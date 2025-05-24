@@ -1,4 +1,4 @@
-![b1-api-cookbook logo](https://github.com/Xaypanya/b1-api-cookbook/blob/main/b1-api-cookbook.png)
+<img src="https://github.com/Xaypanya/b1-api-cookbook/blob/main/b1-api-cookbook.png" alt="b1-api-cookbook logo" width="112">
 
 # B1 API Cookbook
 ## Overview
