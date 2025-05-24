@@ -1,0 +1,20 @@
+{
+  "name": "b1-api-cookbook",
+  "version": "1.0.0",
+  "description": "<img src=\"https://github.com/Xaypanya/b1-api-cookbook/blob/main/b1-api-cookbook.png\" alt=\"b1-api-cookbook logo\" width=\"300\">",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "xml2js": "^0.6.2"
+  }
+}
