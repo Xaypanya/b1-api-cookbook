@@ -1,5 +1,6 @@
-# B1 API Cookbook
+![alt text](https://github.com/Xaypanya/b1-api-cookbook/b1-api-cookbook.png)
 
+# B1 API Cookbook
 ## Overview
 
 The `b1-api-cookbook` repository is a comprehensive resource for developers working with the **SAP Business One (SAP B1) Service Layer APIs**. It provides detailed information about service endpoints, metadata schemas, and practical examples to assist both beginners and experienced developers in integrating with SAP B1 services. This repository includes:
