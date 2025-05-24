@@ -1,0 +1,36 @@
+{
+  "service": "FactoringIndicators",
+  "description": "This entity enables you to manipulate 'FactoringIndicators'. It defines keys that can be recorded in certain journal entries and used as selection criteria in various reports.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "FactoringIndicators(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'FactoringIndicators' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/FactoringIndicators('abc')\n\nGET https://localhost:50000/b1s/v2/FactoringIndicators('abc')?$select=IndicatorCode,IndicatorName"
+    },
+    {
+      "method": "GET",
+      "path": "FactoringIndicators",
+      "description": "Retrieve a collection of 'FactoringIndicators' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/FactoringIndicators\n\nGET https://localhost:50000/b1s/v2/FactoringIndicators?$select=IndicatorCode,IndicatorName&$filter=startswith(IndicatorCode, 'a') &$orderby=IndicatorCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "FactoringIndicators",
+      "description": "Create an instance of 'FactoringIndicators' with the given payload of type 'FactoringIndicator' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FactoringIndicators\n{\n    \"IndicatorCode\": \"abc\",\n    \"IndicatorName\": \"new indicator\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "FactoringIndicators(id)",
+      "description": "Update an instance of 'FactoringIndicators' with the given payload of type 'FactoringIndicator' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/FactoringIndicators('abc')\n{\n    \"IndicatorName\": \"customer indicator\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "FactoringIndicators(id)",
+      "description": "Delete an instance of 'FactoringIndicators' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/FactoringIndicators('abc')"
+    }
+  ]
+}

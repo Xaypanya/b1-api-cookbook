@@ -1,0 +1,12 @@
+{
+  "service": "ShortLinkMappingsService",
+  "description": "This entity enables you to manipulate 'ShortLinkMappingsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ShortLinkMappingsService_BatchDelete",
+      "description": "Invoke the method 'BatchDelete' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ShortLinkMappingsService_BatchDelete"
+    }
+  ]
+}

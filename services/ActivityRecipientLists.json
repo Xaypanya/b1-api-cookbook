@@ -1,0 +1,36 @@
+{
+  "service": "ActivityRecipientLists",
+  "description": "This entity enables you to manipulate 'ActivityRecipientLists'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ActivityRecipientLists(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ActivityRecipientLists' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityRecipientLists(123)\n\nGET https://localhost:50000/b1s/v2/ActivityRecipientLists(123)?$select=Code,Name,Active"
+    },
+    {
+      "method": "GET",
+      "path": "ActivityRecipientLists",
+      "description": "Retrieve a collection of 'ActivityRecipientLists' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityRecipientLists\n\nGET https://localhost:50000/b1s/v2/ActivityRecipientLists?$select=Code,Name,Active&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ActivityRecipientLists",
+      "description": "Create an instance of 'ActivityRecipientLists' with the given payload of type 'ActivityRecipientList' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivityRecipientLists\n{\n    \"Active\": \"tYES\",\n    \"ActivityRecipientCollection\": [\n        {\n            \"LineNumber\": 1,\n            \"RecipientCode\": \"2\",\n            \"RecipientType\": \"rtUser\"\n        },\n        {\n            \"LineNumber\": 2,\n            \"RecipientCode\": \"4\",\n            \"RecipientType\": \"rtUser\"\n        }\n    ],\n    \"Code\": 1,\n    \"IsMultiple\": \"tNO\",\n    \"Name\": \"RP1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ActivityRecipientLists(id)",
+      "description": "Update an instance of 'ActivityRecipientLists' with the given payload of type 'ActivityRecipientList' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ActivityRecipientLists(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ActivityRecipientLists(id)",
+      "description": "Delete an instance of 'ActivityRecipientLists' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ActivityRecipientLists(123)"
+    }
+  ]
+}

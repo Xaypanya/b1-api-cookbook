@@ -1,0 +1,36 @@
+{
+  "service": "BPPriorities",
+  "description": "This entity enables you to manipulate 'BPPriorities'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BPPriorities(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BPPriorities' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BPPriorities(123)\n\nGET https://localhost:50000/b1s/v2/BPPriorities(123)?$select=Priority,PriorityDescription"
+    },
+    {
+      "method": "GET",
+      "path": "BPPriorities",
+      "description": "Retrieve a collection of 'BPPriorities' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BPPriorities\n\nGET https://localhost:50000/b1s/v2/BPPriorities?$select=Priority,PriorityDescription&$filter=Priority ge 123 &$orderby=Priority&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BPPriorities",
+      "description": "Create an instance of 'BPPriorities' with the given payload of type 'BPPriority' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BPPriorities\n{\n    \"Priority\": \"P4\",\n    \"PriorityDescription\": \"Third\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BPPriorities(id)",
+      "description": "Update an instance of 'BPPriorities' with the given payload of type 'BPPriority' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BPPriorities(123)\n{\n    \"PriorityDescription\": \"HighPri\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BPPriorities(id)",
+      "description": "Delete an instance of 'BPPriorities' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BPPriorities(123)"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "TargetGroups",
+  "description": "This entity enables you to manipulate 'TargetGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TargetGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TargetGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TargetGroups('abc')\n\nGET https://localhost:50000/b1s/v2/TargetGroups('abc')?$select=TargetGroupCode,TargetGroupName,TargetGroupType"
+    },
+    {
+      "method": "GET",
+      "path": "TargetGroups",
+      "description": "Retrieve a collection of 'TargetGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TargetGroups\n\nGET https://localhost:50000/b1s/v2/TargetGroups?$select=TargetGroupCode,TargetGroupName,TargetGroupType&$filter=startswith(TargetGroupCode, 'a') &$orderby=TargetGroupCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "TargetGroups",
+      "description": "Create an instance of 'TargetGroups' with the given payload of type 'TargetGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/TargetGroups\n{\n    \"TargetGroupCode\": \"1\",\n    \"TargetGroupName\": \"1\",\n    \"TargetGroupType\": \"tgtCustomer\",\n    \"TargetGroupsDetails\": []\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "TargetGroups(id)",
+      "description": "Update an instance of 'TargetGroups' with the given payload of type 'TargetGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TargetGroups('abc')\n{\n    \"TargetGroupName\": \"21\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "TargetGroups(id)",
+      "description": "Delete an instance of 'TargetGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/TargetGroups('abc')"
+    }
+  ]
+}

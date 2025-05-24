@@ -1,0 +1,36 @@
+{
+  "service": "EnhancedDiscountGroups",
+  "description": "This entity enables you to manipulate 'EnhancedDiscountGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EnhancedDiscountGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EnhancedDiscountGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EnhancedDiscountGroups(123)\n\nGET https://localhost:50000/b1s/v2/EnhancedDiscountGroups(123)?$select=AbsEntry,Type,ObjectCode"
+    },
+    {
+      "method": "GET",
+      "path": "EnhancedDiscountGroups",
+      "description": "Retrieve a collection of 'EnhancedDiscountGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EnhancedDiscountGroups\n\nGET https://localhost:50000/b1s/v2/EnhancedDiscountGroups?$select=AbsEntry,Type,ObjectCode&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EnhancedDiscountGroups",
+      "description": "Create an instance of 'EnhancedDiscountGroups' with the given payload of type 'EnhancedDiscountGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EnhancedDiscountGroups\n{\n    \"Active\": \"tYES\",\n    \"DiscountRelations\": \"dgrLowestDiscount\",\n    \"ObjectCode\": \"101\",\n    \"Type\": \"dgt_CustomerGroup\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EnhancedDiscountGroups(id)",
+      "description": "Update an instance of 'EnhancedDiscountGroups' with the given payload of type 'EnhancedDiscountGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EnhancedDiscountGroups(123)\n{\n    \"Active\": \"tNO\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EnhancedDiscountGroups(id)",
+      "description": "Delete an instance of 'EnhancedDiscountGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EnhancedDiscountGroups(123)"
+    }
+  ]
+}

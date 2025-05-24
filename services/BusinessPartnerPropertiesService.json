@@ -1,0 +1,12 @@
+{
+  "service": "BusinessPartnerPropertiesService",
+  "description": "This API enables you to invoke the interfaces defined on 'BusinessPartnerPropertiesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BusinessPartnerPropertiesService_GetBusinessPartnerPropertyList",
+      "description": "Invoke the method 'GetBusinessPartnerPropertyList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/BusinessPartnerPropertiesService_GetBusinessPartnerPropertyList"
+    }
+  ]
+}

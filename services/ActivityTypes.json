@@ -1,0 +1,36 @@
+{
+  "service": "ActivityTypes",
+  "description": "This entity enables you to manipulate 'ActivityTypes'. You may have different activities with your business partners, for example, phone calls and meetings.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ActivityTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ActivityTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityTypes(123)\n\nGET https://localhost:50000/b1s/v2/ActivityTypes(123)?$select=Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "ActivityTypes",
+      "description": "Retrieve a collection of 'ActivityTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityTypes\n\nGET https://localhost:50000/b1s/v2/ActivityTypes?$select=Code,Name&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ActivityTypes",
+      "description": "Create an instance of 'ActivityTypes' with the given payload of type 'ActivityType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivityTypes\n{\n    \"Name\": \"Special\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ActivityTypes(id)",
+      "description": "Update an instance of 'ActivityTypes' with the given payload of type 'ActivityType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ActivityTypes(123)\n{\n    \"Name\": \"Others\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ActivityTypes(id)",
+      "description": "Delete an instance of 'ActivityTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ActivityTypes(123)"
+    }
+  ]
+}

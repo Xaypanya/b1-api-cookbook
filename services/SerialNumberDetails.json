@@ -1,0 +1,24 @@
+{
+  "service": "SerialNumberDetails",
+  "description": "This entity enables you to manipulate 'SerialNumberDetails'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SerialNumberDetails(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SerialNumberDetails' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SerialNumberDetails(123)\n\nGET https://localhost:50000/b1s/v2/SerialNumberDetails(123)?$select=DocEntry,ItemCode,ItemDescription"
+    },
+    {
+      "method": "GET",
+      "path": "SerialNumberDetails",
+      "description": "Retrieve a collection of 'SerialNumberDetails' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SerialNumberDetails\n\nGET https://localhost:50000/b1s/v2/SerialNumberDetails?$select=DocEntry,ItemCode,ItemDescription&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "SerialNumberDetails(id)",
+      "description": "Update an instance of 'SerialNumberDetails' with the given payload of type 'SerialNumberDetail' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SerialNumberDetails(123)\n{}"
+    }
+  ]
+}

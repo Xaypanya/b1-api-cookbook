@@ -1,0 +1,36 @@
+{
+  "service": "SalesTaxAuthorities",
+  "description": "This entity enables you to manipulate 'SalesTaxAuthorities'. It represents the sales tax jurisdictions data for the US and Canada localizations, or sales tax types for the Latin America localization.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesTaxAuthorities(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesTaxAuthorities' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxAuthorities(Code='WYN',Type=-3)\n\nGET https://localhost:50000/b1s/v2/SalesTaxAuthorities(Code='WYN',Type=-3)?$select=UseTaxAccount,UserSignature,Type"
+    },
+    {
+      "method": "GET",
+      "path": "SalesTaxAuthorities",
+      "description": "Retrieve a collection of 'SalesTaxAuthorities' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxAuthorities\n\nGET https://localhost:50000/b1s/v2/SalesTaxAuthorities?$select=UseTaxAccount,UserSignature,Type&$filter=startswith(Code, 'a') and Type ge 123 &$orderby=Code,Type&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesTaxAuthorities",
+      "description": "Create an instance of 'SalesTaxAuthorities' with the given payload of type 'SalesTaxAuthority' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesTaxAuthorities\n{\n    \"AOrPTaxAccount\": \"_SYS00000000168\",\n    \"AOrRTaxAccount\": \"_SYS00000000061\",\n    \"Code\": \"WYN\",\n    \"Name\": \"Wyoming new\",\n    \"TaxDefinitions\": [\n        {\n            \"Effectivefrom\": \"2000-01-01\",\n            \"Rate\": \"10\"\n        }\n    ],\n    \"Type\": \"-3\",\n    \"UseTaxAccount\": \"_SYS00000000066\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesTaxAuthorities(id)",
+      "description": "Update an instance of 'SalesTaxAuthorities' with the given payload of type 'SalesTaxAuthority' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesTaxAuthorities(Code='WYN',Type=-3)\n{\n    \"Name\": \"new Wyoming\",\n    \"TaxDefinitions\": [\n        {\n            \"Effectivefrom\": \"2002-01-01\",\n            \"Rate\": \"25\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesTaxAuthorities(id)",
+      "description": "Delete an instance of 'SalesTaxAuthorities' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesTaxAuthorities(Code='WYN',Type=-3)"
+    }
+  ]
+}

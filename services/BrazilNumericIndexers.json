@@ -1,0 +1,36 @@
+{
+  "service": "BrazilNumericIndexers",
+  "description": "This entity enables you to manipulate 'BrazilNumericIndexers'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BrazilNumericIndexers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BrazilNumericIndexers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilNumericIndexers(1119)\n\nGET https://localhost:50000/b1s/v2/BrazilNumericIndexers(1119)?$select=IndexerType,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "BrazilNumericIndexers",
+      "description": "Retrieve a collection of 'BrazilNumericIndexers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilNumericIndexers\n\nGET https://localhost:50000/b1s/v2/BrazilNumericIndexers?$select=IndexerType,Code,Description&$filter=ID ge 1119 &$orderby=ID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilNumericIndexers",
+      "description": "Create an instance of 'BrazilNumericIndexers' with the given payload of type 'BrazilNumericIndexer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilNumericIndexers\n{\n    \"Code\": \"15\",\n    \"Description\": \"Sociedade empres\\u00c3\\u00a1ria em geral\",\n    \"IndexerType\": \"bnitNatureOfCompany\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BrazilNumericIndexers(id)",
+      "description": "Delete an instance of 'BrazilNumericIndexers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BrazilNumericIndexers(1119)"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilNumericIndexers(id)/GetIndexerTypeList",
+      "description": "Invoke the method 'GetIndexerTypeList' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilNumericIndexers(1119)/GetIndexerTypeList"
+    }
+  ]
+}

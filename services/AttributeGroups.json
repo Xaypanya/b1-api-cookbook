@@ -1,0 +1,36 @@
+{
+  "service": "AttributeGroups",
+  "description": "This entity enables you to manipulate 'AttributeGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AttributeGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AttributeGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AttributeGroups(1)\n\nGET https://localhost:50000/b1s/v2/AttributeGroups(1)?$select=Code,Name,Locked"
+    },
+    {
+      "method": "GET",
+      "path": "AttributeGroups",
+      "description": "Retrieve a collection of 'AttributeGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AttributeGroups\n\nGET https://localhost:50000/b1s/v2/AttributeGroups?$select=Code,Name,Locked&$filter=Code ge 1 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AttributeGroups",
+      "description": "Create an instance of 'AttributeGroups' with the given payload of type 'AttributeGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AttributeGroups\n{\n    \"AttributeGroupCollection\": [\n        {\n            \"AttributeID\": 1,\n            \"AttributeName\": \"test 1\",\n            \"DefaultValue\": \"5\"\n        },\n        {\n            \"AttributeID\": 2,\n            \"AttributeName\": \"test 2\",\n            \"DefaultValue\": \"6\"\n        }\n    ],\n    \"Code\": 1,\n    \"Name\": \"test Attribute\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AttributeGroups(id)",
+      "description": "Update an instance of 'AttributeGroups' with the given payload of type 'AttributeGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AttributeGroups(1)\n{\n    \"AttributeGroupCollection\": [\n        {\n            \"AttributeID\": 1,\n            \"AttributeName\": \"test 123\",\n            \"DefaultValue\": \"123\",\n            \"SortNumber\": 1\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AttributeGroups(id)",
+      "description": "Delete an instance of 'AttributeGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AttributeGroups(1)"
+    }
+  ]
+}

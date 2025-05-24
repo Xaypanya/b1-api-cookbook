@@ -1,0 +1,36 @@
+{
+  "service": "ServiceCallSolutionStatus",
+  "description": "This entity enables you to manipulate 'ServiceCallSolutionStatus'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceCallSolutionStatus(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceCallSolutionStatus' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallSolutionStatus(1)\n\nGET https://localhost:50000/b1s/v2/ServiceCallSolutionStatus(1)?$select=StatusId,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceCallSolutionStatus",
+      "description": "Retrieve a collection of 'ServiceCallSolutionStatus' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallSolutionStatus\n\nGET https://localhost:50000/b1s/v2/ServiceCallSolutionStatus?$select=StatusId,Name,Description&$filter=StatusId ge 1 &$orderby=StatusId&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceCallSolutionStatus",
+      "description": "Create an instance of 'ServiceCallSolutionStatus' with the given payload of type 'ServiceCallSolutionStatus' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCallSolutionStatus\n{\n    \"Description\": \"Publish test\",\n    \"Name\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceCallSolutionStatus(id)",
+      "description": "Update an instance of 'ServiceCallSolutionStatus' with the given payload of type 'ServiceCallSolutionStatus' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceCallSolutionStatus(1)\n{\n    \"Description\": \"Publish 123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceCallSolutionStatus(id)",
+      "description": "Delete an instance of 'ServiceCallSolutionStatus' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceCallSolutionStatus(1)"
+    }
+  ]
+}

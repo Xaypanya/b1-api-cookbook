@@ -1,0 +1,36 @@
+{
+  "service": "IndiaHsn",
+  "description": "This entity enables you to manipulate 'IndiaHsn'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "IndiaHsn(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'IndiaHsn' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/IndiaHsn(123)\n\nGET https://localhost:50000/b1s/v2/IndiaHsn(123)?$select=AbsEntry"
+    },
+    {
+      "method": "GET",
+      "path": "IndiaHsn",
+      "description": "Retrieve a collection of 'IndiaHsn' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/IndiaHsn\n\nGET https://localhost:50000/b1s/v2/IndiaHsn?$select=AbsEntry&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "IndiaHsn",
+      "description": "Create an instance of 'IndiaHsn' with the given payload of type 'IndiaHsn' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/IndiaHsn\n{\n    \"AbsEntry\": 1,\n    \"Chapter\": \"07\",\n    \"Description\": \"Test for HSN\",\n    \"Heading\": \"01\",\n    \"SubHeading\": \"0102\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "IndiaHsn(id)",
+      "description": "Update an instance of 'IndiaHsn' with the given payload of type 'IndiaHsn' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/IndiaHsn(123)\n{\n    \"Chapter\": \"08\",\n    \"Description\": \"Update HSN\",\n    \"Heading\": \"01\",\n    \"SubHeading\": \"0102\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "IndiaHsn(id)",
+      "description": "Delete an instance of 'IndiaHsn' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/IndiaHsn(123)"
+    }
+  ]
+}

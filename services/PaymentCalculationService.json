@@ -1,0 +1,12 @@
+{
+  "service": "PaymentCalculationService",
+  "description": "This API enables you to invoke the interfaces defined on 'PaymentCalculationService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "PaymentCalculationService_GetPaymentAmount",
+      "description": "Invoke the method 'GetPaymentAmount' on this service by specifying the payload 'PaymentBPCode,PaymentInvoiceEntries' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentCalculationService_GetPaymentAmount\n{\n    \"PaymentBPCode\": {\n        \"BPCode\": \"C01\",\n        \"Date\": \"2016-08-30\"\n    },\n    \"PaymentInvoiceEntries\": [\n        {\n            \"DocEntry\": \"12\",\n            \"DocType\": \"itARInvoice\"\n        }\n    ]\n}"
+    }
+  ]
+}

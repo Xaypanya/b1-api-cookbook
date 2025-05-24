@@ -1,0 +1,12 @@
+{
+  "service": "CampaignResponseTypeService",
+  "description": "This API enables you to invoke the interfaces defined on 'CampaignResponseTypeService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CampaignResponseTypeService_GetResponseTypeList",
+      "description": "Invoke the method 'GetResponseTypeList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CampaignResponseTypeService_GetResponseTypeList"
+    }
+  ]
+}

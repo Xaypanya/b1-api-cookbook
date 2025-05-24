@@ -1,0 +1,36 @@
+{
+  "service": "RouteStages",
+  "description": "This entity enables you to manipulate 'RouteStages'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "RouteStages(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'RouteStages' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/RouteStages(123)\n\nGET https://localhost:50000/b1s/v2/RouteStages(123)?$select=InternalNumber,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "RouteStages",
+      "description": "Retrieve a collection of 'RouteStages' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/RouteStages\n\nGET https://localhost:50000/b1s/v2/RouteStages?$select=InternalNumber,Code,Description&$filter=InternalNumber ge 123 &$orderby=InternalNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "RouteStages",
+      "description": "Create an instance of 'RouteStages' with the given payload of type 'RouteStage' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/RouteStages\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "RouteStages(id)",
+      "description": "Update an instance of 'RouteStages' with the given payload of type 'RouteStage' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/RouteStages(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "RouteStages(id)",
+      "description": "Delete an instance of 'RouteStages' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/RouteStages(123)"
+    }
+  ]
+}

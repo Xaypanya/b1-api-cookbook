@@ -1,0 +1,48 @@
+{
+  "service": "ApprovalTemplates",
+  "description": "This entity enables you to manipulate 'ApprovalTemplates'. Each template specifies an approval procedure, and the users and transactions to which the procedure applies.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ApprovalTemplates(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ApprovalTemplates' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ApprovalTemplates(123)\n\nGET https://localhost:50000/b1s/v2/ApprovalTemplates(123)?$select=Code,Name,Remarks"
+    },
+    {
+      "method": "GET",
+      "path": "ApprovalTemplates",
+      "description": "Retrieve a collection of 'ApprovalTemplates' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ApprovalTemplates\n\nGET https://localhost:50000/b1s/v2/ApprovalTemplates?$select=Code,Name,Remarks&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalTemplates",
+      "description": "Create an instance of 'ApprovalTemplates' with the given payload of type 'ApprovalTemplate' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalTemplates\n{\n    \"ApprovalTemplateDocuments\": [\n        {\n            \"DocumentType\": \"atdtDelivery\"\n        }\n    ],\n    \"ApprovalTemplateStages\": [\n        {\n            \"ApprovalStageCode\": \"3\",\n            \"SortID\": \"1\"\n        }\n    ],\n    \"ApprovalTemplateUsers\": [\n        {\n            \"UserID\": \"1\"\n        }\n    ],\n    \"Name\": \"ShipDocTemp\",\n    \"Remarks\": \"Delivery approval\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ApprovalTemplates(id)",
+      "description": "Update an instance of 'ApprovalTemplates' with the given payload of type 'ApprovalTemplate' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ApprovalTemplates(123)\n{\n    \"Remarks\": \"Shipping\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ApprovalTemplates(id)",
+      "description": "Delete an instance of 'ApprovalTemplates' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ApprovalTemplates(123)"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalTemplates(id)/GetApprovalTemplate",
+      "description": "Invoke the method 'GetApprovalTemplate' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalTemplates(123)/GetApprovalTemplate"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalTemplates(id)/RemoveApprovalTemplate",
+      "description": "Invoke the method 'RemoveApprovalTemplate' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalTemplates(123)/RemoveApprovalTemplate"
+    }
+  ]
+}

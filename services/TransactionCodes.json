@@ -1,0 +1,36 @@
+{
+  "service": "TransactionCodes",
+  "description": "This entity enables you to manipulate 'TransactionCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TransactionCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TransactionCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TransactionCodes('01')\n\nGET https://localhost:50000/b1s/v2/TransactionCodes('01')?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "TransactionCodes",
+      "description": "Retrieve a collection of 'TransactionCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TransactionCodes\n\nGET https://localhost:50000/b1s/v2/TransactionCodes?$select=Code,Description&$filter=startswith(Code, '') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "TransactionCodes",
+      "description": "Create an instance of 'TransactionCodes' with the given payload of type 'TransactionCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/TransactionCodes\n{\n    \"Code\": \"01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "TransactionCodes(id)",
+      "description": "Update an instance of 'TransactionCodes' with the given payload of type 'TransactionCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TransactionCodes('01')\n{\n    \"Description\": \"description of 01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "TransactionCodes(id)",
+      "description": "Delete an instance of 'TransactionCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/TransactionCodes('01')"
+    }
+  ]
+}

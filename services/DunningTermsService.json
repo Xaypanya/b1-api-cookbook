@@ -1,0 +1,12 @@
+{
+  "service": "DunningTermsService",
+  "description": "This API enables you to invoke the interfaces defined on 'DunningTermsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DunningTermsService_GetDunningTermList",
+      "description": "Invoke the method 'GetDunningTermList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/DunningTermsService_GetDunningTermList"
+    }
+  ]
+}

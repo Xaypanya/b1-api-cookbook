@@ -1,0 +1,36 @@
+{
+  "service": "SalesTaxInvoices",
+  "description": "This entity enables you to manipulate 'SalesTaxInvoices'. It represents the data of a sales Tax Invoice document.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesTaxInvoices(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesTaxInvoices' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxInvoices(123)\n\nGET https://localhost:50000/b1s/v2/SalesTaxInvoices(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "SalesTaxInvoices",
+      "description": "Retrieve a collection of 'SalesTaxInvoices' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxInvoices\n\nGET https://localhost:50000/b1s/v2/SalesTaxInvoices?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesTaxInvoices",
+      "description": "Create an instance of 'SalesTaxInvoices' with the given payload of type 'SalesTaxInvoice' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesTaxInvoices\n{\n    \"CardCode\": \"c001\",\n    \"Comments\": \"create purchase tax invoice\",\n    \"DocType\": \"botit_Invoice\",\n    \"SalesTaxInvoiceLines\": [\n        {\n            \"RefEntry1\": \"16\"\n        }\n    ],\n    \"SalesTaxInvoiceOperationCodes\": [\n        {\n            \"OpCode\": \"2\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesTaxInvoices(id)",
+      "description": "Update an instance of 'SalesTaxInvoices' with the given payload of type 'SalesTaxInvoice' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesTaxInvoices(123)\n{\n    \"Comments\": \"Update sales tax invoice\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesTaxInvoices(id)",
+      "description": "Delete an instance of 'SalesTaxInvoices' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesTaxInvoices(123)"
+    }
+  ]
+}

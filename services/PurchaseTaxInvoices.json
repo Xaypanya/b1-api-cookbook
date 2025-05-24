@@ -1,0 +1,30 @@
+{
+  "service": "PurchaseTaxInvoices",
+  "description": "This entity enables you to manipulate 'PurchaseTaxInvoices'. It represents the data of a purchase Tax Invoice document.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PurchaseTaxInvoices(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PurchaseTaxInvoices' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseTaxInvoices(123)\n\nGET https://localhost:50000/b1s/v2/PurchaseTaxInvoices(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "PurchaseTaxInvoices",
+      "description": "Retrieve a collection of 'PurchaseTaxInvoices' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseTaxInvoices\n\nGET https://localhost:50000/b1s/v2/PurchaseTaxInvoices?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseTaxInvoices",
+      "description": "Create an instance of 'PurchaseTaxInvoices' with the given payload of type 'PurchaseTaxInvoice' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseTaxInvoices\n{\n    \"CardCode\": \"v001\",\n    \"Comments\": \"create purchase tax invoice\",\n    \"DocType\": \"botit_Invoice\",\n    \"PurchaseTaxInvoiceLines\": [\n        {\n            \"RefEntry1\": \"11\"\n        }\n    ],\n    \"PurchaseTaxInvoiceOperationCodes\": [\n        {\n            \"OpCode\": \"2\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PurchaseTaxInvoices(id)",
+      "description": "Update an instance of 'PurchaseTaxInvoices' with the given payload of type 'PurchaseTaxInvoice' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PurchaseTaxInvoices(123)\n{\n    \"Comments\": \"Update purchase tax invoice\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "WarehouseSublevelCodes",
+  "description": "This entity enables you to manipulate 'WarehouseSublevelCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WarehouseSublevelCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WarehouseSublevelCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WarehouseSublevelCodes(123)\n\nGET https://localhost:50000/b1s/v2/WarehouseSublevelCodes(123)?$select=WarehouseSublevel,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "WarehouseSublevelCodes",
+      "description": "Retrieve a collection of 'WarehouseSublevelCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WarehouseSublevelCodes\n\nGET https://localhost:50000/b1s/v2/WarehouseSublevelCodes?$select=WarehouseSublevel,Code,Description&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WarehouseSublevelCodes",
+      "description": "Create an instance of 'WarehouseSublevelCodes' with the given payload of type 'WarehouseSublevelCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WarehouseSublevelCodes\n{\n    \"AbsEntry\": 4,\n    \"Code\": \"PIN\",\n    \"Description\": null,\n    \"WarehouseSublevel\": 1\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WarehouseSublevelCodes(id)",
+      "description": "Update an instance of 'WarehouseSublevelCodes' with the given payload of type 'WarehouseSublevelCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WarehouseSublevelCodes(123)\n{\n    \"Description\": \"test\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WarehouseSublevelCodes(id)",
+      "description": "Delete an instance of 'WarehouseSublevelCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WarehouseSublevelCodes(123)"
+    }
+  ]
+}

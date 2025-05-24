@@ -1,0 +1,24 @@
+{
+  "service": "ApprovalRequestsService",
+  "description": "This API enables you to invoke the interfaces defined on 'ApprovalRequestsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ApprovalRequestsService_GetApprovalRequestList",
+      "description": "Invoke the method 'GetApprovalRequestList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalRequestsService_GetApprovalRequestList"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalRequestsService_GetOpenApprovalRequestList",
+      "description": "Invoke the method 'GetOpenApprovalRequestList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalRequestsService_GetOpenApprovalRequestList"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalRequestsService_GetAllApprovalRequestsList",
+      "description": "Invoke the method 'GetAllApprovalRequestsList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalRequestsService_GetAllApprovalRequestsList"
+    }
+  ]
+}

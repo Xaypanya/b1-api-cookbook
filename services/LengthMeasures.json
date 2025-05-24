@@ -1,0 +1,36 @@
+{
+  "service": "LengthMeasures",
+  "description": "This entity enables you to manipulate 'LengthMeasures'. It defines the length and width measure units that are used for item records.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "LengthMeasures(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'LengthMeasures' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/LengthMeasures(123)\n\nGET https://localhost:50000/b1s/v2/LengthMeasures(123)?$select=UnitCode,UnitDisplay,UnitName"
+    },
+    {
+      "method": "GET",
+      "path": "LengthMeasures",
+      "description": "Retrieve a collection of 'LengthMeasures' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/LengthMeasures\n\nGET https://localhost:50000/b1s/v2/LengthMeasures?$select=UnitCode,UnitDisplay,UnitName&$filter=UnitCode ge 123 &$orderby=UnitCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "LengthMeasures",
+      "description": "Create an instance of 'LengthMeasures' with the given payload of type 'LengthMeasure' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/LengthMeasures\n{\n    \"UnitCodeforQuantityDisplay\": \"kmm\",\n    \"UnitDisplay\": \"KM\",\n    \"UnitLengthinmm\": \"120\",\n    \"UnitName\": \"kilometer\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "LengthMeasures(id)",
+      "description": "Update an instance of 'LengthMeasures' with the given payload of type 'LengthMeasure' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/LengthMeasures(123)\n{\n    \"UnitLengthinmm\": \"240\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "LengthMeasures(id)",
+      "description": "Delete an instance of 'LengthMeasures' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/LengthMeasures(123)"
+    }
+  ]
+}

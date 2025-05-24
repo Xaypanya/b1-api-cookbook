@@ -1,0 +1,12 @@
+{
+  "service": "MaterialRevaluationSNBService",
+  "description": "This API enables you to invoke the interfaces defined on 'MaterialRevaluationSNBService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "MaterialRevaluationSNBService_GetList",
+      "description": "Invoke the method 'GetList' on this service by specifying the payload 'MaterialRevaluationSNBParam' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MaterialRevaluationSNBService_GetList\n{\n    \"MaterialRevaluationSNBParam\": {}\n}"
+    }
+  ]
+}

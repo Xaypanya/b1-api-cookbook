@@ -1,0 +1,54 @@
+{
+  "service": "PurchaseInvoices",
+  "description": "This entity enables you to manipulate 'PurchaseInvoices'. It represents a request for payment. It also records the cost in a profit and loss statement.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PurchaseInvoices(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PurchaseInvoices' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseInvoices(123)\n\nGET https://localhost:50000/b1s/v2/PurchaseInvoices(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "PurchaseInvoices",
+      "description": "Retrieve a collection of 'PurchaseInvoices' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseInvoices\n\nGET https://localhost:50000/b1s/v2/PurchaseInvoices?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseInvoices",
+      "description": "Create an instance of 'PurchaseInvoices' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseInvoices\n{\n    \"CardCode\": \"c001\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"TaxCode\": \"T1\",\n            \"UnitPrice\": \"50\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PurchaseInvoices(id)",
+      "description": "Update an instance of 'PurchaseInvoices' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PurchaseInvoices(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseInvoices(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseInvoices(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseInvoices(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseInvoices(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseInvoices(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseInvoices(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseInvoices(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseInvoices(123)/CreateCancellationDocument"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "service": "ActivityLocations",
+  "description": "This entity enables you to manipulate 'ActivityLocations'. It represents locations where activities with your business partners take place.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ActivityLocations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ActivityLocations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityLocations(1)\n\nGET https://localhost:50000/b1s/v2/ActivityLocations(1)?$select=Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "ActivityLocations",
+      "description": "Retrieve a collection of 'ActivityLocations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityLocations\n\nGET https://localhost:50000/b1s/v2/ActivityLocations?$select=Code,Name&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ActivityLocations",
+      "description": "Create an instance of 'ActivityLocations' with the given payload of type 'ActivityLocation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivityLocations\n{\n    \"Name\": \"SH Room1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ActivityLocations(id)",
+      "description": "Update an instance of 'ActivityLocations' with the given payload of type 'ActivityLocation' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ActivityLocations(1)\n{\n    \"Name\": \"SH Room1 updated\"\n}"
+    }
+  ]
+}

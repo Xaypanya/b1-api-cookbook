@@ -1,0 +1,60 @@
+{
+  "service": "SBOBobService",
+  "description": "This API enables you to invoke the interfaces defined on 'SBOBobService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "SBOBobService_GetSystemPermission",
+      "description": "Invoke the method 'GetSystemPermission' on this service by specifying the payload 'UserCode,PermissionID' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_GetSystemPermission\n{\n    \"PermissionID\": \"142\",\n    \"UserCode\": \"manager\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_GetSystemCurrency",
+      "description": "Invoke the method 'GetSystemCurrency' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_GetSystemCurrency"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_GetDueDate",
+      "description": "Invoke the method 'GetDueDate' on this service by specifying the payload 'CardCode,RefDate' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_GetDueDate\n{\n    \"CardCode\": \"c001\",\n    \"RefDate\": \"20151001\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_GetLocalCurrency",
+      "description": "Invoke the method 'GetLocalCurrency' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_GetLocalCurrency"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_GetCurrencyRate",
+      "description": "Invoke the method 'GetCurrencyRate' on this service by specifying the payload 'Currency,Date' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_GetCurrencyRate\n{\n    \"Currency\": \"eur\",\n    \"Date\": \"20151001\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_GetIndexRate",
+      "description": "Invoke the method 'GetIndexRate' on this service by specifying the payload 'Index,Date' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_GetIndexRate\n{\n    \"Date\": \"20151001\",\n    \"Index\": \"1\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_Format_MoneyToString",
+      "description": "Invoke the method 'Format_MoneyToString' on this service by specifying the payload 'InMoney,InPrecision' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_Format_MoneyToString\n{\n    \"InMoney\": \"1234.458\",\n    \"InPrecision\": \"mpt_Sum\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_SetCurrencyRate",
+      "description": "Invoke the method 'SBOBobService_SetCurrencyRate' on this service by specifying the payload 'RateDate,Currency,Rate' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_SetCurrencyRate\n{\n    \"Currency\": \"EUR\",\n    \"Rate\": \"4.8\",\n    \"RateDate\": \"20161129\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SBOBobService_SetSystemPermission",
+      "description": "Invoke the method 'SetSystemPermission' on this service by specifying the payload 'UserCode,PermissionID and Permission' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SBOBobService_SetSystemPermission\n{\n    \"Permission\": 2,\n    \"PermissionID\": \"57\",\n    \"UserCode\": \"andy\"\n}"
+    }
+  ]
+}

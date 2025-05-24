@@ -1,0 +1,36 @@
+{
+  "service": "SalesTaxAuthoritiesTypes",
+  "description": "This entity enables you to manipulate 'SalesTaxAuthoritiesTypes'. It represents the types of sales tax authorities. It specifies whether the sales tax authority includes VAT.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesTaxAuthoritiesTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesTaxAuthoritiesTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxAuthoritiesTypes(123)\n\nGET https://localhost:50000/b1s/v2/SalesTaxAuthoritiesTypes(123)?$select=UserSignature,Name,VAT"
+    },
+    {
+      "method": "GET",
+      "path": "SalesTaxAuthoritiesTypes",
+      "description": "Retrieve a collection of 'SalesTaxAuthoritiesTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxAuthoritiesTypes\n\nGET https://localhost:50000/b1s/v2/SalesTaxAuthoritiesTypes?$select=UserSignature,Name,VAT&$filter=Numerator ge 123 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesTaxAuthoritiesTypes",
+      "description": "Create an instance of 'SalesTaxAuthoritiesTypes' with the given payload of type 'SalesTaxAuthoritiesType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesTaxAuthoritiesTypes\n{\n    \"Name\": \"Town\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesTaxAuthoritiesTypes(id)",
+      "description": "Update an instance of 'SalesTaxAuthoritiesTypes' with the given payload of type 'SalesTaxAuthoritiesType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesTaxAuthoritiesTypes(123)\n{\n    \"Name\": \"Street\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesTaxAuthoritiesTypes(id)",
+      "description": "Delete an instance of 'SalesTaxAuthoritiesTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesTaxAuthoritiesTypes(123)"
+    }
+  ]
+}

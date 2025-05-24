@@ -1,0 +1,12 @@
+{
+  "service": "ReportTypesService",
+  "description": "This API enables you to invoke the interfaces defined on 'ReportTypesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ReportTypesService_GetReportTypeList",
+      "description": "Invoke the method 'GetReportTypeList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportTypesService_GetReportTypeList"
+    }
+  ]
+}

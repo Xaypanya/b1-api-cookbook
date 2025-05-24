@@ -1,0 +1,30 @@
+{
+  "service": "TaxInvoiceReport",
+  "description": "This entity enables you to manipulate 'TaxInvoiceReport'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TaxInvoiceReport(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TaxInvoiceReport' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TaxInvoiceReport('0160000001')\n\nGET https://localhost:50000/b1s/v2/TaxInvoiceReport('0160000001')?$select=NTSApproval,ETaxWebSite,ETaxNo"
+    },
+    {
+      "method": "GET",
+      "path": "TaxInvoiceReport",
+      "description": "Retrieve a collection of 'TaxInvoiceReport' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TaxInvoiceReport\n\nGET https://localhost:50000/b1s/v2/TaxInvoiceReport?$select=NTSApproval,ETaxWebSite,ETaxNo&$filter=startswith(TaxInvoiceReportNumber, '0160000001') &$orderby=TaxInvoiceReportNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "TaxInvoiceReport(id)",
+      "description": "Update an instance of 'TaxInvoiceReport' with the given payload of type 'TaxInvoiceReport' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TaxInvoiceReport('0160000001')\n{\n    \"Remarks\": \"test\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "TaxInvoiceReport(id)/CancelTaxInvoiceReport",
+      "description": "Invoke the method 'CancelTaxInvoiceReport' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/TaxInvoiceReport('0160000001')/CancelTaxInvoiceReport"
+    }
+  ]
+}

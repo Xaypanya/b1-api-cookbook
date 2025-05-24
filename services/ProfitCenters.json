@@ -1,0 +1,36 @@
+{
+  "service": "ProfitCenters",
+  "description": "This entity enables you to manipulate 'ProfitCenters'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ProfitCenters(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ProfitCenters' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ProfitCenters('NY_B')\n\nGET https://localhost:50000/b1s/v2/ProfitCenters('NY_B')?$select=CenterCode,CenterName,GroupCode"
+    },
+    {
+      "method": "GET",
+      "path": "ProfitCenters",
+      "description": "Retrieve a collection of 'ProfitCenters' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ProfitCenters\n\nGET https://localhost:50000/b1s/v2/ProfitCenters?$select=CenterCode,CenterName,GroupCode&$filter=startswith(CenterCode, 'a') &$orderby=CenterCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ProfitCenters",
+      "description": "Create an instance of 'ProfitCenters' with the given payload of type 'ProfitCenter' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProfitCenters\n{\n    \"CenterCode\": \"NY_B\",\n    \"CenterName\": \"New York Branch\",\n    \"EffectiveFrom\": \"2014-01-01\",\n    \"EffectiveTo\": \"2014-12-31\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ProfitCenters(id)",
+      "description": "Update an instance of 'ProfitCenters' with the given payload of type 'ProfitCenter' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ProfitCenters('NY_B')\n{\n    \"CenterName\": \"General Center\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ProfitCenters(id)",
+      "description": "Delete an instance of 'ProfitCenters' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ProfitCenters('NY_B')"
+    }
+  ]
+}

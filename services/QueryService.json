@@ -1,0 +1,12 @@
+{
+  "service": "QueryService",
+  "description": "This API enables you to invoke the interfaces defined on 'QueryService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "QueryService_PostQuery",
+      "description": "Invoke the method 'PostQuery' on this service. To fully comply with OData, Service Layer exposes a new query service for the row level filter, which is implemented based on the $crossjoin capabilities by separating the QueryPath and QueryOption in the query URL.",
+      "example": "POST https://localhost:50000/b1s/v2/QueryService_PostQuery\n{\n    \"QueryOption\": \"$expand=Orders($select=DocEntry, DocNum),Orders/DocumentLines($select=ItemCode,LineNum)&$filter=Orders/DocEntry eq Orders/DocumentLines/DocEntry and Orders/DocEntry ge 3 and Orders/DocumentLines/LineNum eq 0\",\n    \"QueryPath\": \"$crossjoin(Orders,Orders/DocumentLines)\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "DistributionRules",
+  "description": "This entity enables you to manipulate 'DistributionRules'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DistributionRules(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DistributionRules' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DistributionRules('DR1')\n\nGET https://localhost:50000/b1s/v2/DistributionRules('DR1')?$select=FactorCode,FactorDescription,TotalFactor"
+    },
+    {
+      "method": "GET",
+      "path": "DistributionRules",
+      "description": "Retrieve a collection of 'DistributionRules' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DistributionRules\n\nGET https://localhost:50000/b1s/v2/DistributionRules?$select=FactorCode,FactorDescription,TotalFactor&$filter=startswith(FactorCode, 'DR1') &$orderby=FactorCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DistributionRules",
+      "description": "Create an instance of 'DistributionRules' with the given payload of type 'DistributionRule' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DistributionRules\n{\n    \"Active\": \"tYES\",\n    \"Direct\": \"N\",\n    \"DistributionRuleLines\": [\n        {\n            \"CenterCode\": \"1\",\n            \"EffectiveFrom\": \"2016-09-01\",\n            \"EffectiveTo\": \"2016-12-01\",\n            \"TotalInCenter\": 40\n        },\n        {\n            \"CenterCode\": \"2\",\n            \"EffectiveFrom\": \"2016-09-01\",\n            \"EffectiveTo\": \"2016-12-01\",\n            \"TotalInCenter\": 60\n        }\n    ],\n    \"FactorCode\": \"DR1\",\n    \"FactorDescription\": \"DistributionRules1\",\n    \"InWhichDimension\": 1,\n    \"TotalFactor\": 100\n}\nPOST https://localhost:50000/b1s/v2/DistributionRules\n{\n    \"Active\": \"tYES\",\n    \"Direct\": \"N\",\n    \"DistributionRuleLines\": [\n        {\n            \"CenterCode\": \"1\",\n            \"EffectiveFrom\": \"2016-09-01\",\n            \"EffectiveTo\": \"2016-12-01\",\n            \"TotalInCenter\": 400\n        },\n        {\n            \"CenterCode\": \"2\",\n            \"EffectiveFrom\": \"2016-09-01\",\n            \"EffectiveTo\": \"2016-12-01\",\n            \"TotalInCenter\": 600\n        }\n    ],\n    \"FactorCode\": \"DR1\",\n    \"FactorDescription\": \"DistributionRules1\",\n    \"InWhichDimension\": 1,\n    \"IsFixedAmount\": \"tYES\",\n    \"TotalFactor\": 0\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DistributionRules(id)",
+      "description": "Update an instance of 'DistributionRules' with the given payload of type 'DistributionRule' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DistributionRules('DR1')\n{\n    \"DistributionRuleLines\": [\n        {\n            \"CenterCode\": \"1\",\n            \"EffectiveFrom\": \"2016-09-01\",\n            \"EffectiveTo\": \"2016-12-01\",\n            \"TotalInCenter\": 50\n        },\n        {\n            \"CenterCode\": \"2\",\n            \"EffectiveFrom\": \"2016-09-01\",\n            \"EffectiveTo\": \"2016-12-01\",\n            \"TotalInCenter\": 50\n        }\n    ],\n    \"FactorDescription\": \"TEST\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DistributionRules(id)",
+      "description": "Delete an instance of 'DistributionRules' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DistributionRules('DR1')"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "service": "UserKeysMD",
+  "description": "This entity enables you to manipulate 'UserKeysMD' and manage secondary keys to user tables.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserKeysMD(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserKeysMD' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserKeysMD(TableName='OHEM',KeyIndex=0)\n\nGET https://localhost:50000/b1s/v2/UserKeysMD(TableName='OHEM',KeyIndex=0)?$select=TableName,KeyIndex,KeyName"
+    },
+    {
+      "method": "GET",
+      "path": "UserKeysMD",
+      "description": "Retrieve a collection of 'UserKeysMD' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserKeysMD\n\nGET https://localhost:50000/b1s/v2/UserKeysMD?$select=TableName,KeyIndex,KeyName&$filter=startswith(TableName, 'a') and KeyIndex ge 0 &$orderby=TableName,KeyIndex&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserKeysMD",
+      "description": "Create an instance of 'UserKeysMD' with the given payload of type 'UserKeysMD' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserKeysMD\n{\n    \"KeyName\": \"uk01\",\n    \"TableName\": \"OHEM\",\n    \"Unique\": \"tNO\",\n    \"UserKeysMD_Elements\": [\n        {\n            \"ColumnAlias\": \"UDF01\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserKeysMD(id)",
+      "description": "Delete an instance of 'UserKeysMD' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserKeysMD(TableName='OHEM',KeyIndex=0)"
+    }
+  ]
+}

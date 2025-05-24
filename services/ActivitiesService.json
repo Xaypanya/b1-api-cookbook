@@ -1,0 +1,36 @@
+{
+  "service": "ActivitiesService",
+  "description": "This API enables you to invoke the interfaces defined on 'ActivitiesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ActivitiesService_GetActivityList",
+      "description": "Invoke the method 'GetActivityList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivitiesService_GetActivityList"
+    },
+    {
+      "method": "POST",
+      "path": "ActivitiesService_GetSingleInstanceFromSeries",
+      "description": "Invoke the method 'GetSingleInstanceFromSeries' on this service by specifying the payload 'ActivityInstanceParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivitiesService_GetSingleInstanceFromSeries\n{\n    \"ActivityInstanceParams\": {\n        \"ActivityCode\": \"3\",\n        \"InstanceDate\": \"2016-08-30\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ActivitiesService_UpdateSingleInstanceInSeries",
+      "description": "Invoke the method 'UpdateSingleInstanceInSeries' on this service by specifying the payload 'Activity' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivitiesService_UpdateSingleInstanceInSeries\n{\n    \"Activity\": {\n        \"ActivityDate\": \"2016-08-30\",\n        \"ActivityTime\": \"08:13:00\",\n        \"CardCode\": \"C01\",\n        \"DocEntry\": \"3\",\n        \"DocNum\": \"1\",\n        \"DocType\": \"17\",\n        \"Duration\": 15,\n        \"DurationType\": \"du_Minuts\",\n        \"EndDueDate\": \"2016-08-30\",\n        \"EndTime\": \"08:28:00\",\n        \"Reminder\": \"tYES\",\n        \"ReminderPeriod\": 15,\n        \"ReminderType\": \"du_Minuts\",\n        \"StartDate\": \"2016-08-30\",\n        \"StartTime\": \"08:13:00\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ActivitiesService_DeleteSingleInstanceFromSeries",
+      "description": "Invoke the method 'DeleteSingleInstanceFromSeries' on this service by specifying the payload 'ActivityInstanceParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivitiesService_DeleteSingleInstanceFromSeries\n{\n    \"ActivityInstanceParams\": {\n        \"ActivityCode\": \"3\",\n        \"InstanceDate\": \"2016-08-30\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ActivitiesService_GetTopNActivityInstances",
+      "description": "Invoke the method 'GetTopNActivityInstances' on this service by specifying the payload 'ActivityInstancesListParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivitiesService_GetTopNActivityInstances\n{\n    \"ActivityInstancesListParams\": {\n        \"ActivityInstancesListParams\": {\n            \"StartDate\": \"2016-08-30\"\n        }\n    }\n}"
+    }
+  ]
+}

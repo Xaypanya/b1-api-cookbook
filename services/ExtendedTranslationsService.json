@@ -1,0 +1,12 @@
+{
+  "service": "ExtendedTranslationsService",
+  "description": "This API enables you to invoke the interfaces defined on 'ExtendedTranslationsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ExtendedTranslationsService_GetExtendedTranslationList",
+      "description": "Invoke the method 'GetExtendedTranslationList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ExtendedTranslationsService_GetExtendedTranslationList"
+    }
+  ]
+}

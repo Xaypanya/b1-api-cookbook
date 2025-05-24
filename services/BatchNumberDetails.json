@@ -1,0 +1,24 @@
+{
+  "service": "BatchNumberDetails",
+  "description": "This entity enables you to manipulate 'BatchNumberDetails'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BatchNumberDetails(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BatchNumberDetails' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BatchNumberDetails(123)\n\nGET https://localhost:50000/b1s/v2/BatchNumberDetails(123)?$select=DocEntry,ItemCode,ItemDescription"
+    },
+    {
+      "method": "GET",
+      "path": "BatchNumberDetails",
+      "description": "Retrieve a collection of 'BatchNumberDetails' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BatchNumberDetails\n\nGET https://localhost:50000/b1s/v2/BatchNumberDetails?$select=DocEntry,ItemCode,ItemDescription&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "BatchNumberDetails(id)",
+      "description": "Update an instance of 'BatchNumberDetails' with the given payload of type 'BatchNumberDetail' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BatchNumberDetails(123)\n{\n    \"Status\": \"bdsStatus_Locked\"\n}"
+    }
+  ]
+}

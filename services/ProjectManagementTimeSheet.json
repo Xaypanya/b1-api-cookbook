@@ -1,0 +1,36 @@
+{
+  "service": "ProjectManagementTimeSheet",
+  "description": "This entity enables you to manipulate 'ProjectManagementTimeSheet'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ProjectManagementTimeSheet(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ProjectManagementTimeSheet' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ProjectManagementTimeSheet(2)\n\nGET https://localhost:50000/b1s/v2/ProjectManagementTimeSheet(2)?$select=AbsEntry,DocNumber,TimeSheetType"
+    },
+    {
+      "method": "GET",
+      "path": "ProjectManagementTimeSheet",
+      "description": "Retrieve a collection of 'ProjectManagementTimeSheet' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ProjectManagementTimeSheet\n\nGET https://localhost:50000/b1s/v2/ProjectManagementTimeSheet?$select=AbsEntry,DocNumber,TimeSheetType&$filter=AbsEntry ge 2 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementTimeSheet",
+      "description": "Create an instance of 'ProjectManagementTimeSheet' with the given payload of type 'PM_TimeSheetData' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementTimeSheet\n{\n    \"DateFrom\": \"2016-08-31\",\n    \"DateTo\": \"2016-08-31\",\n    \"PM_TimeSheetLineDataCollection\": [\n        {\n            \"ActivityType\": \"1\",\n            \"Date\": \"2016-08-31\",\n            \"EndTime\": \"18:00\",\n            \"StartTime\": \"09:00\"\n        }\n    ],\n    \"UserID\": \"2\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ProjectManagementTimeSheet(id)",
+      "description": "Update an instance of 'ProjectManagementTimeSheet' with the given payload of type 'PM_TimeSheetData' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ProjectManagementTimeSheet(2)\n{\n    \"DateFrom\": \"2016-08-31\",\n    \"DateTo\": \"2016-09-01\",\n    \"PM_TimeSheetLineDataCollection\": [\n        {\n            \"ActivityType\": \"1\",\n            \"Date\": \"2016-09-01\",\n            \"LineID\": 1\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ProjectManagementTimeSheet(id)",
+      "description": "Delete an instance of 'ProjectManagementTimeSheet' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ProjectManagementTimeSheet(2)"
+    }
+  ]
+}

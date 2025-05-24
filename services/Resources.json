@@ -1,0 +1,42 @@
+{
+  "service": "Resources",
+  "description": "This entity enables you to manipulate 'Resources'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Resources(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Resources' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Resources('abc')\n\nGET https://localhost:50000/b1s/v2/Resources('abc')?$select=Code,VisCode,Series"
+    },
+    {
+      "method": "GET",
+      "path": "Resources",
+      "description": "Retrieve a collection of 'Resources' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Resources\n\nGET https://localhost:50000/b1s/v2/Resources?$select=Code,VisCode,Series&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Resources",
+      "description": "Create an instance of 'Resources' with the given payload of type 'Resource' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Resources\n{\n    \"Active\": \"tYES\",\n    \"ActiveFrom\": null,\n    \"ActiveRemarks\": null,\n    \"ActiveTo\": null,\n    \"Allocation\": \"raOnStartDate\",\n    \"AttachmentEntry\": null,\n    \"Code\": \"R02\",\n    \"CodeBar\": null,\n    \"Cost1\": 0,\n    \"Cost10\": 0,\n    \"Cost2\": 0,\n    \"Cost3\": 0,\n    \"Cost4\": 0,\n    \"Cost5\": 0,\n    \"Cost6\": 0,\n    \"Cost7\": 0,\n    \"Cost8\": 0,\n    \"Cost9\": 0,\n    \"DefaultWarehouse\": null,\n    \"ForeignName\": null,\n    \"Group\": 1,\n    \"Inactive\": \"tNO\",\n    \"InactiveFrom\": null,\n    \"InactiveRemarks\": null,\n    \"InactiveTo\": null,\n    \"IssueMethod\": \"rimBackflush\",\n    \"LinkedItem\": null,\n    \"Name\": null,\n    \"Number\": null,\n    \"Picture\": null,\n    \"Property1\": \"tNO\",\n    \"Property10\": \"tNO\",\n    \"Property11\": \"tNO\",\n    \"Property12\": \"tNO\",\n    \"Property13\": \"tNO\",\n    \"Property14\": \"tNO\",\n    \"Property15\": \"tNO\",\n    \"Property16\": \"tNO\",\n    \"Property17\": \"tNO\",\n    \"Property18\": \"tNO\",\n    \"Property19\": \"tNO\",\n    \"Property2\": \"tNO\",\n    \"Property20\": \"tNO\",\n    \"Property21\": \"tNO\",\n    \"Property22\": \"tNO\",\n    \"Property23\": \"tNO\",\n    \"Property24\": \"tNO\",\n    \"Property25\": \"tNO\",\n    \"Property26\": \"tNO\",\n    \"Property27\": \"tNO\",\n    \"Property28\": \"tNO\",\n    \"Property29\": \"tNO\",\n    \"Property3\": \"tNO\",\n    \"Property30\": \"tNO\",\n    \"Property31\": \"tNO\",\n    \"Property32\": \"tNO\",\n    \"Property33\": \"tNO\",\n    \"Property34\": \"tNO\",\n    \"Property35\": \"tNO\",\n    \"Property36\": \"tNO\",\n    \"Property37\": \"tNO\",\n    \"Property38\": \"tNO\",\n    \"Property39\": \"tNO\",\n    \"Property4\": \"tNO\",\n    \"Property40\": \"tNO\",\n    \"Property41\": \"tNO\",\n    \"Property42\": \"tNO\",\n    \"Property43\": \"tNO\",\n    \"Property44\": \"tNO\",\n    \"Property45\": \"tNO\",\n    \"Property46\": \"tNO\",\n    \"Property47\": \"tNO\",\n    \"Property48\": \"tNO\",\n    \"Property49\": \"tNO\",\n    \"Property5\": \"tNO\",\n    \"Property50\": \"tNO\",\n    \"Property51\": \"tNO\",\n    \"Property52\": \"tNO\",\n    \"Property53\": \"tNO\",\n    \"Property54\": \"tNO\",\n    \"Property55\": \"tNO\",\n    \"Property56\": \"tNO\",\n    \"Property57\": \"tNO\",\n    \"Property58\": \"tNO\",\n    \"Property59\": \"tNO\",\n    \"Property6\": \"tNO\",\n    \"Property60\": \"tNO\",\n    \"Property61\": \"tNO\",\n    \"Property62\": \"tNO\",\n    \"Property63\": \"tNO\",\n    \"Property64\": \"tNO\",\n    \"Property7\": \"tNO\",\n    \"Property8\": \"tNO\",\n    \"Property9\": \"tNO\",\n    \"Remarks\": null,\n    \"ResourceDailyCapacities\": [\n        {\n            \"Code\": \"R02\",\n            \"Factor1\": null,\n            \"Factor2\": null,\n            \"Factor3\": null,\n            \"Factor4\": null,\n            \"Remarks\": \"\",\n            \"Total\": null,\n            \"Weekday\": \"rdcwFirst\"\n        },\n        {\n            \"Code\": \"R02\",\n            \"Factor1\": null,\n            \"Factor2\": null,\n            \"Factor3\": null,\n            \"Factor4\": null,\n            \"Remarks\": \"\",\n            \"Total\": null,\n            \"Weekday\": \"rdcwSecond\"\n        },\n        {\n            \"Code\": \"R02\",\n            \"Factor1\": null,\n            \"Factor2\": null,\n            \"Factor3\": null,\n            \"Factor4\": null,\n            \"Remarks\": \"\",\n            \"Total\": null,\n            \"Weekday\": \"rdcwThird\"\n        },\n        {\n            \"Code\": \"R02\",\n            \"Factor1\": null,\n            \"Factor2\": null,\n            \"Factor3\": null,\n            \"Factor4\": null,\n            \"Remarks\": \"\",\n            \"Total\": null,\n            \"Weekday\": \"rdcwFourth\"\n        },\n        {\n            \"Code\": \"R02\",\n            \"Factor1\": null,\n            \"Factor2\": null,\n            \"Factor3\": null,\n            \"Factor4\": null,\n            \"Remarks\": \"\",\n            \"Total\": null,\n            \"Weekday\": \"rdcwFifth\"\n        },\n        {\n            \"Code\": \"R02\",\n            \"Factor1\": null,\n            \"Factor2\": null,\n            \"Factor3\": null,\n            \"Factor4\": null,\n            \"Remarks\": \"\",\n            \"Total\": null,\n            \"Weekday\": \"rdcwSixth\"\n        },\n        {\n            \"Code\": \"R02\",\n            \"Factor1\": null,\n            \"Factor2\": null,\n            \"Factor3\": null,\n            \"Factor4\": null,\n            \"Remarks\": \"\",\n            \"Total\": null,\n            \"Weekday\": \"rdcwSeventh\"\n        }\n    ],\n    \"ResourceEmployees\": [],\n    \"ResourceFixedAssets\": [],\n    \"ResourceWarehouses\": [\n        {\n            \"Code\": \"R02\",\n            \"Locked\": \"tNO\",\n            \"Warehouse\": \"01\"\n        }\n    ],\n    \"Series\": 37,\n    \"TimePerUnits\": null,\n    \"Type\": \"rtMachine\",\n    \"UnitOfMeasure\": null,\n    \"UnitsPerTime\": 1,\n    \"VisCode\": \"R02\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Resources(id)",
+      "description": "Update an instance of 'Resources' with the given payload of type 'Resource' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Resources('abc')\n{\n    \"Name\": \"test\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Resources(id)",
+      "description": "Delete an instance of 'Resources' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Resources('abc')"
+    },
+    {
+      "method": "POST",
+      "path": "Resources(id)/CreateLinkedItem",
+      "description": "Invoke the method 'CreateLinkedItem' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Resources('abc')/CreateLinkedItem"
+    }
+  ]
+}

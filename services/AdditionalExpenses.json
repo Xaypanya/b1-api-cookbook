@@ -1,0 +1,36 @@
+{
+  "service": "AdditionalExpenses",
+  "description": "This entity enables you to manipulate 'AdditionalExpenses'. It represents additional expenses for transporting freight or delivering services, such as delivery fees and tax deposits.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AdditionalExpenses(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AdditionalExpenses' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AdditionalExpenses(123)\n\nGET https://localhost:50000/b1s/v2/AdditionalExpenses(123)?$select=Name,RevenuesAccount,ExpenseAccount"
+    },
+    {
+      "method": "GET",
+      "path": "AdditionalExpenses",
+      "description": "Retrieve a collection of 'AdditionalExpenses' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AdditionalExpenses\n\nGET https://localhost:50000/b1s/v2/AdditionalExpenses?$select=Name,RevenuesAccount,ExpenseAccount&$filter=ExpensCode ge 123 &$orderby=ExpensCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AdditionalExpenses",
+      "description": "Create an instance of 'AdditionalExpenses' with the given payload of type 'AdditionalExpense' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AdditionalExpenses\n{\n    \"DistributionMethod\": \"aed_None\",\n    \"ExpenseAccount\": \"_SYS00000000002\",\n    \"FixedAmountExpenses\": \"20\",\n    \"FixedAmountRevenues\": \"10\",\n    \"Name\": \"road fee\",\n    \"RevenuesAccount\": \"_SYS00000000082\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AdditionalExpenses(id)",
+      "description": "Update an instance of 'AdditionalExpenses' with the given payload of type 'AdditionalExpense' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AdditionalExpenses(123)\n{\n    \"DistributionMethod\": \"aed_Equally\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AdditionalExpenses(id)",
+      "description": "Delete an instance of 'AdditionalExpenses' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AdditionalExpenses(123)"
+    }
+  ]
+}

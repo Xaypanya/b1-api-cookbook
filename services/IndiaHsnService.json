@@ -1,0 +1,12 @@
+{
+  "service": "IndiaHsnService",
+  "description": "This API enables you to invoke the interfaces defined on 'IndiaHsnService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "IndiaHsnService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/IndiaHsnService_GetList"
+    }
+  ]
+}

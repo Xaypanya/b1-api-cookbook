@@ -1,0 +1,36 @@
+{
+  "service": "SalesOpportunityCompetitorsSetup",
+  "description": "This entity enables you to manipulate 'SalesOpportunityCompetitorsSetup'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesOpportunityCompetitorsSetup(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesOpportunityCompetitorsSetup' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunityCompetitorsSetup(123)\n\nGET https://localhost:50000/b1s/v2/SalesOpportunityCompetitorsSetup(123)?$select=SequenceNo,Name,ThreatLevel"
+    },
+    {
+      "method": "GET",
+      "path": "SalesOpportunityCompetitorsSetup",
+      "description": "Retrieve a collection of 'SalesOpportunityCompetitorsSetup' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunityCompetitorsSetup\n\nGET https://localhost:50000/b1s/v2/SalesOpportunityCompetitorsSetup?$select=SequenceNo,Name,ThreatLevel&$filter=SequenceNo ge 123 &$orderby=SequenceNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesOpportunityCompetitorsSetup",
+      "description": "Create an instance of 'SalesOpportunityCompetitorsSetup' with the given payload of type 'SalesOpportunityCompetitorSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesOpportunityCompetitorsSetup\n{\n    \"Details\": \"1111\",\n    \"Name\": \"Win012\",\n    \"SequenceNo\": 2,\n    \"ThreatLevel\": \"tlLow\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesOpportunityCompetitorsSetup(id)",
+      "description": "Update an instance of 'SalesOpportunityCompetitorsSetup' with the given payload of type 'SalesOpportunityCompetitorSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesOpportunityCompetitorsSetup(123)\n{\n    \"Details\": \"2222\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesOpportunityCompetitorsSetup(id)",
+      "description": "Delete an instance of 'SalesOpportunityCompetitorsSetup' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesOpportunityCompetitorsSetup(123)"
+    }
+  ]
+}

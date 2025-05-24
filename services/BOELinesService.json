@@ -1,0 +1,12 @@
+{
+  "service": "BOELinesService",
+  "description": "This API enables you to invoke the interfaces defined on 'BOELinesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BOELinesService_GetBOELine",
+      "description": "Invoke the method 'GetBOELine' on this service by specifying the payload 'BOELineParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BOELinesService_GetBOELine\n{\n    \"BOELineParams\": {\n        \"BOEKey\": \"1\"\n    }\n}"
+    }
+  ]
+}

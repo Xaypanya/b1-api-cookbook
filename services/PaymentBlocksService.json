@@ -1,0 +1,12 @@
+{
+  "service": "PaymentBlocksService",
+  "description": "This API enables you to invoke the interfaces defined on 'PaymentBlocksService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "PaymentBlocksService_GetPaymentBlockList",
+      "description": "Invoke the method 'GetPaymentBlockList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentBlocksService_GetPaymentBlockList"
+    }
+  ]
+}

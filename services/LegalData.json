@@ -1,0 +1,30 @@
+{
+  "service": "LegalData",
+  "description": "This entity enables you to manipulate 'LegalData'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "LegalData(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'LegalData' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/LegalData(123)\n\nGET https://localhost:50000/b1s/v2/LegalData(123)?$select=DocEntry,SourceObjectType,SourceObjectEntry"
+    },
+    {
+      "method": "GET",
+      "path": "LegalData",
+      "description": "Retrieve a collection of 'LegalData' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/LegalData\n\nGET https://localhost:50000/b1s/v2/LegalData?$select=DocEntry,SourceObjectType,SourceObjectEntry&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "LegalData",
+      "description": "Create an instance of 'LegalData' with the given payload of type 'LegalData' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/LegalData\n{\n    \"DateOfPrinting\": null,\n    \"DocEntry\": 1,\n    \"DocumentNumber\": \"1\",\n    \"FiscalNumber\": \"1\",\n    \"FiscalSeries\": \"1\",\n    \"FiscalUserID\": \"1\",\n    \"LegalDataDetailCollection\": [\n        {\n            \"Amount\": 10,\n            \"DocEntry\": 1,\n            \"LineSequence\": 1,\n            \"LineType\": \"ldlt_DocumentTotal\",\n            \"TaxCode\": \"1\",\n            \"TaxRate\": \"1\"\n        }\n    ],\n    \"PrinterBrand\": \"1\",\n    \"PrinterDllVersion\": \"1\",\n    \"PrinterFirmwareVersion\": \"1\",\n    \"PrinterModel\": \"1\",\n    \"PrinterType\": \"1\",\n    \"SourceObjectEntry\": 5,\n    \"SourceObjectType\": \"bodt_Invoice\",\n    \"TimeOfPrinting\": null\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "LegalData(id)",
+      "description": "Update an instance of 'LegalData' with the given payload of type 'LegalData' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/LegalData(123)\n{\n    \"PrinterType\": \"12\"\n}"
+    }
+  ]
+}

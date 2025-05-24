@@ -1,0 +1,36 @@
+{
+  "service": "Banks",
+  "description": "This entity enables you to manipulate 'Banks'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Banks(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Banks' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Banks(123)\n\nGET https://localhost:50000/b1s/v2/Banks(123)?$select=BankCode,BankName,AccountforOutgoingChecks"
+    },
+    {
+      "method": "GET",
+      "path": "Banks",
+      "description": "Retrieve a collection of 'Banks' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Banks\n\nGET https://localhost:50000/b1s/v2/Banks?$select=BankCode,BankName,AccountforOutgoingChecks&$filter=AbsoluteEntry ge 123 &$orderby=AbsoluteEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Banks",
+      "description": "Create an instance of 'Banks' with the given payload of type 'Bank' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Banks\n{\n    \"BankCode\": \"b001\",\n    \"BankName\": \"US National Bank\",\n    \"CountryCode\": \"US\",\n    \"SwiftNo\": \"123456789\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Banks(id)",
+      "description": "Update an instance of 'Banks' with the given payload of type 'Bank' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Banks(123)\n{\n    \"BankName\": \"US Bank\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Banks(id)",
+      "description": "Delete an instance of 'Banks' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Banks(123)"
+    }
+  ]
+}

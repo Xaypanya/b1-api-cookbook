@@ -1,0 +1,18 @@
+{
+  "service": "StockTransferService",
+  "description": "This API enables you to invoke the interfaces defined on 'StockTransferService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "StockTransferService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'StockTransfer' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferService_GetApprovalTemplates\n{\n    \"StockTransfer\": {\n        \"CardCode\": \"C001\",\n        \"StockTransferLines\": [\n            {\n                \"DocDate\": \"2016-08-31\",\n                \"ItemCode\": \"I001\",\n                \"WarehouseCode\": \"10\"\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransferService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferService_HandleApprovalRequest"
+    }
+  ]
+}

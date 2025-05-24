@@ -1,0 +1,36 @@
+{
+  "service": "PredefinedTexts",
+  "description": "This entity enables you to manipulate 'PredefinedTexts'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PredefinedTexts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PredefinedTexts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PredefinedTexts(1)\n\nGET https://localhost:50000/b1s/v2/PredefinedTexts(1)?$select=Numerator,TextCode,Text"
+    },
+    {
+      "method": "GET",
+      "path": "PredefinedTexts",
+      "description": "Retrieve a collection of 'PredefinedTexts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PredefinedTexts\n\nGET https://localhost:50000/b1s/v2/PredefinedTexts?$select=Numerator,TextCode,Text&$filter=Numerator ge 1 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PredefinedTexts",
+      "description": "Create an instance of 'PredefinedTexts' with the given payload of type 'PredefinedText' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PredefinedTexts\n{\n    \"Text\": \"V5's text\",\n    \"TextCode\": \"V5\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PredefinedTexts(id)",
+      "description": "Update an instance of 'PredefinedTexts' with the given payload of type 'PredefinedText' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PredefinedTexts(1)\n{\n    \"Text\": \"updating V5's text\",\n    \"TextCode\": \"V5\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PredefinedTexts(id)",
+      "description": "Delete an instance of 'PredefinedTexts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PredefinedTexts(1)"
+    }
+  ]
+}

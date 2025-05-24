@@ -1,0 +1,36 @@
+{
+  "service": "InventoryPostings",
+  "description": "This entity enables you to manipulate 'InventoryPostings'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "InventoryPostings(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'InventoryPostings' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryPostings(123)\n\nGET https://localhost:50000/b1s/v2/InventoryPostings(123)?$select=DocumentEntry,DocumentNumber,Series"
+    },
+    {
+      "method": "GET",
+      "path": "InventoryPostings",
+      "description": "Retrieve a collection of 'InventoryPostings' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryPostings\n\nGET https://localhost:50000/b1s/v2/InventoryPostings?$select=DocumentEntry,DocumentNumber,Series&$filter=DocumentEntry ge 123 &$orderby=DocumentEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryPostings",
+      "description": "Create an instance of 'InventoryPostings' with the given payload of type 'InventoryPosting' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryPostings\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "InventoryPostings(id)",
+      "description": "Update an instance of 'InventoryPostings' with the given payload of type 'InventoryPosting' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/InventoryPostings(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "InventoryPostings(id)",
+      "description": "Delete an instance of 'InventoryPostings' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/InventoryPostings(123)"
+    }
+  ]
+}

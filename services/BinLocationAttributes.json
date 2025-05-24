@@ -1,0 +1,36 @@
+{
+  "service": "BinLocationAttributes",
+  "description": "This entity enables you to manipulate 'BinLocationAttributes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BinLocationAttributes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BinLocationAttributes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BinLocationAttributes(123)\n\nGET https://localhost:50000/b1s/v2/BinLocationAttributes(123)?$select=Attribute,Code,AbsEntry"
+    },
+    {
+      "method": "GET",
+      "path": "BinLocationAttributes",
+      "description": "Retrieve a collection of 'BinLocationAttributes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BinLocationAttributes\n\nGET https://localhost:50000/b1s/v2/BinLocationAttributes?$select=Attribute,Code,AbsEntry&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BinLocationAttributes",
+      "description": "Create an instance of 'BinLocationAttributes' with the given payload of type 'BinLocationAttribute' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BinLocationAttributes\n{\n    \"AbsEntry\": 3,\n    \"Attribute\": 5,\n    \"Code\": \"BinAttr03\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BinLocationAttributes(id)",
+      "description": "Update an instance of 'BinLocationAttributes' with the given payload of type 'BinLocationAttribute' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BinLocationAttributes(123)\n{\n    \"Code\": \"BinAttr0212\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BinLocationAttributes(id)",
+      "description": "Delete an instance of 'BinLocationAttributes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BinLocationAttributes(123)"
+    }
+  ]
+}

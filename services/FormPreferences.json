@@ -1,0 +1,30 @@
+{
+  "service": "FormPreferences",
+  "description": "This entity enables you to manipulate 'FormPreferences'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "FormPreferences(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'FormPreferences' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/FormPreferences(User=123,FormID='abc',ItemNumber='abc',Column='abc')\n\nGET https://localhost:50000/b1s/v2/FormPreferences(User=123,FormID='abc',ItemNumber='abc',Column='abc')?$select=User,FormID,ItemNumber"
+    },
+    {
+      "method": "GET",
+      "path": "FormPreferences",
+      "description": "Retrieve a collection of 'FormPreferences' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/FormPreferences\n\nGET https://localhost:50000/b1s/v2/FormPreferences?$select=User,FormID,ItemNumber&$filter=User ge 123 and startswith(FormID, 'a') and startswith(ItemNumber, 'a') and startswith(Column, 'a') &$orderby=User,FormID,ItemNumber,Column&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "FormPreferences(id)",
+      "description": "Update an instance of 'FormPreferences' with the given payload of type 'ColumnPreferences' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/FormPreferences(User=123,FormID='abc',ItemNumber='abc',Column='abc')\n{\n    \"VisibleInExpanded\": \"tNO\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "FormPreferences(id)",
+      "description": "Delete an instance of 'FormPreferences' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/FormPreferences(User=123,FormID='abc',ItemNumber='abc',Column='abc')"
+    }
+  ]
+}

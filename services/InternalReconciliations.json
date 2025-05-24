@@ -1,0 +1,18 @@
+{
+  "service": "InternalReconciliations",
+  "description": "This entity enables you to manipulate 'InternalReconciliations'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "InternalReconciliations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'InternalReconciliations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/InternalReconciliations(123)\n\nGET https://localhost:50000/b1s/v2/InternalReconciliations(123)?$select=ReconNum,ReconDate,CardOrAccount"
+    },
+    {
+      "method": "POST",
+      "path": "InternalReconciliations",
+      "description": "Create an instance of 'InternalReconciliations' with the given payload of type 'InternalReconciliation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InternalReconciliations\n{\n    \"CardOrAccount\": \"coaCard\",\n    \"InternalReconciliationOpenTransRows\": [\n        {\n            \"CashDiscount\": null,\n            \"CreditOrDebit\": \"codDebit\",\n            \"ReconcileAmount\": 10,\n            \"Selected\": \"tYES\",\n            \"ShortName\": \"v01\",\n            \"SrcObjAbs\": 5,\n            \"SrcObjTyp\": \"46\",\n            \"TransId\": 41,\n            \"TransRowId\": 1\n        },\n        {\n            \"CashDiscount\": null,\n            \"CreditOrDebit\": \"codCredit\",\n            \"ReconcileAmount\": 10,\n            \"Selected\": \"tYES\",\n            \"ShortName\": \"v01\",\n            \"SrcObjAbs\": 11,\n            \"SrcObjTyp\": \"18\",\n            \"TransId\": 43,\n            \"TransRowId\": 0\n        }\n    ],\n    \"ReconDate\": \"2017-11-15\"\n}"
+    }
+  ]
+}

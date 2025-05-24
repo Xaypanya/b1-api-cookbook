@@ -1,0 +1,42 @@
+{
+  "service": "ProjectManagements",
+  "description": "This entity enables you to manipulate 'ProjectManagements'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ProjectManagements(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ProjectManagements' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ProjectManagements(123)\n\nGET https://localhost:50000/b1s/v2/ProjectManagements(123)?$select=AbsEntry,Owner,ProjectName"
+    },
+    {
+      "method": "GET",
+      "path": "ProjectManagements",
+      "description": "Retrieve a collection of 'ProjectManagements' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ProjectManagements\n\nGET https://localhost:50000/b1s/v2/ProjectManagements?$select=AbsEntry,Owner,ProjectName&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagements",
+      "description": "Create an instance of 'ProjectManagements' with the given payload of type 'PM_ProjectDocumentData' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagements\n{\n    \"AllowSubprojects\": \"tYES\",\n    \"AttachmentEntry\": 1,\n    \"BusinessPartner\": \"Customer_01\",\n    \"BusinessPartnerName\": \"BP Name_01\",\n    \"ClosingDate\": \"2016-12-31\",\n    \"ContactPerson\": 2,\n    \"DueDate\": \"2016-11-30\",\n    \"FinancialProject\": \"FinProj_01\",\n    \"Industry\": 3,\n    \"Owner\": 1,\n    \"ProjectName\": \"ProjectByDI_01\",\n    \"ProjectStatus\": \"pst_Started\",\n    \"ProjectType\": \"pt_External\",\n    \"Reason\": \"Test comment\",\n    \"RiskLevel\": \"rlt_High\",\n    \"SalesEmployee\": 5,\n    \"StartDate\": \"2016-02-01\",\n    \"Territory\": 1\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ProjectManagements(id)",
+      "description": "Update an instance of 'ProjectManagements' with the given payload of type 'PM_ProjectDocumentData' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ProjectManagements(123)\n{\n    \"Reason\": \"Test comment update\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ProjectManagements(id)",
+      "description": "Delete an instance of 'ProjectManagements' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ProjectManagements(123)"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagements(id)/CancelProject",
+      "description": "Invoke the method 'CancelProject' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagements(123)/CancelProject"
+    }
+  ]
+}

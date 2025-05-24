@@ -1,0 +1,18 @@
+{
+  "service": "BEMReplicationPeriodService",
+  "description": "This API enables you to invoke the interfaces defined on 'BEMReplicationPeriodService'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BEMReplicationPeriodService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "GET https://localhost:50000/b1s/v2/BEMReplicationPeriodService_GetList"
+    },
+    {
+      "method": "POST",
+      "path": "BEMReplicationPeriodService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/BEMReplicationPeriodService_GetList"
+    }
+  ]
+}

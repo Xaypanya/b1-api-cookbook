@@ -1,0 +1,36 @@
+{
+  "service": "ElectronicFileFormats",
+  "description": "This entity enables you to manipulate 'ElectronicFileFormats'. It depends on EFM runtime.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ElectronicFileFormats(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ElectronicFileFormats' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ElectronicFileFormats(123)\n\nGET https://localhost:50000/b1s/v2/ElectronicFileFormats(123)?$select=FormatID,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ElectronicFileFormats",
+      "description": "Retrieve a collection of 'ElectronicFileFormats' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ElectronicFileFormats\n\nGET https://localhost:50000/b1s/v2/ElectronicFileFormats?$select=FormatID,Name,Description&$filter=FormatID ge 123 &$orderby=FormatID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicFileFormats",
+      "description": "Create an instance of 'ElectronicFileFormats' with the given payload of type 'ElectronicFileFormat' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicFileFormats\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ElectronicFileFormats(id)",
+      "description": "Update an instance of 'ElectronicFileFormats' with the given payload of type 'ElectronicFileFormat' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ElectronicFileFormats(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ElectronicFileFormats(id)",
+      "description": "Delete an instance of 'ElectronicFileFormats' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ElectronicFileFormats(123)"
+    }
+  ]
+}

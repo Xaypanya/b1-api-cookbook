@@ -1,0 +1,48 @@
+{
+  "service": "VendorPayments",
+  "description": "This entity enables you to manipulate 'VendorPayments'. It represents incoming payments to vendors or, for returned goods, to customers. Available payment methods are cash, credit cards, checks, bank transfers, and in some localizations, bills of exchange.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "VendorPayments(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'VendorPayments' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/VendorPayments(123)\n\nGET https://localhost:50000/b1s/v2/VendorPayments(123)?$select=DocNum,DocType,HandWritten"
+    },
+    {
+      "method": "GET",
+      "path": "VendorPayments",
+      "description": "Retrieve a collection of 'VendorPayments' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/VendorPayments\n\nGET https://localhost:50000/b1s/v2/VendorPayments?$select=DocNum,DocType,HandWritten&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "VendorPayments",
+      "description": "Create an instance of 'VendorPayments' with the given payload of type 'Payment' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/VendorPayments\n{\n    \"CardCode\": \"v001\",\n    \"CashFlowAssignments\": [\n        {\n            \"AmountLC\": \"101\",\n            \"PaymentMeans\": \"pmtBankTransfer\"\n        }\n    ],\n    \"TransferAccount\": \"_SYS00000000004\",\n    \"TransferDate\": \"2014-03-27\",\n    \"TransferSum\": \"101\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "VendorPayments(id)",
+      "description": "Update an instance of 'VendorPayments' with the given payload of type 'Payment' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/VendorPayments(123)\n{\n    \"Remarks\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "VendorPayments(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/VendorPayments(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "VendorPayments(id)/GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/VendorPayments(123)/GetApprovalTemplates"
+    },
+    {
+      "method": "POST",
+      "path": "VendorPayments(id)/CancelbyCurrentSystemDate",
+      "description": "Invoke the method 'CancelbyCurrentSystemDate' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/VendorPayments(123)/CancelbyCurrentSystemDate"
+    }
+  ]
+}

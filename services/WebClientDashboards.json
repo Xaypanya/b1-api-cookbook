@@ -1,0 +1,36 @@
+{
+  "service": "WebClientDashboards",
+  "description": "This entity enables you to manipulate 'WebClientDashboards'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientDashboards(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientDashboards' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientDashboards('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientDashboards('abc')?$select=Guid,UserId,Content"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientDashboards",
+      "description": "Retrieve a collection of 'WebClientDashboards' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientDashboards\n\nGET https://localhost:50000/b1s/v2/WebClientDashboards?$select=Guid,UserId,Content&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientDashboards",
+      "description": "Create an instance of 'WebClientDashboards' with the given payload of type 'WebClientDashboard' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientDashboards\n{\n    \"Guid\": \"DB_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientDashboards(id)",
+      "description": "Update an instance of 'WebClientDashboards' with the given payload of type 'WebClientDashboard' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientDashboards('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientDashboards(id)",
+      "description": "Delete an instance of 'WebClientDashboards' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientDashboards('abc')"
+    }
+  ]
+}

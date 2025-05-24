@@ -1,0 +1,36 @@
+{
+  "service": "BOEPortfolios",
+  "description": "This entity enables you to manipulate 'BOEPortfolios'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BOEPortfolios(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BOEPortfolios' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BOEPortfolios(123)\n\nGET https://localhost:50000/b1s/v2/BOEPortfolios(123)?$select=PortfolioEntry,PortfolioID,PortfolioCode"
+    },
+    {
+      "method": "GET",
+      "path": "BOEPortfolios",
+      "description": "Retrieve a collection of 'BOEPortfolios' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BOEPortfolios\n\nGET https://localhost:50000/b1s/v2/BOEPortfolios?$select=PortfolioEntry,PortfolioID,PortfolioCode&$filter=PortfolioEntry ge 123 &$orderby=PortfolioEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BOEPortfolios",
+      "description": "Create an instance of 'BOEPortfolios' with the given payload of type 'BOEPortfolio' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BOEPortfolios\n{\n    \"PortfolioCode\": \"01\",\n    \"PortfolioDescription\": \"01\",\n    \"PortfolioID\": \"01\",\n    \"PortfolioNum\": \"01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BOEPortfolios(id)",
+      "description": "Update an instance of 'BOEPortfolios' with the given payload of type 'BOEPortfolio' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BOEPortfolios(123)\n{\n    \"PortfolioCode\": \"02\",\n    \"PortfolioDescription\": \"02\",\n    \"PortfolioID\": \"02\",\n    \"PortfolioNum\": \"02\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BOEPortfolios(id)",
+      "description": "Delete an instance of 'BOEPortfolios' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BOEPortfolios(123)"
+    }
+  ]
+}

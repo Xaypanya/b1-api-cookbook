@@ -1,0 +1,12 @@
+{
+  "service": "AddressService",
+  "description": "This API enables you to invoke the interfaces defined on 'AddressService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "AddressService_GetFullAddress",
+      "description": "Invoke the method 'GetFullAddress' on this service by specifying the payload 'AddressParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AddressService_GetFullAddress\n{\n    \"AddressParams\": {\n        \"Block\": \"1001\",\n        \"City\": \"Shanghai\",\n        \"Country\": \"CN\",\n        \"Street\": \"Chenhui\"\n    }\n}"
+    }
+  ]
+}

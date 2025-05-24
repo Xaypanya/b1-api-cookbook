@@ -1,0 +1,48 @@
+{
+  "service": "EmployeesInfo",
+  "description": "This entity enables you to manipulate 'EmployeesInfo'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EmployeesInfo(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EmployeesInfo' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeesInfo(123)\n\nGET https://localhost:50000/b1s/v2/EmployeesInfo(123)?$select=EmployeeID,LastName,FirstName"
+    },
+    {
+      "method": "GET",
+      "path": "EmployeesInfo",
+      "description": "Retrieve a collection of 'EmployeesInfo' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeesInfo\n\nGET https://localhost:50000/b1s/v2/EmployeesInfo?$select=EmployeeID,LastName,FirstName&$filter=EmployeeID ge 123 &$orderby=EmployeeID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EmployeesInfo",
+      "description": "Create an instance of 'EmployeesInfo' with the given payload of type 'EmployeeInfo' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeesInfo\n{\n    \"Branch\": \"-2\",\n    \"Department\": \"-2\",\n    \"FirstName\": \"Harry\",\n    \"JobTitle\": \"Tester\",\n    \"LastName\": \"Hu\",\n    \"Remarks\": \"Best Employee\",\n    \"WorkCountryCode\": \"US\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EmployeesInfo(id)",
+      "description": "Update an instance of 'EmployeesInfo' with the given payload of type 'EmployeeInfo' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EmployeesInfo(123)\n{\n    \"Remarks\": \"new manager\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EmployeesInfo(id)",
+      "description": "Delete an instance of 'EmployeesInfo' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EmployeesInfo(123)"
+    },
+    {
+      "method": "POST",
+      "path": "EmployeesInfo(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeesInfo(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "EmployeesInfo(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeesInfo(123)/Close"
+    }
+  ]
+}

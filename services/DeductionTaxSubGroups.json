@@ -1,0 +1,30 @@
+{
+  "service": "DeductionTaxSubGroups",
+  "description": "This entity enables you to manipulate 'DeductionTaxSubGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DeductionTaxSubGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DeductionTaxSubGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductionTaxSubGroups('99')\n\nGET https://localhost:50000/b1s/v2/DeductionTaxSubGroups('99')?$select=GroupCode,GroupName"
+    },
+    {
+      "method": "GET",
+      "path": "DeductionTaxSubGroups",
+      "description": "Retrieve a collection of 'DeductionTaxSubGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductionTaxSubGroups\n\nGET https://localhost:50000/b1s/v2/DeductionTaxSubGroups?$select=GroupCode,GroupName&$filter=startswith(GroupCode, '99') &$orderby=GroupCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DeductionTaxSubGroups",
+      "description": "Create an instance of 'DeductionTaxSubGroups' with the given payload of type 'DeductionTaxSubGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DeductionTaxSubGroups\n{\n    \"GroupCode\": \"99\",\n    \"GroupName\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DeductionTaxSubGroups(id)",
+      "description": "Update an instance of 'DeductionTaxSubGroups' with the given payload of type 'DeductionTaxSubGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DeductionTaxSubGroups('99')\n{\n    \"GroupName\": \"123\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "AssetClasses",
+  "description": "This entity enables you to manipulate 'AssetClasses'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AssetClasses(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AssetClasses' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetClasses('TEST')\n\nGET https://localhost:50000/b1s/v2/AssetClasses('TEST')?$select=Code,Description,AssetType"
+    },
+    {
+      "method": "GET",
+      "path": "AssetClasses",
+      "description": "Retrieve a collection of 'AssetClasses' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetClasses\n\nGET https://localhost:50000/b1s/v2/AssetClasses?$select=Code,Description,AssetType&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AssetClasses",
+      "description": "Create an instance of 'AssetClasses' with the given payload of type 'AssetClass' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetClasses\n{\n    \"AssetClassCollection\": [\n        {\n            \"AccountDetermination\": \"1001\",\n            \"ActiveStatus\": \"tYES\",\n            \"Code\": \"TEST\",\n            \"DepreciationAreaID\": \"100\",\n            \"DepreciationTypeID\": \"LINP\",\n            \"LineNumber\": 0,\n            \"UseLife\": 36\n        },\n        {\n            \"AccountDetermination\": null,\n            \"ActiveStatus\": \"tYES\",\n            \"Code\": \"TEST\",\n            \"DepreciationAreaID\": \"300\",\n            \"DepreciationTypeID\": \"LINP\",\n            \"LineNumber\": 1,\n            \"UseLife\": 36\n        }\n    ],\n    \"AssetType\": \"atAssetTypeGeneral\",\n    \"Code\": \"TEST\",\n    \"Description\": \"test AssetClasses\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AssetClasses(id)",
+      "description": "Update an instance of 'AssetClasses' with the given payload of type 'AssetClass' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AssetClasses('TEST')\n{\n    \"AssetType\": \"atAssetTypeLowValueAsset\",\n    \"Description\": \"test AssetClasses\",\n    \"ValueLimitFrom\": \"600\",\n    \"ValueLimitTo\": \"2000\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AssetClasses(id)",
+      "description": "Delete an instance of 'AssetClasses' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AssetClasses('TEST')"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "service": "AssetGroupsService",
+  "description": "This API enables you to invoke the interfaces defined on 'AssetGroupsService'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AssetGroupsService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetGroupsService_GetList"
+    },
+    {
+      "method": "POST",
+      "path": "AssetGroupsService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetGroupsService_GetList"
+    }
+  ]
+}

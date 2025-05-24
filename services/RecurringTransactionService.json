@@ -1,0 +1,30 @@
+{
+  "service": "RecurringTransactionService",
+  "description": "This API enables you to invoke the interfaces defined on 'RecurringTransactionService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "RecurringTransactionService_GetAvailableRecurringTransactions",
+      "description": "Invoke the method 'GetAvailableRecurringTransactions' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/RecurringTransactionService_GetAvailableRecurringTransactions"
+    },
+    {
+      "method": "POST",
+      "path": "RecurringTransactionService_DeleteRecurringTransactions",
+      "description": "Invoke the method 'DeleteRecurringTransactions' on this service by specifying the payload 'RclRecurringTransactionParamsCollection' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/RecurringTransactionService_DeleteRecurringTransactions\n{\n    \"RclRecurringTransactionParamsCollection\": [\n        {},\n        {}\n    ]\n}"
+    },
+    {
+      "method": "POST",
+      "path": "RecurringTransactionService_GetRecurringTransaction",
+      "description": "Invoke the method 'GetRecurringTransaction' on this service by specifying the payload 'RclRecurringTransactionParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/RecurringTransactionService_GetRecurringTransaction\n{\n    \"RclRecurringTransactionParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "RecurringTransactionService_ExecuteRecurringTransactions",
+      "description": "Invoke the method 'ExecuteRecurringTransactions' on this service by specifying the payload 'RclRecurringTransactionParamsCollection,RclRecurringExecutionParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/RecurringTransactionService_ExecuteRecurringTransactions\n{\n    \"RclRecurringExecutionParams\": {},\n    \"RclRecurringTransactionParamsCollection\": [\n        {},\n        {}\n    ]\n}"
+    }
+  ]
+}

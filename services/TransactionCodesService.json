@@ -1,0 +1,12 @@
+{
+  "service": "TransactionCodesService",
+  "description": "This API enables you to invoke the interfaces defined on 'TransactionCodesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "TransactionCodesService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/TransactionCodesService_GetList"
+    }
+  ]
+}

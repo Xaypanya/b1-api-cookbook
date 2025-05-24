@@ -1,0 +1,36 @@
+{
+  "service": "Attachments2",
+  "description": "This entity enables you to manipulate 'Attachments2'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Attachments2(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Attachments2' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Attachments2(123)\n\nGET https://localhost:50000/b1s/v2/Attachments2(123)?$select=AbsoluteEntry,Attachments2_Lines"
+    },
+    {
+      "method": "GET",
+      "path": "Attachments2",
+      "description": "Retrieve a collection of 'Attachments2' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Attachments2\n\nGET https://localhost:50000/b1s/v2/Attachments2?$select=AbsoluteEntry,Attachments2_Lines&$filter=AbsoluteEntry ge 123 &$orderby=AbsoluteEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Attachments2",
+      "description": "Create an instance of 'Attachments2' with the given payload of type 'Attachments2' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Attachments2\n{\n    \"Attachments2_Lines\": [\n        {\n            \"FileExtension\": \"so\",\n            \"FileName\": \"mod_negotiation\",\n            \"SourcePath\": \"/usr/sap/SAPBusinessOne/ServiceLayer/modules\",\n            \"UserID\": \"1\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Attachments2(id)",
+      "description": "Update an instance of 'Attachments2' with the given payload of type 'Attachments2' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Attachments2(123)\n{\n    \"Attachments2_Lines\": [\n        {\n            \"FileExtension\": \"so\",\n            \"FileName\": \"mod_negotiation\",\n            \"SourcePath\": \"/usr/sap/SAPBusinessOne/ServiceLayer/modules\",\n            \"UserID\": \"1\"\n        },\n        {\n            \"FileExtension\": \"so\",\n            \"FileName\": \"mod_negotiation2\",\n            \"SourcePath\": \"/usr/sap/SAPBusinessOne/ServiceLayer/modules\",\n            \"UserID\": \"1\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Attachments2(id)",
+      "description": "Delete an instance of 'Attachments2' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Attachments2(123)"
+    }
+  ]
+}

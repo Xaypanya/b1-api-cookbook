@@ -1,0 +1,12 @@
+{
+  "service": "TaxCodeDeterminationsService",
+  "description": "This API enables you to invoke the interfaces defined on 'TaxCodeDeterminationsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "TaxCodeDeterminationsService_GetTaxCodeDeterminationList",
+      "description": "Invoke the method 'GetTaxCodeDeterminationList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/TaxCodeDeterminationsService_GetTaxCodeDeterminationList"
+    }
+  ]
+}

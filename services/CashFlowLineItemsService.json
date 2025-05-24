@@ -1,0 +1,12 @@
+{
+  "service": "CashFlowLineItemsService",
+  "description": "This API enables you to invoke the interfaces defined on 'CashFlowLineItemsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CashFlowLineItemsService_GetCashFlowLineItemList",
+      "description": "Invoke the method 'GetCashFlowLineItemList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CashFlowLineItemsService_GetCashFlowLineItemList"
+    }
+  ]
+}

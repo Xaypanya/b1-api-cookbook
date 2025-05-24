@@ -1,0 +1,30 @@
+{
+  "service": "CockpitsService",
+  "description": "This API enables you to invoke the interfaces defined on 'CockpitsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CockpitsService_GetCockpitList",
+      "description": "Invoke the method 'GetCockpitList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CockpitsService_GetCockpitList"
+    },
+    {
+      "method": "POST",
+      "path": "CockpitsService_PublishCockpit",
+      "description": "Invoke the method 'PublishCockpit' on this service by specifying the payload 'Cockpit' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CockpitsService_PublishCockpit\n{\n    \"Cockpit\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CockpitsService_GetUserCockpitList",
+      "description": "Invoke the method 'GetUserCockpitList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CockpitsService_GetUserCockpitList"
+    },
+    {
+      "method": "POST",
+      "path": "CockpitsService_GetTemplateCockpitList",
+      "description": "Invoke the method 'GetTemplateCockpitList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CockpitsService_GetTemplateCockpitList"
+    }
+  ]
+}

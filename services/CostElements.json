@@ -1,0 +1,36 @@
+{
+  "service": "CostElements",
+  "description": "This entity enables you to manipulate 'CostElements'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CostElements(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CostElements' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CostElements('abc')\n\nGET https://localhost:50000/b1s/v2/CostElements('abc')?$select=Code,Description,IsActive"
+    },
+    {
+      "method": "GET",
+      "path": "CostElements",
+      "description": "Retrieve a collection of 'CostElements' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CostElements\n\nGET https://localhost:50000/b1s/v2/CostElements?$select=Code,Description,IsActive&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CostElements",
+      "description": "Create an instance of 'CostElements' with the given payload of type 'CostElement' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CostElements\n{\n    \"Code\": \"CE 01\",\n    \"Description\": \"Cost Element 001\",\n    \"IsActive\": \"tYES\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CostElements(id)",
+      "description": "Update an instance of 'CostElements' with the given payload of type 'CostElement' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CostElements('CE 01')\n{\n    \"Description\": \"Cost Element 000001\",\n    \"IsActive\": \"tNO\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CostElements(id)",
+      "description": "Delete an instance of 'CostElements' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CostElements('abc')"
+    }
+  ]
+}

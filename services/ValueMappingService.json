@@ -1,0 +1,24 @@
+{
+  "service": "ValueMappingService",
+  "description": "This API enables you to invoke the interfaces defined on 'ValueMappingService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ValueMappingService_GetMappedB1Value",
+      "description": "Invoke the method 'GetMappedB1Value' on this service by specifying the payload 'VM_B1ValuesData' in the JSON format.\n\t\t\t\tRetreives value from Business One universe, that is mapped to specific 3th party value.",
+      "example": "POST https://localhost:50000/b1s/v2/ValueMappingService_GetMappedB1Value\n{\n    \"ObjectId\": 37,\n    \"VM_ThirdPartyValuesData\": {\n        \"ThirdPartySystemId\": 1,\n        \"ThirdPartyValue\": \"AED\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ValueMappingService_GetThirdPartyValuesForB1Value",
+      "description": "Invoke the method 'GetThirdPartyValuesForB1Value' on this service by specifying the payload 'VM_B1ValuesData' in the JSON format.\n\t\t\t\tRetrieves all 3th party values for the specific value from Business One universe.",
+      "example": "POST https://localhost:50000/b1s/v2/ValueMappingService_GetThirdPartyValuesForB1Value\n{\n    \"ObjectAbsEntry\": \"CHF\",\n    \"ObjectId\": 37\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ValueMappingService_RemoveMappedValue",
+      "description": "Invoke the method 'RemoveMappedValue' on this service by specifying the payload 'VM_ThirdPartyValuesData' in the JSON format.\n\t\t\t\tRemoves one 3th party value from the collection of mapped values to one specific value from Business One universe.",
+      "example": "POST https://localhost:50000/b1s/v2/ValueMappingService_RemoveMappedValue\n{\n    \"AbsEntry\": 6,\n    \"LineId\": 2,\n    \"ThirdPartySystemId\": 1\n}"
+    }
+  ]
+}

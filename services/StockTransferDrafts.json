@@ -1,0 +1,48 @@
+{
+  "service": "StockTransferDrafts",
+  "description": "This entity enables you to manipulate 'StockTransferDrafts'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "StockTransferDrafts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'StockTransferDrafts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/StockTransferDrafts(123)\n\nGET https://localhost:50000/b1s/v2/StockTransferDrafts(123)?$select=DocEntry,Series,Printed"
+    },
+    {
+      "method": "GET",
+      "path": "StockTransferDrafts",
+      "description": "Retrieve a collection of 'StockTransferDrafts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/StockTransferDrafts\n\nGET https://localhost:50000/b1s/v2/StockTransferDrafts?$select=DocEntry,Series,Printed&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransferDrafts",
+      "description": "Create an instance of 'StockTransferDrafts' with the given payload of type 'StockTransfer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferDrafts\n{\n    \"StockTransferLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"UnitPrice\": \"30\",\n            \"WarehouseCode\": \"w001\"\n        }\n    ]\n}\nPOST https://localhost:50000/b1s/v2/StockTransferDrafts\n{\n    \"Comments\": \"Test123\",\n    \"DocObjectCode\": \"67\",\n    \"StockTransferLines\": [\n        {\n            \"ItemCode\": \"A00001\",\n            \"Quantity\": 10,\n            \"StockTransferLinesBinAllocations\": [\n                {\n                    \"BaseLineNumber\": 0,\n                    \"BinAbsEntry\": 1,\n                    \"BinActionType\": \"batFromWarehouse\",\n                    \"Quantity\": 10\n                },\n                {\n                    \"BaseLineNumber\": 0,\n                    \"BinAbsEntry\": 76,\n                    \"BinActionType\": \"batToWarehouse\",\n                    \"Quantity\": 7\n                },\n                {\n                    \"BaseLineNumber\": 0,\n                    \"BinAbsEntry\": 75,\n                    \"BinActionType\": \"batToWarehouse\",\n                    \"Quantity\": 3\n                }\n            ]\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "StockTransferDrafts(id)",
+      "description": "Update an instance of 'StockTransferDrafts' with the given payload of type 'StockTransfer' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/StockTransferDrafts(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransferDrafts(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferDrafts(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransferDrafts(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferDrafts(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransferDrafts(id)/SaveDraftToDocument",
+      "description": "Invoke the method 'SaveDraftToDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferDrafts(123)/SaveDraftToDocument"
+    }
+  ]
+}

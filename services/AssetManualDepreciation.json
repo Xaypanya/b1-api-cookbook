@@ -1,0 +1,30 @@
+{
+  "service": "AssetManualDepreciation",
+  "description": "This entity enables you to manipulate 'AssetManualDepreciation'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AssetManualDepreciation(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AssetManualDepreciation' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetManualDepreciation(2)\n\nGET https://localhost:50000/b1s/v2/AssetManualDepreciation(2)select=DocEntry,DocNum,Series"
+    },
+    {
+      "method": "GET",
+      "path": "AssetManualDepreciation",
+      "description": "Retrieve a collection of 'AssetManualDepreciation' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetManualDepreciation\n\nGET https://localhost:50000/b1s/v2/AssetManualDepreciation?$select=DocEntry,DocNum,Series&$filter=DocEntry ge 2 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AssetManualDepreciation",
+      "description": "Create an instance of 'AssetManualDepreciation' with the given payload of type 'AssetDocument' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetManualDepreciation\n{\n    \"AssetDocumentLineCollection\": [\n        {\n            \"AssetNumber\": \"FA1\",\n            \"GLAccount\": null,\n            \"Quantity\": 0,\n            \"Remarks\": \"test1\",\n            \"TotalFC\": 0,\n            \"TotalLC\": 100,\n            \"TotalSC\": 100\n        }\n    ],\n    \"AssetValueDate\": \"2016-08-31\",\n    \"DepreciationArea\": \"*\",\n    \"DocumentDate\": \"2016-08-31\",\n    \"DocumentTotal\": 100,\n    \"DocumentType\": \"adtUnplannedDepreciation\",\n    \"PostingDate\": \"2016-08-31\",\n    \"SummerizeByDistributionRules\": \"tYES\",\n    \"SummerizeByProjects\": \"tYES\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AssetManualDepreciation(id)",
+      "description": "Update an instance of 'AssetManualDepreciation' with the given payload of type 'AssetDocument' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AssetManualDepreciation(2)\n{\n    \"AssetDocumentLineCollection\": [\n        {\n            \"LineNumber\": 1,\n            \"Remarks\": \"123\"\n        }\n    ]\n}"
+    }
+  ]
+}

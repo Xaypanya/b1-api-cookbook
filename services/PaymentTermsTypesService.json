@@ -1,0 +1,12 @@
+{
+  "service": "PaymentTermsTypesService",
+  "description": "This API enables you to invoke the interfaces defined on 'PaymentTermsTypesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "PaymentTermsTypesService_UpdateWithBPs",
+      "description": "Invoke the method 'UpdateWithBPs' on this service by specifying the payload 'PaymentTermsType' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentTermsTypesService_UpdateWithBPs\n{\n    \"PaymentTermsType\": {}\n}"
+    }
+  ]
+}

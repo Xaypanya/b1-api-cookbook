@@ -1,0 +1,12 @@
+{
+  "service": "EmployeeRolesSetupService",
+  "description": "This API enables you to invoke the interfaces defined on 'EmployeeRolesSetupService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "EmployeeRolesSetupService_GetEmployeeRoleSetupList",
+      "description": "Invoke the method 'GetEmployeeRoleSetupList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeeRolesSetupService_GetEmployeeRoleSetupList"
+    }
+  ]
+}

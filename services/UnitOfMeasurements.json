@@ -1,0 +1,36 @@
+{
+  "service": "UnitOfMeasurements",
+  "description": "This entity enables you to manipulate 'UnitOfMeasurements'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UnitOfMeasurements(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UnitOfMeasurements' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UnitOfMeasurements(123)\n\nGET https://localhost:50000/b1s/v2/UnitOfMeasurements(123)?$select=AbsEntry,Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "UnitOfMeasurements",
+      "description": "Retrieve a collection of 'UnitOfMeasurements' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UnitOfMeasurements\n\nGET https://localhost:50000/b1s/v2/UnitOfMeasurements?$select=AbsEntry,Code,Name&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UnitOfMeasurements",
+      "description": "Create an instance of 'UnitOfMeasurements' with the given payload of type 'UnitOfMeasurement' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UnitOfMeasurements\n{\n    \"AbsEntry\": 2,\n    \"Code\": \"Carton\",\n    \"Height1\": 300,\n    \"Height1Unit\": 50,\n    \"Height2\": 0,\n    \"Height2Unit\": null,\n    \"InternationalSymbol\": null,\n    \"Length1\": 100,\n    \"Length1Unit\": 50,\n    \"Length2\": 0,\n    \"Length2Unit\": null,\n    \"Name\": \"Carton\",\n    \"Volume\": 6000000,\n    \"VolumeUnit\": 5,\n    \"Weight1\": 0,\n    \"Weight1Unit\": null,\n    \"Weight2\": 0,\n    \"Weight2Unit\": null,\n    \"Width1\": 200,\n    \"Width1Unit\": 50,\n    \"Width2\": 0,\n    \"Width2Unit\": null\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UnitOfMeasurements(id)",
+      "description": "Update an instance of 'UnitOfMeasurements' with the given payload of type 'UnitOfMeasurement' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UnitOfMeasurements(123)\n{\n    \"AbsEntry\": 2,\n    \"Code\": \"Carton001\",\n    \"Length1\": 100,\n    \"Name\": \"Carton001\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UnitOfMeasurements(id)",
+      "description": "Delete an instance of 'UnitOfMeasurements' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UnitOfMeasurements(123)"
+    }
+  ]
+}

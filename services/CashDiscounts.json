@@ -1,0 +1,36 @@
+{
+  "service": "CashDiscounts",
+  "description": "This entity enables you to manipulate 'CashDiscounts'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CashDiscounts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CashDiscounts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CashDiscounts('EPDiscount')\n\nGET https://localhost:50000/b1s/v2/CashDiscounts('EPDiscount')?$select=Code,Name,ByDate"
+    },
+    {
+      "method": "GET",
+      "path": "CashDiscounts",
+      "description": "Retrieve a collection of 'CashDiscounts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CashDiscounts\n\nGET https://localhost:50000/b1s/v2/CashDiscounts?$select=Code,Name,ByDate&$filter=startswith(Code, '') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CashDiscounts",
+      "description": "Create an instance of 'CashDiscounts' with the given payload of type 'CashDiscount' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CashDiscounts\n{\n    \"ByDate\": \"tNO\",\n    \"Code\": \"EPDiscount\",\n    \"DiscountLines\": [\n        {\n            \"Discount\": 15,\n            \"DiscountCode\": \"EPDiscount\",\n            \"LineId\": 0,\n            \"NumOfDays\": 10\n        },\n        {\n            \"Discount\": 25,\n            \"DiscountCode\": \"EPDiscount\",\n            \"LineId\": 1,\n            \"NumOfDays\": 15\n        }\n    ],\n    \"Freight\": \"tYES\",\n    \"Name\": \"Early Pay Discount\",\n    \"Tax\": \"tYES\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CashDiscounts(id)",
+      "description": "Update an instance of 'CashDiscounts' with the given payload of type 'CashDiscount' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CashDiscounts('EPDiscount')\n{\n    \"DiscountLines\": [\n        {\n            \"Discount\": 20,\n            \"LineId\": 0,\n            \"NumOfDays\": 20\n        },\n        {\n            \"Discount\": 30,\n            \"LineId\": 1,\n            \"NumOfDays\": 25\n        },\n        {\n            \"Discount\": 35,\n            \"LineId\": 2,\n            \"NumOfDays\": 35\n        }\n    ],\n    \"Name\": \"Early Pay changed\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CashDiscounts(id)",
+      "description": "Delete an instance of 'CashDiscounts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CashDiscounts('EPDiscount')"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "service": "InventoryCountings",
+  "description": "This entity enables you to manipulate 'InventoryCountings'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "InventoryCountings(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'InventoryCountings' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryCountings(123)\n\nGET https://localhost:50000/b1s/v2/InventoryCountings(123)?$select=DocumentEntry,DocumentNumber,Series"
+    },
+    {
+      "method": "GET",
+      "path": "InventoryCountings",
+      "description": "Retrieve a collection of 'InventoryCountings' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryCountings\n\nGET https://localhost:50000/b1s/v2/InventoryCountings?$select=DocumentEntry,DocumentNumber,Series&$filter=DocumentEntry ge 123 &$orderby=DocumentEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryCountings",
+      "description": "Create an instance of 'InventoryCountings' with the given payload of type 'InventoryCounting' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryCountings\n{\n    \"InventoryCountingLines\": [\n        {\n            \"ItemCode\": \"I003\",\n            \"WarehouseCode\": \"01\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "InventoryCountings(id)",
+      "description": "Update an instance of 'InventoryCountings' with the given payload of type 'InventoryCounting' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/InventoryCountings(123)\n{\n    \"Remarks\": \"updated by ServiceLayer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "InventoryCountings(id)",
+      "description": "Delete an instance of 'InventoryCountings' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/InventoryCountings(123)"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryCountings(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryCountings(123)/Close"
+    }
+  ]
+}

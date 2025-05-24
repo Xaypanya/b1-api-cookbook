@@ -1,0 +1,36 @@
+{
+  "service": "NFTaxCategories",
+  "description": "This entity enables you to manipulate 'NFTaxCategories'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "NFTaxCategories(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'NFTaxCategories' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/NFTaxCategories(123)\n\nGET https://localhost:50000/b1s/v2/NFTaxCategories(123)?$select=AbsId,Code,Locked"
+    },
+    {
+      "method": "GET",
+      "path": "NFTaxCategories",
+      "description": "Retrieve a collection of 'NFTaxCategories' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/NFTaxCategories\n\nGET https://localhost:50000/b1s/v2/NFTaxCategories?$select=AbsId,Code,Locked&$filter=AbsId ge 123 &$orderby=AbsId&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "NFTaxCategories",
+      "description": "Create an instance of 'NFTaxCategories' with the given payload of type 'NFTaxCategory' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/NFTaxCategories\n{\n    \"AbsId\": 1,\n    \"Code\": \"PIS1\",\n    \"GPCId\": -1,\n    \"Locked\": \"tNO\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "NFTaxCategories(id)",
+      "description": "Update an instance of 'NFTaxCategories' with the given payload of type 'NFTaxCategory' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/NFTaxCategories(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "NFTaxCategories(id)",
+      "description": "Delete an instance of 'NFTaxCategories' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/NFTaxCategories(123)"
+    }
+  ]
+}

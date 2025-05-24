@@ -1,0 +1,12 @@
+{
+  "service": "BlanketAgreementsService",
+  "description": "This API enables you to invoke the interfaces defined on 'BlanketAgreementsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BlanketAgreementsService_GetBlanketAgreementList",
+      "description": "Invoke the method 'GetBlanketAgreementList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/BlanketAgreementsService_GetBlanketAgreementList"
+    }
+  ]
+}

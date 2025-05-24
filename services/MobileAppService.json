@@ -1,0 +1,90 @@
+{
+  "service": "MobileAppService",
+  "description": "This API enables you to invoke the interfaces defined on 'MobileAppService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetCurrentServerDateTime",
+      "description": "Invoke the method 'GetCurrentServerDateTime' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetCurrentServerDateTime"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetDppChangeParams",
+      "description": "Invoke the method 'GetDppChangeParams' on this service by specifying the payload 'DppChangeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetDppChangeParams\n{\n    \"DppChangeParams\": {\n        \"FromDate\": \"2018-03-30\",\n        \"FromTime\": \"17:30:00\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetTechnicianSchedulings",
+      "description": "Invoke the method 'GetTechnicianSchedulings' on this service by specifying the payload 'TechnicianSchedulingsParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetTechnicianSchedulings\n{\n    \"TechnicianSchedulingsParams\": {\n        \"EndDate\": \"2017-12-31\",\n        \"StartDate\": \"2017-08-10\",\n        \"Technician\": \"2\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetEmployeeFullNames",
+      "description": "Invoke the method 'GetEmployeeFullNames' on this service by specifying the payload 'EmployeeFullNamesParamsCollection' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetEmployeeFullNames\n{\n    \"EmployeeFullNamesParamsCollection\": [\n        {\n            \"EmployeeFullName\": \"\",\n            \"EmployeeID\": 2\n        },\n        {\n            \"EmployeeFullName\": \"\",\n            \"EmployeeID\": 3\n        }\n    ]\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetTechnicianSettings",
+      "description": "Invoke the method 'GetTechnicianSettings' on this service by specifying the payload 'TechnicianSettingsParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetTechnicianSettings\n{\n    \"TechnicianSettingsParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_UpdateTechnicianSettings",
+      "description": "Invoke the method 'UpdateTechnicianSettings' on this service by specifying the payload 'TechnicianSettings' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_UpdateTechnicianSettings\n{\n    \"TechnicianSettings\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetTechnicianSettingsGroup",
+      "description": "Invoke the method 'GetTechnicianSettingsGroup' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetTechnicianSettingsGroup\n{\n    \"TechnicianSettingsGroupParams\": {\n        \"Code\": -1,\n        \"Name\": \"TEST1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_UpdateTechnicianSettingsGroup",
+      "description": "Invoke the method 'UpdateTechnicianSettingsGroup' on this service by specifying the payload 'TechnicianSettingsGroup' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_UpdateTechnicianSettingsGroup\n{\n    \"AdvancedDashBoard\": -4,\n    \"Code\": -1,\n    \"CustomizedGroup\": \"tNO\",\n    \"EnableActualDuration\": \"tNO\",\n    \"EnableEditTime\": \"tNO\",\n    \"EnableFollowup\": \"tNO\",\n    \"EnableReject\": \"tNO\",\n    \"EnableResign\": \"tNO\",\n    \"EnableSignature\": \"tNO\",\n    \"EnableStarRating\": \"tNO\",\n    \"Name\": \"TESTCODE-1\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetSalesAppSetting",
+      "description": "Invoke the method 'GetSalesAppSetting' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetSalesAppSetting\n{\n    \"SalesAppSettingParams\": {\n        \"Code\": -1,\n        \"Name\": \"TEST1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_UpdateSalesAppSetting",
+      "description": "Invoke the method 'UpdateSalesAppSetting' on this service by specifying the payload 'SalesAppSetting' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_UpdateSalesAppSetting\n{\n    \"AdvancedDashBoard\": -1,\n    \"Code\": -1,\n    \"CustomerAdvancedDashBoard\": -2,\n    \"Name\": \"TESTCODE-1\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetServiceAppReportContent",
+      "description": "Invoke the method 'GetServiceAppReportContent' on this service by specifying the payload 'ServiceAppReportParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetServiceAppReportContent\n{\n    \"ServiceAppReportParams\": {\n        \"Code\": -1,\n        \"ReportChoice\": \"marCustomizedReport\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_UpdateServiceAppReportContent",
+      "description": "Invoke the method 'UpdateServiceAppReportContent' on this service by specifying the payload 'ServiceAppReportParams,ServiceAppReportContent' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_UpdateServiceAppReportContent\n{\n    \"ServiceAppReportContent\": {\n        \"ReportContent\": \"\"\n    },\n    \"ServiceAppReportParams\": {\n        \"Code\": -1,\n        \"ReportChoice\": \"marCustomizedReport\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_GetServiceAppReport",
+      "description": "Invoke the method 'GetServiceAppReport' on this service by specifying the payload 'ServiceAppReportParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_GetServiceAppReport\n{\n    \"ServiceAppReportParams\": {\n        \"Code\": -1,\n        \"ReportChoice\": \"S\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAppService_UpdateServiceAppReport",
+      "description": "Invoke the method 'UpdateServiceAppReport' on this service by specifying the payload 'ServiceAppReport' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAppService_UpdateServiceAppReport\n{\n    \"ServiceAppReport\": {\n        \"Code\": -1,\n        \"ReportChoice\": \"marCustomizedReport\"\n    }\n}"
+    }
+  ]
+}

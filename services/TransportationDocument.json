@@ -1,0 +1,36 @@
+{
+  "service": "TransportationDocument",
+  "description": "This entity enables you to manipulate 'TransportationDocument'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TransportationDocument(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TransportationDocument' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TransportationDocument(123)\n\nGET https://localhost:50000/b1s/v2/TransportationDocument(123)?$select=TranspDocNumber,NextNumber,PostDate"
+    },
+    {
+      "method": "GET",
+      "path": "TransportationDocument",
+      "description": "Retrieve a collection of 'TransportationDocument' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TransportationDocument\n\nGET https://localhost:50000/b1s/v2/TransportationDocument?$select=TranspDocNumber,NextNumber,PostDate&$filter=TranspDocNumber ge 123 &$orderby=TranspDocNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "TransportationDocument",
+      "description": "Create an instance of 'TransportationDocument' with the given payload of type 'TransportationDocumentData' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/TransportationDocument\n{\n    \"AttachmentEntry\": null,\n    \"Canceled\": \"tNO\",\n    \"CarrierCode\": \"V01\",\n    \"ElDocExportFormat\": null,\n    \"ElDocGenType\": \"edgt_NotRelevant\",\n    \"ExpirationDate\": null,\n    \"IssueGate\": 0,\n    \"PostDate\": \"2018-01-30\",\n    \"TrailerID\": null,\n    \"TransportationDocumentLineDataCollection\": [\n        {\n            \"DocLineNumber\": 0,\n            \"DocNumber\": 4,\n            \"DocOrderNum\": null,\n            \"DocType\": \"dc_Delivery\",\n            \"ItemCode\": \"I01\",\n            \"TransportedQuantity\": 1.0\n        }\n    ],\n    \"TransportationNumber\": null,\n    \"VehicleID\": null,\n    \"WarehouseCode\": \"01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "TransportationDocument(id)",
+      "description": "Update an instance of 'TransportationDocument' with the given payload of type 'TransportationDocumentData' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TransportationDocument(123)\n{\n    \"VehicleID\": \"1234\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "TransportationDocument(id)/CancelTransportationDocument",
+      "description": "Invoke the method 'CancelTransportationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/TransportationDocument(123)/CancelTransportationDocument"
+    }
+  ]
+}

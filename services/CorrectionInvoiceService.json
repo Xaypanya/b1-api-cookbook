@@ -1,0 +1,18 @@
+{
+  "service": "CorrectionInvoiceService",
+  "description": "This API enables you to invoke the interfaces defined on 'CorrectionInvoiceService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CorrectionInvoiceService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'Document' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionInvoiceService_GetApprovalTemplates\n{\n    \"Document\": {\n        \"CardCode\": \"c001\",\n        \"Comments\": \"Added by Service Layer\",\n        \"DocumentLines\": [\n            {\n                \"CorrectionInvoiceItem\": \"ciis_ShouldBe\",\n                \"ItemCode\": \"item01\",\n                \"Price\": \"310\",\n                \"Quantity\": \"10\",\n                \"VatGroup\": \"B4\"\n            },\n            {\n                \"CorrectionInvoiceItem\": \"ciis_Was\",\n                \"ItemCode\": \"item01\",\n                \"Price\": \"110\",\n                \"Quantity\": \"10\",\n                \"VatGroup\": \"B4\"\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionInvoiceService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionInvoiceService_HandleApprovalRequest"
+    }
+  ]
+}

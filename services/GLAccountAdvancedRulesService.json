@@ -1,0 +1,12 @@
+{
+  "service": "GLAccountAdvancedRulesService",
+  "description": "This API enables you to invoke the interfaces defined on 'GLAccountAdvancedRulesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "GLAccountAdvancedRulesService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/GLAccountAdvancedRulesService_GetList"
+    }
+  ]
+}

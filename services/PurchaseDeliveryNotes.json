@@ -1,0 +1,60 @@
+{
+  "service": "PurchaseDeliveryNotes",
+  "description": "This entity enables you to manipulate 'PurchaseDeliveryNotes'. It represents a legally binding document indicating that a shipment of goods or a delivery of services has occurred.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PurchaseDeliveryNotes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PurchaseDeliveryNotes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)\n\nGET https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "PurchaseDeliveryNotes",
+      "description": "Retrieve a collection of 'PurchaseDeliveryNotes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseDeliveryNotes\n\nGET https://localhost:50000/b1s/v2/PurchaseDeliveryNotes?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDeliveryNotes",
+      "description": "Create an instance of 'PurchaseDeliveryNotes' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDeliveryNotes\n{\n    \"CardCode\": \"c001\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"c001\",\n            \"Quantity\": \"100\",\n            \"TaxCode\": \"T1\",\n            \"UnitPrice\": \"50\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PurchaseDeliveryNotes(id)",
+      "description": "Update an instance of 'PurchaseDeliveryNotes' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PurchaseDeliveryNotes(id)",
+      "description": "Delete an instance of 'PurchaseDeliveryNotes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDeliveryNotes(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDeliveryNotes(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDeliveryNotes(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDeliveryNotes(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDeliveryNotes(123)/CreateCancellationDocument"
+    }
+  ]
+}

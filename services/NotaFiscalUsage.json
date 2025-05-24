@@ -1,0 +1,36 @@
+{
+  "service": "NotaFiscalUsage",
+  "description": "This entity enables you to manipulate 'NotaFiscalUsage'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "NotaFiscalUsage(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'NotaFiscalUsage' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/NotaFiscalUsage(123)\n\nGET https://localhost:50000/b1s/v2/NotaFiscalUsage(123)?$select=ID,Usage,IncomingInStateCFOPCode"
+    },
+    {
+      "method": "GET",
+      "path": "NotaFiscalUsage",
+      "description": "Retrieve a collection of 'NotaFiscalUsage' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/NotaFiscalUsage\n\nGET https://localhost:50000/b1s/v2/NotaFiscalUsage?$select=ID,Usage,IncomingInStateCFOPCode&$filter=ID ge 123 &$orderby=ID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "NotaFiscalUsage",
+      "description": "Create an instance of 'NotaFiscalUsage' with the given payload of type 'NotaFiscalUsage' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/NotaFiscalUsage\n{\n    \"Description\": \"desc\",\n    \"IncomingImportCFOPCode\": \"0402\",\n    \"IncomingInStateCFOPCode\": \"0330\",\n    \"IncomingOutStateCFOPCode\": \"0330\",\n    \"OutgoingExportCFOPCode\": \"60000\",\n    \"OutgoingInStateCFOPCode\": \"60000\",\n    \"OutgoingOutStateCFOPCode\": \"60000\",\n    \"Usage\": \"usage1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "NotaFiscalUsage(id)",
+      "description": "Update an instance of 'NotaFiscalUsage' with the given payload of type 'NotaFiscalUsage' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/NotaFiscalUsage(123)\n{\n    \"Description\": \"desc01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "NotaFiscalUsage(id)",
+      "description": "Delete an instance of 'NotaFiscalUsage' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/NotaFiscalUsage(123)"
+    }
+  ]
+}

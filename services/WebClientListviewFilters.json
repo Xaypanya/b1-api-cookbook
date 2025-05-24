@@ -1,0 +1,36 @@
+{
+  "service": "WebClientListviewFilters",
+  "description": "This entity enables you to manipulate 'WebClientListviewFilters'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientListviewFilters(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientListviewFilters' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientListviewFilters('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientListviewFilters('abc')?$select=Guid,UserId,TableName"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientListviewFilters",
+      "description": "Retrieve a collection of 'WebClientListviewFilters' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientListviewFilters\n\nGET https://localhost:50000/b1s/v2/WebClientListviewFilters?$select=Guid,UserId,TableName&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientListviewFilters",
+      "description": "Create an instance of 'WebClientListviewFilters' with the given payload of type 'WebClientListviewFilter' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientListviewFilters\n{\n    \"Guid\": \"Filter_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientListviewFilters(id)",
+      "description": "Update an instance of 'WebClientListviewFilters' with the given payload of type 'WebClientListviewFilter' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientListviewFilters('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientListviewFilters(id)",
+      "description": "Delete an instance of 'WebClientListviewFilters' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientListviewFilters('abc')"
+    }
+  ]
+}

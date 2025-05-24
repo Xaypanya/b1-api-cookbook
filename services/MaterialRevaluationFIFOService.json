@@ -1,0 +1,12 @@
+{
+  "service": "MaterialRevaluationFIFOService",
+  "description": "This API enables you to invoke the interfaces defined on 'MaterialRevaluationFIFOService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "MaterialRevaluationFIFOService_GetMaterialRevaluationFIFO",
+      "description": "Invoke the method 'GetMaterialRevaluationFIFO' on this service by specifying the payload 'MaterialRevaluationFIFOParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MaterialRevaluationFIFOService_GetMaterialRevaluationFIFO\n{\n    \"MaterialRevaluationFIFOParams\": {\n        \"ItemCode\": \"I001\",\n        \"LocationCode\": null,\n        \"LocationType\": null,\n        \"ShowIssuedLayers\": \"tNO\"\n    }\n}"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "service": "SeriesService",
+  "description": "This API enables you to invoke the interfaces defined on 'SeriesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "SeriesService_AddSeries",
+      "description": "Invoke the method 'AddSeries' on this service by specifying the payload 'Series' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_AddSeries\n{\n    \"Series\": {\n        \"ATDocumentType\": null,\n        \"BPLID\": null,\n        \"DigitNumber\": 2,\n        \"Document\": \"2\",\n        \"DocumentSubType\": \"C\",\n        \"GroupCode\": \"sg_Group1\",\n        \"InitialNumber\": 21,\n        \"IsDigitalSeries\": \"tNO\",\n        \"IsElectronicCommEnabled\": \"tNO\",\n        \"LastNumber\": 30,\n        \"Locked\": \"tNO\",\n        \"Name\": \"New2\",\n        \"NextNumber\": 21,\n        \"PeriodIndicator\": \"Default\",\n        \"Prefix\": \"S\",\n        \"Remarks\": \"test\",\n        \"Series\": 70,\n        \"SeriesType\": \"stBusinessPartner\",\n        \"Suffix\": \"b\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_RemoveSeries",
+      "description": "Invoke the method 'RemoveSeries' on this service by specifying the payload 'SeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_RemoveSeries\n{\n    \"Series\": {\n        \"ATDocumentType\": null,\n        \"BPLID\": null,\n        \"DigitNumber\": 2,\n        \"Document\": \"2\",\n        \"DocumentSubType\": \"C\",\n        \"GroupCode\": \"sg_Group1\",\n        \"InitialNumber\": 21,\n        \"IsDigitalSeries\": \"tNO\",\n        \"IsElectronicCommEnabled\": \"tNO\",\n        \"LastNumber\": 30,\n        \"Locked\": \"tNO\",\n        \"Name\": \"New2\",\n        \"NextNumber\": 21,\n        \"PeriodIndicator\": \"Default\",\n        \"Prefix\": \"S\",\n        \"Remarks\": \"test\",\n        \"Series\": 70,\n        \"SeriesType\": \"stBusinessPartner\",\n        \"Suffix\": \"b\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_AttachSeriesToDocument",
+      "description": "Invoke the method 'AttachSeriesToDocument' on this service by specifying the payload 'DocumentSeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_AttachSeriesToDocument\n{\n    \"DocumentSeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_UnattachSeriesFromDocument",
+      "description": "Invoke the method 'UnattachSeriesFromDocument' on this service by specifying the payload 'DocumentSeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_UnattachSeriesFromDocument\n{\n    \"DocumentSeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_SetDefaultSeriesForAllUsers",
+      "description": "Invoke the method 'SetDefaultSeriesForAllUsers' on this service by specifying the payload 'DocumentSeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_SetDefaultSeriesForAllUsers\n{\n    \"DocumentSeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_SetDefaultSeriesForCurrentUser",
+      "description": "Invoke the method 'SetDefaultSeriesForCurrentUser' on this service by specifying the payload 'DocumentSeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_SetDefaultSeriesForCurrentUser\n{\n    \"DocumentSeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_SetDefaultSeriesForUser",
+      "description": "Invoke the method 'SetDefaultSeriesForUser' on this service by specifying the payload 'DocumentSeriesUserParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_SetDefaultSeriesForUser\n{\n    \"DocumentSeriesUserParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_UpdateSeries",
+      "description": "Invoke the method 'UpdateSeries' on this service by specifying the payload 'Series' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_UpdateSeries\n{\n    \"Series\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_GetDefaultSeries",
+      "description": "Invoke the method 'GetDefaultSeries' on this service by specifying the payload 'DocumentTypeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_GetDefaultSeries\n{\n    \"DocumentTypeParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_GetDocumentSeries",
+      "description": "Invoke the method 'GetDocumentSeries' on this service by specifying the payload 'DocumentTypeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_GetDocumentSeries\n{\n    \"DocumentTypeParams\": {\n        \"Document\": \"2\",\n        \"DocumentSubType\": \"C\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_GetSeries",
+      "description": "Invoke the method 'GetSeries' on this service by specifying the payload 'SeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_GetSeries\n{\n    \"SeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_GetDocumentChangedMenuName",
+      "description": "Invoke the method 'GetDocumentChangedMenuName' on this service by specifying the payload 'DocumentTypeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_GetDocumentChangedMenuName\n{\n    \"DocumentTypeParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_ChangeDocumentMenuName",
+      "description": "Invoke the method 'ChangeDocumentMenuName' on this service by specifying the payload 'DocumentChangeMenuName' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_ChangeDocumentMenuName\n{\n    \"DocumentChangeMenuName\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_GetElectronicSeries",
+      "description": "Invoke the method 'GetElectronicSeries' on this service by specifying the payload 'ElectronicSeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_GetElectronicSeries\n{\n    \"ElectronicSeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_AddElectronicSeries",
+      "description": "Invoke the method 'AddElectronicSeries' on this service by specifying the payload 'ElectronicSeries' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_AddElectronicSeries\n{\n    \"ElectronicSeries\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_RemoveElectronicSeries",
+      "description": "Invoke the method 'RemoveElectronicSeries' on this service by specifying the payload 'ElectronicSeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_RemoveElectronicSeries\n{\n    \"ElectronicSeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_UpdateElectronicSeries",
+      "description": "Invoke the method 'UpdateElectronicSeries' on this service by specifying the payload 'ElectronicSeries' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_UpdateElectronicSeries\n{\n    \"ElectronicSeries\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_GetDefaultElectronicSeries",
+      "description": "Invoke the method 'GetDefaultElectronicSeries' on this service by specifying the payload 'SeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_GetDefaultElectronicSeries\n{\n    \"SeriesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SeriesService_SetDefaultElectronicSeries",
+      "description": "Invoke the method 'SetDefaultElectronicSeries' on this service by specifying the payload 'DefaultElectronicSeriesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SeriesService_SetDefaultElectronicSeries\n{\n    \"DefaultElectronicSeriesParams\": {}\n}"
+    }
+  ]
+}

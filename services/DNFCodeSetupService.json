@@ -1,0 +1,12 @@
+{
+  "service": "DNFCodeSetupService",
+  "description": "This API enables you to invoke the interfaces defined on 'DNFCodeSetupService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DNFCodeSetupService_GetDNFCodeSetupList",
+      "description": "Invoke the method 'GetDNFCodeSetupList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/DNFCodeSetupService_GetDNFCodeSetupList"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "service": "AssetRetirementService",
+  "description": "This API enables you to invoke the interfaces defined on 'AssetRetirementService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "AssetRetirementService_Cancel",
+      "description": "Invoke the method 'Cancel' on this service by specifying the payload 'AssetDocumentParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetRetirementService_Cancel\n{\n    \"AssetDocumentParams\": {\n        \"CancellationOption\": \"coByCurrentSystemDate\",\n        \"Code\": \"9\"\n    }\n}"
+    },
+    {
+      "method": "GET",
+      "path": "AssetRetirementService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetRetirementService_GetList"
+    },
+    {
+      "method": "POST",
+      "path": "AssetRetirementService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetRetirementService_GetList"
+    }
+  ]
+}

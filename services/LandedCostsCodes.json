@@ -1,0 +1,36 @@
+{
+  "service": "LandedCostsCodes",
+  "description": "This entity enables you to manipulate 'LandedCostsCodes'. It defines various types of landed costs (for example, insurance, customs) and their default distribution rules. When you record landed costs for deliveries, landed costs are allocated to the goods according to the distribution rule of each type.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "LandedCostsCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'LandedCostsCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/LandedCostsCodes('01')\n\nGET https://localhost:50000/b1s/v2/LandedCostsCodes('01')?$select=Code,Name,AllocationBy"
+    },
+    {
+      "method": "GET",
+      "path": "LandedCostsCodes",
+      "description": "Retrieve a collection of 'LandedCostsCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/LandedCostsCodes\n\nGET https://localhost:50000/b1s/v2/LandedCostsCodes?$select=Code,Name,AllocationBy&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "LandedCostsCodes",
+      "description": "Create an instance of 'LandedCostsCodes' with the given payload of type 'LandedCostsCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/LandedCostsCodes\n{\n    \"AllocationBy\": \"ab_Quantity\",\n    \"Code\": \"01\",\n    \"Name\": \"Insurance\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "LandedCostsCodes(id)",
+      "description": "Update an instance of 'LandedCostsCodes' with the given payload of type 'LandedCostsCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/LandedCostsCodes('01')\n{\n    \"Name\": \"Shipping\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "LandedCostsCodes(id)",
+      "description": "Delete an instance of 'LandedCostsCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/LandedCostsCodes('01')"
+    }
+  ]
+}

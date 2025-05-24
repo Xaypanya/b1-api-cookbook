@@ -1,0 +1,48 @@
+{
+  "service": "StockTransfers",
+  "description": "This entity enables you to manipulate 'StockTransfers'. It represents transfer records of items from one warehouse to another.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "StockTransfers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'StockTransfers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/StockTransfers(123)\n\nGET https://localhost:50000/b1s/v2/StockTransfers(123)?$select=DocEntry,Series,Printed"
+    },
+    {
+      "method": "GET",
+      "path": "StockTransfers",
+      "description": "Retrieve a collection of 'StockTransfers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/StockTransfers\n\nGET https://localhost:50000/b1s/v2/StockTransfers?$select=DocEntry,Series,Printed&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransfers",
+      "description": "Create an instance of 'StockTransfers' with the given payload of type 'StockTransfer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransfers\n{\n    \"StockTransferLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"UnitPrice\": \"30\",\n            \"WarehouseCode\": \"w001\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "StockTransfers(id)",
+      "description": "Update an instance of 'StockTransfers' with the given payload of type 'StockTransfer' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/StockTransfers(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "StockTransfers(id)",
+      "description": "Delete an instance of 'StockTransfers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/StockTransfers(123)"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransfers(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransfers(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransfers(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransfers(123)/Close"
+    }
+  ]
+}

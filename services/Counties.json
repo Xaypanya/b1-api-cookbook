@@ -1,0 +1,36 @@
+{
+  "service": "Counties",
+  "description": "This entity enables you to manipulate 'Counties'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Counties(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Counties' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Counties(123)\n\nGET https://localhost:50000/b1s/v2/Counties(123)?$select=AbsId,Code,Country"
+    },
+    {
+      "method": "GET",
+      "path": "Counties",
+      "description": "Retrieve a collection of 'Counties' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Counties\n\nGET https://localhost:50000/b1s/v2/Counties?$select=AbsId,Code,Country&$filter=AbsId ge 123 &$orderby=AbsId&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Counties",
+      "description": "Create an instance of 'Counties' with the given payload of type 'County' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Counties\n{\n    \"Code\": \"00199\",\n    \"Country\": \"BR\",\n    \"GiaCode\": \"0\",\n    \"IbgeCode\": \"2700102\",\n    \"Name\": \"Agua Branca\",\n    \"State\": \"AL\",\n    \"TaxZone\": \"tNO\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Counties(id)",
+      "description": "Update an instance of 'Counties' with the given payload of type 'County' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Counties(123)\n{\n    \"Name\": \"abc\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Counties(id)",
+      "description": "Delete an instance of 'Counties' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Counties(123)"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "BusinessPlaces",
+  "description": "This entity enables you to manipulate 'BusinessPlaces'. It represents a company's business locations.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BusinessPlaces(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BusinessPlaces' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPlaces(123)\n\nGET https://localhost:50000/b1s/v2/BusinessPlaces(123)?$select=BPLID,BPLName,BPLNameForeign"
+    },
+    {
+      "method": "GET",
+      "path": "BusinessPlaces",
+      "description": "Retrieve a collection of 'BusinessPlaces' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPlaces\n\nGET https://localhost:50000/b1s/v2/BusinessPlaces?$select=BPLID,BPLName,BPLNameForeign&$filter=BPLID ge 123 &$orderby=BPLID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BusinessPlaces",
+      "description": "Create an instance of 'BusinessPlaces' with the given payload of type 'BusinessPlace' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BusinessPlaces\n{\n    \"Address\": \"No. 1001 Chenghui road\",\n    \"BPLName\": \"LG\",\n    \"BPLNameForeign\": \"LG\",\n    \"Industry\": \"manufacture\",\n    \"RepName\": \"new LG\",\n    \"VATRegNum\": \"222-33-47528\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BusinessPlaces(id)",
+      "description": "Update an instance of 'BusinessPlaces' with the given payload of type 'BusinessPlace' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BusinessPlaces(123)\n{\n    \"Address\": \"No. 101 Huaxia Road\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BusinessPlaces(id)",
+      "description": "Delete an instance of 'BusinessPlaces' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BusinessPlaces(123)"
+    }
+  ]
+}

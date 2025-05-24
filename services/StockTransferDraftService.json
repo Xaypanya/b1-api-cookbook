@@ -1,0 +1,18 @@
+{
+  "service": "StockTransferDraftService",
+  "description": "This API enables you to invoke the interfaces defined on 'StockTransferDraftService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "StockTransferDraftService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'StockTransfer' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferDraftService_GetApprovalTemplates\n{\n    \"StockTransfer\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "StockTransferDraftService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTransferDraftService_HandleApprovalRequest"
+    }
+  ]
+}

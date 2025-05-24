@@ -1,0 +1,24 @@
+{
+  "service": "ResourceProperties",
+  "description": "This entity enables you to manipulate 'ResourceProperties'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ResourceProperties(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ResourceProperties' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ResourceProperties(123)\n\nGET https://localhost:50000/b1s/v2/ResourceProperties(123)?$select=Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "ResourceProperties",
+      "description": "Retrieve a collection of 'ResourceProperties' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ResourceProperties\n\nGET https://localhost:50000/b1s/v2/ResourceProperties?$select=Code,Name&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "ResourceProperties(id)",
+      "description": "Update an instance of 'ResourceProperties' with the given payload of type 'ResourceProperty' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ResourceProperties(123)\n{}"
+    }
+  ]
+}

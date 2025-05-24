@@ -1,0 +1,5 @@
+{
+  "service": "B1Sessions",
+  "description": "This entity is just used to enable Service Layer to be able to work with WCF. Currently, it has no practical usage and does not support CURD.",
+  "operations": []
+}

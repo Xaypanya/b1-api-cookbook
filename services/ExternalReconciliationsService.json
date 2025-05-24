@@ -1,0 +1,30 @@
+{
+  "service": "ExternalReconciliationsService",
+  "description": "This API enables you to invoke the interfaces defined on 'ExternalReconciliationsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ExternalReconciliationsService_Reconcile",
+      "description": "Invoke the method 'Reconcile' on this service by specifying the payload 'ExternalReconciliation' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ExternalReconciliationsService_Reconcile\n{\n    \"ExternalReconciliation\": {\n        \"ReconciliationAccountType\": \"rat_BusinessPartner\",\n        \"ReconciliationBankStatementLines\": [\n            {\n                \"BankStatementAccountCode\": \"C1\",\n                \"Sequence\": 1\n            },\n            {\n                \"BankStatementAccountCode\": \"C1\",\n                \"Sequence\": 2\n            }\n        ],\n        \"ReconciliationJournalEntryLines\": [\n            {\n                \"LineNumber\": 1,\n                \"TransactionNumber\": 1\n            },\n            {\n                \"LineNumber\": 2,\n                \"TransactionNumber\": 2\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ExternalReconciliationsService_GetReconciliation",
+      "description": "Invoke the method 'GetReconciliation' on this service by specifying the payload 'ExternalReconciliationParams' in the JSON format. It retrieves an external reconciliation.",
+      "example": "POST https://localhost:50000/b1s/v2/ExternalReconciliationsService_GetReconciliation\n{\n    \"ExternalReconciliationParams\": {\n        \"AccountCode\": \"_SYS00000000001\",\n        \"ReconciliationNo\": 1\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ExternalReconciliationsService_CancelReconciliation",
+      "description": "Invoke the method 'CancelReconciliation' on this service by specifying the payload 'ExternalReconciliationParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ExternalReconciliationsService_CancelReconciliation\n{\n    \"ExternalReconciliationParams\": {\n        \"AccountCode\": \"_SYS00000000001\",\n        \"ReconciliationNo\": 1\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ExternalReconciliationsService_GetReconciliationList",
+      "description": "Invoke the method 'GetReconciliationList' on this service by specifying the payload 'ExternalReconciliationFilterParams' in the JSON format.\n\t\t\t\t\tIt returns the 'ExternalReconciliationsParamsCollection' data collection that identifies all eternal reconciliations with the optional filter payload.",
+      "example": "POST https://localhost:50000/b1s/v2/ExternalReconciliationsService_GetReconciliationList\n\nPOST https://localhost:50000/b1s/v2/ExternalReconciliationsService_GetReconciliationList\n{\n    \"ExternalReconciliationFilterParams\": {\n        \"AccountCodeFrom\": \"_SYS00000000001\",\n        \"AccountCodeTo\": \"_SYS00000000002\",\n        \"ReconciliationAccountType\": \"rat_GLAccount\",\n        \"ReconciliationDateFrom\": \"2016-05-03\",\n        \"ReconciliationDateTo\": \"2016-12-03\",\n        \"ReconciliationNoFrom\": 1,\n        \"ReconciliationNoTo\": 2\n    }\n}"
+    }
+  ]
+}

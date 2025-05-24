@@ -1,0 +1,36 @@
+{
+  "service": "BPFiscalRegistryID",
+  "description": "This entity enables you to manipulate 'BPFiscalRegistryID'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BPFiscalRegistryID(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BPFiscalRegistryID' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BPFiscalRegistryID(123)\n\nGET https://localhost:50000/b1s/v2/BPFiscalRegistryID(123)?$select=Numerator,CNAECode,Description"
+    },
+    {
+      "method": "GET",
+      "path": "BPFiscalRegistryID",
+      "description": "Retrieve a collection of 'BPFiscalRegistryID' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BPFiscalRegistryID\n\nGET https://localhost:50000/b1s/v2/BPFiscalRegistryID?$select=Numerator,CNAECode,Description&$filter=Numerator ge 123 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BPFiscalRegistryID",
+      "description": "Create an instance of 'BPFiscalRegistryID' with the given payload of type 'BPFiscalRegistryID' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BPFiscalRegistryID\n{\n    \"CNAECode\": \"0330\",\n    \"Description\": \"CNAE codes\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BPFiscalRegistryID(id)",
+      "description": "Update an instance of 'BPFiscalRegistryID' with the given payload of type 'BPFiscalRegistryID' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BPFiscalRegistryID(123)\n{\n    \"Description\": \"CNAE RegistryID\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BPFiscalRegistryID(id)",
+      "description": "Delete an instance of 'BPFiscalRegistryID' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BPFiscalRegistryID(123)"
+    }
+  ]
+}

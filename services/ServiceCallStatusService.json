@@ -1,0 +1,12 @@
+{
+  "service": "ServiceCallStatusService",
+  "description": "This API enables you to invoke the interfaces defined on 'ServiceCallStatusService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ServiceCallStatusService_GetServiceCallStatusList",
+      "description": "Invoke the method 'GetServiceCallStatusList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCallStatusService_GetServiceCallStatusList"
+    }
+  ]
+}

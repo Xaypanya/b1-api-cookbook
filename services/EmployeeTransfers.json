@@ -1,0 +1,36 @@
+{
+  "service": "EmployeeTransfers",
+  "description": "This entity enables you to manipulate 'EmployeeTransfers'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EmployeeTransfers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EmployeeTransfers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeeTransfers(1)\n\nGET https://localhost:50000/b1s/v2/EmployeeTransfers(1)?$select=TransferID,TransStartDate,TransStartTime"
+    },
+    {
+      "method": "GET",
+      "path": "EmployeeTransfers",
+      "description": "Retrieve a collection of 'EmployeeTransfers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeeTransfers\n\nGET https://localhost:50000/b1s/v2/EmployeeTransfers?$select=TransferID,TransStartDate,TransStartTime&$filter=TransferID ge 1 &$orderby=TransferID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EmployeeTransfers",
+      "description": "Create an instance of 'EmployeeTransfers' with the given payload of type 'EmployeeTransfer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeeTransfers\n{\n    \"Comment\": \"test\",\n    \"Status\": \"ets_Processing\",\n    \"TransEndDate\": \"2017-01-01\",\n    \"TransEndTime\": \"08:13:00\",\n    \"TransStartDate\": \"2017-01-01\",\n    \"TransStartTime\": \"08:13:00\",\n    \"TransferID\": \"1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EmployeeTransfers(id)",
+      "description": "Update an instance of 'EmployeeTransfers' with the given payload of type 'EmployeeTransfer' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EmployeeTransfers(1)\n{\n    \"Comment\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EmployeeTransfers(id)",
+      "description": "Delete an instance of 'EmployeeTransfers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EmployeeTransfers(1)"
+    }
+  ]
+}

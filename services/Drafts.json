@@ -1,0 +1,60 @@
+{
+  "service": "Drafts",
+  "description": "This entity enables you to manipulate 'Drafts'. It is the preliminary version of a document or report.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Drafts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Drafts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Drafts(123)\n\nGET https://localhost:50000/b1s/v2/Drafts(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "Drafts",
+      "description": "Retrieve a collection of 'Drafts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Drafts\n\nGET https://localhost:50000/b1s/v2/Drafts?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Drafts",
+      "description": "Create an instance of 'Drafts' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Drafts\n{\n    \"CardCode\": \"c001\",\n    \"DocObjectCode\": \"23\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"TaxCode\": \"T1\",\n            \"UnitPrice\": \"30\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Drafts(id)",
+      "description": "Update an instance of 'Drafts' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Drafts(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Drafts(id)",
+      "description": "Delete an instance of 'Drafts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Drafts(123)"
+    },
+    {
+      "method": "POST",
+      "path": "Drafts(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Drafts(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "Drafts(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Drafts(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "Drafts(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Drafts(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "Drafts(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Drafts(123)/CreateCancellationDocument"
+    }
+  ]
+}

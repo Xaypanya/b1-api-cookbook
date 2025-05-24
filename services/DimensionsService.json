@@ -1,0 +1,12 @@
+{
+  "service": "DimensionsService",
+  "description": "This API enables you to invoke the interfaces defined on 'DimensionsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DimensionsService_GetDimensionList",
+      "description": "Invoke the method 'GetDimensionList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/DimensionsService_GetDimensionList"
+    }
+  ]
+}

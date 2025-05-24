@@ -1,0 +1,36 @@
+{
+  "service": "BankStatements",
+  "description": "This entity enables you to manipulate 'BankStatements'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BankStatements(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BankStatements' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BankStatements(2)\n\nGET https://localhost:50000/b1s/v2/BankStatements(2)?$select=InternalNumber,BankAccountKey,StatementNumber"
+    },
+    {
+      "method": "GET",
+      "path": "BankStatements",
+      "description": "Retrieve a collection of 'BankStatements' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BankStatements\n\nGET https://localhost:50000/b1s/v2/BankStatements?$select=InternalNumber,BankAccountKey,StatementNumber&$filter=InternalNumber ge 2 &$orderby=InternalNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BankStatements",
+      "description": "Create an instance of 'BankStatements' with the given payload of type 'BankStatement' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BankStatements\n{\n    \"BankAccountKey \": 1,\n    \"BankStatementRows\": [\n        {\n            \"ExternalCode\": \"E1\"\n        }\n    ],\n    \"MultiplePayments\": [\n        {\n            \"AmountFC\": 20,\n            \"IsDebit\": \"tYES\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BankStatements(id)",
+      "description": "Update an instance of 'BankStatements' with the given payload of type 'BankStatement' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BankStatements(2)\n{\n    \"Currency\": \"USD\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BankStatements(id)",
+      "description": "Delete an instance of 'BankStatements' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BankStatements(2)"
+    }
+  ]
+}

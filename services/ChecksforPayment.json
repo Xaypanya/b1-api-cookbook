@@ -1,0 +1,30 @@
+{
+  "service": "ChecksforPayment",
+  "description": "This entity enables you to manipulate 'ChecksforPayment'. It represents checks payable that are not tied to a document.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ChecksforPayment(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ChecksforPayment' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ChecksforPayment(123)\n\nGET https://localhost:50000/b1s/v2/ChecksforPayment(123)?$select=CheckKey,CheckNumber,BankCode"
+    },
+    {
+      "method": "GET",
+      "path": "ChecksforPayment",
+      "description": "Retrieve a collection of 'ChecksforPayment' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ChecksforPayment\n\nGET https://localhost:50000/b1s/v2/ChecksforPayment?$select=CheckKey,CheckNumber,BankCode&$filter=CheckKey ge 123 &$orderby=CheckKey&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ChecksforPayment",
+      "description": "Create an instance of 'ChecksforPayment' with the given payload of type 'ChecksforPayment' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ChecksforPayment\n{\n    \"AccountNumber\": \"11123456\",\n    \"BankCode\": \"bank01\",\n    \"Branch\": \"123\",\n    \"CardOrAccount\": \"cfp_Account\",\n    \"ChecksforPaymentLines\": [\n        {\n            \"RowTotal\": \"315\"\n        }\n    ],\n    \"CountryCode\": \"US\",\n    \"CustomerAccountCode\": \"_SYS00000000052\",\n    \"Details\": \"Add checks for payment\",\n    \"VendorCode\": \"_SYS00000000006\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ChecksforPayment(id)",
+      "description": "Update an instance of 'ChecksforPayment' with the given payload of type 'ChecksforPayment' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ChecksforPayment(123)\n{\n    \"Details\": \"update check payment\"\n}"
+    }
+  ]
+}

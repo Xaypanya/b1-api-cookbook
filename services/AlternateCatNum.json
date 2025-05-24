@@ -1,0 +1,36 @@
+{
+  "service": "AlternateCatNum",
+  "description": "This entity enables you to manipulate 'AlternateCatNum'. It represents the alternative catalog numbers in the Business Partners module.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AlternateCatNum(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AlternateCatNum' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AlternateCatNum(ItemCode='item01',CardCode='c001',Substitute='BP01')\n\nGET https://localhost:50000/b1s/v2/AlternateCatNum(ItemCode='item01',CardCode='c001',Substitute='BP01')?$select=ItemCode,CardCode,Substitute"
+    },
+    {
+      "method": "GET",
+      "path": "AlternateCatNum",
+      "description": "Retrieve a collection of 'AlternateCatNum' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AlternateCatNum\n\nGET https://localhost:50000/b1s/v2/AlternateCatNum?$select=ItemCode,CardCode,Substitute&$filter=startswith(ItemCode, 'i') and startswith(CardCode, 'c') and startswith(Substitute, 'b') &$orderby=ItemCode,CardCode,Substitute&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AlternateCatNum",
+      "description": "Create an instance of 'AlternateCatNum' with the given payload of type 'AlternateCatNum' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AlternateCatNum\n{\n    \"CardCode\": \"c001\",\n    \"DisplayBPCatalogNumber\": \"tNO\",\n    \"ItemCode\": \"item01\",\n    \"Substitute\": \"BP01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AlternateCatNum(id)",
+      "description": "Update an instance of 'AlternateCatNum' with the given payload of type 'AlternateCatNum' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AlternateCatNum(ItemCode='item01',CardCode='c001',Substitute='BP01')\n{\n    \"DisplayBPCatalogNumber\": \"tYES\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AlternateCatNum(id)",
+      "description": "Delete an instance of 'AlternateCatNum' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AlternateCatNum(ItemCode='item01',CardCode='c001',Substitute='BP01')"
+    }
+  ]
+}

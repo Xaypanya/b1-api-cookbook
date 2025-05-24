@@ -1,0 +1,36 @@
+{
+  "service": "EmployeeIDType",
+  "description": "This entity enables you to manipulate 'EmployeeIDType'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EmployeeIDType(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EmployeeIDType' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeeIDType('test')\n\nGET https://localhost:50000/b1s/v2/EmployeeIDType('test')?$select=IDType"
+    },
+    {
+      "method": "GET",
+      "path": "EmployeeIDType",
+      "description": "Retrieve a collection of 'EmployeeIDType' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeeIDType\n\nGET https://localhost:50000/b1s/v2/EmployeeIDType?$select=IDType&$filter=startswith(IDType, 'a') &$orderby=IDType&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EmployeeIDType",
+      "description": "Create an instance of 'EmployeeIDType' with the given payload of type 'EmployeeIDType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeeIDType\n{\n    \"IDType\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EmployeeIDType(id)",
+      "description": "Update an instance of 'EmployeeIDType' with the given payload of type 'EmployeeIDType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EmployeeIDType('test')\n{\n    \"IDType\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EmployeeIDType(id)",
+      "description": "Delete an instance of 'EmployeeIDType' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EmployeeIDType('test')"
+    }
+  ]
+}

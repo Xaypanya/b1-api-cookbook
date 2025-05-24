@@ -1,0 +1,36 @@
+{
+  "service": "Cockpits",
+  "description": "This entity enables you to manipulate 'Cockpits'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Cockpits(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Cockpits' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Cockpits(123)\n\nGET https://localhost:50000/b1s/v2/Cockpits(123)?$select=AbsEntry,Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "Cockpits",
+      "description": "Retrieve a collection of 'Cockpits' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Cockpits\n\nGET https://localhost:50000/b1s/v2/Cockpits?$select=AbsEntry,Code,Name&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Cockpits",
+      "description": "Create an instance of 'Cockpits' with the given payload of type 'Cockpit' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Cockpits\n{\n    \"AbsEntry\": 4,\n    \"CockpitType\": \"cptt_UserCockpit\",\n    \"Code\": 1,\n    \"Date\": null,\n    \"Description\": null,\n    \"Manufacturer\": \"SAP\",\n    \"Name\": \"Home11\",\n    \"Publisher\": null,\n    \"Time\": null,\n    \"UserSignature\": 1\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Cockpits(id)",
+      "description": "Update an instance of 'Cockpits' with the given payload of type 'Cockpit' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Cockpits(123)\n{\n    \"Description\": \"test\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Cockpits(id)",
+      "description": "Delete an instance of 'Cockpits' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Cockpits(123)"
+    }
+  ]
+}

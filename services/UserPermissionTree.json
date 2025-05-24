@@ -1,0 +1,36 @@
+{
+  "service": "UserPermissionTree",
+  "description": "This entity enables you to manipulate 'UserPermissionTree'. It represents the User Authorization form. This object enables managing user authorization for various forms.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserPermissionTree(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserPermissionTree' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserPermissionTree('P01')\n\nGET https://localhost:50000/b1s/v2/UserPermissionTree('P01')?$select=UserSignature,DisplayOrder,PermissionID"
+    },
+    {
+      "method": "GET",
+      "path": "UserPermissionTree",
+      "description": "Retrieve a collection of 'UserPermissionTree' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserPermissionTree\n\nGET https://localhost:50000/b1s/v2/UserPermissionTree?$select=UserSignature,DisplayOrder,PermissionID&$filter=startswith(PermissionID, 'a') &$orderby=PermissionID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserPermissionTree",
+      "description": "Create an instance of 'UserPermissionTree' with the given payload of type 'UserPermissionTree' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserPermissionTree\n{\n    \"Name\": \"newPer\",\n    \"PermissionID\": \"P01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UserPermissionTree(id)",
+      "description": "Update an instance of 'UserPermissionTree' with the given payload of type 'UserPermissionTree' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UserPermissionTree('P01')\n{\n    \"Name\": \"newFormPer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserPermissionTree(id)",
+      "description": "Delete an instance of 'UserPermissionTree' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserPermissionTree('P01')"
+    }
+  ]
+}

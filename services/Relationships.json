@@ -1,0 +1,36 @@
+{
+  "service": "Relationships",
+  "description": "This entity enables you to manipulate 'Relationships'. It represents the relationships list from which a relationship definition can be associated with a partner in a sales opportunity.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Relationships(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Relationships' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Relationships(123)\n\nGET https://localhost:50000/b1s/v2/Relationships(123)?$select=RelationshipDescription,RelationshipCode"
+    },
+    {
+      "method": "GET",
+      "path": "Relationships",
+      "description": "Retrieve a collection of 'Relationships' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Relationships\n\nGET https://localhost:50000/b1s/v2/Relationships?$select=RelationshipDescription,RelationshipCode&$filter=RelationshipCode ge 123 &$orderby=RelationshipCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Relationships",
+      "description": "Create an instance of 'Relationships' with the given payload of type 'Relationship' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Relationships\n{\n    \"RelationshipDescription\": \"Best Parnter\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Relationships(id)",
+      "description": "Update an instance of 'Relationships' with the given payload of type 'Relationship' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Relationships(123)\n{\n    \"RelationshipDescription\": \"One time\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Relationships(id)",
+      "description": "Delete an instance of 'Relationships' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Relationships(123)"
+    }
+  ]
+}

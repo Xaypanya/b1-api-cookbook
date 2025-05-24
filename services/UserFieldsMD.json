@@ -1,0 +1,36 @@
+{
+  "service": "UserFieldsMD",
+  "description": "This entity enables you to manipulate 'UserFieldsMD' and manage user-defined fields in user and system tables.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserFieldsMD(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserFieldsMD' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserFieldsMD(TableName='@UDT01',FieldID=0)\n\nGET https://localhost:50000/b1s/v2/UserFieldsMD(TableName='@UDT01',FieldID=0)?$select=Name,Type,Size"
+    },
+    {
+      "method": "GET",
+      "path": "UserFieldsMD",
+      "description": "Retrieve a collection of 'UserFieldsMD' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserFieldsMD\n\nGET https://localhost:50000/b1s/v2/UserFieldsMD?$select=Name,Type,Size&$filter=startswith(TableName, 'a') and FieldID ge 0 &$orderby=TableName,FieldID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserFieldsMD",
+      "description": "Create an instance of 'UserFieldsMD' with the given payload of type 'UserFieldMD' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserFieldsMD\n{\n    \"Description\": \"UDF01\",\n    \"Name\": \"UDF01\",\n    \"SubType\": \"st_Address\",\n    \"TableName\": \"@UDT01\",\n    \"Type\": \"db_Alpha\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UserFieldsMD(id)",
+      "description": "Update an instance of 'UserFieldsMD' with the given payload of type 'UserFieldMD' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UserFieldsMD(TableName='@UDT01',FieldID=0)\n{\n    \"Description\": \"new UDF01\",\n    \"FieldID\": 0,\n    \"TableName\": \"@UDT01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserFieldsMD(id)",
+      "description": "Delete an instance of 'UserFieldsMD' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserFieldsMD(TableName='@UDT01',FieldID=0)"
+    }
+  ]
+}

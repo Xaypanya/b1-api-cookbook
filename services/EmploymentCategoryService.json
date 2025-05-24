@@ -1,0 +1,12 @@
+{
+  "service": "EmploymentCategoryService",
+  "description": "This API enables you to invoke the interfaces defined on 'EmploymentCategoryService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "EmploymentCategoryService_GetEmploymentCategoryList",
+      "description": "Invoke the method 'GetEmploymentCategoryList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/EmploymentCategoryService_GetEmploymentCategoryList"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "service": "SectionsService",
+  "description": "This API enables you to invoke the interfaces defined on 'SectionsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "SectionsService_GetSectionList",
+      "description": "Invoke the method 'GetSectionList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/SectionsService_GetSectionList"
+    }
+  ]
+}

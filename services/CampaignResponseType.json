@@ -1,0 +1,36 @@
+{
+  "service": "CampaignResponseType",
+  "description": "This entity enables you to manipulate 'CampaignResponseType'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CampaignResponseType(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CampaignResponseType' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CampaignResponseType('01')\n\nGET https://localhost:50000/b1s/v2/CampaignResponseType('01')?$select=ResponseTypeDescription,ResponseType,IsActive"
+    },
+    {
+      "method": "GET",
+      "path": "CampaignResponseType",
+      "description": "Retrieve a collection of 'CampaignResponseType' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CampaignResponseType\n\nGET https://localhost:50000/b1s/v2/CampaignResponseType?$select=ResponseTypeDescription,ResponseType,IsActive&$filter=startswith(ResponseType, '') &$orderby=ResponseType&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CampaignResponseType",
+      "description": "Create an instance of 'CampaignResponseType' with the given payload of type 'CampaignResponseType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CampaignResponseType\n{\n    \"IsActive\": \"tYES\",\n    \"ResponseType\": \"01\",\n    \"ResponseTypeDescription\": \"001\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CampaignResponseType(id)",
+      "description": "Update an instance of 'CampaignResponseType' with the given payload of type 'CampaignResponseType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CampaignResponseType('01')\n{\n    \"IsActive\": \"tNO\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CampaignResponseType(id)",
+      "description": "Delete an instance of 'CampaignResponseType' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CampaignResponseType('01')"
+    }
+  ]
+}

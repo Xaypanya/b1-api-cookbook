@@ -1,0 +1,36 @@
+{
+  "service": "ProjectManagementService",
+  "description": "This API enables you to invoke the interfaces defined on 'ProjectManagementService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ProjectManagementService_GetSubprojectsList",
+      "description": "Invoke the method 'GetSubprojectsList' on this service by specifying the payload 'PM_SubprojectParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementService_GetSubprojectsList\n{\n    \"PM_SubprojectParams\": {\n        \"AbsEntry\": 2\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementService_GetSubproject",
+      "description": "Invoke the method 'GetSubproject' on this service by specifying the payload 'PM_SubprojectDocumentParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementService_GetSubproject\n{\n    \"PM_SubprojectDocumentParams\": {\n        \"AbsEntry\": 1\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementService_AddSubproject",
+      "description": "Invoke the method 'AddSubproject' on this service by specifying the payload 'PM_SubprojectDocumentData' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementService_AddSubproject\n{\n    \"PM_SubprojectDocumentData\": {\n        \"Owner\": 2,\n        \"PMS_StagesCollection\": [\n            {\n                \"CloseDate\": \"2016-08-31\",\n                \"StageType\": 7,\n                \"StartDate\": \"2016-08-31\"\n            }\n        ],\n        \"ProjectID\": \"2\",\n        \"StartDate\": \"2016-08-31\",\n        \"SubprojectEndDate\": \"2016-08-31\",\n        \"SubprojectName\": \"subProject1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementService_UpdateSubproject",
+      "description": "Invoke the method 'UpdateSubproject' on this service by specifying the payload 'PM_SubprojectDocumentData' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementService_UpdateSubproject\n{\n    \"PM_SubprojectDocumentData\": {\n        \"AbsEntry\": 1,\n        \"ProjectID\": \"2\",\n        \"StartDate\": \"2016-08-30\",\n        \"SubprojectName\": \"new subProject1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementService_DeleteSubproject",
+      "description": "Invoke the method 'DeleteSubproject' on this service by specifying the payload 'PM_SubprojectDocumentParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementService_DeleteSubproject\n{\n    \"PM_SubprojectDocumentParams\": {\n        \"AbsEntry\": 1\n    }\n}"
+    }
+  ]
+}

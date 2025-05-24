@@ -1,0 +1,36 @@
+{
+  "service": "JournalEntryDocumentTypes",
+  "description": "This entity enables you to manipulate 'JournalEntryDocumentTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "JournalEntryDocumentTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'JournalEntryDocumentTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/JournalEntryDocumentTypes('type1')\n\nGET https://localhost:50000/b1s/v2/JournalEntryDocumentTypes('type1')?$select=JournalEntryType,DocTypeDescription,ShortName"
+    },
+    {
+      "method": "GET",
+      "path": "JournalEntryDocumentTypes",
+      "description": "Retrieve a collection of 'JournalEntryDocumentTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/JournalEntryDocumentTypes\n\nGET https://localhost:50000/b1s/v2/JournalEntryDocumentTypes?$select=JournalEntryType,DocTypeDescription,ShortName&$filter=startswith(JournalEntryType, 'a') &$orderby=JournalEntryType&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "JournalEntryDocumentTypes",
+      "description": "Create an instance of 'JournalEntryDocumentTypes' with the given payload of type 'JournalEntryDocumentType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/JournalEntryDocumentTypes\n{\n    \"DocTypeDescription\": \"my desc\",\n    \"JournalEntryType\": \"type1\",\n    \"ShortName\": \"my first type\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "JournalEntryDocumentTypes(id)",
+      "description": "Update an instance of 'JournalEntryDocumentTypes' with the given payload of type 'JournalEntryDocumentType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/JournalEntryDocumentTypes('type1')\n{\n    \"DocTypeDescription\": \"my desc - updated by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "JournalEntryDocumentTypes(id)",
+      "description": "Delete an instance of 'JournalEntryDocumentTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/JournalEntryDocumentTypes('type1')"
+    }
+  ]
+}

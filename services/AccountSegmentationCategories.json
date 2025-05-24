@@ -1,0 +1,36 @@
+{
+  "service": "AccountSegmentationCategories",
+  "description": "This entity enables you to manipulate 'AccountSegmentationCategories'. It represents the categories under each of the account segments.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AccountSegmentationCategories(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AccountSegmentationCategories' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AccountSegmentationCategories(SegmentID=123,Code='abc')\n\nGET https://localhost:50000/b1s/v2/AccountSegmentationCategories(SegmentID=123,Code='abc')?$select=SegmentID,Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "AccountSegmentationCategories",
+      "description": "Retrieve a collection of 'AccountSegmentationCategories' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AccountSegmentationCategories\n\nGET https://localhost:50000/b1s/v2/AccountSegmentationCategories?$select=SegmentID,Code,Name&$filter=SegmentID ge 123 and startswith(Code, 'a') &$orderby=SegmentID,Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AccountSegmentationCategories",
+      "description": "Create an instance of 'AccountSegmentationCategories' with the given payload of type 'AccountSegmentationCategory' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AccountSegmentationCategories\n{\n    \"Code\": \"50\",\n    \"Name\": \"Sales Department\",\n    \"SegmentID\": \"3\",\n    \"ShortName\": \"SD\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AccountSegmentationCategories(id)",
+      "description": "Update an instance of 'AccountSegmentationCategories' with the given payload of type 'AccountSegmentationCategory' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AccountSegmentationCategories(SegmentID=3,Code='50')\n{\n    \"Name\": \"General Administration\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AccountSegmentationCategories(id)",
+      "description": "Delete an instance of 'AccountSegmentationCategories' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AccountSegmentationCategories(SegmentID=3,Code='50')"
+    }
+  ]
+}

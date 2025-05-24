@@ -1,0 +1,18 @@
+{
+  "service": "CashFlowLineItems",
+  "description": "This entity enables you to manipulate 'CashFlowLineItems'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CashFlowLineItems(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CashFlowLineItems' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CashFlowLineItems(2)\n\nGET https://localhost:50000/b1s/v2/CashFlowLineItems(2)?$select=LineItemID,LineItemName,ActiveLineItem"
+    },
+    {
+      "method": "GET",
+      "path": "CashFlowLineItems",
+      "description": "Retrieve a collection of 'CashFlowLineItems' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CashFlowLineItems\n\nGET https://localhost:50000/b1s/v2/CashFlowLineItems?$select=LineItemID,LineItemName,ActiveLineItem&$filter=LineItemID ge 2 &$orderby=LineItemID&$top=10&$skip=1"
+    }
+  ]
+}

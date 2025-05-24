@@ -1,0 +1,36 @@
+{
+  "service": "CreditCardPayments",
+  "description": "This entity enables you to manipulate 'CreditCardPayments'. It defines dates on which the credit card company credits the cardholder.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CreditCardPayments(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CreditCardPayments' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditCardPayments('code01')\n\nGET https://localhost:50000/b1s/v2/CreditCardPayments('code01')?$select=DueDateCode,DueDateName,DueDatesType"
+    },
+    {
+      "method": "GET",
+      "path": "CreditCardPayments",
+      "description": "Retrieve a collection of 'CreditCardPayments' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditCardPayments\n\nGET https://localhost:50000/b1s/v2/CreditCardPayments?$select=DueDateCode,DueDateName,DueDatesType&$filter=startswith(DueDateCode, 'a') &$orderby=DueDateCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CreditCardPayments",
+      "description": "Create an instance of 'CreditCardPayments' with the given payload of type 'CreditCardPayment' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditCardPayments\n{\n    \"DueDateCode\": \"code01\",\n    \"DueDateName\": \"10 days\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CreditCardPayments(id)",
+      "description": "Update an instance of 'CreditCardPayments' with the given payload of type 'CreditCardPayment' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CreditCardPayments('code01')\n{\n    \"DueDateName\": \"15 days\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CreditCardPayments(id)",
+      "description": "Delete an instance of 'CreditCardPayments' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CreditCardPayments('code01')"
+    }
+  ]
+}

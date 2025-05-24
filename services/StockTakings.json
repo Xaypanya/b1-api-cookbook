@@ -1,0 +1,36 @@
+{
+  "service": "StockTakings",
+  "description": "This entity enables you to manipulate 'StockTakings'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "StockTakings(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'StockTakings' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/StockTakings(ItemCode='abc',WarehouseCode='abc')\n\nGET https://localhost:50000/b1s/v2/StockTakings(ItemCode='abc',WarehouseCode='abc')?$select=ItemCode,WarehouseCode,Counted"
+    },
+    {
+      "method": "GET",
+      "path": "StockTakings",
+      "description": "Retrieve a collection of 'StockTakings' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/StockTakings\n\nGET https://localhost:50000/b1s/v2/StockTakings?$select=ItemCode,WarehouseCode,Counted&$filter=startswith(ItemCode, 'a') and startswith(WarehouseCode, 'a') &$orderby=ItemCode,WarehouseCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "StockTakings",
+      "description": "Create an instance of 'StockTakings' with the given payload of type 'StockTaking' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/StockTakings\n{\n    \"Counted\": 0,\n    \"ItemCode\": \"item001\",\n    \"WarehouseCode\": \"01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "StockTakings(id)",
+      "description": "Update an instance of 'StockTakings' with the given payload of type 'StockTaking' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/StockTakings(ItemCode='abc',WarehouseCode='abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "StockTakings(id)",
+      "description": "Delete an instance of 'StockTakings' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/StockTakings(ItemCode='abc',WarehouseCode='abc')"
+    }
+  ]
+}

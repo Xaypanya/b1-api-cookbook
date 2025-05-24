@@ -1,0 +1,150 @@
+{
+  "service": "ProjectManagementConfigurationService",
+  "description": "This API enables you to invoke the interfaces defined on 'ProjectManagementConfigurationService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_GetSubprojectTypes",
+      "description": "Invoke the method 'GetSubprojectTypes' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_GetSubprojectTypes"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_AddSubprojectTypes",
+      "description": "Invoke the method 'AddSubprojectTypes' on this service by specifying the payload 'Collection(PMC_SubprojectTypeData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_AddSubprojectTypes\n{\n    \"PMC_SubprojectTypeData\": {\n        \"SubprojectTypeID\": \"1\",\n        \"SubprojectTypeName\": \"subproject 01\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_UpdateSubprojectTypes",
+      "description": "Invoke the method 'UpdateSubprojectTypes' on this service by specifying the payload 'Collection(PMC_SubprojectTypeData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_UpdateSubprojectTypes\n{\n    \"PMC_SubprojectTypeData\": {\n        \"SubprojectTypeID\": \"1\",\n        \"SubprojectTypeName\": \"changed subproject 01 name\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_DeleteSubprojectTypes",
+      "description": "Invoke the method 'DeleteSubprojectTypes' on this service by specifying the payload 'Collection(PMC_SubprojectTypeData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_DeleteSubprojectTypes\n{\n    \"PMC_SubprojectTypeData\": {\n        \"SubprojectTypeID\": \"1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_GetStageTypes",
+      "description": "Invoke the method 'GetStageTypes' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_GetStageTypes"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_AddStageTypes",
+      "description": "Invoke the method 'AddStageTypes' on this service by specifying the payload 'Collection(PMC_StageTypeData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_AddStageTypes\n{\n    \"PMC_StageTypeData\": {\n        \"StageDescription\": \"stage 01\",\n        \"StageName\": \"stage01\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_UpdateStageTypes",
+      "description": "Invoke the method 'UpdateStageTypes' on this service by specifying the payload 'Collection(PMC_StageTypeData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_UpdateStageTypes\n{\n    \"PMC_StageTypeData\": {\n        \"StageDescription\": \"update stage 01 description\",\n        \"StageID\": 6,\n        \"StageName\": \"stage01\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_DeleteStageTypes",
+      "description": "Invoke the method 'DeleteStageTypes' on this service by specifying the payload 'Collection(PMC_StageTypeData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_DeleteStageTypes\n{\n    \"PMC_StageTypeData\": {\n        \"StageID\": 6\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_GetAreas",
+      "description": "Invoke the method 'GetAreas' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_GetAreas"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_AddAreas",
+      "description": "Invoke the method 'AddAreas' on this service by specifying the payload 'Collection(PMC_AreaData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_AddAreas\n{\n    \"PMC_AreaData\": {\n        \"AreaName\": \"area 1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_UpdateAreas",
+      "description": "Invoke the method 'UpdateAreas' on this service by specifying the payload 'Collection(PMC_AreaData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_UpdateAreas\n{\n    \"PMC_AreaData\": {\n        \"AreaID\": \"1\",\n        \"AreaName\": \"update area 1 name\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_DeleteAreas",
+      "description": "Invoke the method 'DeleteAreas' on this service by specifying the payload 'Collection(PMC_AreaData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_DeleteAreas\n{\n    \"PMC_AreaData\": {\n        \"AreaID\": \"1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_GetPriorities",
+      "description": "Invoke the method 'GetPriorities' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_GetPriorities"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_AddPriorities",
+      "description": "Invoke the method 'AddPriorities' on this service by specifying the payload 'Collection(PMC_PriorityData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_AddPriorities\n{\n    \"PMC_PriorityData\": {\n        \"PriorityName\": \"Middle level\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_UpdatePriorities",
+      "description": "Invoke the method 'UpdatePriorities' on this service by specifying the payload 'Collection(PMC_PriorityData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_UpdatePriorities\n{\n    \"PMC_PriorityData\": {\n        \"PriorityID\": 1,\n        \"PriorityName\": \"Lowest level\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_DeletePriorities",
+      "description": "Invoke the method 'DeletePriorities' on this service by specifying the payload 'Collection(PMC_PriorityData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_DeletePriorities\n{\n    \"PMC_PriorityData\": {\n        \"PriorityID\": 1,\n        \"PriorityName\": \"Lowest level\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_GetActivities",
+      "description": "Invoke the method 'GetActivities' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_GetActivities"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_AddActivities",
+      "description": "Invoke the method 'AddActivities' on this service by specifying the payload 'Collection(PMC_ActivityData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_AddActivities\n{\n    \"PMC_ActivityData\": {\n        \"ActivityType\": \"calls\",\n        \"IsChargeable\": \"tYES\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_UpdateActivities",
+      "description": "Invoke the method 'UpdateActivities' on this service by specifying the payload 'Collection(PMC_ActivityData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_UpdateActivities\n{\n    \"PMC_ActivityData\": {\n        \"ActivityID\": 1,\n        \"ActivityType\": \"email\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_DeleteActivities",
+      "description": "Invoke the method 'DeleteActivities' on this service by specifying the payload 'Collection(PMC_ActivityData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_DeleteActivities\n{\n    \"PMC_ActivityData\": {\n        \"ActivityID\": 1,\n        \"ActivityType\": \"calls\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_GetTasks",
+      "description": "Invoke the method 'GetTasks' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_GetTasks"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_AddTasks",
+      "description": "Invoke the method 'AddTasks' on this service by specifying the payload 'Collection(PMC_TaskData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_AddTasks\n{\n    \"PMC_TaskData\": {\n        \"TaskName\": \"plans\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_UpdateTasks",
+      "description": "Invoke the method 'UpdateTasks' on this service by specifying the payload 'Collection(PMC_TaskData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_UpdateTasks\n{\n    \"PMC_TaskData\": {\n        \"TaskName\": \"change plans\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProjectManagementConfigurationService_DeleteTasks",
+      "description": "Invoke the method 'DeleteTasks' on this service by specifying the payload 'Collection(PMC_TaskData)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProjectManagementConfigurationService_DeleteTasks\n{\n    \"PMC_TaskData\": {\n        \"TaskID\": 2,\n        \"TaskName\": \"change plans\"\n    }\n}"
+    }
+  ]
+}

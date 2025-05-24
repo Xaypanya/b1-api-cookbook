@@ -1,0 +1,48 @@
+{
+  "service": "QueryAuthGroups",
+  "description": "This entity enables you to manipulate 'QueryAuthGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "QueryAuthGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'QueryAuthGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/QueryAuthGroups(-15)\n\nGET https://localhost:50000/b1s/v2/QueryAuthGroups(-15)?$select=AuthGroupCode,AuthGroupDes,AuthGroupId"
+    },
+    {
+      "method": "GET",
+      "path": "QueryAuthGroups",
+      "description": "Retrieve a collection of 'QueryAuthGroups' with all or some selected properties by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/QueryAuthGroups\n\nGET https://localhost:50000/b1s/v2/QueryAuthGroups?$select=AuthGroupCode,AuthGroupDes,AuthGroupId &$filter=AuthGroupId eq -15"
+    },
+    {
+      "method": "POST",
+      "path": "QueryAuthGroups",
+      "description": "Create an instance of 'QueryAuthGroups' with the given payload of type 'QueryAuthGroup' in JSON format.GroupCode and GroupDes should be unique,mandatory.",
+      "example": "POST https://localhost:50000/b1s/v2/QueryAuthGroups\n{\n    \"AuthGroupCode\": \"Group21\",\n    \"AuthGroupDes\": \"Group21description\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "QueryAuthGroups(id)",
+      "description": "Update an instance of 'QueryAuthGroups' with the given payload of type 'QueryAuthGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/QueryAuthGroups(1)\n{\n    \"AuthGroupDes\": \"Group21descriptionupdate\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "QueryAuthGroups(id)",
+      "description": "assign QueryAuthorizationGroups to query category.In http header, set B1S-ReplaceCollectionsOnPatch as false.",
+      "example": "PATCH https://localhost:50000/b1s/v2/QueryAuthGroups(1)\n{\n    \"CategoryGroupCollection\": [\n        {\n            \"CategoryId\": -2\n        },\n        {\n            \"CategoryId\": -1\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "QueryAuthGroups(id)",
+      "description": "unassign QueryAuthorizationGroups to query category such as Category with CategoryId=-1.In http header, set B1S-ReplaceCollectionsOnPatch as true.",
+      "example": "PATCH https://localhost:50000/b1s/v2/QueryAuthGroups(1)\n{\n    \"CategoryGroupCollection\": [\n        {\n            \"CategoryId\": -2\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "QueryAuthGroups(id)",
+      "description": "Delete an instance of 'QueryAuthGroups' with the specified id.It is allowed only when no query category is assigned to the query group.",
+      "example": "DELETE https://localhost:50000/b1s/v2/QueryAuthGroups(1)"
+    }
+  ]
+}

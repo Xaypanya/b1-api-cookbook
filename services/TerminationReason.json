@@ -1,0 +1,36 @@
+{
+  "service": "TerminationReason",
+  "description": "This entity enables you to manipulate 'TerminationReason'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TerminationReason(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TerminationReason' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TerminationReason(1)\n\nGET https://localhost:50000/b1s/v2/TerminationReason(1)?$select=ReasonID,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "TerminationReason",
+      "description": "Retrieve a collection of 'TerminationReason' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TerminationReason\n\nGET https://localhost:50000/b1s/v2/TerminationReason?$select=ReasonID,Name,Description&$filter=ReasonID ge 1 &$orderby=ReasonID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "TerminationReason",
+      "description": "Create an instance of 'TerminationReason' with the given payload of type 'TerminationReason' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/TerminationReason\n{\n    \"Name\": \"reason 01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "TerminationReason(id)",
+      "description": "Update an instance of 'TerminationReason' with the given payload of type 'TerminationReason' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TerminationReason(1)\n{\n    \"Description\": \"Add description\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "TerminationReason(id)",
+      "description": "Delete an instance of 'TerminationReason' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/TerminationReason(1)"
+    }
+  ]
+}

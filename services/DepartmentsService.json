@@ -1,0 +1,12 @@
+{
+  "service": "DepartmentsService",
+  "description": "This API enables you to invoke the interfaces defined on 'DepartmentsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DepartmentsService_GetDepartmentList",
+      "description": "Invoke the method 'GetDepartmentList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/DepartmentsService_GetDepartmentList"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "NCMCodesSetup",
+  "description": "This entity enables you to manipulate 'NCMCodesSetup'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "NCMCodesSetup(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'NCMCodesSetup' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/NCMCodesSetup(123)\n\nGET https://localhost:50000/b1s/v2/NCMCodesSetup(123)?$select=AbsEntry,NCMCode,Description"
+    },
+    {
+      "method": "GET",
+      "path": "NCMCodesSetup",
+      "description": "Retrieve a collection of 'NCMCodesSetup' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/NCMCodesSetup\n\nGET https://localhost:50000/b1s/v2/NCMCodesSetup?$select=AbsEntry,NCMCode,Description&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "NCMCodesSetup",
+      "description": "Create an instance of 'NCMCodesSetup' with the given payload of type 'NCMCodeSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/NCMCodesSetup\n{\n    \"AbsEntry\": 2,\n    \"Description\": \"Outros\",\n    \"NCMCode\": \"0905.59.901\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "NCMCodesSetup(id)",
+      "description": "Update an instance of 'NCMCodesSetup' with the given payload of type 'NCMCodeSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/NCMCodesSetup(123)\n{\n    \"Description\": \"111Outros\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "NCMCodesSetup(id)",
+      "description": "Delete an instance of 'NCMCodesSetup' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/NCMCodesSetup(123)"
+    }
+  ]
+}

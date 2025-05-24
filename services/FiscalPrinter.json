@@ -1,0 +1,36 @@
+{
+  "service": "FiscalPrinter",
+  "description": "This entity enables you to manipulate 'FiscalPrinter'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "FiscalPrinter(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'FiscalPrinter' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/FiscalPrinter('1')\n\nGET https://localhost:50000/b1s/v2/FiscalPrinter('1')?$select=EquipmentNo,Model,ManufacturerSerialN"
+    },
+    {
+      "method": "GET",
+      "path": "FiscalPrinter",
+      "description": "Retrieve a collection of 'FiscalPrinter' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/FiscalPrinter\n\nGET https://localhost:50000/b1s/v2/FiscalPrinter?$select=EquipmentNo,Model,ManufacturerSerialN&$filter=startswith(EquipmentNo, '1') &$orderby=EquipmentNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "FiscalPrinter",
+      "description": "Create an instance of 'FiscalPrinter' with the given payload of type 'FiscalPrinter' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FiscalPrinter\n{\n    \"EquipmentNo\": \"1\",\n    \"FiscalDocumentModel\": \"FM\",\n    \"ManufacturerSerialN\": \"ManufacturerSerialN\",\n    \"Model\": \"Model\",\n    \"RegisterNo\": \"0123456789\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "FiscalPrinter(id)",
+      "description": "Update an instance of 'FiscalPrinter' with the given payload of type 'FiscalPrinter' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/FiscalPrinter('1')\n{\n    \"EquipmentNo\": \"1\",\n    \"FiscalDocumentModel\": \"FM\",\n    \"ManufacturerSerialN\": \"ManufacturerSerialN\",\n    \"Model\": \"Model\",\n    \"RegisterNo\": \"0123456789\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "FiscalPrinter(id)",
+      "description": "Delete an instance of 'FiscalPrinter' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/FiscalPrinter('1')"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "BudgetScenarios",
+  "description": "This entity enables you to manipulate 'BudgetScenarios'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BudgetScenarios(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BudgetScenarios' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BudgetScenarios(123)\n\nGET https://localhost:50000/b1s/v2/BudgetScenarios(123)?$select=Name,InitialRatioPercentage,StartofFiscalYear"
+    },
+    {
+      "method": "GET",
+      "path": "BudgetScenarios",
+      "description": "Retrieve a collection of 'BudgetScenarios' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BudgetScenarios\n\nGET https://localhost:50000/b1s/v2/BudgetScenarios?$select=Name,InitialRatioPercentage,StartofFiscalYear&$filter=Numerator ge 123 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BudgetScenarios",
+      "description": "Create an instance of 'BudgetScenarios' with the given payload of type 'BudgetScenario' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BudgetScenarios\n{\n    \"BasicBudget\": \"1\",\n    \"InitialRatioPercentage\": \"100\",\n    \"Name\": \"newScenario\",\n    \"RoundingMethod\": \"borm_NoRounding\",\n    \"StartofFiscalYear\": \"2014-01-01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BudgetScenarios(id)",
+      "description": "Update an instance of 'BudgetScenarios' with the given payload of type 'BudgetScenario' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BudgetScenarios(123)\n{\n    \"Name\": \"new2014\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BudgetScenarios(id)",
+      "description": "Delete an instance of 'BudgetScenarios' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BudgetScenarios(123)"
+    }
+  ]
+}

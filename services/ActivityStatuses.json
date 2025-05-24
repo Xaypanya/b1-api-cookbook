@@ -1,0 +1,36 @@
+{
+  "service": "ActivityStatuses",
+  "description": "This entity enables you to manipulate 'ActivityStatuses'. It is a business object that enables to define statuses for Task type activities in the Business Partners module.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ActivityStatuses(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ActivityStatuses' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityStatuses(1)\n\nGET https://localhost:50000/b1s/v2/ActivityStatuses(1)?$select=StatusDescription,StatusId,StatusName"
+    },
+    {
+      "method": "GET",
+      "path": "ActivityStatuses",
+      "description": "Retrieve a collection of 'ActivityStatuses' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ActivityStatuses\n\nGET https://localhost:50000/b1s/v2/ActivityStatuses?$select=StatusDescription,StatusId,StatusName&$filter=StatusId ge 1 &$orderby=StatusId&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ActivityStatuses",
+      "description": "Create an instance of 'ActivityStatuses' with the given payload of type 'ActivityStatus' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ActivityStatuses\n{\n    \"StatusDescription\": \"Task in progress\",\n    \"StatusName\": \"In Progress\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ActivityStatuses(id)",
+      "description": "Update an instance of 'ActivityStatuses' with the given payload of type 'ActivityStatus' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ActivityStatuses(1)\n{\n    \"StatusDescription\": \"Finished\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ActivityStatuses(id)",
+      "description": "Delete an instance of 'ActivityStatuses' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ActivityStatuses(1)"
+    }
+  ]
+}

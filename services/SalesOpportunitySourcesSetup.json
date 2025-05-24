@@ -1,0 +1,36 @@
+{
+  "service": "SalesOpportunitySourcesSetup",
+  "description": "This entity enables you to manipulate 'SalesOpportunitySourcesSetup'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesOpportunitySourcesSetup(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesOpportunitySourcesSetup' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunitySourcesSetup(123)\n\nGET https://localhost:50000/b1s/v2/SalesOpportunitySourcesSetup(123)?$select=SequenceNo,Description,Sort"
+    },
+    {
+      "method": "GET",
+      "path": "SalesOpportunitySourcesSetup",
+      "description": "Retrieve a collection of 'SalesOpportunitySourcesSetup' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunitySourcesSetup\n\nGET https://localhost:50000/b1s/v2/SalesOpportunitySourcesSetup?$select=SequenceNo,Description,Sort&$filter=SequenceNo ge 123 &$orderby=SequenceNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesOpportunitySourcesSetup",
+      "description": "Create an instance of 'SalesOpportunitySourcesSetup' with the given payload of type 'SalesOpportunitySourceSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesOpportunitySourcesSetup\n{\n    \"Description\": \"2111\",\n    \"SequenceNo\": 2,\n    \"Sort\": 11\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesOpportunitySourcesSetup(id)",
+      "description": "Update an instance of 'SalesOpportunitySourcesSetup' with the given payload of type 'SalesOpportunitySourceSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesOpportunitySourcesSetup(123)\n{\n    \"Sort\": 21\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesOpportunitySourcesSetup(id)",
+      "description": "Delete an instance of 'SalesOpportunitySourcesSetup' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesOpportunitySourcesSetup(123)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "service": "CostElementService",
+  "description": "This API enables you to invoke the interfaces defined on 'CostElementService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CostElementService_GetCostElementList",
+      "description": "Invoke the method 'GetCostElementList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CostElementService_GetCostElementList"
+    }
+  ]
+}

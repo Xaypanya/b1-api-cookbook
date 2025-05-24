@@ -1,0 +1,36 @@
+{
+  "service": "FAAccountDeterminations",
+  "description": "This entity enables you to manipulate 'FAAccountDeterminations'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "FAAccountDeterminations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'FAAccountDeterminations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/FAAccountDeterminations('test')\n\nGET https://localhost:50000/b1s/v2/FAAccountDeterminations('test')?$select=Code,Description,AssetBalanceSheetAccount"
+    },
+    {
+      "method": "GET",
+      "path": "FAAccountDeterminations",
+      "description": "Retrieve a collection of 'FAAccountDeterminations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/FAAccountDeterminations\n\nGET https://localhost:50000/b1s/v2/FAAccountDeterminations?$select=Code,Description,AssetBalanceSheetAccount&$filter=startswith(Code, 'test') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "FAAccountDeterminations",
+      "description": "Create an instance of 'FAAccountDeterminations' with the given payload of type 'FAAccountDetermination' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FAAccountDeterminations\n{\n    \"AccumulatedOrdinaryDepr\": \"2180\",\n    \"AccumulatedSpecialDepr\": \"2185\",\n    \"AccumulatedUnplannedDepr\": \"2182\",\n    \"AssetBalanceSheetAccount\": \"0027\",\n    \"ClearingAccountAcquisition\": \"2307\",\n    \"Code\": \"test\",\n    \"Description\": \"Immaterielle Verm.\",\n    \"LeavewithExpenseNBVGross\": \"2310\",\n    \"LeavewithRevenueNBVGross\": \"2315\",\n    \"OrdinaryDepreciation\": \"4822\",\n    \"RetirementwithExpenseNet\": \"4850\",\n    \"RetirementwithRevenueNet\": \"4850\",\n    \"RevaluationReserveAccount\": \"4850\",\n    \"RevaluationReserveClearing\": \"4850\",\n    \"RevenueAccountforRetirement\": \"8837\",\n    \"RevenueClearingAccount\": \"4850\",\n    \"RevenuefromAssetSalesNet\": \"4850\",\n    \"SpecialDepreciation\": \"4850\",\n    \"UnplannedDepreciation\": \"4826\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "FAAccountDeterminations(id)",
+      "description": "Update an instance of 'FAAccountDeterminations' with the given payload of type 'FAAccountDetermination' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/FAAccountDeterminations('test')\n{\n    \"RevenueClearingAccount\": \"2310\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "FAAccountDeterminations(id)",
+      "description": "Delete an instance of 'FAAccountDeterminations' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/FAAccountDeterminations('test')"
+    }
+  ]
+}

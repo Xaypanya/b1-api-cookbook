@@ -1,0 +1,30 @@
+{
+  "service": "BrazilFuelIndexers",
+  "description": "This entity enables you to manipulate 'BrazilFuelIndexers'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BrazilFuelIndexers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BrazilFuelIndexers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilFuelIndexers(797)\n\nGET https://localhost:50000/b1s/v2/BrazilFuelIndexers(797)?$select=FuelID,FuelGroupCode,FuelCode"
+    },
+    {
+      "method": "GET",
+      "path": "BrazilFuelIndexers",
+      "description": "Retrieve a collection of 'BrazilFuelIndexers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilFuelIndexers\n\nGET https://localhost:50000/b1s/v2/BrazilFuelIndexers?$select=FuelID,FuelGroupCode,FuelCode&$filter=FuelID ge 797 &$orderby=FuelID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilFuelIndexers",
+      "description": "Create an instance of 'BrazilFuelIndexers' with the given payload of type 'BrazilFuelIndexer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilFuelIndexers\n{\n    \"Description\": \"999999999-Description\",\n    \"FuelCode\": \"999999999\",\n    \"FuelGroupCode\": \"1\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BrazilFuelIndexers(id)",
+      "description": "Delete an instance of 'BrazilFuelIndexers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BrazilFuelIndexers(797)"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "ReportFilter",
+  "description": "This entity enables you to manipulate 'ReportFilter'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ReportFilter(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ReportFilter' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ReportFilter(1)\n\nGET https://localhost:50000/b1s/v2/ReportFilter(1)?$select=Code,Name,ReportLayout"
+    },
+    {
+      "method": "GET",
+      "path": "ReportFilter",
+      "description": "Retrieve a collection of 'ReportFilter' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ReportFilter\n\nGET https://localhost:50000/b1s/v2/ReportFilter?$select=Code,Name,ReportLayout&$filter=Code ge 1 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ReportFilter",
+      "description": "Create an instance of 'ReportFilter' with the given payload of type 'TaxReportFilter' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportFilter\n{\n    \"FilterType\": \"trft_TaxReport\",\n    \"Name\": \"Myfilter\",\n    \"ReportLayout\": \"trfrlt_RegisterBookLayout\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ReportFilter(id)",
+      "description": "Update an instance of 'ReportFilter' with the given payload of type 'TaxReportFilter' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ReportFilter(1)\n{\n    \"FromDate\": \"2016-08-01\",\n    \"ToDate\": \"2016-08-31\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ReportFilter(id)",
+      "description": "Delete an instance of 'ReportFilter' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ReportFilter(1)"
+    }
+  ]
+}

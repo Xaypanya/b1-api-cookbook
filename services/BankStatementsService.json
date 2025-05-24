@@ -1,0 +1,12 @@
+{
+  "service": "BankStatementsService",
+  "description": "This API enables you to invoke the interfaces defined on 'BankStatementsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BankStatementsService_GetBankStatementList",
+      "description": "Invoke the method 'GetBankStatementList' on this service by specifying the payload 'BankStatementsFilter' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BankStatementsService_GetBankStatementList\n{\n    \"BankStatementsFilter\": {\n        \"Account\": \"111\",\n        \"Bank\": \"10000000\",\n        \"Country\": \"DE\"\n    }\n}"
+    }
+  ]
+}

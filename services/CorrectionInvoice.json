@@ -1,0 +1,54 @@
+{
+  "service": "CorrectionInvoice",
+  "description": "This entity enables you to manipulate 'CorrectionInvoice'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CorrectionInvoice(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CorrectionInvoice' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CorrectionInvoice(123)\n\nGET https://localhost:50000/b1s/v2/CorrectionInvoice(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "CorrectionInvoice",
+      "description": "Retrieve a collection of 'CorrectionInvoice' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CorrectionInvoice\n\nGET https://localhost:50000/b1s/v2/CorrectionInvoice?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionInvoice",
+      "description": "Create an instance of 'CorrectionInvoice' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionInvoice\n{\n    \"CardCode\": \"c001\",\n    \"Comments\": \"Added by Service Layer\",\n    \"DocumentLines\": [\n        {\n            \"CorrectionInvoiceItem\": \"ciis_ShouldBe\",\n            \"ItemCode\": \"item01\",\n            \"Price\": \"310\",\n            \"Quantity\": \"10\",\n            \"VatGroup\": \"B4\"\n        },\n        {\n            \"CorrectionInvoiceItem\": \"ciis_Was\",\n            \"ItemCode\": \"item01\",\n            \"Price\": \"110\",\n            \"Quantity\": \"10\",\n            \"VatGroup\": \"B4\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CorrectionInvoice(id)",
+      "description": "Update an instance of 'CorrectionInvoice' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CorrectionInvoice(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionInvoice(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionInvoice(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionInvoice(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionInvoice(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionInvoice(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionInvoice(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionInvoice(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionInvoice(123)/CreateCancellationDocument"
+    }
+  ]
+}

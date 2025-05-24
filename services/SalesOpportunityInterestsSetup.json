@@ -1,0 +1,36 @@
+{
+  "service": "SalesOpportunityInterestsSetup",
+  "description": "This entity enables you to manipulate 'SalesOpportunityInterestsSetup'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesOpportunityInterestsSetup(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesOpportunityInterestsSetup' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunityInterestsSetup(123)\n\nGET https://localhost:50000/b1s/v2/SalesOpportunityInterestsSetup(123)?$select=SequenceNo,Description,Sort"
+    },
+    {
+      "method": "GET",
+      "path": "SalesOpportunityInterestsSetup",
+      "description": "Retrieve a collection of 'SalesOpportunityInterestsSetup' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunityInterestsSetup\n\nGET https://localhost:50000/b1s/v2/SalesOpportunityInterestsSetup?$select=SequenceNo,Description,Sort&$filter=SequenceNo ge 123 &$orderby=SequenceNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesOpportunityInterestsSetup",
+      "description": "Create an instance of 'SalesOpportunityInterestsSetup' with the given payload of type 'SalesOpportunityInterestSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesOpportunityInterestsSetup\n{\n    \"Description\": \"good\",\n    \"SequenceNo\": 2,\n    \"Sort\": 100\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesOpportunityInterestsSetup(id)",
+      "description": "Update an instance of 'SalesOpportunityInterestsSetup' with the given payload of type 'SalesOpportunityInterestSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesOpportunityInterestsSetup(123)\n{\n    \"Description\": \"good\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesOpportunityInterestsSetup(id)",
+      "description": "Delete an instance of 'SalesOpportunityInterestsSetup' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesOpportunityInterestsSetup(123)"
+    }
+  ]
+}

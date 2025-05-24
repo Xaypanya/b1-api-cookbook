@@ -1,0 +1,24 @@
+{
+  "service": "ReturnRequestService",
+  "description": "This API enables you to invoke the interfaces defined on 'ReturnRequestService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ReturnRequestService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'Document' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReturnRequestService_GetApprovalTemplates\n{\n    \"Document\": {\n        \"CardCode\": \"c001\",\n        \"DocumentLines\": [\n            {\n                \"ItemCode\": \"i001\",\n                \"Quantity\": \"100\",\n                \"TaxCode\": \"T1\",\n                \"UnitPrice\": \"50\"\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReturnRequestService_Preview",
+      "description": "Invoke the method 'Preview' on this service by specifying the payload 'Document' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReturnRequestService_Preview\n{\n    \"Document\": {\n        \"CardCode\": \"c001\",\n        \"DocumentLines\": [\n            {\n                \"ItemCode\": \"i001\",\n                \"Quantity\": \"100\",\n                \"TaxCode\": \"T1\",\n                \"UnitPrice\": \"50\"\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReturnRequestService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ReturnRequestService_HandleApprovalRequest"
+    }
+  ]
+}

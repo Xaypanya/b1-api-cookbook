@@ -1,0 +1,30 @@
+{
+  "service": "BEMReplicationPeriods",
+  "description": "This entity enables you to manipulate 'BEMReplicationPeriods'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BEMReplicationPeriods(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BEMReplicationPeriods' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BEMReplicationPeriods(1)\n\nGET https://localhost:50000/b1s/v2/BEMReplicationPeriods(1)?$select=ScopeKey,ScopeName,Periodic,StartDate,Status,UpdateDate"
+    },
+    {
+      "method": "GET",
+      "path": "BEMReplicationPeriods",
+      "description": "Retrieve a collection of 'BEMReplicationPeriods' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BEMReplicationPeriods\n\nGET https://localhost:50000/b1s/v2/BEMReplicationPeriods?$select=ScopeName,StartDate,Status&$filter=startswith(ScopeName,'a')&$orderby=StartDate&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BEMReplicationPeriods",
+      "description": "Create an instance of 'BEMReplicationPeriods' with the given payload of type 'BEMReplicationPeriod' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BEMReplicationPeriods\n{\n    \"Periodic\": \"bemPeriodic_Month\",\n    \"ScopeKey\": \"f053fa97-66cd-407e-8a85-e8a8040ef65e\",\n    \"ScopeName\": \"BEM Scope 1\",\n    \"StartDate\": \"2022-01-01\",\n    \"Status\": \"bemStatus_New\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BEMReplicationPeriods(id)",
+      "description": "Update an instance of 'BEMReplicationPeriods' with the given payload of type 'BEMReplicationPeriod' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BEMReplicationPeriods(1)\n{\n    \"Status\": \"bemStatus_InProcess\",\n    \"UpdateDate\": \"2022-02-01\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "service": "SelfCreditMemoService",
+  "description": "This API enables you to invoke the interfaces defined on 'SelfCreditMemoService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "SelfCreditMemoService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'Document' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SelfCreditMemoService_GetApprovalTemplates\n{\n    \"Document\": {\n        \"CardCode\": \"c001\",\n        \"DocumentLines\": [\n            {\n                \"ItemCode\": \"i001\",\n                \"Quantity\": \"100\",\n                \"TaxCode\": \"T1\",\n                \"UnitPrice\": \"50\"\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "SelfCreditMemoService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/SelfCreditMemoService_HandleApprovalRequest"
+    },
+    {
+      "method": "POST",
+      "path": "SelfCreditMemoService_Cancel2",
+      "description": "Invoke the method 'Cancel2' on this service by specifying the payload 'Document' in the JSON format. This method allows you to change some properties before cancelling one document.",
+      "example": "POST https://localhost:50000/b1s/v2/SelfCreditMemoService_Cancel2\n{\n    \"Document\": {\n        \"Comments\": \"via SL.\",\n        \"DocEntry\": 123\n    }\n}"
+    }
+  ]
+}

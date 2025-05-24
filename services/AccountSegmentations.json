@@ -1,0 +1,36 @@
+{
+  "service": "AccountSegmentations",
+  "description": "This entity enables you to manipulate 'AccountSegmentations'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AccountSegmentations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AccountSegmentations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AccountSegmentations(123)\n\nGET https://localhost:50000/b1s/v2/AccountSegmentations(123)?$select=Numerator,Name,Size"
+    },
+    {
+      "method": "GET",
+      "path": "AccountSegmentations",
+      "description": "Retrieve a collection of 'AccountSegmentations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AccountSegmentations\n\nGET https://localhost:50000/b1s/v2/AccountSegmentations?$select=Numerator,Name,Size&$filter=Numerator ge 123 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AccountSegmentations",
+      "description": "Create an instance of 'AccountSegmentations' with the given payload of type 'AccountSegmentation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AccountSegmentations\n{\n    \"AccountSegmentationsCategories\": [\n        {\n            \"Code\": \"50\",\n            \"Name\": \"Sales Department\",\n            \"SegmentID\": \"3\",\n            \"ShortName\": \"SD\"\n        }\n    ],\n    \"Name\": \"Division2\",\n    \"Size\": 2,\n    \"Type\": \"ast_Alphanumeric\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AccountSegmentations(id)",
+      "description": "Update an instance of 'AccountSegmentations' with the given payload of type 'AccountSegmentation' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AccountSegmentations(123)\n{\n    \"Name\": \"Division3\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AccountSegmentations(id)",
+      "description": "Delete an instance of 'AccountSegmentations' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AccountSegmentations(123)"
+    }
+  ]
+}

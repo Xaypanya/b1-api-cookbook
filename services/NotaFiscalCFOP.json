@@ -1,0 +1,36 @@
+{
+  "service": "NotaFiscalCFOP",
+  "description": "This entity enables you to manipulate 'NotaFiscalCFOP'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "NotaFiscalCFOP(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'NotaFiscalCFOP' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/NotaFiscalCFOP(123)\n\nGET https://localhost:50000/b1s/v2/NotaFiscalCFOP(123)?$select=ID,Description,Code"
+    },
+    {
+      "method": "GET",
+      "path": "NotaFiscalCFOP",
+      "description": "Retrieve a collection of 'NotaFiscalCFOP' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/NotaFiscalCFOP\n\nGET https://localhost:50000/b1s/v2/NotaFiscalCFOP?$select=ID,Description,Code&$filter=ID ge 123 &$orderby=ID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "NotaFiscalCFOP",
+      "description": "Create an instance of 'NotaFiscalCFOP' with the given payload of type 'NotaFiscalCFOP' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/NotaFiscalCFOP\n{\n    \"Application\": \"app0401\",\n    \"Code\": \"00401\",\n    \"Description\": \"cfop0401\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "NotaFiscalCFOP(id)",
+      "description": "Update an instance of 'NotaFiscalCFOP' with the given payload of type 'NotaFiscalCFOP' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/NotaFiscalCFOP(123)\n{\n    \"Description\": \"cfop20200401\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "NotaFiscalCFOP(id)",
+      "description": "Delete an instance of 'NotaFiscalCFOP' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/NotaFiscalCFOP(123)"
+    }
+  ]
+}

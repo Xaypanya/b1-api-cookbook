@@ -1,0 +1,36 @@
+{
+  "service": "Branches",
+  "description": "This entity enables you to manipulate 'Branches'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Branches(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Branches' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Branches(123)\n\nGET https://localhost:50000/b1s/v2/Branches(123)?$select=Code,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "Branches",
+      "description": "Retrieve a collection of 'Branches' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Branches\n\nGET https://localhost:50000/b1s/v2/Branches?$select=Code,Name,Description&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Branches",
+      "description": "Create an instance of 'Branches' with the given payload of type 'Branch' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Branches\n{\n    \"Description\": \"Main Branch\",\n    \"Name\": \"Branch2\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Branches(id)",
+      "description": "Update an instance of 'Branches' with the given payload of type 'Branch' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Branches(123)\n{\n    \"Description\": \"Main Branch updated\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Branches(id)",
+      "description": "Delete an instance of 'Branches' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Branches(123)"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "CreditCards",
+  "description": "This entity enables you to manipulate 'CreditCards'. It defines credit cards that the company can use for incoming and outgoing payments.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CreditCards(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CreditCards' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditCards(123)\n\nGET https://localhost:50000/b1s/v2/CreditCards(123)?$select=CreditCardCode,CreditCardName,GLAccount"
+    },
+    {
+      "method": "GET",
+      "path": "CreditCards",
+      "description": "Retrieve a collection of 'CreditCards' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditCards\n\nGET https://localhost:50000/b1s/v2/CreditCards?$select=CreditCardCode,CreditCardName,GLAccount&$filter=CreditCardCode ge 123 &$orderby=CreditCardCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CreditCards",
+      "description": "Create an instance of 'CreditCards' with the given payload of type 'CreditCard' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditCards\n{\n    \"CompanyID\": \"123456789\",\n    \"CreditCardName\": \"Test\",\n    \"GLAccount\": \"_SYS00000000004\",\n    \"Telephone\": \"61087839\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CreditCards(id)",
+      "description": "Update an instance of 'CreditCards' with the given payload of type 'CreditCard' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CreditCards(123)\n{\n    \"CreditCardName\": \"Updated Name\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CreditCards(id)",
+      "description": "Delete an instance of 'CreditCards' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CreditCards(123)"
+    }
+  ]
+}

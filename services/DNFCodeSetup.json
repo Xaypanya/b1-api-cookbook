@@ -1,0 +1,36 @@
+{
+  "service": "DNFCodeSetup",
+  "description": "This entity enables you to manipulate 'DNFCodeSetup'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DNFCodeSetup(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DNFCodeSetup' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DNFCodeSetup(123)\n\nGET https://localhost:50000/b1s/v2/DNFCodeSetup(123)?$select=AbsEntry,NCMCode,DNFCode"
+    },
+    {
+      "method": "GET",
+      "path": "DNFCodeSetup",
+      "description": "Retrieve a collection of 'DNFCodeSetup' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DNFCodeSetup\n\nGET https://localhost:50000/b1s/v2/DNFCodeSetup?$select=AbsEntry,NCMCode,DNFCode&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DNFCodeSetup",
+      "description": "Create an instance of 'DNFCodeSetup' with the given payload of type 'DNFCodeSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DNFCodeSetup\n{\n    \"AbsEntry\": 1,\n    \"DNFCode\": \"1113\",\n    \"Factor\": 15,\n    \"NCMCode\": 9774,\n    \"UoM\": \"11\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DNFCodeSetup(id)",
+      "description": "Update an instance of 'DNFCodeSetup' with the given payload of type 'DNFCodeSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DNFCodeSetup(123)\n{\n    \"DNFCode\": \"11131\",\n    \"Factor\": 75,\n    \"UoM\": \"112\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DNFCodeSetup(id)",
+      "description": "Delete an instance of 'DNFCodeSetup' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DNFCodeSetup(123)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "service": "LandedCostsService",
+  "description": "This API enables you to invoke the interfaces defined on 'LandedCostsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "LandedCostsService_GetLandedCostList",
+      "description": "Invoke the method 'GetLandedCostList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/LandedCostsService_GetLandedCostList"
+    }
+  ]
+}

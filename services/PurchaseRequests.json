@@ -1,0 +1,60 @@
+{
+  "service": "PurchaseRequests",
+  "description": "This entity enables you to manipulate 'PurchaseRequests'. It allows users and employees in an organization to initiate a purchasing process by submitting their needs for certain goods or services.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PurchaseRequests(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PurchaseRequests' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseRequests(123)\n\nGET https://localhost:50000/b1s/v2/PurchaseRequests(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "PurchaseRequests",
+      "description": "Retrieve a collection of 'PurchaseRequests' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseRequests\n\nGET https://localhost:50000/b1s/v2/PurchaseRequests?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseRequests",
+      "description": "Create an instance of 'PurchaseRequests' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseRequests\n{\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"LineVendor\": \"v001\",\n            \"Quantity\": \"11\"\n        }\n    ],\n    \"RequriedDate\": \"2014-03-18\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PurchaseRequests(id)",
+      "description": "Update an instance of 'PurchaseRequests' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PurchaseRequests(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PurchaseRequests(id)",
+      "description": "Delete an instance of 'PurchaseRequests' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PurchaseRequests(123)"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseRequests(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseRequests(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseRequests(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseRequests(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseRequests(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseRequests(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseRequests(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseRequests(123)/CreateCancellationDocument"
+    }
+  ]
+}

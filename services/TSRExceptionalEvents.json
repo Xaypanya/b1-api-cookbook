@@ -1,0 +1,30 @@
+{
+  "service": "TSRExceptionalEvents",
+  "description": "This entity enables you to manipulate 'TSRExceptionalEvents'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TSRExceptionalEvents(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TSRExceptionalEvents' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TSRExceptionalEvents('abc')\n\nGET https://localhost:50000/b1s/v2/TSRExceptionalEvents('abc')?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "TSRExceptionalEvents",
+      "description": "Retrieve a collection of 'TSRExceptionalEvents' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TSRExceptionalEvents\n\nGET https://localhost:50000/b1s/v2/TSRExceptionalEvents?$select=Code,Description&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "TSRExceptionalEvents",
+      "description": "Create an instance of 'TSRExceptionalEvents' with the given payload of type 'TSRExceptionalEvent' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/TSRExceptionalEvents\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "TSRExceptionalEvents(id)",
+      "description": "Update an instance of 'TSRExceptionalEvents' with the given payload of type 'TSRExceptionalEvent' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TSRExceptionalEvents('abc')\n{}"
+    }
+  ]
+}

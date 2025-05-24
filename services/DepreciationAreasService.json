@@ -1,0 +1,12 @@
+{
+  "service": "DepreciationAreasService",
+  "description": "This API enables you to invoke the interfaces defined on 'DepreciationAreasService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DepreciationAreasService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/DepreciationAreasService_GetList"
+    }
+  ]
+}

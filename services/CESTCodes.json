@@ -1,0 +1,36 @@
+{
+  "service": "CESTCodes",
+  "description": "This entity enables you to manipulate 'CESTCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CESTCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CESTCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CESTCodes(2)\n\nGET https://localhost:50000/b1s/v2/CESTCodes(2)?$select=AbsEntry,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "CESTCodes",
+      "description": "Retrieve a collection of 'CESTCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CESTCodes\n\nGET https://localhost:50000/b1s/v2/CESTCodes?$select=AbsEntry,Code,Description&$filter=AbsEntry ge 2 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CESTCodes",
+      "description": "Create an instance of 'CESTCodes' with the given payload of type 'CESTCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CESTCodes\n{\n    \"Code\": \"99.999.00\",\n    \"Description\": \"ca\\u00c3\\u00a7amba\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CESTCodes(id)",
+      "description": "Update an instance of 'CESTCodes' with the given payload of type 'CESTCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CESTCodes(3)\n{\n    \"Code\": \"01.003.00\",\n    \"Description\": \"Protetores de ca\\u00c3\\u00a7amba 2\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CESTCodes(id)",
+      "description": "Delete an instance of 'CESTCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CESTCodes(2)"
+    }
+  ]
+}

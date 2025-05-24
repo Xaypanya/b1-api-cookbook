@@ -1,0 +1,36 @@
+{
+  "service": "BarCodes",
+  "description": "This entity enables you to manipulate 'BarCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BarCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BarCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BarCodes(123)\n\nGET https://localhost:50000/b1s/v2/BarCodes(123)?$select=AbsEntry,ItemNo,UoMEntry"
+    },
+    {
+      "method": "GET",
+      "path": "BarCodes",
+      "description": "Retrieve a collection of 'BarCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BarCodes\n\nGET https://localhost:50000/b1s/v2/BarCodes?$select=AbsEntry,ItemNo,UoMEntry&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BarCodes",
+      "description": "Create an instance of 'BarCodes' with the given payload of type 'BarCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BarCodes\n{\n    \"AbsEntry\": 1,\n    \"Barcode\": \"1000001\",\n    \"FreeText\": \"01\",\n    \"ItemNo\": \"I001\",\n    \"UoMEntry\": -1\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BarCodes(id)",
+      "description": "Update an instance of 'BarCodes' with the given payload of type 'BarCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BarCodes(123)\n{\n    \"Barcode\": \"500001\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BarCodes(id)",
+      "description": "Delete an instance of 'BarCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BarCodes(123)"
+    }
+  ]
+}

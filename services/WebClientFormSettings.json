@@ -1,0 +1,36 @@
+{
+  "service": "WebClientFormSettings",
+  "description": "This entity enables you to manipulate 'WebClientFormSettings'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientFormSettings(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientFormSettings' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientFormSettings('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientFormSettings('abc')?$select=Guid,FormId,UserId"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientFormSettings",
+      "description": "Retrieve a collection of 'WebClientFormSettings' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientFormSettings\n\nGET https://localhost:50000/b1s/v2/WebClientFormSettings?$select=Guid,FormId,UserId&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientFormSettings",
+      "description": "Create an instance of 'WebClientFormSettings' with the given payload of type 'WebClientFormSetting' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientFormSettings\n{\n    \"Guid\": \"FS_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientFormSettings(id)",
+      "description": "Update an instance of 'WebClientFormSettings' with the given payload of type 'WebClientFormSetting' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientFormSettings('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientFormSettings(id)",
+      "description": "Delete an instance of 'WebClientFormSettings' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientFormSettings('abc')"
+    }
+  ]
+}

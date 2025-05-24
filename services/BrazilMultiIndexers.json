@@ -1,0 +1,36 @@
+{
+  "service": "BrazilMultiIndexers",
+  "description": "This entity enables you to manipulate 'BrazilMultiIndexers'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BrazilMultiIndexers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BrazilMultiIndexers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilMultiIndexers(670)\n\nGET https://localhost:50000/b1s/v2/BrazilMultiIndexers(670)?$select=ID,IndexerType,Code"
+    },
+    {
+      "method": "GET",
+      "path": "BrazilMultiIndexers",
+      "description": "Retrieve a collection of 'BrazilMultiIndexers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilMultiIndexers\n\nGET https://localhost:50000/b1s/v2/BrazilMultiIndexers?$select=ID,IndexerType,Code&$filter=ID ge 670 &$orderby=ID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilMultiIndexers",
+      "description": "Create an instance of 'BrazilMultiIndexers' with the given payload of type 'BrazilMultiIndexer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilMultiIndexers\n{\n    \"Code\": \"1114\",\n    \"Description\": \"Gasolinas, Exceto Gasolina de Avia\\u00c3\\u00a7\\u00c3\\u00a3o\",\n    \"FirstRefIndexerCode\": \"1\",\n    \"IndexerType\": \"bmitIncomeNature\",\n    \"SecondRefIndexerCode\": \"101\",\n    \"ThirdRefIndexerCode\": null\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BrazilMultiIndexers(id)",
+      "description": "Delete an instance of 'BrazilMultiIndexers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BrazilMultiIndexers(670)"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilMultiIndexers(id)/GetIndexerTypeList",
+      "description": "Invoke the method 'GetIndexerTypeList' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilMultiIndexers(670)/GetIndexerTypeList"
+    }
+  ]
+}

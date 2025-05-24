@@ -1,0 +1,12 @@
+{
+  "service": "FinancialYearsService",
+  "description": "This API enables you to invoke the interfaces defined on 'FinancialYearsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "FinancialYearsService_GetFinancialYearList",
+      "description": "Invoke the method 'GetFinancialYearList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/FinancialYearsService_GetFinancialYearList"
+    }
+  ]
+}

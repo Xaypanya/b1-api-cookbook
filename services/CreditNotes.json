@@ -1,0 +1,60 @@
+{
+  "service": "CreditNotes",
+  "description": "This entity enables you to manipulate 'CreditNotes'. It is the clearing document for invoices and returns. If the goods were delivered to the customer and an invoice has already been created, you can partially or completely reverse the transaction by creating a credit note.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CreditNotes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CreditNotes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditNotes(123)\n\nGET https://localhost:50000/b1s/v2/CreditNotes(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "CreditNotes",
+      "description": "Retrieve a collection of 'CreditNotes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditNotes\n\nGET https://localhost:50000/b1s/v2/CreditNotes?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CreditNotes",
+      "description": "Create an instance of 'CreditNotes' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditNotes\n{\n    \"CardCode\": \"c001\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Price\": 100,\n            \"Quantity\": 1,\n            \"TaxCode\": \"T1\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CreditNotes(id)",
+      "description": "Update an instance of 'CreditNotes' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CreditNotes(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CreditNotes(id)",
+      "description": "Delete an instance of 'CreditNotes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CreditNotes(123)"
+    },
+    {
+      "method": "POST",
+      "path": "CreditNotes(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditNotes(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "CreditNotes(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditNotes(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "CreditNotes(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditNotes(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "CreditNotes(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditNotes(123)/CreateCancellationDocument"
+    }
+  ]
+}

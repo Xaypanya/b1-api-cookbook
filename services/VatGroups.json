@@ -1,0 +1,36 @@
+{
+  "service": "VatGroups",
+  "description": "This entity enables you to manipulate 'VatGroups'. It defines tax groups that can be assigned to business partners and items in sales and purchase documents.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "VatGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'VatGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/VatGroups('c52')\n\nGET https://localhost:50000/b1s/v2/VatGroups('c52')?$select=Code,Name,Category"
+    },
+    {
+      "method": "GET",
+      "path": "VatGroups",
+      "description": "Retrieve a collection of 'VatGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/VatGroups\n\nGET https://localhost:50000/b1s/v2/VatGroups?$select=Code,Name,Category&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "VatGroups",
+      "description": "Create an instance of 'VatGroups' with the given payload of type 'VatGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/VatGroups\n{\n    \"Code\": \"c52\",\n    \"Name\": \"VAT 20\",\n    \"TaxAccount\": \"260000\",\n    \"VatGroups_Lines\": [\n        {\n            \"Effectivefrom\": \"20070101\",\n            \"Rate\": \"20\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "VatGroups(id)",
+      "description": "Update an instance of 'VatGroups' with the given payload of type 'VatGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/VatGroups('c52')\n{\n    \"Name\": \"VAT rate 20\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "VatGroups(id)",
+      "description": "Delete an instance of 'VatGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/VatGroups('c52')"
+    }
+  ]
+}

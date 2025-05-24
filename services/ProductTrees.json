@@ -1,0 +1,36 @@
+{
+  "service": "ProductTrees",
+  "description": "This entity enables you to manipulate 'ProductTrees'. It represents a completed product comprising parts and raw materials, which is described by means of a bill of materials.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ProductTrees(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ProductTrees' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ProductTrees('pt001')\n\nGET https://localhost:50000/b1s/v2/ProductTrees('pt001')?$select=TreeCode,TreeType,Quantity"
+    },
+    {
+      "method": "GET",
+      "path": "ProductTrees",
+      "description": "Retrieve a collection of 'ProductTrees' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ProductTrees\n\nGET https://localhost:50000/b1s/v2/ProductTrees?$select=TreeCode,TreeType,Quantity&$filter=startswith(TreeCode, 'a') &$orderby=TreeCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ProductTrees",
+      "description": "Create an instance of 'ProductTrees' with the given payload of type 'ProductTree' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProductTrees\n{\n    \"ProductTreeLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": 5\n        }\n    ],\n    \"TreeCode\": \"pt001\",\n    \"TreeType\": \"iProductionTree\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ProductTrees(id)",
+      "description": "Update an instance of 'ProductTrees' with the given payload of type 'ProductTree' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ProductTrees('pt001')\n{\n    \"Quantity\": 20\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ProductTrees(id)",
+      "description": "Delete an instance of 'ProductTrees' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ProductTrees('pt001')"
+    }
+  ]
+}

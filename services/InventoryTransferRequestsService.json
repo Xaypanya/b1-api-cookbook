@@ -1,0 +1,18 @@
+{
+  "service": "InventoryTransferRequestsService",
+  "description": "This API enables you to invoke the interfaces defined on 'InventoryTransferRequestsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "InventoryTransferRequestsService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'StockTransfer' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryTransferRequestsService_GetApprovalTemplates\n{\n    \"StockTransfer\": {\n        \"StockTransferLines\": [\n            {\n                \"ItemCode\": \"i001\",\n                \"Quantity\": \"100\",\n                \"UnitPrice\": \"100\",\n                \"WarehouseCode\": \"w001\"\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryTransferRequestsService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryTransferRequestsService_HandleApprovalRequest"
+    }
+  ]
+}

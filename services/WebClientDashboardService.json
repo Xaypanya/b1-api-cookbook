@@ -1,0 +1,12 @@
+{
+  "service": "WebClientDashboardService",
+  "description": "This API enables you to invoke the interfaces defined on 'WebClientDashboardService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "WebClientDashboardService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientDashboardService_GetList"
+    }
+  ]
+}

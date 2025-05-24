@@ -1,0 +1,24 @@
+{
+  "service": "Dimensions",
+  "description": "This entity enables you to manipulate 'Dimensions'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Dimensions(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Dimensions' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Dimensions(1)\n\nGET https://localhost:50000/b1s/v2/Dimensions(1)?$select=DimensionCode,DimensionName,IsActive"
+    },
+    {
+      "method": "GET",
+      "path": "Dimensions",
+      "description": "Retrieve a collection of 'Dimensions' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Dimensions\n\nGET https://localhost:50000/b1s/v2/Dimensions?$select=DimensionCode,DimensionName,IsActive&$filter=DimensionCode ge 1 &$orderby=DimensionCode&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "Dimensions(id)",
+      "description": "Update an instance of 'Dimensions' with the given payload of type 'Dimension' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Dimensions(1)\n{\n    \"DimensionCode\": 1,\n    \"DimensionDescription\": \"Dimension test\",\n    \"IsActive\": \"tYES\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "NFModels",
+  "description": "This entity enables you to manipulate 'NFModels'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "NFModels(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'NFModels' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/NFModels('abc')\n\nGET https://localhost:50000/b1s/v2/NFModels('abc')?$select=AbsEntry,NFMName,NFMDescription"
+    },
+    {
+      "method": "GET",
+      "path": "NFModels",
+      "description": "Retrieve a collection of 'NFModels' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/NFModels\n\nGET https://localhost:50000/b1s/v2/NFModels?$select=AbsEntry,NFMName,NFMDescription&$filter=startswith(AbsEntry, 'a') &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "NFModels",
+      "description": "Create an instance of 'NFModels' with the given payload of type 'NFModel' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/NFModels\n{\n    \"AbsEntry\": \"55\",\n    \"NFMCode\": \"201\",\n    \"NFMDescription\": \"test\",\n    \"NFMName\": \"testModelo 21\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "NFModels(id)",
+      "description": "Update an instance of 'NFModels' with the given payload of type 'NFModel' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/NFModels('abc')\n{\n    \"NFMDescription\": \"02 Nota Fiscal de Venda a Consumidor\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "NFModels(id)",
+      "description": "Delete an instance of 'NFModels' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/NFModels('abc')"
+    }
+  ]
+}

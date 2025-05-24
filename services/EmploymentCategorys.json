@@ -1,0 +1,36 @@
+{
+  "service": "EmploymentCategorys",
+  "description": "This entity enables you to manipulate 'EmploymentCategorys'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EmploymentCategorys(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EmploymentCategorys' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EmploymentCategorys('abc')\n\nGET https://localhost:50000/b1s/v2/EmploymentCategorys('abc')?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "EmploymentCategorys",
+      "description": "Retrieve a collection of 'EmploymentCategorys' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EmploymentCategorys\n\nGET https://localhost:50000/b1s/v2/EmploymentCategorys?$select=Code,Description&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EmploymentCategorys",
+      "description": "Create an instance of 'EmploymentCategorys' with the given payload of type 'EmploymentCategory' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EmploymentCategorys\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EmploymentCategorys(id)",
+      "description": "Update an instance of 'EmploymentCategorys' with the given payload of type 'EmploymentCategory' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EmploymentCategorys('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EmploymentCategorys(id)",
+      "description": "Delete an instance of 'EmploymentCategorys' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EmploymentCategorys('abc')"
+    }
+  ]
+}

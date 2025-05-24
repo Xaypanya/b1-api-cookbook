@@ -1,0 +1,12 @@
+{
+  "service": "WebClientRecentActivityService",
+  "description": "This API enables you to invoke the interfaces defined on 'WebClientRecentActivityService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "WebClientRecentActivityService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientRecentActivityService_GetList"
+    }
+  ]
+}

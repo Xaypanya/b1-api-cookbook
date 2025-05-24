@@ -1,0 +1,36 @@
+{
+  "service": "WebClientRecentActivities",
+  "description": "This entity enables you to manipulate 'WebClientRecentActivities'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientRecentActivities(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientRecentActivities' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientRecentActivities('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientRecentActivities('abc')?$select=Guid,AppId,AppType"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientRecentActivities",
+      "description": "Retrieve a collection of 'WebClientRecentActivities' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientRecentActivities\n\nGET https://localhost:50000/b1s/v2/WebClientRecentActivities?$select=Guid,AppId,AppType&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientRecentActivities",
+      "description": "Create an instance of 'WebClientRecentActivities' with the given payload of type 'WebClientRecentActivity' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientRecentActivities\n{\n    \"Guid\": \"Act_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientRecentActivities(id)",
+      "description": "Update an instance of 'WebClientRecentActivities' with the given payload of type 'WebClientRecentActivity' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientRecentActivities('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientRecentActivities(id)",
+      "description": "Delete an instance of 'WebClientRecentActivities' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientRecentActivities('abc')"
+    }
+  ]
+}

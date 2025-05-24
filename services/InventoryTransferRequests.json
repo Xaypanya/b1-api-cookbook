@@ -1,0 +1,48 @@
+{
+  "service": "InventoryTransferRequests",
+  "description": "This entity enables you to manipulate 'InventoryTransferRequests'. It represents a request to transfer inventory from one warehouse to another. After the requested quantity is received by the receiving warehouse, you can close the inventory transfer request and create an inventory transfer document.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "InventoryTransferRequests(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'InventoryTransferRequests' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryTransferRequests(123)\n\nGET https://localhost:50000/b1s/v2/InventoryTransferRequests(123)?$select=DocEntry,Series,Printed"
+    },
+    {
+      "method": "GET",
+      "path": "InventoryTransferRequests",
+      "description": "Retrieve a collection of 'InventoryTransferRequests' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryTransferRequests\n\nGET https://localhost:50000/b1s/v2/InventoryTransferRequests?$select=DocEntry,Series,Printed&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryTransferRequests",
+      "description": "Create an instance of 'InventoryTransferRequests' with the given payload of type 'StockTransfer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryTransferRequests\n{\n    \"StockTransferLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"UnitPrice\": \"100\",\n            \"WarehouseCode\": \"w001\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "InventoryTransferRequests(id)",
+      "description": "Update an instance of 'InventoryTransferRequests' with the given payload of type 'StockTransfer' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/InventoryTransferRequests(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryTransferRequests(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryTransferRequests(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryTransferRequests(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryTransferRequests(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryTransferRequests(id)/SaveDraftToDocument",
+      "description": "Invoke the method 'SaveDraftToDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryTransferRequests(123)/SaveDraftToDocument"
+    }
+  ]
+}

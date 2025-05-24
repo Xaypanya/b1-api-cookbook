@@ -1,0 +1,36 @@
+{
+  "service": "Holidays",
+  "description": "This entity enables you to manipulate 'Holidays'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Holidays(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Holidays' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Holidays('holiday1')\n\nGET https://localhost:50000/b1s/v2/Holidays('holiday1')?$select=HolidayCode,WeekendFrom,WeekendTO"
+    },
+    {
+      "method": "GET",
+      "path": "Holidays",
+      "description": "Retrieve a collection of 'Holidays' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Holidays\n\nGET https://localhost:50000/b1s/v2/Holidays?$select=HolidayCode,WeekendFrom,WeekendTO&$filter=startswith(HolidayCode, 'h') &$orderby=HolidayCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Holidays",
+      "description": "Create an instance of 'Holidays' with the given payload of type 'Holiday' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Holidays\n{\n    \"HolidayCode\": \"holiday1\",\n    \"HolidayDates\": [\n        {\n            \"EndDate\": \"2020-01-02\",\n            \"Remarks\": \"test\",\n            \"StartDate\": \"2020-01-01\"\n        }\n    ],\n    \"IgnoreWeekend\": \"N\",\n    \"IsCurrentYear\": \"tYES\",\n    \"WeekNoRule\": \"fromFirstFourDayWeek\",\n    \"WeekendFrom\": \"Monday\",\n    \"WeekendTO\": \"Tuesday\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Holidays(id)",
+      "description": "Update an instance of 'Holidays' with the given payload of type 'Holiday' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Holidays('holiday1')\n{\n    \"HolidayDates\": [\n        {\n            \"EndDate\": \"2020-01-02\",\n            \"HolidayCode\": \"holiday1\",\n            \"Remarks\": \"newRemarks\",\n            \"StartDate\": \"2020-01-01\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Holidays(id)",
+      "description": "Delete an instance of 'Holidays' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Holidays('holiday1')"
+    }
+  ]
+}

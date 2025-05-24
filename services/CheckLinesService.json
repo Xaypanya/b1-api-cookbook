@@ -1,0 +1,18 @@
+{
+  "service": "CheckLinesService",
+  "description": "This API enables you to invoke the interfaces defined on 'CheckLinesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CheckLinesService_GetCheckLine",
+      "description": "Invoke the method 'GetCheckLine' on this service by specifying the payload 'CheckLineParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CheckLinesService_GetCheckLine\n{\n    \"CheckLinesParams\": [\n        {\n            \"CheckKey\": 1\n        }\n    ]\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CheckLinesService_GetValidCheckLineList",
+      "description": "Invoke the method 'GetValidCheckLineList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CheckLinesService_GetValidCheckLineList"
+    }
+  ]
+}

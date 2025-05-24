@@ -1,0 +1,36 @@
+{
+  "service": "SalesPersons",
+  "description": "This entity enables you to manipulate 'SalesPersons'. It defines sales employees and their commission rates.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesPersons(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesPersons' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesPersons(123)\n\nGET https://localhost:50000/b1s/v2/SalesPersons(123)?$select=SalesEmployeeCode,SalesEmployeeName,Remarks"
+    },
+    {
+      "method": "GET",
+      "path": "SalesPersons",
+      "description": "Retrieve a collection of 'SalesPersons' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesPersons\n\nGET https://localhost:50000/b1s/v2/SalesPersons?$select=SalesEmployeeCode,SalesEmployeeName,Remarks&$filter=SalesEmployeeCode ge 123 &$orderby=SalesEmployeeCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesPersons",
+      "description": "Create an instance of 'SalesPersons' with the given payload of type 'SalesPerson' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesPersons\n{\n    \"Active\": \"tYES\",\n    \"Remarks\": \"best sales person\",\n    \"SalesEmployeeName\": \"Lily\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesPersons(id)",
+      "description": "Update an instance of 'SalesPersons' with the given payload of type 'SalesPerson' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesPersons(123)\n{\n    \"Remarks\": \"new star\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesPersons(id)",
+      "description": "Delete an instance of 'SalesPersons' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesPersons(123)"
+    }
+  ]
+}

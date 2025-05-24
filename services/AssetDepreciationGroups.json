@@ -1,0 +1,36 @@
+{
+  "service": "AssetDepreciationGroups",
+  "description": "This entity enables you to manipulate 'AssetDepreciationGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AssetDepreciationGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AssetDepreciationGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetDepreciationGroups('ADG')\n\nGET https://localhost:50000/b1s/v2/AssetDepreciationGroups('ADG')?$select=Code,Description,Group"
+    },
+    {
+      "method": "GET",
+      "path": "AssetDepreciationGroups",
+      "description": "Retrieve a collection of 'AssetDepreciationGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetDepreciationGroups\n\nGET https://localhost:50000/b1s/v2/AssetDepreciationGroups?$select=Code,Description,Group&$filter=startswith(Code, 'ADG') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AssetDepreciationGroups",
+      "description": "Create an instance of 'AssetDepreciationGroups' with the given payload of type 'AssetDepreciationGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetDepreciationGroups\n{\n    \"Code\": \"ADG\",\n    \"Description\": \"AssetDepreciationGroups\",\n    \"Group\": \"Group1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AssetDepreciationGroups(id)",
+      "description": "Update an instance of 'AssetDepreciationGroups' with the given payload of type 'AssetDepreciationGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AssetDepreciationGroups('ADG')\n{\n    \"Description\": \"test\",\n    \"Group\": \"Group123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AssetDepreciationGroups(id)",
+      "description": "Delete an instance of 'AssetDepreciationGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AssetDepreciationGroups('ADG')"
+    }
+  ]
+}

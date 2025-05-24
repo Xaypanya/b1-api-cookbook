@@ -1,0 +1,12 @@
+{
+  "service": "ExceptionalEventService",
+  "description": "This API enables you to invoke the interfaces defined on 'ExceptionalEventService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ExceptionalEventService_GetExceptionalEventList",
+      "description": "Invoke the method 'GetExceptionalEventList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ExceptionalEventService_GetExceptionalEventList"
+    }
+  ]
+}

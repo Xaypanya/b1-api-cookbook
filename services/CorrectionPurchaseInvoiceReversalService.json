@@ -1,0 +1,18 @@
+{
+  "service": "CorrectionPurchaseInvoiceReversalService",
+  "description": "This API enables you to invoke the interfaces defined on 'CorrectionPurchaseInvoiceReversalService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CorrectionPurchaseInvoiceReversalService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'Document' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversalService_GetApprovalTemplates\n{\n    \"Document\": {\n        \"CardCode\": \"v001\",\n        \"Comments\": \"add correction invoice reversal based on correction invoice\",\n        \"DocDate\": \"2014-12-06\",\n        \"DocDueDate\": \"2014-12-06\",\n        \"InternalCorrectedDocNum\": \"8\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionPurchaseInvoiceReversalService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversalService_HandleApprovalRequest"
+    }
+  ]
+}

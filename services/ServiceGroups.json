@@ -1,0 +1,36 @@
+{
+  "service": "ServiceGroups",
+  "description": "This entity enables you to manipulate 'ServiceGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceGroups(2)\n\nGET https://localhost:50000/b1s/v2/ServiceGroups(2)?$select=AbsEntry,ServiceGroupCode,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceGroups",
+      "description": "Retrieve a collection of 'ServiceGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceGroups\n\nGET https://localhost:50000/b1s/v2/ServiceGroups?$select=AbsEntry,ServiceGroupCode,Description&$filter=AbsEntry ge 2 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceGroups",
+      "description": "Create an instance of 'ServiceGroups' with the given payload of type 'ServiceGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceGroups\n{\n    \"Description\": \"001\",\n    \"ServiceGroupCode\": \"99\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceGroups(id)",
+      "description": "Update an instance of 'ServiceGroups' with the given payload of type 'ServiceGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceGroups(2)\n{\n    \"Description\": \"test\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceGroups(id)",
+      "description": "Delete an instance of 'ServiceGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceGroups(2)"
+    }
+  ]
+}

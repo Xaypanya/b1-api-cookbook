@@ -1,0 +1,12 @@
+{
+  "service": "BankChargesAllocationCodesService",
+  "description": "This API enables you to invoke the interfaces defined on 'BankChargesAllocationCodesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BankChargesAllocationCodesService_GetBankChargesAllocationCodeList",
+      "description": "Invoke the method 'GetBankChargesAllocationCodeList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/BankChargesAllocationCodesService_GetBankChargesAllocationCodeList"
+    }
+  ]
+}

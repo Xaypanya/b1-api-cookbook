@@ -1,0 +1,36 @@
+{
+  "service": "AccrualTypes",
+  "description": "This entity enables you to manipulate 'AccrualTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AccrualTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AccrualTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AccrualTypes('Accrual1')\n\nGET https://localhost:50000/b1s/v2/AccrualTypes('Accrual1')?$select=Code,Name,PostingAccount"
+    },
+    {
+      "method": "GET",
+      "path": "AccrualTypes",
+      "description": "Retrieve a collection of 'AccrualTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AccrualTypes\n\nGET https://localhost:50000/b1s/v2/AccrualTypes?$select=Code,Name,PostingAccount&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AccrualTypes",
+      "description": "Create an instance of 'AccrualTypes' with the given payload of type 'AccrualType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AccrualTypes\n{\n    \"CalculationAccount\": \"2110\",\n    \"Code\": \"Accrual1\",\n    \"InterimAccount\": \"2120\",\n    \"Name\": \"Accrual1\",\n    \"PostingAccount\": \"2107\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AccrualTypes(id)",
+      "description": "Update an instance of 'AccrualTypes' with the given payload of type 'AccrualType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AccrualTypes('Accrual1')\n{\n    \"PostingAccount\": \"2140\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AccrualTypes(id)",
+      "description": "Delete an instance of 'AccrualTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AccrualTypes('Accrual1')"
+    }
+  ]
+}

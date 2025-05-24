@@ -1,0 +1,36 @@
+{
+  "service": "QueryCategories",
+  "description": "This entity enables you to manipulate 'QueryCategories'. It represents the predefined query categories.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "QueryCategories(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'QueryCategories' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/QueryCategories(123)\n\nGET https://localhost:50000/b1s/v2/QueryCategories(123)?$select=Code,Name,Permissions"
+    },
+    {
+      "method": "GET",
+      "path": "QueryCategories",
+      "description": "Retrieve a collection of 'QueryCategories' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/QueryCategories\n\nGET https://localhost:50000/b1s/v2/QueryCategories?$select=Code,Name,Permissions&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "QueryCategories",
+      "description": "Create an instance of 'QueryCategories' with the given payload of type 'QueryCategory' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/QueryCategories\n{\n    \"Name\": \"Query_Category_12\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "QueryCategories(id)",
+      "description": "Update an instance of 'QueryCategories' with the given payload of type 'QueryCategory' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/QueryCategories(123)\n{\n    \"Name\": \"Query_Category_01\",\n    \"Permissions\": \"NNNYNNNNNNNNNNN\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "QueryCategories(id)",
+      "description": "Delete an instance of 'QueryCategories' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/QueryCategories(123)"
+    }
+  ]
+}

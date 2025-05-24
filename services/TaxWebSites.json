@@ -1,0 +1,42 @@
+{
+  "service": "TaxWebSites",
+  "description": "This entity enables you to manipulate 'TaxWebSites'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TaxWebSites(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TaxWebSites' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TaxWebSites(1)\n\nGET https://localhost:50000/b1s/v2/TaxWebSites(1)?$select=AbsEntry,WebSiteName,WebSiteURL"
+    },
+    {
+      "method": "GET",
+      "path": "TaxWebSites",
+      "description": "Retrieve a collection of 'TaxWebSites' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TaxWebSites\n\nGET https://localhost:50000/b1s/v2/TaxWebSites?$select=AbsEntry,WebSiteName,WebSiteURL&$filter=AbsEntry ge 1 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "TaxWebSites",
+      "description": "Create an instance of 'TaxWebSites' with the given payload of type 'TaxWebSite' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/TaxWebSites\n{\n    \"Description\": \"test\",\n    \"WebSiteName\": \"test\",\n    \"WebSiteURL\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "TaxWebSites(id)",
+      "description": "Update an instance of 'TaxWebSites' with the given payload of type 'TaxWebSite' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TaxWebSites(1)\n{\n    \"WebSiteName\": \"test123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "TaxWebSites(id)",
+      "description": "Delete an instance of 'TaxWebSites' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/TaxWebSites(1)"
+    },
+    {
+      "method": "POST",
+      "path": "TaxWebSites(id)/SetAsDefault",
+      "description": "Invoke the method 'SetAsDefault' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/TaxWebSites(1)/SetAsDefault"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "DunningTerms",
+  "description": "This entity enables you to manipulate 'DunningTerms'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DunningTerms(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DunningTerms' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DunningTerms('DT01')\n\nGET https://localhost:50000/b1s/v2/DunningTerms('DT01')?$select=Code,Name,GroupingMethod"
+    },
+    {
+      "method": "GET",
+      "path": "DunningTerms",
+      "description": "Retrieve a collection of 'DunningTerms' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DunningTerms\n\nGET https://localhost:50000/b1s/v2/DunningTerms?$select=Code,Name,GroupingMethod&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DunningTerms",
+      "description": "Create an instance of 'DunningTerms' with the given payload of type 'DunningTerm' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DunningTerms\n{\n    \"Code\": \"DT01\",\n    \"DaysInMonth\": \"10\",\n    \"DaysInYear\": \"2016\",\n    \"DunningTermLines\": [\n        {\n            \"Effectiveafter\": \"30\",\n            \"LetterFormat\": \"dltDunningLetter1\",\n            \"LevelNum\": \"001\"\n        }\n    ],\n    \"GroupingMethod\": \"gmPerBP\",\n    \"Name\": \"DT01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DunningTerms(id)",
+      "description": "Update an instance of 'DunningTerms' with the given payload of type 'DunningTerm' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DunningTerms('DT01')\n{\n    \"DunningTermLines\": [\n        {\n            \"LevelNum\": \"1\",\n            \"MininumBalance\": \"1000\",\n            \"MininumBalanceCurrency\": \"EUR\"\n        }\n    ],\n    \"Name\": \"Dunning Term 01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DunningTerms(id)",
+      "description": "Delete an instance of 'DunningTerms' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DunningTerms('DT01')"
+    }
+  ]
+}

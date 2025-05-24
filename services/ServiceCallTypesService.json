@@ -1,0 +1,12 @@
+{
+  "service": "ServiceCallTypesService",
+  "description": "This API enables you to invoke the interfaces defined on 'ServiceCallTypesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ServiceCallTypesService_GetServiceCallTypeList",
+      "description": "Invoke the method 'GetServiceCallTypeList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCallTypesService_GetServiceCallTypeList"
+    }
+  ]
+}

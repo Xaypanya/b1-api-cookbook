@@ -1,0 +1,36 @@
+{
+  "service": "Queue",
+  "description": "This entity enables you to manipulate 'Queue'. It represents the queues list in the Service module from which you can assign a queue member to a service call.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Queue(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Queue' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Queue('PCs')\n\nGET https://localhost:50000/b1s/v2/Queue('PCs')?$select=QueueID,Description,Inactive"
+    },
+    {
+      "method": "GET",
+      "path": "Queue",
+      "description": "Retrieve a collection of 'Queue' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Queue\n\nGET https://localhost:50000/b1s/v2/Queue?$select=QueueID,Description,Inactive&$filter=startswith(QueueID, 'a') &$orderby=QueueID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Queue",
+      "description": "Create an instance of 'Queue' with the given payload of type 'Queue' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Queue\n{\n    \"Description\": \"PC Issues\",\n    \"QueueID\": \"PCs\",\n    \"QueueManager\": \"1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Queue(id)",
+      "description": "Update an instance of 'Queue' with the given payload of type 'Queue' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Queue('PCs')\n{\n    \"Description\": \"Printer Issues\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Queue(id)",
+      "description": "Delete an instance of 'Queue' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Queue('PCs')"
+    }
+  ]
+}

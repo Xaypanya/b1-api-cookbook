@@ -1,0 +1,36 @@
+{
+  "service": "PaymentBlocks",
+  "description": "This entity enables you to manipulate 'PaymentBlocks'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PaymentBlocks(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PaymentBlocks' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentBlocks(5)\n\nGET https://localhost:50000/b1s/v2/PaymentBlocks(5)?$select=AbsEntry,PaymentBlockCode"
+    },
+    {
+      "method": "GET",
+      "path": "PaymentBlocks",
+      "description": "Retrieve a collection of 'PaymentBlocks' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentBlocks\n\nGET https://localhost:50000/b1s/v2/PaymentBlocks?$select=AbsEntry,PaymentBlockCode&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentBlocks",
+      "description": "Create an instance of 'PaymentBlocks' with the given payload of type 'PaymentBlock' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentBlocks\n{\n    \"PaymentBlockCode\": \"aaaaaa\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PaymentBlocks(id)",
+      "description": "Update an instance of 'PaymentBlocks' with the given payload of type 'PaymentBlock' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PaymentBlocks(5)\n{\n    \"PaymentBlockCode\": \"bbbbbbb\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PaymentBlocks(id)",
+      "description": "Delete an instance of 'PaymentBlocks' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PaymentBlocks(5)"
+    }
+  ]
+}

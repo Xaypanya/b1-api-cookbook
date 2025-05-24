@@ -1,0 +1,12 @@
+{
+  "service": "StatesService",
+  "description": "This API enables you to invoke the interfaces defined on 'StatesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "StatesService_GetStateList",
+      "description": "Invoke the method 'GetStateList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/StatesService_GetStateList"
+    }
+  ]
+}

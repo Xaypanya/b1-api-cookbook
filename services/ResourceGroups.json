@@ -1,0 +1,36 @@
+{
+  "service": "ResourceGroups",
+  "description": "This entity enables you to manipulate 'ResourceGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ResourceGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ResourceGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ResourceGroups(123)\n\nGET https://localhost:50000/b1s/v2/ResourceGroups(123)?$select=Code,Name,Type"
+    },
+    {
+      "method": "GET",
+      "path": "ResourceGroups",
+      "description": "Retrieve a collection of 'ResourceGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ResourceGroups\n\nGET https://localhost:50000/b1s/v2/ResourceGroups?$select=Code,Name,Type&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ResourceGroups",
+      "description": "Create an instance of 'ResourceGroups' with the given payload of type 'ResourceGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ResourceGroups\n{\n    \"Code\": 2,\n    \"Cost1\": 0,\n    \"Cost10\": 0,\n    \"Cost2\": 0,\n    \"Cost3\": 0,\n    \"Cost4\": 0,\n    \"Cost5\": 0,\n    \"Cost6\": 0,\n    \"Cost7\": 0,\n    \"Cost8\": 0,\n    \"Cost9\": 0,\n    \"CostName1\": \"Ressource Standardkosten 1\",\n    \"CostName10\": \"Ressource Standardkosten 10\",\n    \"CostName2\": \"Ressource Standardkosten 2\",\n    \"CostName3\": \"Ressource Standardkosten 3\",\n    \"CostName4\": \"Ressource Standardkosten 4\",\n    \"CostName5\": \"Ressource Standardkosten 5\",\n    \"CostName6\": \"Ressource Standardkosten 6\",\n    \"CostName7\": \"Ressource Standardkosten 7\",\n    \"CostName8\": \"Ressource Standardkosten 8\",\n    \"CostName9\": \"Ressource Standardkosten 9\",\n    \"Name\": \"tRessourcen\",\n    \"NumOfUnitsText\": null,\n    \"Type\": \"rtMachine\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ResourceGroups(id)",
+      "description": "Update an instance of 'ResourceGroups' with the given payload of type 'ResourceGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ResourceGroups(123)\n{\n    \"Name\": \"tRessourcen\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ResourceGroups(id)",
+      "description": "Delete an instance of 'ResourceGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ResourceGroups(123)"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "SalesForecast",
+  "description": "This entity enables you to manipulate 'SalesForecast'. It represents the sales forecast for a specified period.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesForecast(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesForecast' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesForecast(123)\n\nGET https://localhost:50000/b1s/v2/SalesForecast(123)?$select=ForecastStartDate,ForecastEndDate,ForecastCode"
+    },
+    {
+      "method": "GET",
+      "path": "SalesForecast",
+      "description": "Retrieve a collection of 'SalesForecast' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesForecast\n\nGET https://localhost:50000/b1s/v2/SalesForecast?$select=ForecastStartDate,ForecastEndDate,ForecastCode&$filter=Numerator ge 123 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesForecast",
+      "description": "Create an instance of 'SalesForecast' with the given payload of type 'SalesForecast' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesForecast\n{\n    \"ForecastCode\": \"D01\",\n    \"ForecastName\": \"For Daily forecast\",\n    \"SalesForecastLines\": [\n        {\n            \"ForecastedDay\": \"2014-11-29\",\n            \"ItemNo\": \"item01\",\n            \"Quantity\": \"100\"\n        }\n    ],\n    \"View\": \"fvtDaily\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesForecast(id)",
+      "description": "Update an instance of 'SalesForecast' with the given payload of type 'SalesForecast' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesForecast(123)\n{\n    \"ForecastName\": \"Daily forecast for item01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesForecast(id)",
+      "description": "Delete an instance of 'SalesForecast' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesForecast(123)"
+    }
+  ]
+}

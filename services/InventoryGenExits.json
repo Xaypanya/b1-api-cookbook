@@ -1,0 +1,54 @@
+{
+  "service": "InventoryGenExits",
+  "description": "This entity enables you to manipulate 'InventoryGenExits'. It represents inventory losses in quantities not resulting from doing business with customers, for example, issue for production.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "InventoryGenExits(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'InventoryGenExits' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryGenExits(123)\n\nGET https://localhost:50000/b1s/v2/InventoryGenExits(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "InventoryGenExits",
+      "description": "Retrieve a collection of 'InventoryGenExits' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryGenExits\n\nGET https://localhost:50000/b1s/v2/InventoryGenExits?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryGenExits",
+      "description": "Create an instance of 'InventoryGenExits' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryGenExits\n{\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\"\n        }\n    ]\n}\nPOST https://localhost:50000/b1s/v2/InventoryGenExits\n{\n    \"DocDate\": \"20170604\",\n    \"DocDueDate\": \"20170604\",\n    \"DocumentLines\": [\n        {\n            \"BaseEntry\": \"12861\",\n            \"BaseLine\": 0,\n            \"CostingCode\": \"1020\",\n            \"DocumentLinesBinAllocations\": [\n                {\n                    \"AllowNegativeQuantity\": \"Y\",\n                    \"BinAbsEntry\": \"2\",\n                    \"Quantity\": 1\n                }\n            ],\n            \"Quantity\": 1,\n            \"WarehouseCode\": \"MD01\"\n        },\n        {\n            \"BaseEntry\": \"12861\",\n            \"BaseLine\": 0,\n            \"CostingCode\": \"1177\",\n            \"DocumentLinesBinAllocations\": [\n                {\n                    \"AllowNegativeQuantity\": \"Y\",\n                    \"BinAbsEntry\": \"3\",\n                    \"Quantity\": 1\n                }\n            ],\n            \"Quantity\": 1,\n            \"WarehouseCode\": \"MD01\"\n        },\n        {\n            \"BaseEntry\": \"12861\",\n            \"BaseLine\": 0,\n            \"CostingCode\": \"1301\",\n            \"DocumentLinesBinAllocations\": [\n                {\n                    \"AllowNegativeQuantity\": \"Y\",\n                    \"BinAbsEntry\": \"4\",\n                    \"Quantity\": 1\n                }\n            ],\n            \"Quantity\": 1,\n            \"WarehouseCode\": \"MD01\"\n        }\n    ]\n}\nPOST https://localhost:50000/b1s/v2/InventoryGenExits\n{\n    \"Comments\": \"Test\",\n    \"DocDate\": \"2017-07-10\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"ITEM01\",\n            \"Quantity\": 1,\n            \"UnitPrice\": 10,\n            \"WarehouseCode\": \"01\"\n        }\n    ],\n    \"Document_ApprovalRequests\": [\n        {\n            \"ApprovalTemplatesID\": 1,\n            \"Remarks\": \"Please approve\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "InventoryGenExits(id)",
+      "description": "Update an instance of 'InventoryGenExits' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/InventoryGenExits(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryGenExits(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryGenExits(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryGenExits(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryGenExits(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryGenExits(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryGenExits(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryGenExits(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryGenExits(123)/CreateCancellationDocument"
+    }
+  ]
+}

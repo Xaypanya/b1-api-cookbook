@@ -1,0 +1,36 @@
+{
+  "service": "RetornoCodes",
+  "description": "This entity enables you to manipulate 'RetornoCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "RetornoCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'RetornoCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/RetornoCodes(123)\n\nGET https://localhost:50000/b1s/v2/RetornoCodes(123)?$select=AbsEntry,OccurenceCode,MovementCode"
+    },
+    {
+      "method": "GET",
+      "path": "RetornoCodes",
+      "description": "Retrieve a collection of 'RetornoCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/RetornoCodes\n\nGET https://localhost:50000/b1s/v2/RetornoCodes?$select=AbsEntry,OccurenceCode,MovementCode&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "RetornoCodes",
+      "description": "Create an instance of 'RetornoCodes' with the given payload of type 'RetornoCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/RetornoCodes\n{\n    \"AbsEntry\": 3,\n    \"BankCode\": \"000\",\n    \"BoeStatus\": \"boes_Created\",\n    \"Color\": 4254476,\n    \"Description\": \"test\",\n    \"FileFormat\": \"5\",\n    \"MovementCode\": 211,\n    \"OccurenceCode\": 211\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "RetornoCodes(id)",
+      "description": "Update an instance of 'RetornoCodes' with the given payload of type 'RetornoCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/RetornoCodes(123)\n{\n    \"BankCode\": \"1000\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "RetornoCodes(id)",
+      "description": "Delete an instance of 'RetornoCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/RetornoCodes(123)"
+    }
+  ]
+}

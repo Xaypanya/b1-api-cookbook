@@ -1,0 +1,36 @@
+{
+  "service": "AssetGroups",
+  "description": "This entity enables you to manipulate 'AssetGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AssetGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AssetGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetGroups('AG')\n\nGET https://localhost:50000/b1s/v2/AssetGroups('AG')?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "AssetGroups",
+      "description": "Retrieve a collection of 'AssetGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetGroups\n\nGET https://localhost:50000/b1s/v2/AssetGroups?$select=Code,Description&$filter=startswith(Code, 'AG') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AssetGroups",
+      "description": "Create an instance of 'AssetGroups' with the given payload of type 'AssetGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetGroups\n{\n    \"Code\": \"AG\",\n    \"Description\": \"AssetGroups\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AssetGroups(id)",
+      "description": "Update an instance of 'AssetGroups' with the given payload of type 'AssetGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AssetGroups('AG')\n{\n    \"Description\": \"test1\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AssetGroups(id)",
+      "description": "Delete an instance of 'AssetGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AssetGroups('AG')"
+    }
+  ]
+}

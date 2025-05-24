@@ -1,0 +1,36 @@
+{
+  "service": "ServiceCallProblemTypes",
+  "description": "This entity enables you to manipulate 'ServiceCallProblemTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceCallProblemTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceCallProblemTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallProblemTypes(1)\n\nGET https://localhost:50000/b1s/v2/ServiceCallProblemTypes(1)?$select=ProblemTypeID,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceCallProblemTypes",
+      "description": "Retrieve a collection of 'ServiceCallProblemTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallProblemTypes\n\nGET https://localhost:50000/b1s/v2/ServiceCallProblemTypes?$select=ProblemTypeID,Name,Description&$filter=ProblemTypeID ge 1 &$orderby=ProblemTypeID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceCallProblemTypes",
+      "description": "Create an instance of 'ServiceCallProblemTypes' with the given payload of type 'ServiceCallProblemType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCallProblemTypes\n{\n    \"Description\": \"test\",\n    \"Name\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceCallProblemTypes(id)",
+      "description": "Update an instance of 'ServiceCallProblemTypes' with the given payload of type 'ServiceCallProblemType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceCallProblemTypes(1)\n{\n    \"Description\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceCallProblemTypes(id)",
+      "description": "Delete an instance of 'ServiceCallProblemTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceCallProblemTypes(1)"
+    }
+  ]
+}

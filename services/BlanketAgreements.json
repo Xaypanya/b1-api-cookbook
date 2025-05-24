@@ -1,0 +1,42 @@
+{
+  "service": "BlanketAgreements",
+  "description": "This entity enables you to manipulate 'BlanketAgreements'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BlanketAgreements(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BlanketAgreements' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BlanketAgreements(123)\n\nGET https://localhost:50000/b1s/v2/BlanketAgreements(123)?$select=AgreementNo,BPCode,BPName"
+    },
+    {
+      "method": "GET",
+      "path": "BlanketAgreements",
+      "description": "Retrieve a collection of 'BlanketAgreements' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BlanketAgreements\n\nGET https://localhost:50000/b1s/v2/BlanketAgreements?$select=AgreementNo,BPCode,BPName&$filter=AgreementNo ge 123 &$orderby=AgreementNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BlanketAgreements",
+      "description": "Create an instance of 'BlanketAgreements' with the given payload of type 'BlanketAgreement' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BlanketAgreements\n{\n    \"AgreementType\": \"atGeneral\",\n    \"BPCode\": \"C01\",\n    \"BlanketAgreements_ItemsLines\": [\n        {\n            \"ItemNo\": \"I01\",\n            \"PlannedQuantity\": 100,\n            \"UnitPrice\": 100\n        },\n        {\n            \"ItemNo\": \"I02\",\n            \"PlannedQuantity\": 100,\n            \"UnitPrice\": 100\n        }\n    ],\n    \"EndDate\": \"2016-08-29\",\n    \"Status\": \"asDraft\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BlanketAgreements(id)",
+      "description": "Update an instance of 'BlanketAgreements' with the given payload of type 'BlanketAgreement' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BlanketAgreements(123)\n{\n    \"BlanketAgreements_ItemsLines\": [\n        {\n            \"ItemNo\": \"I03\",\n            \"PlannedQuantity\": 100,\n            \"UnitPrice\": 100\n        }\n    ],\n    \"Description\": \"Add a new item\",\n    \"EndDate\": \"2016-12-30\",\n    \"Status\": \"asApproved\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "BlanketAgreements(id)/CancelBlanketAgreement",
+      "description": "Invoke the method 'CancelBlanketAgreement' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/BlanketAgreements(123)/CancelBlanketAgreement"
+    },
+    {
+      "method": "POST",
+      "path": "BlanketAgreements(id)/GetRelatedDocuments",
+      "description": "Invoke the method 'GetRelatedDocuments' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/BlanketAgreements(123)/GetRelatedDocuments"
+    }
+  ]
+}

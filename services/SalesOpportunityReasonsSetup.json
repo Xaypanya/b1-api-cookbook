@@ -1,0 +1,36 @@
+{
+  "service": "SalesOpportunityReasonsSetup",
+  "description": "This entity enables you to manipulate 'SalesOpportunityReasonsSetup'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesOpportunityReasonsSetup(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesOpportunityReasonsSetup' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetup(123)\n\nGET https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetup(123)?$select=SequenceNo,Description,Sort"
+    },
+    {
+      "method": "GET",
+      "path": "SalesOpportunityReasonsSetup",
+      "description": "Retrieve a collection of 'SalesOpportunityReasonsSetup' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetup\n\nGET https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetup?$select=SequenceNo,Description,Sort&$filter=SequenceNo ge 123 &$orderby=SequenceNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesOpportunityReasonsSetup",
+      "description": "Create an instance of 'SalesOpportunityReasonsSetup' with the given payload of type 'SalesOpportunityReasonSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetup\n{\n    \"Description\": \"2112\",\n    \"SequenceNo\": 2,\n    \"Sort\": 100\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesOpportunityReasonsSetup(id)",
+      "description": "Update an instance of 'SalesOpportunityReasonsSetup' with the given payload of type 'SalesOpportunityReasonSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetup(123)\n{\n    \"Sort\": 10\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesOpportunityReasonsSetup(id)",
+      "description": "Delete an instance of 'SalesOpportunityReasonsSetup' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetup(123)"
+    }
+  ]
+}

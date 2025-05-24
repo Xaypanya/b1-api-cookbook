@@ -1,0 +1,30 @@
+{
+  "service": "Messages",
+  "description": "This entity enables you to manipulate 'Messages'. You can also specify the OData query options to query the messages, which is a combination of Inbox messages, Outbox messages and to-send messages.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Messages(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Messages' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Messages(4)\n\nGET https://localhost:50000/b1s/v2/Messages(4)?$select=Code,User,Priority"
+    },
+    {
+      "method": "GET",
+      "path": "Messages",
+      "description": "Retrieve a collection of 'Messages' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Messages\n\nGET https://localhost:50000/b1s/v2/Messages?$select=Code,User,Priority&$filter=Code ge 1 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Messages",
+      "description": "Create an instance of 'Messages' with the given payload of type 'Message' in JSON format, which is functionally equivalent to the old method 'MessagesService_SendMessage'.",
+      "example": "POST https://localhost:50000/b1s/v2/Messages\n{\n    \"MessageDataColumns\": [\n        {\n            \"ColumnName\": \"Document\",\n            \"Link\": \"tYES\",\n            \"MessageDataLines\": [\n                {\n                    \"Object\": \"17\",\n                    \"ObjectKey\": \"2\",\n                    \"Value\": \"1\"\n                }\n            ]\n        }\n    ],\n    \"RecipientCollection\": [\n        {\n            \"SendInternal\": \"tYES\",\n            \"UserCode\": \"andy\"\n        }\n    ],\n    \"Subject\": \"service layer subject 01\",\n    \"Text\": \"test by service layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "Messages(id)/GetMessage",
+      "description": "Invoke the method 'GetMessage' on this EntitySet with the specified id. It is functionally equivalent to 'GET Messages(id)'",
+      "example": "POST https://localhost:50000/b1s/v2/Messages(1)/GetMessage"
+    }
+  ]
+}

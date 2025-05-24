@@ -1,0 +1,36 @@
+{
+  "service": "BankPages",
+  "description": "This entity enables you to manipulate 'BankPages'. It represents external bank statements in the Banking module.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BankPages(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BankPages' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BankPages(AccountCode='abc',Sequence=123)\n\nGET https://localhost:50000/b1s/v2/BankPages(AccountCode='abc',Sequence=123)?$select=AccountCode,Sequence,AccountName"
+    },
+    {
+      "method": "GET",
+      "path": "BankPages",
+      "description": "Retrieve a collection of 'BankPages' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BankPages\n\nGET https://localhost:50000/b1s/v2/BankPages?$select=AccountCode,Sequence,AccountName&$filter=startswith(AccountCode, 'a') and Sequence ge 123 &$orderby=AccountCode,Sequence&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BankPages",
+      "description": "Create an instance of 'BankPages' with the given payload of type 'BankPage' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BankPages\n{\n    \"AccountCode\": \"_SYS00000000001\",\n    \"CardCode\": \"c001\",\n    \"CreditAmount\": \"111\",\n    \"DocNumberType\": \"bpdt_DocNum\",\n    \"PaymentReference\": \"first pay\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BankPages(id)",
+      "description": "Update an instance of 'BankPages' with the given payload of type 'BankPage' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BankPages(AccountCode='abc',Sequence=123)\n{\n    \"PaymentReference\": \"Pay reference 01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BankPages(id)",
+      "description": "Delete an instance of 'BankPages' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BankPages(AccountCode='abc',Sequence=123)"
+    }
+  ]
+}

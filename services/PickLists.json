@@ -1,0 +1,42 @@
+{
+  "service": "PickLists",
+  "description": "This entity enables you to manipulate 'PickLists'. It supports the picking process of items from the warehouse. The picking process applies only to items that are already approved in sales orders.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PickLists(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PickLists' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PickLists(3)\n\nGET https://localhost:50000/b1s/v2/PickLists(3)?$select=Absoluteentry,Name,OwnerCode"
+    },
+    {
+      "method": "GET",
+      "path": "PickLists",
+      "description": "Retrieve a collection of 'PickLists' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PickLists\n\nGET https://localhost:50000/b1s/v2/PickLists?$select=Absoluteentry,Name,OwnerCode&$filter=Absoluteentry ge 2 &$orderby=Absoluteentry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PickLists",
+      "description": "Create an instance of 'PickLists' with the given payload of type 'PickList' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PickLists\n{\n    \"ObjectType\": \"156\",\n    \"PickDate\": \"2016-08-25\",\n    \"PickListsLines\": [\n        {\n            \"BaseObjectType\": 17,\n            \"OrderEntry\": 9,\n            \"OrderRowID\": 0,\n            \"ReleasedQuantity\": 1\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PickLists(id)",
+      "description": "Update an instance of 'PickLists' with the given payload of type 'PickList' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PickLists(3)\n{\n    \"Remarks\": \"Updated Remarks\"\n}"
+    },
+    {
+      "method": "PUT",
+      "path": "PickLists(id)",
+      "description": "PickList is a very special object. The exposed properties are not enough for Service Layer to finish a patch operation with 'PickListsLines'. In this way, use 'put' instead.",
+      "example": "PUT https://localhost:50000/b1s/v2/PickLists(19)\n{\n    \"Absoluteentry\": 19,\n    \"Name\": \"Jayson Butler\",\n    \"ObjectType\": \"156\",\n    \"OwnerCode\": 1,\n    \"OwnerName\": null,\n    \"PickDate\": \"2017-09-09\",\n    \"PickListsLines\": [\n        {\n            \"AbsoluteEntry\": 19,\n            \"BaseObjectType\": 17,\n            \"BatchNumbers\": [],\n            \"DocumentLinesBinAllocations\": [\n                {\n                    \"AllowNegativeQuantity\": \"tNO\",\n                    \"BaseLineNumber\": 0,\n                    \"BinAbsEntry\": 2,\n                    \"Quantity\": 2,\n                    \"SerialAndBatchNumbersBaseLine\": -1\n                }\n            ],\n            \"LineNumber\": 0,\n            \"OrderEntry\": 378,\n            \"OrderRowID\": 0,\n            \"PickStatus\": \"ps_Picked\",\n            \"PickedQuantity\": 2,\n            \"PreviouslyReleasedQuantity\": 4,\n            \"ReleasedQuantity\": 2,\n            \"SerialNumbers\": []\n        }\n    ],\n    \"Remarks\": \"\",\n    \"Status\": \"ps_Picked\",\n    \"UseBaseUnits\": \"tNO\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "PickLists(id)/GetReleasedAllocation",
+      "description": "Invoke the method 'GetReleasedAllocation' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PickLists(3)/GetReleasedAllocation"
+    }
+  ]
+}

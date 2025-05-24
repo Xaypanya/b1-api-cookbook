@@ -1,0 +1,12 @@
+{
+  "service": "InventoryOpeningBalancesService",
+  "description": "This API enables you to invoke the interfaces defined on 'InventoryOpeningBalancesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "InventoryOpeningBalancesService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryOpeningBalancesService_GetList"
+    }
+  ]
+}

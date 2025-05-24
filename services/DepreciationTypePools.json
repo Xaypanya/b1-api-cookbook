@@ -1,0 +1,36 @@
+{
+  "service": "DepreciationTypePools",
+  "description": "This entity enables you to manipulate 'DepreciationTypePools'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DepreciationTypePools(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DepreciationTypePools' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DepreciationTypePools('1')\n\nGET https://localhost:50000/b1s/v2/DepreciationTypePools('1')?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "DepreciationTypePools",
+      "description": "Retrieve a collection of 'DepreciationTypePools' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DepreciationTypePools\n\nGET https://localhost:50000/b1s/v2/DepreciationTypePools?$select=Code,Description&$filter=startswith(Code, '1') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DepreciationTypePools",
+      "description": "Create an instance of 'DepreciationTypePools' with the given payload of type 'DepreciationTypePool' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DepreciationTypePools\n{\n    \"Code\": \"1\",\n    \"Description\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DepreciationTypePools(id)",
+      "description": "Update an instance of 'DepreciationTypePools' with the given payload of type 'DepreciationTypePool' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DepreciationTypePools('1')\n{\n    \"Description\": \"test123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DepreciationTypePools(id)",
+      "description": "Delete an instance of 'DepreciationTypePools' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DepreciationTypePools('1')"
+    }
+  ]
+}

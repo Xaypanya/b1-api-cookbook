@@ -1,0 +1,36 @@
+{
+  "service": "AccountCategory",
+  "description": "This entity enables you to manipulate 'AccountCategory'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AccountCategory(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AccountCategory' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AccountCategory(1)\n\nGET https://localhost:50000/b1s/v2/AccountCategory(1)?$select=CategoryCode,CategoryName,CategorySource"
+    },
+    {
+      "method": "GET",
+      "path": "AccountCategory",
+      "description": "Retrieve a collection of 'AccountCategory' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AccountCategory\n\nGET https://localhost:50000/b1s/v2/AccountCategory?$select=CategoryCode,CategoryName,CategorySource&$filter=CategoryCode ge 123 &$orderby=CategoryCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AccountCategory",
+      "description": "Create an instance of 'AccountCategory' with the given payload of type 'AccountCategory' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AccountCategory\n{\n    \"CategoryCode\": 1,\n    \"CategoryName\": \"test1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AccountCategory(id)",
+      "description": "Update an instance of 'AccountCategory' with the given payload of type 'AccountCategory' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AccountCategory(1)\n{\n    \"CategoryCode\": 1,\n    \"CategoryName\": \"test123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AccountCategory(id)",
+      "description": "Delete an instance of 'AccountCategory' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AccountCategory(1)"
+    }
+  ]
+}

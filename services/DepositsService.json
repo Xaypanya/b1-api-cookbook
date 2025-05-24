@@ -1,0 +1,24 @@
+{
+  "service": "DepositsService",
+  "description": "This API enables you to invoke the interfaces defined on 'DepositsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DepositsService_GetDepositList",
+      "description": "Invoke the method 'GetDepositList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/DepositsService_GetDepositList"
+    },
+    {
+      "method": "POST",
+      "path": "DepositsService_CancelCheckRow",
+      "description": "Invoke the method 'CancelCheckRow' on this service by specifying the payload 'CancelCheckRowParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DepositsService_CancelCheckRow\n{\n    \"CancelCheckRowParams\": {\n        \"CheckID\": 1,\n        \"DepositID\": 11\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "DepositsService_CancelCheckRowbyCurrentSystemDate",
+      "description": "Invoke the method 'CancelCheckRowbyCurrentSystemDate' on this service by specifying the payload 'CancelCheckRowParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DepositsService_CancelCheckRowbyCurrentSystemDate\n{\n    \"CancelCheckRowParams\": {\n        \"CheckID\": 2,\n        \"DepositID\": 11\n    }\n}"
+    }
+  ]
+}

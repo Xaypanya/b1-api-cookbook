@@ -1,0 +1,36 @@
+{
+  "service": "POSDailySummary",
+  "description": "This entity enables you to manipulate 'POSDailySummary'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "POSDailySummary(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'POSDailySummary' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/POSDailySummary(123)\n\nGET https://localhost:50000/b1s/v2/POSDailySummary(123)?$select=AbsEntry,Date,EquipmentNo"
+    },
+    {
+      "method": "GET",
+      "path": "POSDailySummary",
+      "description": "Retrieve a collection of 'POSDailySummary' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/POSDailySummary\n\nGET https://localhost:50000/b1s/v2/POSDailySummary?$select=AbsEntry,Date,EquipmentNo&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "POSDailySummary",
+      "description": "Create an instance of 'POSDailySummary' with the given payload of type 'POSDailySummary' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/POSDailySummary\n{\n    \"CounterPosition\": \"11\",\n    \"Date\": \"2016-08-30\",\n    \"EquipmentNo\": \"123\",\n    \"OperationCounter\": \"13\",\n    \"ResetCounterPosition\": \"12\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "POSDailySummary(id)",
+      "description": "Update an instance of 'POSDailySummary' with the given payload of type 'POSDailySummary' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/POSDailySummary(123)\n{\n    \"Date\": \"2016-08-31\",\n    \"POSTotalizerCollection\": [\n        {\n            \"Code\": \"001\",\n            \"Description\": \"\",\n            \"Number\": \"2\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "POSDailySummary(id)",
+      "description": "Delete an instance of 'POSDailySummary' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/POSDailySummary(123)"
+    }
+  ]
+}

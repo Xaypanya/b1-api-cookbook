@@ -1,0 +1,36 @@
+{
+  "service": "ServiceCallProblemSubTypes",
+  "description": "This entity enables you to manipulate 'ServiceCallProblemSubTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceCallProblemSubTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceCallProblemSubTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallProblemSubTypes(1)\n\nGET https://localhost:50000/b1s/v2/ServiceCallProblemSubTypes(1)?$select=ProblemSubTypeID,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceCallProblemSubTypes",
+      "description": "Retrieve a collection of 'ServiceCallProblemSubTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallProblemSubTypes\n\nGET https://localhost:50000/b1s/v2/ServiceCallProblemSubTypes?$select=ProblemSubTypeID,Name,Description&$filter=ProblemSubTypeID ge 1 &$orderby=ProblemSubTypeID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceCallProblemSubTypes",
+      "description": "Create an instance of 'ServiceCallProblemSubTypes' with the given payload of type 'ServiceCallProblemSubType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCallProblemSubTypes\n{\n    \"Description\": \"test\",\n    \"Name\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceCallProblemSubTypes(id)",
+      "description": "Update an instance of 'ServiceCallProblemSubTypes' with the given payload of type 'ServiceCallProblemSubType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceCallProblemSubTypes(1)\n{\n    \"Description\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceCallProblemSubTypes(id)",
+      "description": "Delete an instance of 'ServiceCallProblemSubTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceCallProblemSubTypes(1)"
+    }
+  ]
+}

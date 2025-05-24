@@ -1,0 +1,36 @@
+{
+  "service": "ServiceCallStatus",
+  "description": "This entity enables you to manipulate 'ServiceCallStatus'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceCallStatus(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceCallStatus' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallStatus(1)\n\nGET https://localhost:50000/b1s/v2/ServiceCallStatus(1)?$select=StatusId,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceCallStatus",
+      "description": "Retrieve a collection of 'ServiceCallStatus' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallStatus\n\nGET https://localhost:50000/b1s/v2/ServiceCallStatus?$select=StatusId,Name,Description&$filter=StatusId ge 1 &$orderby=StatusId&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceCallStatus",
+      "description": "Create an instance of 'ServiceCallStatus' with the given payload of type 'ServiceCallStatus' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCallStatus\n{\n    \"Description\": \"test\",\n    \"Name\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceCallStatus(id)",
+      "description": "Update an instance of 'ServiceCallStatus' with the given payload of type 'ServiceCallStatus' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceCallStatus(1)\n{\n    \"Description\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceCallStatus(id)",
+      "description": "Delete an instance of 'ServiceCallStatus' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceCallStatus(1)"
+    }
+  ]
+}

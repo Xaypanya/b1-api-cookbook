@@ -1,0 +1,36 @@
+{
+  "service": "InventoryCycles",
+  "description": "This entity enables you to manipulate 'InventoryCycles'. It allows to set up cycles of inventory counts and order intervals.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "InventoryCycles(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'InventoryCycles' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryCycles(123)\n\nGET https://localhost:50000/b1s/v2/InventoryCycles(123)?$select=CycleCode,CycleName,Frequency"
+    },
+    {
+      "method": "GET",
+      "path": "InventoryCycles",
+      "description": "Retrieve a collection of 'InventoryCycles' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/InventoryCycles\n\nGET https://localhost:50000/b1s/v2/InventoryCycles?$select=CycleCode,CycleName,Frequency&$filter=CycleCode ge 123 &$orderby=CycleCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryCycles",
+      "description": "Create an instance of 'InventoryCycles' with the given payload of type 'InventoryCycles' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryCycles\n{\n    \"CycleName\": \"DailyCycle\",\n    \"Frequency\": \"bof_Daily\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "InventoryCycles(id)",
+      "description": "Update an instance of 'InventoryCycles' with the given payload of type 'InventoryCycles' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/InventoryCycles(123)\n{\n    \"Frequency\": \"bof_OneTime\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "InventoryCycles(id)",
+      "description": "Delete an instance of 'InventoryCycles' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/InventoryCycles(123)"
+    }
+  ]
+}

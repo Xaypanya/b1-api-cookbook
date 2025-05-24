@@ -1,0 +1,30 @@
+{
+  "service": "BrazilBeverageIndexers",
+  "description": "This entity enables you to manipulate 'BrazilBeverageIndexers'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BrazilBeverageIndexers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BrazilBeverageIndexers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilBeverageIndexers(847)\n\nGET https://localhost:50000/b1s/v2/BrazilBeverageIndexers(847)?$select=BeverageGroupCode,BeverageTableCode,BeverageCommercialBrandCode"
+    },
+    {
+      "method": "GET",
+      "path": "BrazilBeverageIndexers",
+      "description": "Retrieve a collection of 'BrazilBeverageIndexers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilBeverageIndexers\n\nGET https://localhost:50000/b1s/v2/BrazilBeverageIndexers?$select=BeverageGroupCode,BeverageTableCode,BeverageCommercialBrandCode&$filter=BeverageID ge 847 &$orderby=BeverageID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilBeverageIndexers",
+      "description": "Create an instance of 'BrazilBeverageIndexers' with the given payload of type 'BrazilBeverageIndexer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilBeverageIndexers\n{\n    \"BeverageCommercialBrandCode\": 52,\n    \"BeverageGroupCode\": \"13\",\n    \"BeverageTableCode\": \"07\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BrazilBeverageIndexers(id)",
+      "description": "Delete an instance of 'BrazilBeverageIndexers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BrazilBeverageIndexers(847)"
+    }
+  ]
+}

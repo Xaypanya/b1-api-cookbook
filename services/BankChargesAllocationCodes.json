@@ -1,0 +1,42 @@
+{
+  "service": "BankChargesAllocationCodes",
+  "description": "This entity enables you to manipulate 'BankChargesAllocationCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BankChargesAllocationCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BankChargesAllocationCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BankChargesAllocationCodes('001')\n\nGET https://localhost:50000/b1s/v2/BankChargesAllocationCodes('001')?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "BankChargesAllocationCodes",
+      "description": "Retrieve a collection of 'BankChargesAllocationCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BankChargesAllocationCodes\n\nGET https://localhost:50000/b1s/v2/BankChargesAllocationCodes?$select=Code,Description&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BankChargesAllocationCodes",
+      "description": "Create an instance of 'BankChargesAllocationCodes' with the given payload of type 'BankChargesAllocationCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BankChargesAllocationCodes\n{\n    \"Code\": \"001\",\n    \"Description\": \"bank charge allocation 001\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BankChargesAllocationCodes(id)",
+      "description": "Update an instance of 'BankChargesAllocationCodes' with the given payload of type 'BankChargesAllocationCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BankChargesAllocationCodes('001')\n{\n    \"Description\": \"updated by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BankChargesAllocationCodes(id)",
+      "description": "Delete an instance of 'BankChargesAllocationCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BankChargesAllocationCodes('001')"
+    },
+    {
+      "method": "POST",
+      "path": "BankChargesAllocationCodes(id)/SetDefaultBankChargesAllocationCode",
+      "description": "Invoke the method 'SetDefaultBankChargesAllocationCode' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/BankChargesAllocationCodes('001')/SetDefaultBankChargesAllocationCode"
+    }
+  ]
+}

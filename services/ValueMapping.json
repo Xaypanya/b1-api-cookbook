@@ -1,0 +1,36 @@
+{
+  "service": "ValueMapping",
+  "description": "This entity enables you to manipulate 'ValueMapping'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ValueMapping(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ValueMapping' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ValueMapping(123)\n\nGET https://localhost:50000/b1s/v2/ValueMapping(123)?$select=AbsEntry,ObjectId,ObjectAbsEntry"
+    },
+    {
+      "method": "GET",
+      "path": "ValueMapping",
+      "description": "Retrieve a collection of 'ValueMapping' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ValueMapping\n\nGET https://localhost:50000/b1s/v2/ValueMapping?$select=AbsEntry,ObjectId,ObjectAbsEntry&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ValueMapping",
+      "description": "Create an instance of 'ValueMapping' with the given payload of type 'VM_B1ValuesData' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ValueMapping\n{\n    \"ObjectAbsEntry\": \"USD\",\n    \"ObjectId\": 37,\n    \"VM_ThirdPartyValuesCollection\": [\n        {\n            \"ThirdPartySystemId\": 1,\n            \"ThirdPartyValue\": \"USD\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ValueMapping(id)",
+      "description": "Update an instance of 'ValueMapping' with the given payload of type 'VM_B1ValuesData' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ValueMapping(123)\n{\n    \"ObjectAbsEntry\": \"NOK\",\n    \"ObjectId\": 37,\n    \"VM_ThirdPartyValuesCollection\": [\n        {\n            \"ThirdPartySystemId\": 1,\n            \"ThirdPartyValue\": \"AFN\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ValueMapping(id)",
+      "description": "Delete an instance of 'ValueMapping' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ValueMapping(123)"
+    }
+  ]
+}

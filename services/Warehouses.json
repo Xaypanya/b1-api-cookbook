@@ -1,0 +1,36 @@
+{
+  "service": "Warehouses",
+  "description": "This entity enables you to manipulate 'Warehouses'. It represents the information of warehouses in the Inventory module.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Warehouses(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Warehouses' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Warehouses('w001')\n\nGET https://localhost:50000/b1s/v2/Warehouses('w001')?$select=Street,StockInflationOffsetAccount,ZipCode"
+    },
+    {
+      "method": "GET",
+      "path": "Warehouses",
+      "description": "Retrieve a collection of 'Warehouses' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Warehouses\n\nGET https://localhost:50000/b1s/v2/Warehouses?$select=Street,StockInflationOffsetAccount,ZipCode&$filter=startswith(WarehouseCode, 'a') &$orderby=WarehouseCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Warehouses",
+      "description": "Create an instance of 'Warehouses' with the given payload of type 'Warehouse' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Warehouses\n{\n    \"WarehouseCode\": \"w001\",\n    \"WarehouseName\": \"w001\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Warehouses(id)",
+      "description": "Update an instance of 'Warehouses' with the given payload of type 'Warehouse' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Warehouses('w001')\n{\n    \"WarehouseName\": \"UpdatedWHName\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Warehouses(id)",
+      "description": "Delete an instance of 'Warehouses' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Warehouses('w001')"
+    }
+  ]
+}

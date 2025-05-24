@@ -1,0 +1,36 @@
+{
+  "service": "PackagesTypes",
+  "description": "This entity enables you to manipulate 'PackagesTypes'. It represents various packaging types for deliveries.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PackagesTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PackagesTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PackagesTypes(123)\n\nGET https://localhost:50000/b1s/v2/PackagesTypes(123)?$select=Type,Code,Length1"
+    },
+    {
+      "method": "GET",
+      "path": "PackagesTypes",
+      "description": "Retrieve a collection of 'PackagesTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PackagesTypes\n\nGET https://localhost:50000/b1s/v2/PackagesTypes?$select=Type,Code,Length1&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PackagesTypes",
+      "description": "Create an instance of 'PackagesTypes' with the given payload of type 'PackagesType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PackagesTypes\n{\n    \"Height1\": \"60\",\n    \"Height1Unit\": \"4\",\n    \"Length1\": \"10\",\n    \"Length1Unit\": \"4\",\n    \"Type\": \"carton\",\n    \"VolumeUnit\": \"2\",\n    \"Weight1\": \"200\",\n    \"Weight1Unit\": \"3\",\n    \"Width1\": \"30\",\n    \"Width1Unit\": \"4\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PackagesTypes(id)",
+      "description": "Update an instance of 'PackagesTypes' with the given payload of type 'PackagesType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PackagesTypes(123)\n{\n    \"Length1\": \"20\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PackagesTypes(id)",
+      "description": "Delete an instance of 'PackagesTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PackagesTypes(123)"
+    }
+  ]
+}

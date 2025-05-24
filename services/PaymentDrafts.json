@@ -1,0 +1,60 @@
+{
+  "service": "PaymentDrafts",
+  "description": "This entity enables you to manipulate 'PaymentDrafts'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PaymentDrafts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PaymentDrafts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentDrafts(123)\n\nGET https://localhost:50000/b1s/v2/PaymentDrafts(123)?$select=DocNum,DocType,HandWritten"
+    },
+    {
+      "method": "GET",
+      "path": "PaymentDrafts",
+      "description": "Retrieve a collection of 'PaymentDrafts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentDrafts\n\nGET https://localhost:50000/b1s/v2/PaymentDrafts?$select=DocNum,DocType,HandWritten&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentDrafts",
+      "description": "Create an instance of 'PaymentDrafts' with the given payload of type 'Payment' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentDrafts\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PaymentDrafts(id)",
+      "description": "Update an instance of 'PaymentDrafts' with the given payload of type 'Payment' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PaymentDrafts(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PaymentDrafts(id)",
+      "description": "Delete an instance of 'PaymentDrafts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PaymentDrafts(123)"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentDrafts(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentDrafts(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentDrafts(id)/SaveDraftToDocument",
+      "description": "Invoke the method 'SaveDraftToDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentDrafts(123)/SaveDraftToDocument"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentDrafts(id)/GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentDrafts(123)/GetApprovalTemplates"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentDrafts(id)/CancelbyCurrentSystemDate",
+      "description": "Invoke the method 'CancelbyCurrentSystemDate' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentDrafts(123)/CancelbyCurrentSystemDate"
+    }
+  ]
+}

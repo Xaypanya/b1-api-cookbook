@@ -1,0 +1,36 @@
+{
+  "service": "CostCenterTypes",
+  "description": "This entity enables you to manipulate 'CostCenterTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CostCenterTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CostCenterTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CostCenterTypes('test')\n\nGET https://localhost:50000/b1s/v2/CostCenterTypes('test')?$select=CostCenterTypeCode,CostCenterTypeName"
+    },
+    {
+      "method": "GET",
+      "path": "CostCenterTypes",
+      "description": "Retrieve a collection of 'CostCenterTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CostCenterTypes\n\nGET https://localhost:50000/b1s/v2/CostCenterTypes?$select=CostCenterTypeCode,CostCenterTypeName&$filter=startswith(CostCenterTypeCode, 'test') &$orderby=CostCenterTypeCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CostCenterTypes",
+      "description": "Create an instance of 'CostCenterTypes' with the given payload of type 'CostCenterType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CostCenterTypes\n{\n    \"CostCenterTypeCode\": \"test\",\n    \"CostCenterTypeName\": \"123\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CostCenterTypes(id)",
+      "description": "Update an instance of 'CostCenterTypes' with the given payload of type 'CostCenterType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CostCenterTypes('test')\n{\n    \"CostCenterTypeName\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CostCenterTypes(id)",
+      "description": "Delete an instance of 'CostCenterTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CostCenterTypes('test')"
+    }
+  ]
+}

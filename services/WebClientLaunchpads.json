@@ -1,0 +1,36 @@
+{
+  "service": "WebClientLaunchpads",
+  "description": "This entity enables you to manipulate 'WebClientLaunchpads'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientLaunchpads(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientLaunchpads' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientLaunchpads('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientLaunchpads('abc')?$select=Guid,UserId,ThemeId"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientLaunchpads",
+      "description": "Retrieve a collection of 'WebClientLaunchpads' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientLaunchpads\n\nGET https://localhost:50000/b1s/v2/WebClientLaunchpads?$select=Guid,UserId,ThemeId&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientLaunchpads",
+      "description": "Create an instance of 'WebClientLaunchpads' with the given payload of type 'WebClientLaunchpad' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientLaunchpads\n{\n    \"Guid\": \"LP_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientLaunchpads(id)",
+      "description": "Update an instance of 'WebClientLaunchpads' with the given payload of type 'WebClientLaunchpad' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientLaunchpads('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientLaunchpads(id)",
+      "description": "Delete an instance of 'WebClientLaunchpads' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientLaunchpads('abc')"
+    }
+  ]
+}

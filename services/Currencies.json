@@ -1,0 +1,36 @@
+{
+  "service": "Currencies",
+  "description": "This entity enables you to manipulate 'Currencies'. It represents the currency codes in the Administration module.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Currencies(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Currencies' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Currencies('CNY')\n\nGET https://localhost:50000/b1s/v2/Currencies('CNY')?$select=Code,Name,DocumentsCode"
+    },
+    {
+      "method": "GET",
+      "path": "Currencies",
+      "description": "Retrieve a collection of 'Currencies' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Currencies\n\nGET https://localhost:50000/b1s/v2/Currencies?$select=Code,Name,DocumentsCode&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Currencies",
+      "description": "Create an instance of 'Currencies' with the given payload of type 'Currency' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Currencies\n{\n    \"Code\": \"CNY\",\n    \"DocumentsCode\": \"CNY\",\n    \"InternationalDescription\": \"CN Yuan\",\n    \"Name\": \"CNY\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Currencies(id)",
+      "description": "Update an instance of 'Currencies' with the given payload of type 'Currency' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Currencies('CNY')\n{\n    \"Name\": \"UpdatedCurrencyName\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Currencies(id)",
+      "description": "Delete an instance of 'Currencies' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Currencies('CNY')"
+    }
+  ]
+}

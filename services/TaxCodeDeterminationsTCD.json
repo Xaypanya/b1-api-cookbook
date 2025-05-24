@@ -1,0 +1,24 @@
+{
+  "service": "TaxCodeDeterminationsTCD",
+  "description": "This entity enables you to manipulate 'TaxCodeDeterminationsTCD'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TaxCodeDeterminationsTCD(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TaxCodeDeterminationsTCD' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TaxCodeDeterminationsTCD(4)\n\nGET https://localhost:50000/b1s/v2/TaxCodeDeterminationsTCD(4)?$select=AbsId,TcdType,DftArCode"
+    },
+    {
+      "method": "GET",
+      "path": "TaxCodeDeterminationsTCD",
+      "description": "Retrieve a collection of 'TaxCodeDeterminationsTCD' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TaxCodeDeterminationsTCD\n\nGET https://localhost:50000/b1s/v2/TaxCodeDeterminationsTCD?$select=AbsId,TcdType,DftArCode&$filter=AbsId ge 4 &$orderby=AbsId&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "TaxCodeDeterminationsTCD(id)",
+      "description": "Update an instance of 'TaxCodeDeterminationsTCD' with the given payload of type 'TaxCodeDeterminationTCD' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TaxCodeDeterminationsTCD(4)\n{\n    \"DftApCode\": null,\n    \"DftArCode\": null,\n    \"TaxCodeDeterminationTCDByUsages\": [],\n    \"TaxCodeDeterminationTCDDefaultWTs\": [],\n    \"TaxCodeDeterminationTCDKeyFields\": [\n        {\n            \"AbsId\": 2,\n            \"Descr\": \"\",\n            \"KeyFld_1\": 1,\n            \"KeyFld_2\": 0,\n            \"KeyFld_3\": 0,\n            \"KeyFld_4\": 0,\n            \"Priority\": 1,\n            \"TaxCodeDeterminationTCDKeyFieldValues\": [],\n            \"UDFAlias_1\": null,\n            \"UDFAlias_2\": null,\n            \"UDFAlias_3\": null,\n            \"UDFAlias_4\": null,\n            \"UDFTable_1\": null,\n            \"UDFTable_2\": null,\n            \"UDFTable_3\": null,\n            \"UDFTable_4\": null\n        }\n    ],\n    \"TcdType\": \"tcdtWithholdingTax\"\n}"
+    }
+  ]
+}

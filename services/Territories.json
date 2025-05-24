@@ -1,0 +1,36 @@
+{
+  "service": "Territories",
+  "description": "This entity enables you to manipulate 'Territories'. It represents the territory segmentation.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Territories(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Territories' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Territories(123)\n\nGET https://localhost:50000/b1s/v2/Territories(123)?$select=TerritoryID,Description,LocationIndex"
+    },
+    {
+      "method": "GET",
+      "path": "Territories",
+      "description": "Retrieve a collection of 'Territories' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Territories\n\nGET https://localhost:50000/b1s/v2/Territories?$select=TerritoryID,Description,LocationIndex&$filter=TerritoryID ge 123 &$orderby=TerritoryID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Territories",
+      "description": "Create an instance of 'Territories' with the given payload of type 'Territory' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Territories\n{\n    \"Description\": \"NorthChina\",\n    \"Parent\": \"-1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Territories(id)",
+      "description": "Update an instance of 'Territories' with the given payload of type 'Territory' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Territories(123)\n{\n    \"Description\": \"EastChina\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Territories(id)",
+      "description": "Delete an instance of 'Territories' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Territories(123)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "service": "Login",
+  "description": "Log in Service Layer with the specified credentials. Generally it is the first step to using the Service Layer API. Calling the Service Layer API without a login will result in failure. After logging in successfully, one session ID will be returned in HTTP response body.\n\t\tAt the same time, two HTTP cookie items named \"B1SESSION\" and \"ROUTEID\" will be set. You do not need to relate to them if calling the Service Layer API in a browser because the browser will send them to Service Layer automatically in subsequent HTTP requests. \n\t\tYou do need to add the cookie item \"B1SESSION\" to your HTTP header in a subsequent Service Layer API call. Otherwise, Service Layer will consider them as a bad request without a login. The cookie item \"ROUTEID\" is optional. It ensures the session stickiness and optimizes performance through efficient load balancing.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "Login",
+      "description": "Login Service Layer with the specified credentials.",
+      "example": "POST https://localhost:50000/b1s/v2/Login\n{\n    \"CompanyDB\": \"SBODEMOUS\",\n    \"Password\": \"1234\",\n    \"UserName\": \"manager\"\n}"
+    }
+  ]
+}

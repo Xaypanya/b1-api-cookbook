@@ -1,0 +1,36 @@
+{
+  "service": "Departments",
+  "description": "This entity enables you to manipulate 'Departments'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Departments(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Departments' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Departments(123)\n\nGET https://localhost:50000/b1s/v2/Departments(123)?$select=Code,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "Departments",
+      "description": "Retrieve a collection of 'Departments' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Departments\n\nGET https://localhost:50000/b1s/v2/Departments?$select=Code,Name,Description&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Departments",
+      "description": "Create an instance of 'Departments' with the given payload of type 'Department' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Departments\n{\n    \"Code\": 1,\n    \"Description\": \"General Department001\",\n    \"Name\": \"General001\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Departments(id)",
+      "description": "Update an instance of 'Departments' with the given payload of type 'Department' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Departments(123)\n{\n    \"Description\": \"General Department001\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Departments(id)",
+      "description": "Delete an instance of 'Departments' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Departments(123)"
+    }
+  ]
+}

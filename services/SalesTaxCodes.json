@@ -1,0 +1,36 @@
+{
+  "service": "SalesTaxCodes",
+  "description": "This entity enables you to manipulate 'SalesTaxCodes'. It represents the inclusive sales tax codes. Each sales tax code consists of one or more sales taxes.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesTaxCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesTaxCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxCodes('T1')\n\nGET https://localhost:50000/b1s/v2/SalesTaxCodes('T1')?$select=ValidForAR,ValidForAP,UserSignature"
+    },
+    {
+      "method": "GET",
+      "path": "SalesTaxCodes",
+      "description": "Retrieve a collection of 'SalesTaxCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesTaxCodes\n\nGET https://localhost:50000/b1s/v2/SalesTaxCodes?$select=ValidForAR,ValidForAP,UserSignature&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesTaxCodes",
+      "description": "Create an instance of 'SalesTaxCodes' with the given payload of type 'SalesTaxCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesTaxCodes\n{\n    \"Code\": \"T1\",\n    \"Name\": \"T1\",\n    \"SalesTaxCodes_Lines\": [\n        {\n            \"STACode\": \"AL\",\n            \"STAType\": \"-3\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesTaxCodes(id)",
+      "description": "Update an instance of 'SalesTaxCodes' with the given payload of type 'SalesTaxCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesTaxCodes('T1')\n{\n    \"Name\": \"UpdatedTaxName\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesTaxCodes(id)",
+      "description": "Delete an instance of 'SalesTaxCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesTaxCodes('T1')"
+    }
+  ]
+}

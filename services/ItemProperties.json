@@ -1,0 +1,36 @@
+{
+  "service": "ItemProperties",
+  "description": "This entity enables you to manipulate 'ItemProperties'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ItemProperties(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ItemProperties' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ItemProperties(9124)\n\nGET https://localhost:50000/b1s/v2/ItemProperties(9124)?$select=Number,PropertyName"
+    },
+    {
+      "method": "GET",
+      "path": "ItemProperties",
+      "description": "Retrieve a collection of 'ItemProperties' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ItemProperties\n\nGET https://localhost:50000/b1s/v2/ItemProperties?$select=Number,PropertyName&$filter=Number ge 9124 &$orderby=Number&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ItemProperties",
+      "description": "Create an instance of 'ItemProperties' with the given payload of type 'ItemProperty' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ItemProperties\n{\n    \"Number\": \"9124\",\n    \"PropertyName\": \"Item Property 9124\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ItemProperties(id)",
+      "description": "Update an instance of 'ItemProperties' with the given payload of type 'ItemProperty' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ItemProperties(9124)\n{\n    \"PropertyName\": \"new Item Property 9124\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ItemProperties(id)",
+      "description": "Delete an instance of 'ItemProperties' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ItemProperties(9124)"
+    }
+  ]
+}

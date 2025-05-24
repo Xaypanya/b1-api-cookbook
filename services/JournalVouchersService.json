@@ -1,0 +1,12 @@
+{
+  "service": "JournalVouchersService",
+  "description": "This API enables you to invoke the interfaces defined on 'JournalVouchersService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "JournalVouchersService_Add",
+      "description": "Invoke the method 'Add' on this service by specifying the payload 'Collection(JournalEntry)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/JournalVouchersService_Add\n{\n    \"JournalVoucher\": {\n        \"JournalEntry\": {\n            \"DueDate\": \"2014-12-06\",\n            \"JournalEntryLines\": [\n                {\n                    \"AccountCode\": \"_SYS00000000094\",\n                    \"Credit\": \"0\",\n                    \"Debit\": \"123\"\n                },\n                {\n                    \"AccountCode\": \"_SYS00000000019\",\n                    \"Credit\": \"123\",\n                    \"Debit\": \"0\"\n                }\n            ],\n            \"ReferenceDate\": \"2014-12-06\"\n        }\n    }\n}"
+    }
+  ]
+}

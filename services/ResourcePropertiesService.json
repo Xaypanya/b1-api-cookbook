@@ -1,0 +1,12 @@
+{
+  "service": "ResourcePropertiesService",
+  "description": "This API enables you to invoke the interfaces defined on 'ResourcePropertiesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ResourcePropertiesService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ResourcePropertiesService_GetList"
+    }
+  ]
+}

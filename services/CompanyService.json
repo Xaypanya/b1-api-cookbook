@@ -1,0 +1,162 @@
+{
+  "service": "CompanyService",
+  "description": "This API enables you to invoke the interfaces defined on 'CompanyService'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CompanyService_GetCompanyInfo",
+      "description": "Invoke the method 'GetCompanyInfo' on this service. It returns the 'CompanyInfo' data structure, including initial parameters related to the company. The default values of some of the properties vary according to the country localization.",
+      "example": "GET https://localhost:50000/b1s/v2/CompanyService_GetCompanyInfo"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetCompanyInfo",
+      "description": "Invoke the method 'GetCompanyInfo' on this service. It returns the 'CompanyInfo' data structure, including initial parameters related to the company. The default values of some of the properties vary according to the country localization.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetCompanyInfo"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_UpdateCompanyInfo",
+      "description": "Invoke the method 'UpdateCompanyInfo' on this service by specifying the payload 'CompanyInfo' in the JSON format. It includes the initial parameters related to the company. The default values of some of the properties vary according to the country localization.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_UpdateCompanyInfo\n{\n    \"CompanyInfo\": {\n        \"EnableAccountSegmentation\": \"tYES\",\n        \"EnableExpensesManagement\": \"tYES\",\n        \"MaxRecordsInChooseFromList\": 0,\n        \"MinimumAmountForAnnualList\": 0,\n        \"MinimumAmountForAppndixOP\": 0,\n        \"MinimumBaseAmountPerDoc\": 0,\n        \"PercentOfTotalAcquisition\": 0,\n        \"Version\": \"910190\"\n    }\n}"
+    },
+    {
+      "method": "GET",
+      "path": "CompanyService_GetAdminInfo",
+      "description": "Invoke the method 'GetAdminInfo' on this service. It Returns the 'AdminInfo' data structure, including administration properties for system initialization and various definitions, such as financials and banking.",
+      "example": "GET https://localhost:50000/b1s/v2/CompanyService_GetAdminInfo"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetAdminInfo",
+      "description": "Invoke the method 'GetAdminInfo' on this service. It Returns the 'AdminInfo' data structure, including administration properties for system initialization and various definitions, such as financials and banking.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetAdminInfo"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_UpdateAdminInfo",
+      "description": "Invoke the method 'UpdateAdminInfo' on this service by specifying the payload 'AdminInfo' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_UpdateAdminInfo\n{\n    \"AdminInfo\": {\n        \"CalculateBudget\": \"tYES\",\n        \"ChangeDefReconAPAccounts\": \"tYES\",\n        \"ChangeDefReconARAccounts\": \"tYES\",\n        \"ChartofAccountsTemplate\": \"C\",\n        \"Code\": 1,\n        \"CompanyName\": \"USTest\",\n        \"ContinuousStockManagement\": \"tYES\",\n        \"Country\": \"US\",\n        \"CreditBalancewithMinusSign\": \"tYES\",\n        \"DefaultWarehouse\": \"01\",\n        \"ExtendedAdminInfo\": {},\n        \"LocalCurrency\": \"$\",\n        \"MultiLanguageSupportEnable\": \"tYES\",\n        \"RoundingMethod\": \"tYES\",\n        \"SetItemsWarehouses\": \"tYES\",\n        \"SplitPO\": \"tYES\",\n        \"SystemCurrency\": \"$\",\n        \"UniqueSerialNo\": \"usn_MfrSerialNumber\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_CreatePeriod",
+      "description": "Invoke the method 'CreatePeriod' on this service by specifying the payload 'PeriodCategory' in the JSON format.\n\t\t\t\t\tIt returns the 'PeriodCategoryParams' identification key based on the 'PeriodCategory' data structure.\n\t\t\t\t\tThe 'PeriodCategory' object provides two types of properties:\n\t\t\t\t\t1.Properties that access existing Accounts and function as foreign keys to the ChartOfAccounts object.\n\t\t\t\t\t2.Properties that define new accounts by using Posting and Sub-Period definitions.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_CreatePeriod\n{\n    \"PeriodCategory\": {\n        \"BeginningofFinancialYear\": \"2010-01-01\",\n        \"NumberOfPeriods\": 1,\n        \"PeriodCategory\": \"2010\",\n        \"PeriodName\": \"2010\",\n        \"SubPeriodType\": \"spt_Year\"\n    }\n}"
+    },
+    {
+      "method": "GET",
+      "path": "CompanyService_GetPeriods",
+      "description": "Invoke the method 'GetPeriods' on this service.\n\t\t\t\t\tIt returns the 'PeriodCategoryParamsCollection', which is a collection of 'PeriodCategoryParams' identification keys.",
+      "example": "GET https://localhost:50000/b1s/v2/CompanyService_GetPeriods"
+    },
+    {
+      "method": "GET",
+      "path": "CompanyService_GetPeriods",
+      "description": "Invoke the method 'GetPeriods' on this service.\n\t\t\t\t\tIt returns the 'PeriodCategoryParamsCollection', which is a collection of 'PeriodCategoryParams' identification keys.",
+      "example": "GET https://localhost:50000/b1s/v2/CompanyService_GetPeriods"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetPeriod",
+      "description": "Invoke the method 'GetPeriod' on this service by specifying the payload 'PeriodCategoryParams' in the JSON format.\n\t\t\t\t\tIt returns the 'PeriodCategory' data structure according to the specified period category key parameters.\n\t\t\t\t\tThe 'PeriodCategory' object provides two types of properties:\n\t\t\t\t\t1.Properties that access existing Accounts and function as foreign keys to the ChartOfAccounts object.\n\t\t\t\t\t2.Properties that define new accounts by using Posting and Sub-Period definitions.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetPeriod\n{\n    \"PeriodCategoryParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_UpdatePeriod",
+      "description": "Invoke the method 'UpdatePeriod' on this service by specifying the payload 'PeriodCategory' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_UpdatePeriod\n{\n    \"PeriodCategory\": {\n        \"AbsoluteEntry\": 1,\n        \"AccountforCashReceipt\": \"_SYS00000000003\",\n        \"BeginningofFinancialYear\": \"2015-01-01\",\n        \"NumberOfPeriods\": 12,\n        \"PeriodCategory\": \"2015\",\n        \"SubPeriodType\": \"spt_Months\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetFinancePeriods",
+      "description": "Invoke the method 'GetFinancePeriods' on this service by specifying the payload 'PeriodCategoryParams' in the JSON format.\n\t\t\t\t\tIt returns the 'FinancePeriods' collection according to the specified period category key parameters. \n\t\t\t\t\tThe object is used to identify and define a new 'FinancePeriods'.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetFinancePeriods\n{\n    \"PeriodCategoryParams\": {\n        \"AbsoluteEntry\": 1\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetFinancePeriod",
+      "description": "Invoke the method 'GetFinancePeriod' on this service by specifying the payload 'FinancePeriodParams' in the JSON format.\n\t\t\t\t\tIt returns a 'FinancePeriod' data structure according to the specified finance period key parameters. \n\t\t\t\t\tThe object is used to identify and define a new 'FinancePeriod'.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetFinancePeriod\n{\n    \"FinancePeriodParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_UpdateFinancePeriod",
+      "description": "Invoke the method 'UpdateFinancePeriod' on this service by specifying the payload 'FinancePeriod' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_UpdateFinancePeriod\n{\n    \"FinancePeriod\": {\n        \"AbsoluteEntry\": 6,\n        \"ActiveforFeed\": \"tNO\",\n        \"PeriodCode\": \"2015-06\",\n        \"PeriodName\": \"2015-06\",\n        \"PostingDateFrom\": \"2015-06-01\",\n        \"PostingDateTo\": \"2015-06-30\",\n        \"TaxDateFrom\": \"2015-01-01\",\n        \"TaxDateTo\": \"2015-12-31\",\n        \"ValueDateFrom\": \"2015-01-01\",\n        \"ValueDateTo\": \"2015-12-31\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_RemoveFinancePeriod",
+      "description": "Invoke the method 'RemoveFinancePeriod' on this service by specifying the payload 'FinancePeriodParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_RemoveFinancePeriod\n{\n    \"FinancePeriods\": [\n        {\n            \"AbsoluteEntry\": \"1\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_CreatePeriodWithFinanceParams",
+      "description": "Invoke the method 'CreatePeriodWithFinanceParams' on this service by specifying the payload 'PeriodCategory' in the JSON format.\n\t\t\t\t\tIt returns a 'PeriodCategoryParams' identification key, extended with finance parameters derived by the 'FinancePeriodParams' identification key (system number, period indicator).\n\t\t\t\t\tThe PeriodCategory object provides two types of properties:\n\t\t\t\t\t1.Properties that access existing Accounts and function as foreign keys to the 'ChartOfAccounts' object.\n\t\t\t\t\t2.Properties that define new accounts by using Posting and Sub-Period definitions. \n\t\t\t\t\tThe 'FinancePeriodParams' specifies the identification key(system number, period indicator ) to which the 'CompanyService' is related.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_CreatePeriodWithFinanceParams\n{\n    \"FinancePeriodParams\": {\n        \"PeriodIndicator\": \"Default\"\n    },\n    \"PeriodCategory\": {\n        \"BeginningofFinancialYear\": \"2010-01-01\",\n        \"NumberOfPeriods\": 1,\n        \"PeriodCategory\": \"2010\",\n        \"PeriodName\": \"2010\",\n        \"SubPeriodType\": \"spt_Year\"\n    }\n}"
+    },
+    {
+      "method": "GET",
+      "path": "CompanyService_GetFeaturesStatus",
+      "description": "Invoke the method 'GetFeaturesStatus' on this service.\n\t\t\t\t\tIt returns the 'FeatureStatusCollection'. A feature status can be either blocked or not. \n\t\t\t\t\tThis object represents the status of a specified feature in the application, whether it is blocked or not according to the installation type: new 2007 release installation or upgrade installation prior to 2007 release.",
+      "example": "GET https://localhost:50000/b1s/v2/CompanyService_GetFeaturesStatus"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetFeaturesStatus",
+      "description": "Invoke the method 'GetFeaturesStatus' on this service.\n\t\t\t\t\tIt returns the 'FeatureStatusCollection'. A feature status can be either blocked or not. \n\t\t\t\t\tThis object represents the status of a specified feature in the application, whether it is blocked or not according to the installation type: new 2007 release installation or upgrade installation prior to 2007 release.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetFeaturesStatus"
+    },
+    {
+      "method": "GET",
+      "path": "CompanyService_GetPathAdmin",
+      "description": "Invoke the method 'GetPathAdmin' on this service.",
+      "example": "GET https://localhost:50000/b1s/v2/CompanyService_GetPathAdmin"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetPathAdmin",
+      "description": "Invoke the method 'GetPathAdmin' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetPathAdmin"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_UpdatePathAdmin",
+      "description": "Invoke the method 'UpdatePathAdmin' on this service by specifying the payload 'PathAdmin' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_UpdatePathAdmin\n{\n    \"PathAdmin\": {\n        \"AttachmentsFolderPath\": \"/usr/sap/SAPBusinessOne/ServiceLayer/modules\",\n        \"ExtensionsFolderPath\": null,\n        \"PicturesFolderPath\": null,\n        \"PrintId\": \"USBO\",\n        \"WordTemplateFolderPath\": null\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_RoundDecimal",
+      "description": "Invoke the method 'RoundDecimal' on this service by specifying the payload 'DecimalData' in the JSON format.\n\t\t\t\t\tIt rounds data to a specified number of decimal places or to a whole number if no decimal places are specified.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_RoundDecimal\n{\n    \"DecimalData\": {\n        \"Context\": \"rcPrice\",\n        \"Currency\": \"$\",\n        \"Value\": 12.345\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetItemPrice",
+      "description": "Invoke the method 'GetItemPrice' on this service by specifying the payload 'ItemPriceParams' in the JSON format.\n\t\t\t\t\tIt returns a business object that contains the item price for specified business partner and item, based on the amount and transaction date.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetItemPrice\n{\n    \"ItemPriceParams\": {\n        \"CardCode\": \"Customer\",\n        \"ItemCode\": \"Item\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_GetAdvancedGLAccount",
+      "description": "Invoke the method 'GetAdvancedGLAccount' on this service by specifying the payload 'AdvancedGLAccountParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_GetAdvancedGLAccount\n{\n    \"AdvancedGLAccountParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_LogLoginAction",
+      "description": "Invoke the method 'LogLoginAction' on this service by specifying the payload 'UserAccessLog' and 'SupportUserLoginRecord' in the JSON format. \n\t\t\t\t\t1. SupportUserLoginRecord is only used in 'On Premise' mode. For 'On Demand' mode, there is no need to provide 'SupportUserLoginRecord'. For 'On Premise' mode, there is no need to provide 'ReasonID' and 'ReasonDesc'.\n                    2. 'SessionID' can be retrieved from DB server.\n                    3. Must use DB server time for 'ActionDate' and 'ActionTime'.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_LogLoginAction\n{\n    \"SupportUserLoginRecord\": {\n        \"ID\": 21,\n        \"LogDetail\": \"Log detail\",\n        \"LogReason\": \"J\",\n        \"RealName\": \"Real name\"\n    },\n    \"UserAccessLog\": {\n        \"Action\": \"I\",\n        \"ActionBy\": \"Support\",\n        \"ActionDate\": \"2021-06-23\",\n        \"ActionTime\": 102959,\n        \"ClientIP\": \"10.10.10.10\",\n        \"ClientName\": \"SERVER01A\",\n        \"ProcName\": \"Web Client.jar\",\n        \"ProcessID\": 10592,\n        \"ReasonDesc\": \"Reason desc\",\n        \"ReasonID\": 51,\n        \"SessionID\": 65,\n        \"Source\": \"SBO_Web_Client\",\n        \"UserCode\": \"Support\",\n        \"UserID\": 4,\n        \"WinSessnID\": -1,\n        \"WinUsrName\": \"b1admin\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CompanyService_LogLogoffAction",
+      "description": "Invoke the method 'LogLogoffAction' on this service by specifying the payload 'UserAccessLog' and 'SupportUserLoginRecord' in the JSON format. \n\t\t\t\t\t1. SupportUserLoginRecord is only used in 'On Premise' mode. For 'On Demand' mode, there is no need to provide 'SupportUserLoginRecord'. For 'On Premise' mode, there is no need to provide 'ReasonID' and 'ReasonDesc'.\n          \t\t\t2. 'SessionID' can be retrieved from DB server.\n          \t\t\t3. 'ActionDate' and 'ActionTime' must be the same value as those in LogLoginAction.\n          \t\t\t4. 'ID' of 'SupportUserLoginRecord' comes from LogLoginAction.",
+      "example": "POST https://localhost:50000/b1s/v2/CompanyService_LogLogoffAction\n{\n    \"SupportUserLoginRecord\": {\n        \"ID\": 21,\n        \"LogDetail\": \"Log detail\",\n        \"LogReason\": \"J\",\n        \"RealName\": \"Real name\"\n    },\n    \"UserAccessLog\": {\n        \"Action\": \"O\",\n        \"ActionBy\": \"Support\",\n        \"ActionDate\": \"2021-06-23\",\n        \"ActionTime\": 102959,\n        \"ClientIP\": \"10.10.10.10\",\n        \"ClientName\": \"SERVER01A\",\n        \"ProcName\": \"Web Client.jar\",\n        \"ProcessID\": 10592,\n        \"ReasonDesc\": \"Reason desc\",\n        \"ReasonID\": 51,\n        \"SessionID\": 65,\n        \"Source\": \"SBO_Web_Client\",\n        \"UserCode\": \"Support\",\n        \"UserID\": 4,\n        \"WinSessnID\": -1,\n        \"WinUsrName\": \"b1admin\"\n    }\n}"
+    }
+  ]
+}

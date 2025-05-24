@@ -1,0 +1,36 @@
+{
+  "service": "WitholdingTaxDefinition",
+  "description": "This entity enables you to manipulate 'WitholdingTaxDefinition'. It functionally overlaps `WithholdingTaxCodes`.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WitholdingTaxDefinition(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WitholdingTaxDefinition' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WitholdingTaxDefinition(123)\n\nGET https://localhost:50000/b1s/v2/WitholdingTaxDefinition(123)?$select=AbsEntry,WTaxCode,WTaxName"
+    },
+    {
+      "method": "GET",
+      "path": "WitholdingTaxDefinition",
+      "description": "Retrieve a collection of 'WitholdingTaxDefinition' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WitholdingTaxDefinition\n\nGET https://localhost:50000/b1s/v2/WitholdingTaxDefinition?$select=AbsEntry,WTaxCode,WTaxName&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WitholdingTaxDefinition",
+      "description": "Create an instance of 'WitholdingTaxDefinition' with the given payload of type 'WTDCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WitholdingTaxDefinition\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WitholdingTaxDefinition(id)",
+      "description": "Update an instance of 'WitholdingTaxDefinition' with the given payload of type 'WTDCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WitholdingTaxDefinition(123)\n{\n    \"WTaxName\": \"newName\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WitholdingTaxDefinition(id)",
+      "description": "Delete an instance of 'WitholdingTaxDefinition' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WitholdingTaxDefinition(123)"
+    }
+  ]
+}

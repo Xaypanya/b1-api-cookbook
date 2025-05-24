@@ -1,0 +1,36 @@
+{
+  "service": "KPIs",
+  "description": "This entity enables you to manipulate 'KPIs'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "KPIs(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'KPIs' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/KPIs('abc')\n\nGET https://localhost:50000/b1s/v2/KPIs('abc')?$select=KPICode,KPIName,KPIType"
+    },
+    {
+      "method": "GET",
+      "path": "KPIs",
+      "description": "Retrieve a collection of 'KPIs' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/KPIs\n\nGET https://localhost:50000/b1s/v2/KPIs?$select=KPICode,KPIName,KPIType&$filter=startswith(KPICode, 'a') &$orderby=KPICode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "KPIs",
+      "description": "Create an instance of 'KPIs' with the given payload of type 'KPI' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/KPIs\n{\n    \"KPICode\": \"CFC001\",\n    \"KPIName\": \"Cash Flow Config001\",\n    \"KPIType\": \"asSingle\",\n    \"KPI_ItemLines\": [\n        {\n            \"KPICode\": \"CFC001\",\n            \"KPILineNumber\": 1,\n            \"KPIName\": \"No. of Days\",\n            \"KPIValue1\": 5,\n            \"KPIValue10\": 0,\n            \"KPIValue11\": 0,\n            \"KPIValue12\": 0,\n            \"KPIValue13\": 0,\n            \"KPIValue14\": 0,\n            \"KPIValue15\": 0,\n            \"KPIValue16\": 0,\n            \"KPIValue17\": 0,\n            \"KPIValue18\": 0,\n            \"KPIValue19\": 0,\n            \"KPIValue2\": 0,\n            \"KPIValue20\": 0,\n            \"KPIValue21\": 0,\n            \"KPIValue22\": 0,\n            \"KPIValue23\": 0,\n            \"KPIValue24\": 0,\n            \"KPIValue25\": 0,\n            \"KPIValue26\": 0,\n            \"KPIValue27\": 0,\n            \"KPIValue28\": 0,\n            \"KPIValue29\": 0,\n            \"KPIValue3\": 0,\n            \"KPIValue30\": 0,\n            \"KPIValue4\": 0,\n            \"KPIValue5\": 0,\n            \"KPIValue6\": 0,\n            \"KPIValue7\": 0,\n            \"KPIValue8\": 0,\n            \"KPIValue9\": 0\n        }\n    ],\n    \"NumberOfColumns\": 1\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "KPIs(id)",
+      "description": "Update an instance of 'KPIs' with the given payload of type 'KPI' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/KPIs('abc')\n{\n    \"KPIName\": \"Cash Flow Config0012\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "KPIs(id)",
+      "description": "Delete an instance of 'KPIs' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/KPIs('abc')"
+    }
+  ]
+}

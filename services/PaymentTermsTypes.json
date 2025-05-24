@@ -1,0 +1,36 @@
+{
+  "service": "PaymentTermsTypes",
+  "description": "This entity enables you to manipulate 'PaymentTermsTypes'. It represents the types of payment terms in the Banking module. The payment terms define typical agreements that apply to transactions with customers and vendors.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PaymentTermsTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PaymentTermsTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentTermsTypes(123)\n\nGET https://localhost:50000/b1s/v2/PaymentTermsTypes(123)?$select=GroupNumber,PaymentTermsGroupName,StartFrom"
+    },
+    {
+      "method": "GET",
+      "path": "PaymentTermsTypes",
+      "description": "Retrieve a collection of 'PaymentTermsTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentTermsTypes\n\nGET https://localhost:50000/b1s/v2/PaymentTermsTypes?$select=GroupNumber,PaymentTermsGroupName,StartFrom&$filter=GroupNumber ge 123 &$orderby=GroupNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentTermsTypes",
+      "description": "Create an instance of 'PaymentTermsTypes' with the given payload of type 'PaymentTermsType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentTermsTypes\n{\n    \"CreditLimit\": \"44\",\n    \"GeneralDiscount\": \"33\",\n    \"LoadLimit\": \"55\",\n    \"PaymentTermsGroupName\": \"10DTerm\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PaymentTermsTypes(id)",
+      "description": "Update an instance of 'PaymentTermsTypes' with the given payload of type 'PaymentTermsType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PaymentTermsTypes(123)\n{\n    \"GeneralDiscount\": \"10\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PaymentTermsTypes(id)",
+      "description": "Delete an instance of 'PaymentTermsTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PaymentTermsTypes(123)"
+    }
+  ]
+}

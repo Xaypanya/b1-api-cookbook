@@ -1,0 +1,36 @@
+{
+  "service": "UnitOfMeasurementGroups",
+  "description": "This entity enables you to manipulate 'UnitOfMeasurementGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UnitOfMeasurementGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UnitOfMeasurementGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UnitOfMeasurementGroups(123)\n\nGET https://localhost:50000/b1s/v2/UnitOfMeasurementGroups(123)?$select=AbsEntry,Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "UnitOfMeasurementGroups",
+      "description": "Retrieve a collection of 'UnitOfMeasurementGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UnitOfMeasurementGroups\n\nGET https://localhost:50000/b1s/v2/UnitOfMeasurementGroups?$select=AbsEntry,Code,Name&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UnitOfMeasurementGroups",
+      "description": "Create an instance of 'UnitOfMeasurementGroups' with the given payload of type 'UnitOfMeasurementGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UnitOfMeasurementGroups\n{\n    \"AbsEntry\": 2,\n    \"BaseUoM\": 1,\n    \"Code\": \"F1\",\n    \"Name\": \"F1\",\n    \"UoMGroupDefinitionCollection\": [\n        {\n            \"AlternateQuantity\": 1,\n            \"AlternateUoM\": 1,\n            \"BaseQuantity\": 1,\n            \"UdfFactor\": -1,\n            \"WeightFactor\": 0\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UnitOfMeasurementGroups(id)",
+      "description": "Update an instance of 'UnitOfMeasurementGroups' with the given payload of type 'UnitOfMeasurementGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UnitOfMeasurementGroups(123)\n{\n    \"Name\": \"F1\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UnitOfMeasurementGroups(id)",
+      "description": "Delete an instance of 'UnitOfMeasurementGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UnitOfMeasurementGroups(123)"
+    }
+  ]
+}

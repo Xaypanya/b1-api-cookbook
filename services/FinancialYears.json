@@ -1,0 +1,36 @@
+{
+  "service": "FinancialYears",
+  "description": "This entity enables you to manipulate 'FinancialYears'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "FinancialYears(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'FinancialYears' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/FinancialYears(1)\n\nGET https://localhost:50000/b1s/v2/FinancialYears(1)?$select=AbsEntry,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "FinancialYears",
+      "description": "Retrieve a collection of 'FinancialYears' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/FinancialYears\n\nGET https://localhost:50000/b1s/v2/FinancialYears?$select=AbsEntry,Code,Description&$filter=AbsEntry ge 1 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "FinancialYears",
+      "description": "Create an instance of 'FinancialYears' with the given payload of type 'FinancialYear' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FinancialYears\n{\n    \"AssessYear\": \"201718\",\n    \"Code\": \"201617\",\n    \"Description\": \"201617\",\n    \"EndDate\": \"2017-08-31\",\n    \"StartDate\": \"2016-09-01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "FinancialYears(id)",
+      "description": "Update an instance of 'FinancialYears' with the given payload of type 'FinancialYear' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/FinancialYears(1)\n{\n    \"Description\": \"TEST\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "FinancialYears(id)",
+      "description": "Delete an instance of 'FinancialYears' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/FinancialYears(1)"
+    }
+  ]
+}

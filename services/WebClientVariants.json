@@ -1,0 +1,36 @@
+{
+  "service": "WebClientVariants",
+  "description": "This entity enables you to manipulate 'WebClientVariants'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientVariants(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientVariants' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientVariants('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientVariants('abc')?$select=Guid,Order,UserId"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientVariants",
+      "description": "Retrieve a collection of 'WebClientVariants' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientVariants\n\nGET https://localhost:50000/b1s/v2/WebClientVariants?$select=Guid,Order,UserId&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientVariants",
+      "description": "Create an instance of 'WebClientVariants' with the given payload of type 'WebClientVariant' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientVariants\n{\n    \"Guid\": \"testVariant_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientVariants(id)",
+      "description": "Update an instance of 'WebClientVariants' with the given payload of type 'WebClientVariant' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientVariants('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientVariants(id)",
+      "description": "Delete an instance of 'WebClientVariants' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientVariants('abc')"
+    }
+  ]
+}

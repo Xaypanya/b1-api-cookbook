@@ -1,0 +1,18 @@
+{
+  "service": "ClosingDateProcedure",
+  "description": "This entity enables you to manipulate 'ClosingDateProcedure'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ClosingDateProcedure(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ClosingDateProcedure' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ClosingDateProcedure(123)\n\nGET https://localhost:50000/b1s/v2/ClosingDateProcedure(123)?$select=ClosingDateNum,ClosingDateCode,BaselineDate"
+    },
+    {
+      "method": "GET",
+      "path": "ClosingDateProcedure",
+      "description": "Retrieve a collection of 'ClosingDateProcedure' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ClosingDateProcedure\n\nGET https://localhost:50000/b1s/v2/ClosingDateProcedure?$select=ClosingDateNum,ClosingDateCode,BaselineDate&$filter=ClosingDateNum ge 123 &$orderby=ClosingDateNum&$top=10&$skip=1"
+    }
+  ]
+}

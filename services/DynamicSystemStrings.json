@@ -1,0 +1,36 @@
+{
+  "service": "DynamicSystemStrings",
+  "description": "This entity enables you to manipulate 'DynamicSystemStrings' and enables modifying a field name and format in the interface to match the terms used in your company.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DynamicSystemStrings(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DynamicSystemStrings' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DynamicSystemStrings(FormID='139',ItemID='230',ColumnID='-1')\n\nGET https://localhost:50000/b1s/v2/DynamicSystemStrings(FormID='139',ItemID='230',ColumnID='-1')?$select=FormID,ItemID,ColumnID"
+    },
+    {
+      "method": "GET",
+      "path": "DynamicSystemStrings",
+      "description": "Retrieve a collection of 'DynamicSystemStrings' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DynamicSystemStrings\n\nGET https://localhost:50000/b1s/v2/DynamicSystemStrings?$select=FormID,ItemID,ColumnID&$filter=startswith(FormID, 'a') and startswith(ItemID, 'a') and startswith(ColumnID, 'a') &$orderby=FormID,ItemID,ColumnID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DynamicSystemStrings",
+      "description": "Create an instance of 'DynamicSystemStrings' with the given payload of type 'DynamicSystemString' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DynamicSystemStrings\n{\n    \"ColumnID\": \"-1\",\n    \"FormID\": \"139\",\n    \"ItemID\": \"230\",\n    \"ItemString\": \"new owner\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DynamicSystemStrings(id)",
+      "description": "Update an instance of 'DynamicSystemStrings' with the given payload of type 'DynamicSystemString' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DynamicSystemStrings(FormID='139',ItemID='230',ColumnID='-1')\n{\n    \"ItemString\": \"Order Owner\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DynamicSystemStrings(id)",
+      "description": "Delete an instance of 'DynamicSystemStrings' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DynamicSystemStrings(FormID='139',ItemID='230',ColumnID='-1')"
+    }
+  ]
+}

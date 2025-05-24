@@ -1,0 +1,36 @@
+{
+  "service": "UserQueries",
+  "description": "This entity enables you to manipulate 'UserQueries'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserQueries(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserQueries' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserQueries(InternalKey=123,QueryCategory=-1)\n\nGET https://localhost:50000/b1s/v2/UserQueries(InternalKey=123,QueryCategory=-1)?$select=InternalKey,QueryCategory,QueryDescription"
+    },
+    {
+      "method": "GET",
+      "path": "UserQueries",
+      "description": "Retrieve a collection of 'UserQueries' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserQueries\n\nGET https://localhost:50000/b1s/v2/UserQueries?$select=InternalKey,QueryCategory,QueryDescription&$filter=InternalKey ge 123 and QueryCategory ge 123 &$orderby=InternalKey,QueryCategory&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserQueries",
+      "description": "Create an instance of 'UserQueries' with the given payload of type 'UserQuery' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserQueries\n{\n    \"Query\": \"SELECT T0. CardCode FROM OCRD T0\",\n    \"QueryCategory\": \"-1\",\n    \"QueryDescription\": \"QueryOCRD\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UserQueries(id)",
+      "description": "Update an instance of 'UserQueries' with the given payload of type 'UserQuery' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UserQueries(InternalKey=123,QueryCategory=-1)\n{\n    \"QueryDescription\": \"Select OCRD\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserQueries(id)",
+      "description": "Delete an instance of 'UserQueries' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserQueries(InternalKey=123,QueryCategory=-1)"
+    }
+  ]
+}

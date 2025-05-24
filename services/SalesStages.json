@@ -1,0 +1,30 @@
+{
+  "service": "SalesStages",
+  "description": "This entity enables you to manipulate 'SalesStages'. It defines sales stages and the probability of closing a deal indicated by each stage. For example, you enter stage 1 by identifying a customer as a lead (prospective customer); if you define the closing percentage of this stage as 5%, it means that you estimate 5 out of 100 leads can be converted to customers who will place orders with you.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesStages(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesStages' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesStages(123)\n\nGET https://localhost:50000/b1s/v2/SalesStages(123)?$select=SequenceNo,Name,Stageno"
+    },
+    {
+      "method": "GET",
+      "path": "SalesStages",
+      "description": "Retrieve a collection of 'SalesStages' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesStages\n\nGET https://localhost:50000/b1s/v2/SalesStages?$select=SequenceNo,Name,Stageno&$filter=SequenceNo ge 123 &$orderby=SequenceNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesStages",
+      "description": "Create an instance of 'SalesStages' with the given payload of type 'SalesStage' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesStages\n{\n    \"ClosingPercentage\": \"10\",\n    \"Name\": \"Lead\",\n    \"Stageno\": \"1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesStages(id)",
+      "description": "Update an instance of 'SalesStages' with the given payload of type 'SalesStage' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesStages(123)\n{\n    \"Name\": \"1st Meeting\"\n}"
+    }
+  ]
+}

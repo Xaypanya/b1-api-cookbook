@@ -1,0 +1,60 @@
+{
+  "service": "DownPayments",
+  "description": "This entity enables you to manipulate 'DownPayments'. It represents a document for ensuring that a customer is committed and will follow through with a placed order.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DownPayments(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DownPayments' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DownPayments(123)\n\nGET https://localhost:50000/b1s/v2/DownPayments(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "DownPayments",
+      "description": "Retrieve a collection of 'DownPayments' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DownPayments\n\nGET https://localhost:50000/b1s/v2/DownPayments?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DownPayments",
+      "description": "Create an instance of 'DownPayments' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DownPayments\n{\n    \"CardCode\": \"c001\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"TaxCode\": \"T1\",\n            \"UnitPrice\": \"30\"\n        }\n    ],\n    \"DownPaymentType\": \"dptInvoice\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DownPayments(id)",
+      "description": "Update an instance of 'DownPayments' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DownPayments(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DownPayments(id)",
+      "description": "Delete an instance of 'DownPayments' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DownPayments(123)"
+    },
+    {
+      "method": "POST",
+      "path": "DownPayments(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/DownPayments(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "DownPayments(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/DownPayments(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "DownPayments(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/DownPayments(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "DownPayments(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/DownPayments(123)/CreateCancellationDocument"
+    }
+  ]
+}

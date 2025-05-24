@@ -1,0 +1,42 @@
+{
+  "service": "ServiceCalls",
+  "description": "This entity enables you to manipulate 'ServiceCalls'. It represents the service calls in the Service module. Service calls are used to manage service and support activities that you provide to your customers.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceCalls(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceCalls' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCalls(123)\n\nGET https://localhost:50000/b1s/v2/ServiceCalls(123)?$select=ServiceCallID,Subject,CustomerCode"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceCalls",
+      "description": "Retrieve a collection of 'ServiceCalls' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCalls\n\nGET https://localhost:50000/b1s/v2/ServiceCalls?$select=ServiceCallID,Subject,CustomerCode&$filter=ServiceCallID ge 123 &$orderby=ServiceCallID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceCalls",
+      "description": "Create an instance of 'ServiceCalls' with the given payload of type 'ServiceCall' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCalls\n{\n    \"CustomerCode\": \"c001\",\n    \"Subject\": \"Subject\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceCalls(id)",
+      "description": "Update an instance of 'ServiceCalls' with the given payload of type 'ServiceCall' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceCalls(123)\n{\n    \"Subject\": \"new subject - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceCalls(id)",
+      "description": "Delete an instance of 'ServiceCalls' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceCalls(123)"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceCalls(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCalls(123)/Close"
+    }
+  ]
+}

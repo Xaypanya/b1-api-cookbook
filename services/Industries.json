@@ -1,0 +1,36 @@
+{
+  "service": "Industries",
+  "description": "This entity enables you to manipulate 'Industries'. It represents the industries list from which an industry can be associated with a sales opportunity.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Industries(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Industries' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Industries(123)\n\nGET https://localhost:50000/b1s/v2/Industries(123)?$select=IndustryDescription,IndustryName,IndustryCode"
+    },
+    {
+      "method": "GET",
+      "path": "Industries",
+      "description": "Retrieve a collection of 'Industries' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Industries\n\nGET https://localhost:50000/b1s/v2/Industries?$select=IndustryDescription,IndustryName,IndustryCode&$filter=IndustryCode ge 123 &$orderby=IndustryCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Industries",
+      "description": "Create an instance of 'Industries' with the given payload of type 'Industry' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Industries\n{\n    \"IndustryDescription\": \"chemical industry\",\n    \"IndustryName\": \"chemical\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Industries(id)",
+      "description": "Update an instance of 'Industries' with the given payload of type 'Industry' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Industries(123)\n{\n    \"IndustryDescription\": \"oil\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Industries(id)",
+      "description": "Delete an instance of 'Industries' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Industries(123)"
+    }
+  ]
+}

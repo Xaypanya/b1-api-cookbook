@@ -1,0 +1,36 @@
+{
+  "service": "DeductionTaxGroups",
+  "description": "This entity enables you to manipulate 'DeductionTaxGroups'. It represents withholding tax deduction groups.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DeductionTaxGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DeductionTaxGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductionTaxGroups(123)\n\nGET https://localhost:50000/b1s/v2/DeductionTaxGroups(123)?$select=GroupKey,GroupCode,GroupName"
+    },
+    {
+      "method": "GET",
+      "path": "DeductionTaxGroups",
+      "description": "Retrieve a collection of 'DeductionTaxGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductionTaxGroups\n\nGET https://localhost:50000/b1s/v2/DeductionTaxGroups?$select=GroupKey,GroupCode,GroupName&$filter=GroupKey ge 123 &$orderby=GroupKey&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DeductionTaxGroups",
+      "description": "Create an instance of 'DeductionTaxGroups' with the given payload of type 'DeductionTaxGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DeductionTaxGroups\n{\n    \"GroupExtendedCode\": \"01\",\n    \"GroupName\": \"Group 01\",\n    \"MaxRedin\": 0.7746\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DeductionTaxGroups(id)",
+      "description": "Update an instance of 'DeductionTaxGroups' with the given payload of type 'DeductionTaxGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DeductionTaxGroups(123)\n{\n    \"GroupName\": \"Group 02\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DeductionTaxGroups(id)",
+      "description": "Delete an instance of 'DeductionTaxGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DeductionTaxGroups(123)"
+    }
+  ]
+}

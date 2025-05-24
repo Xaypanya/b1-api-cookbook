@@ -1,0 +1,54 @@
+{
+  "service": "Orders",
+  "description": "This entity enables you to manipulate 'Orders'. It represents a commitment from a customer or lead to buy a product or service.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Orders(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Orders' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Orders(123)\n\nGET https://localhost:50000/b1s/v2/Orders(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "Orders",
+      "description": "Retrieve a collection of 'Orders' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Orders\n\nGET https://localhost:50000/b1s/v2/Orders?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Orders",
+      "description": "Create an instance of 'Orders' with the given payload of type 'Document' in JSON format. \n\t\t\t\tUnder normal conditions, a new order would be created on posting Orders. However, when activating approval procedures, \n\t\t\t\ta draft would be created due to the special business logic and service would return the error code -2028. \n\t\t\t\tFor this case, a header(Prefer: return-no-content) should be appended to avoid this error.\n\t\t\t\tAccordingly, service would return http staus 204, with empty response body.\n\t\t\t\tFor more details, please see Working with SAP Business One Service Layer.pdf.",
+      "example": "POST https://localhost:50000/b1s/v2/Orders\n{\n    \"CardCode\": \"c001\",\n    \"DocDueDate\": \"2014-04-04\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"TaxCode\": \"T1\",\n            \"UnitPrice\": \"30\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Orders(id)",
+      "description": "Update an instance of 'Orders' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Orders(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "Orders(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Orders(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "Orders(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Orders(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "Orders(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Orders(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "Orders(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Orders(123)/CreateCancellationDocument"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "service": "MaterialRevaluation",
+  "description": "This entity enables you to manipulate 'MaterialRevaluation'. It allows to update the items' price (average price or standard price only), revaluate the stock, and create journal entries accordingly.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "MaterialRevaluation(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'MaterialRevaluation' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/MaterialRevaluation(123)\n\nGET https://localhost:50000/b1s/v2/MaterialRevaluation(123)?$select=DocNum,DocDate,Reference1"
+    },
+    {
+      "method": "GET",
+      "path": "MaterialRevaluation",
+      "description": "Retrieve a collection of 'MaterialRevaluation' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/MaterialRevaluation\n\nGET https://localhost:50000/b1s/v2/MaterialRevaluation?$select=DocNum,DocDate,Reference1&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "MaterialRevaluation",
+      "description": "Create an instance of 'MaterialRevaluation' with the given payload of type 'MaterialRevaluation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MaterialRevaluation\n{\n    \"Comments\": \"Create new revaluation for item\",\n    \"DataSource\": \"I\",\n    \"MaterialRevaluationLines\": [\n        {\n            \"ItemCode\": \"item01\",\n            \"Price\": \"18805\"\n        }\n    ],\n    \"RevalType\": \"P\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "MaterialRevaluation(id)",
+      "description": "Update an instance of 'MaterialRevaluation' with the given payload of type 'MaterialRevaluation' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/MaterialRevaluation(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "MaterialRevaluation(id)",
+      "description": "Delete an instance of 'MaterialRevaluation' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/MaterialRevaluation(123)"
+    },
+    {
+      "method": "POST",
+      "path": "MaterialRevaluation(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/MaterialRevaluation(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "MaterialRevaluation(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/MaterialRevaluation(123)/Close"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "Activities",
+  "description": "This entity enables you to manipulate 'Activities'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Activities(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Activities' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Activities(2)\n\nGET https://localhost:50000/b1s/v2/Activities(2)?$select=ActivityCode,CardCode,Notes"
+    },
+    {
+      "method": "GET",
+      "path": "Activities",
+      "description": "Retrieve a collection of 'Activities' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Activities\n\nGET https://localhost:50000/b1s/v2/Activities?$select=ActivityCode,CardCode,Notes&$filter=ActivityCode ge 2 &$orderby=ActivityCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Activities",
+      "description": "Create an instance of 'Activities' with the given payload of type 'Activity' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Activities\n{\n    \"ActivityDate\": \"2016-08-30\",\n    \"ActivityTime\": \"08:13:00\",\n    \"CardCode\": \"C01\",\n    \"DocEntry\": \"3\",\n    \"DocNum\": \"1\",\n    \"DocType\": \"17\",\n    \"Duration\": 15,\n    \"DurationType\": \"du_Minuts\",\n    \"EndDueDate\": \"2016-08-30\",\n    \"EndTime\": \"08:28:00\",\n    \"Reminder\": \"tYES\",\n    \"ReminderPeriod\": 15,\n    \"ReminderType\": \"du_Minuts\",\n    \"StartDate\": \"2016-08-30\",\n    \"StartTime\": \"08:13:00\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Activities(id)",
+      "description": "Update an instance of 'Activities' with the given payload of type 'Activity' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Activities(2)\n{\n    \"StartTime\": \"12:00:00\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Activities(id)",
+      "description": "Delete an instance of 'Activities' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Activities(2)"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "service": "Users",
+  "description": "This entity enables you to manipulate 'Users'. It represents the users table of the SAP Business One application. The users table includes the users list, login details, and authorizations.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Users(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Users' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Users(123)\n\nGET https://localhost:50000/b1s/v2/Users(123)?$select=InternalKey,UserPassword,UserCode"
+    },
+    {
+      "method": "GET",
+      "path": "Users",
+      "description": "Retrieve a collection of 'Users' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Users\n\nGET https://localhost:50000/b1s/v2/Users?$select=InternalKey,UserPassword,UserCode&$filter=InternalKey ge 123 &$orderby=InternalKey&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Users",
+      "description": "Create an instance of 'Users' with the given payload of type 'User' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Users\n{\n    \"UserCode\": \"u001\",\n    \"UserName\": \"User1\",\n    \"UserPassword\": \"default\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Users(id)",
+      "description": "Update an instance of 'Users' with the given payload of type 'User' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Users(123)\n{\n    \"UserName\": \"Updated User Name\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Users(id)",
+      "description": "Delete an instance of 'Users' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Users(123)"
+    },
+    {
+      "method": "POST",
+      "path": "Users(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Users(123)/Close"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "service": "BusinessPartnerProperties",
+  "description": "This entity enables you to manipulate 'BusinessPartnerProperties'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BusinessPartnerProperties(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BusinessPartnerProperties' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPartnerProperties(1)\n\nGET https://localhost:50000/b1s/v2/BusinessPartnerProperties(1)?$select=PropertyCode,PropertyName"
+    },
+    {
+      "method": "GET",
+      "path": "BusinessPartnerProperties",
+      "description": "Retrieve a collection of 'BusinessPartnerProperties' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPartnerProperties\n\nGET https://localhost:50000/b1s/v2/BusinessPartnerProperties?$select=PropertyCode,PropertyName&$filter=PropertyCode ge 1 &$orderby=PropertyCode&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "BusinessPartnerProperties(id)",
+      "description": "Update an instance of 'BusinessPartnerProperties' with the given payload of type 'BusinessPartnerProperty' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BusinessPartnerProperties(1)\n{\n    \"PropertyName\": \"test\"\n}"
+    }
+  ]
+}

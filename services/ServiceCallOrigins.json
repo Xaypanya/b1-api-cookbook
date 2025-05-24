@@ -1,0 +1,36 @@
+{
+  "service": "ServiceCallOrigins",
+  "description": "This entity enables you to manipulate 'ServiceCallOrigins'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceCallOrigins(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceCallOrigins' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallOrigins(1)\n\nGET https://localhost:50000/b1s/v2/ServiceCallOrigins(1)?$select=OriginID,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceCallOrigins",
+      "description": "Retrieve a collection of 'ServiceCallOrigins' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceCallOrigins\n\nGET https://localhost:50000/b1s/v2/ServiceCallOrigins?$select=OriginID,Name,Description&$filter=OriginID ge 1 &$orderby=OriginID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceCallOrigins",
+      "description": "Create an instance of 'ServiceCallOrigins' with the given payload of type 'ServiceCallOrigin' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceCallOrigins\n{\n    \"Description\": \"E-test\",\n    \"Name\": \"E-test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceCallOrigins(id)",
+      "description": "Update an instance of 'ServiceCallOrigins' with the given payload of type 'ServiceCallOrigin' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceCallOrigins(1)\n{\n    \"Description\": \"E-123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceCallOrigins(id)",
+      "description": "Delete an instance of 'ServiceCallOrigins' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceCallOrigins(1)"
+    }
+  ]
+}

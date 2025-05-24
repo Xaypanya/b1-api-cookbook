@@ -1,0 +1,36 @@
+{
+  "service": "ItemGroups",
+  "description": "This entity enables you to manipulate 'ItemGroups'. It represents the definition of item groups in the Inventory module.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ItemGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ItemGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ItemGroups(123)\n\nGET https://localhost:50000/b1s/v2/ItemGroups(123)?$select=PriceDifferencesAccount,StockInflationAdjustAccount,MinimumOrderQuantity"
+    },
+    {
+      "method": "GET",
+      "path": "ItemGroups",
+      "description": "Retrieve a collection of 'ItemGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ItemGroups\n\nGET https://localhost:50000/b1s/v2/ItemGroups?$select=PriceDifferencesAccount,StockInflationAdjustAccount,MinimumOrderQuantity&$filter=Number ge 123 &$orderby=Number&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ItemGroups",
+      "description": "Create an instance of 'ItemGroups' with the given payload of type 'ItemGroups' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ItemGroups\n{\n    \"GroupName\": \"ig001\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ItemGroups(id)",
+      "description": "Update an instance of 'ItemGroups' with the given payload of type 'ItemGroups' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ItemGroups(123)\n{\n    \"Alert\": \"tYES\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ItemGroups(id)",
+      "description": "Delete an instance of 'ItemGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ItemGroups(123)"
+    }
+  ]
+}

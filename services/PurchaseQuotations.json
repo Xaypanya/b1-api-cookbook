@@ -1,0 +1,54 @@
+{
+  "service": "PurchaseQuotations",
+  "description": "This entity enables you to manipulate 'PurchaseQuotations'. It represents an invitation to a number of vendors to find the best offer for goods or services that you require.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PurchaseQuotations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PurchaseQuotations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseQuotations(123)\n\nGET https://localhost:50000/b1s/v2/PurchaseQuotations(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "PurchaseQuotations",
+      "description": "Retrieve a collection of 'PurchaseQuotations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseQuotations\n\nGET https://localhost:50000/b1s/v2/PurchaseQuotations?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseQuotations",
+      "description": "Create an instance of 'PurchaseQuotations' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseQuotations\n{\n    \"CardCode\": \"c001\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"TaxCode\": \"T1\",\n            \"UnitPrice\": \"50\"\n        }\n    ],\n    \"RequriedDate\": \"2014-04-04\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PurchaseQuotations(id)",
+      "description": "Update an instance of 'PurchaseQuotations' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PurchaseQuotations(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseQuotations(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseQuotations(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseQuotations(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseQuotations(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseQuotations(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseQuotations(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseQuotations(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseQuotations(123)/CreateCancellationDocument"
+    }
+  ]
+}

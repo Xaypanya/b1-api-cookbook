@@ -1,0 +1,12 @@
+{
+  "service": "ApprovalStagesService",
+  "description": "This API enables you to invoke the interfaces defined on 'ApprovalStagesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ApprovalStagesService_GetApprovalStageList",
+      "description": "Invoke the method 'GetApprovalStageList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalStagesService_GetApprovalStageList"
+    }
+  ]
+}

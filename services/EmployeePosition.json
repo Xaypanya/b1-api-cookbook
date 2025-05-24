@@ -1,0 +1,36 @@
+{
+  "service": "EmployeePosition",
+  "description": "This entity enables you to manipulate 'EmployeePosition'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EmployeePosition(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EmployeePosition' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeePosition(2)\n\nGET https://localhost:50000/b1s/v2/EmployeePosition(2)?$select=PositionID,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "EmployeePosition",
+      "description": "Retrieve a collection of 'EmployeePosition' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeePosition\n\nGET https://localhost:50000/b1s/v2/EmployeePosition?$select=PositionID,Name,Description&$filter=PositionID ge 2 &$orderby=PositionID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EmployeePosition",
+      "description": "Create an instance of 'EmployeePosition' with the given payload of type 'EmployeePosition' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeePosition\n{\n    \"Description\": \"test1\",\n    \"Name\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EmployeePosition(id)",
+      "description": "Update an instance of 'EmployeePosition' with the given payload of type 'EmployeePosition' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EmployeePosition(2)\n{\n    \"Description\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EmployeePosition(id)",
+      "description": "Delete an instance of 'EmployeePosition' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EmployeePosition(2)"
+    }
+  ]
+}

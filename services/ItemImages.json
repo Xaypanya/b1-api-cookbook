@@ -1,0 +1,24 @@
+{
+  "service": "ItemImages",
+  "description": "This entity enables you to manipulate 'ItemImages'. It is a stream entity and relies on the entity 'Item'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ItemImages(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ItemImages' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ItemImages('i001')\n\nGET https://localhost:50000/b1s/v2/ItemImages('i001')/$value"
+    },
+    {
+      "method": "PATCH",
+      "path": "ItemImages(id)",
+      "description": "Update an instance of 'ItemImages' with an image of multipart/form-data format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ItemImages('i001')"
+    },
+    {
+      "method": "DELETE",
+      "path": "ItemImages(id)",
+      "description": "Delete an instance of 'ItemImages' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ItemImages('i001')"
+    }
+  ]
+}

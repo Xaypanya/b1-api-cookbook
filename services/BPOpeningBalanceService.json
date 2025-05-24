@@ -1,0 +1,12 @@
+{
+  "service": "BPOpeningBalanceService",
+  "description": "This API enables you to invoke the interfaces defined on 'BPOpeningBalanceService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BPOpeningBalanceService_CreateOpenBalance",
+      "description": "Invoke the method 'CreateOpenBalance' on this service by specifying the payload 'OpenningBalanceAccount,BPCodes' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BPOpeningBalanceService_CreateOpenBalance\n{\n    \"BPCodes\": [\n        {\n            \"Code\": \"C01\",\n            \"Debit\": \"1000\"\n        },\n        {\n            \"Code\": \"V01\",\n            \"Debit\": \"1000\"\n        }\n    ],\n    \"OpenningBalanceAccount\": {\n        \"Details\": \"Transfer balance to BP\",\n        \"OpenBalanceAccount\": \"999100\"\n    }\n}"
+    }
+  ]
+}

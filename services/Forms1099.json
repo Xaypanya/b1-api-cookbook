@@ -1,0 +1,36 @@
+{
+  "service": "Forms1099",
+  "description": "This entity enables you to manipulate 'Forms1099'. It defines new Form 1099 types in addition to the existing types: 1099 Miscellaneous, 1099 Interest, and 1099 Dividends.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Forms1099(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Forms1099' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Forms1099(123)\n\nGET https://localhost:50000/b1s/v2/Forms1099(123)?$select=FormCode,Form1099,Boxes1099"
+    },
+    {
+      "method": "GET",
+      "path": "Forms1099",
+      "description": "Retrieve a collection of 'Forms1099' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Forms1099\n\nGET https://localhost:50000/b1s/v2/Forms1099?$select=FormCode,Form1099,Boxes1099&$filter=FormCode ge 123 &$orderby=FormCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Forms1099",
+      "description": "Create an instance of 'Forms1099' with the given payload of type 'Forms1099' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Forms1099\n{\n    \"Boxes1099\": [\n        {\n            \"Box1099\": \"01\",\n            \"BoxDescription\": \"Foreign tax paid\",\n            \"Minimum1099Amount\": \"11\"\n        }\n    ],\n    \"Form1099\": \"1099 Tax\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Forms1099(id)",
+      "description": "Update an instance of 'Forms1099' with the given payload of type 'Forms1099' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Forms1099(123)\n{\n    \"Boxes1099\": [\n        {\n            \"Minimum1099Amount\": \"30\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Forms1099(id)",
+      "description": "Delete an instance of 'Forms1099' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Forms1099(123)"
+    }
+  ]
+}

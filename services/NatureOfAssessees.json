@@ -1,0 +1,36 @@
+{
+  "service": "NatureOfAssessees",
+  "description": "This entity enables you to manipulate 'NatureOfAssessees'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "NatureOfAssessees(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'NatureOfAssessees' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/NatureOfAssessees(123)\n\nGET https://localhost:50000/b1s/v2/NatureOfAssessees(123)?$select=AbsEntry,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "NatureOfAssessees",
+      "description": "Retrieve a collection of 'NatureOfAssessees' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/NatureOfAssessees\n\nGET https://localhost:50000/b1s/v2/NatureOfAssessees?$select=AbsEntry,Code,Description&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "NatureOfAssessees",
+      "description": "Create an instance of 'NatureOfAssessees' with the given payload of type 'NatureOfAssessee' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/NatureOfAssessees\n{\n    \"AbsEntry\": 4,\n    \"AssesseeType\": \"atOthers\",\n    \"Code\": \"2HUF\",\n    \"Description\": \"11HUF\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "NatureOfAssessees(id)",
+      "description": "Update an instance of 'NatureOfAssessees' with the given payload of type 'NatureOfAssessee' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/NatureOfAssessees(123)\n{\n    \"Description\": \"11HUF\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "NatureOfAssessees(id)",
+      "description": "Delete an instance of 'NatureOfAssessees' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/NatureOfAssessees(123)"
+    }
+  ]
+}

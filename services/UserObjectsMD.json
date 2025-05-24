@@ -1,0 +1,36 @@
+{
+  "service": "UserObjectsMD",
+  "description": "This entity enables you to manipulate 'UserObjectsMD'. It represents the registration data settings, such as table name and supported services, of a user-defined object.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserObjectsMD(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserObjectsMD' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserObjectsMD('UDO5353')\n\nGET https://localhost:50000/b1s/v2/UserObjectsMD('UDO5353')?$select=TableName,Code,LogTableName"
+    },
+    {
+      "method": "GET",
+      "path": "UserObjectsMD",
+      "description": "Retrieve a collection of 'UserObjectsMD' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserObjectsMD\n\nGET https://localhost:50000/b1s/v2/UserObjectsMD?$select=TableName,Code,LogTableName&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserObjectsMD",
+      "description": "Create an instance of 'UserObjectsMD' with the given payload of type 'UserObjectsMD' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserObjectsMD\n{\n    \"Code\": \"UDO5353\",\n    \"Name\": \"UDOTest\",\n    \"TableName\": \"UDT01\",\n    \"UserObjectMD_ChildTables\": [\n        {\n            \"ObjectName\": \"UDO Child\",\n            \"SonNumber\": \"1\",\n            \"TableName\": \"UDT02\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UserObjectsMD(id)",
+      "description": "Update an instance of 'UserObjectsMD' with the given payload of type 'UserObjectsMD' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UserObjectsMD('UDO5353')\n{\n    \"Name\": \"NewUDOTest\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserObjectsMD(id)",
+      "description": "Delete an instance of 'UserObjectsMD' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserObjectsMD('UDO5353')"
+    }
+  ]
+}

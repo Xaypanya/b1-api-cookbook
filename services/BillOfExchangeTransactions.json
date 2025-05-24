@@ -1,0 +1,24 @@
+{
+  "service": "BillOfExchangeTransactions",
+  "description": "This entity enables you to manipulate 'BillOfExchangeTransactions'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BillOfExchangeTransactions(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BillOfExchangeTransactions' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BillOfExchangeTransactions(123)\n\nGET https://localhost:50000/b1s/v2/BillOfExchangeTransactions(123)?$select=StatusFrom,StatusTo,TransactionDate"
+    },
+    {
+      "method": "GET",
+      "path": "BillOfExchangeTransactions",
+      "description": "Retrieve a collection of 'BillOfExchangeTransactions' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BillOfExchangeTransactions\n\nGET https://localhost:50000/b1s/v2/BillOfExchangeTransactions?$select=StatusFrom,StatusTo,TransactionDate&$filter=BOETransactionkey ge 123 &$orderby=BOETransactionkey&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BillOfExchangeTransactions",
+      "description": "Create an instance of 'BillOfExchangeTransactions' with the given payload of type 'BillOfExchangeTransactions' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BillOfExchangeTransactions\n{\n    \"BillOfExchangeTransactionLines\": [\n        {\n            \"BillOfExchangeDueDate\": \"2014-12-10\",\n            \"BillOfExchangeNo\": 1,\n            \"BillOfExchangeType\": \"bobt_Outgoing\"\n        }\n    ],\n    \"IsBoeReconciled\": \"tNO\",\n    \"StatusFrom\": \"btfs_Generated\",\n    \"StatusTo\": \"btts_Paid\"\n}"
+    }
+  ]
+}

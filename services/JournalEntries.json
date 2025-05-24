@@ -1,0 +1,36 @@
+{
+  "service": "JournalEntries",
+  "description": "This entity enables you to manipulate 'JournalEntries'. It represents journal transactions.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "JournalEntries(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'JournalEntries' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/JournalEntries(123)\n\nGET https://localhost:50000/b1s/v2/JournalEntries(123)?$select=ReferenceDate,Memo,Reference"
+    },
+    {
+      "method": "GET",
+      "path": "JournalEntries",
+      "description": "Retrieve a collection of 'JournalEntries' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/JournalEntries\n\nGET https://localhost:50000/b1s/v2/JournalEntries?$select=ReferenceDate,Memo,Reference&$filter=JdtNum ge 123 &$orderby=JdtNum&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "JournalEntries",
+      "description": "Create an instance of 'JournalEntries' with the given payload of type 'JournalEntry' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/JournalEntries\n{\n    \"JournalEntryLines\": [\n        {\n            \"AccountCode\": \"_SYS00000000019\",\n            \"Credit\": 100,\n            \"Debit\": 0\n        },\n        {\n            \"AccountCode\": \"_SYS00000000164\",\n            \"Credit\": 0,\n            \"Debit\": 100\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "JournalEntries(id)",
+      "description": "Update an instance of 'JournalEntries' with the given payload of type 'JournalEntry' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/JournalEntries(123)\n{\n    \"Memo\": \"new memo - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "JournalEntries(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/JournalEntries(123)/Cancel"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "service": "MessagesService",
+  "description": "This API enables you to invoke the interfaces defined on 'MessagesService'. \n\t\t\tTo be specific, this service enables to manage the inbox and outbox messages, and to send messages.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "MessagesService_GetInbox",
+      "description": "Invoke the method 'GetInbox' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/MessagesService_GetInbox"
+    },
+    {
+      "method": "POST",
+      "path": "MessagesService_GetOutbox",
+      "description": "Invoke the method 'GetOutbox' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/MessagesService_GetOutbox"
+    },
+    {
+      "method": "POST",
+      "path": "MessagesService_GetSentMessages",
+      "description": "Invoke the method 'GetSentMessages' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/MessagesService_GetSentMessages"
+    }
+  ]
+}

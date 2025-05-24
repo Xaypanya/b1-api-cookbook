@@ -1,0 +1,36 @@
+{
+  "service": "PaymentReasonCodes",
+  "description": "This entity enables you to manipulate 'PaymentReasonCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PaymentReasonCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PaymentReasonCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentReasonCodes('abc')\n\nGET https://localhost:50000/b1s/v2/PaymentReasonCodes('abc')?$select=Code"
+    },
+    {
+      "method": "GET",
+      "path": "PaymentReasonCodes",
+      "description": "Retrieve a collection of 'PaymentReasonCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentReasonCodes\n\nGET https://localhost:50000/b1s/v2/PaymentReasonCodes?$select=Code&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PaymentReasonCodes",
+      "description": "Create an instance of 'PaymentReasonCodes' with the given payload of type 'PaymentReasonCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentReasonCodes\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PaymentReasonCodes(id)",
+      "description": "Update an instance of 'PaymentReasonCodes' with the given payload of type 'PaymentReasonCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PaymentReasonCodes('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PaymentReasonCodes(id)",
+      "description": "Delete an instance of 'PaymentReasonCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PaymentReasonCodes('abc')"
+    }
+  ]
+}

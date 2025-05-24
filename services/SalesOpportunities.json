@@ -1,0 +1,42 @@
+{
+  "service": "SalesOpportunities",
+  "description": "This entity enables you to manipulate 'SalesOpportunities'. It represents the data of sales opportunities in SAP Business One. Sales opportunities include potential sale volumes that may arise from business with customers and interested parties.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SalesOpportunities(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SalesOpportunities' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunities(123)\n\nGET https://localhost:50000/b1s/v2/SalesOpportunities(123)?$select=SequentialNo,CardCode,SalesPerson"
+    },
+    {
+      "method": "GET",
+      "path": "SalesOpportunities",
+      "description": "Retrieve a collection of 'SalesOpportunities' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SalesOpportunities\n\nGET https://localhost:50000/b1s/v2/SalesOpportunities?$select=SequentialNo,CardCode,SalesPerson&$filter=SequentialNo ge 123 &$orderby=SequentialNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SalesOpportunities",
+      "description": "Create an instance of 'SalesOpportunities' with the given payload of type 'SalesOpportunities' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesOpportunities\n{\n    \"InventoryCountingLines\": [\n        {\n            \"ItemCode\": \"I003\",\n            \"WarehouseCode\": \"01\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SalesOpportunities(id)",
+      "description": "Update an instance of 'SalesOpportunities' with the given payload of type 'SalesOpportunities' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SalesOpportunities(123)\n{\n    \"OpportunityName\": \"Updated Name\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SalesOpportunities(id)",
+      "description": "Delete an instance of 'SalesOpportunities' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SalesOpportunities(123)"
+    },
+    {
+      "method": "POST",
+      "path": "SalesOpportunities(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesOpportunities(123)/Close"
+    }
+  ]
+}

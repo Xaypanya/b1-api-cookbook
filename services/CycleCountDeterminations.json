@@ -1,0 +1,24 @@
+{
+  "service": "CycleCountDeterminations",
+  "description": "This entity enables you to manipulate 'CycleCountDeterminations'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CycleCountDeterminations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CycleCountDeterminations' with the given warehouse code.",
+      "example": "GET https://localhost:50000/b1s/v2/CycleCountDeterminations('abc')\n\nGET https://localhost:50000/b1s/v2/CycleCountDeterminations('abc')?$select=WarehouseCode,CycleBy,CycleCountDeterminationSetupCollection"
+    },
+    {
+      "method": "GET",
+      "path": "CycleCountDeterminations",
+      "description": "Retrieve a collection of 'CycleCountDeterminations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CycleCountDeterminations\n\nGET https://localhost:50000/b1s/v2/CycleCountDeterminations?$select=WarehouseCode,CycleBy,CycleCountDeterminationSetupCollection&$filter=startswith(WarehouseCode, 'a') &$orderby=WarehouseCode&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "CycleCountDeterminations(id)",
+      "description": "Update an instance of 'CycleCountDeterminations' with the given payload of type 'CycleCountDetermination' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CycleCountDeterminations('abc')\n{\n    \"CycleBy\": \"ccdcbItemGroup\"\n}"
+    }
+  ]
+}

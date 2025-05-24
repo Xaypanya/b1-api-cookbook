@@ -1,0 +1,36 @@
+{
+  "service": "HouseBankAccounts",
+  "description": "This entity enables you to manipulate 'HouseBankAccounts'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "HouseBankAccounts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'HouseBankAccounts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/HouseBankAccounts(123)\n\nGET https://localhost:50000/b1s/v2/HouseBankAccounts(123)?$select=BankCode,AccNo,Branch"
+    },
+    {
+      "method": "GET",
+      "path": "HouseBankAccounts",
+      "description": "Retrieve a collection of 'HouseBankAccounts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/HouseBankAccounts\n\nGET https://localhost:50000/b1s/v2/HouseBankAccounts?$select=BankCode,AccNo,Branch&$filter=AbsoluteEntry ge 123 &$orderby=AbsoluteEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "HouseBankAccounts",
+      "description": "Create an instance of 'HouseBankAccounts' with the given payload of type 'HouseBankAccount' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/HouseBankAccounts\n{\n    \"AccNo\": \"11123456\",\n    \"BankCode\": \"HSBC\",\n    \"BankKey\": \"6\",\n    \"Branch\": \"123\",\n    \"Country\": \"US\",\n    \"GLAccount\": \"_SYS00000000001\",\n    \"GLInterimAccount\": \"_SYS00000000052\",\n    \"ZipCode\": \"201200\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "HouseBankAccounts(id)",
+      "description": "Update an instance of 'HouseBankAccounts' with the given payload of type 'HouseBankAccount' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/HouseBankAccounts(123)\n{\n    \"ZipCode\": \"200-10\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "HouseBankAccounts(id)",
+      "description": "Delete an instance of 'HouseBankAccounts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/HouseBankAccounts(123)"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "EmailGroups",
+  "description": "This entity enables you to manipulate 'EmailGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EmailGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EmailGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EmailGroups('abc')\n\nGET https://localhost:50000/b1s/v2/EmailGroups('abc')?$select=EmailGroupCode,EmailGroupName"
+    },
+    {
+      "method": "GET",
+      "path": "EmailGroups",
+      "description": "Retrieve a collection of 'EmailGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EmailGroups\n\nGET https://localhost:50000/b1s/v2/EmailGroups?$select=EmailGroupCode,EmailGroupName&$filter=startswith(EmailGroupCode, 'a') &$orderby=EmailGroupCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EmailGroups",
+      "description": "Create an instance of 'EmailGroups' with the given payload of type 'EmailGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EmailGroups\n{\n    \"EmailGroupCode\": \"kun\",\n    \"EmailGroupName\": \"cnlin\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EmailGroups(id)",
+      "description": "Update an instance of 'EmailGroups' with the given payload of type 'EmailGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EmailGroups('abc')\n{\n    \"EmailGroupName\": \"cnlin0121\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EmailGroups(id)",
+      "description": "Delete an instance of 'EmailGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EmailGroups('abc')"
+    }
+  ]
+}

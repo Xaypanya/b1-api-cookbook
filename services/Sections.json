@@ -1,0 +1,36 @@
+{
+  "service": "Sections",
+  "description": "This entity enables you to manipulate 'Sections'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Sections(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Sections' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Sections(1)\n\nGET https://localhost:50000/b1s/v2/Sections(1)?$select=AbsEntry,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "Sections",
+      "description": "Retrieve a collection of 'Sections' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Sections\n\nGET https://localhost:50000/b1s/v2/Sections?$select=AbsEntry,Code,Description&$filter=AbsEntry ge 1 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Sections",
+      "description": "Create an instance of 'Sections' with the given payload of type 'Section' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Sections\n{\n    \"Code\": \"01\",\n    \"Description\": \"section 01\",\n    \"ECode\": \"e01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Sections(id)",
+      "description": "Update an instance of 'Sections' with the given payload of type 'Section' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Sections(1)\n{\n    \"Code\": \"001\",\n    \"Description\": \"updated section 01 code\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Sections(id)",
+      "description": "Delete an instance of 'Sections' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Sections(1)"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "KnowledgeBaseSolutions",
+  "description": "This entity enables you to manipulate 'KnowledgeBaseSolutions'. It represents the knowledge base solutions in the Service module.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "KnowledgeBaseSolutions(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'KnowledgeBaseSolutions' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/KnowledgeBaseSolutions(123)\n\nGET https://localhost:50000/b1s/v2/KnowledgeBaseSolutions(123)?$select=ItemCode,Status,Owner"
+    },
+    {
+      "method": "GET",
+      "path": "KnowledgeBaseSolutions",
+      "description": "Retrieve a collection of 'KnowledgeBaseSolutions' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/KnowledgeBaseSolutions\n\nGET https://localhost:50000/b1s/v2/KnowledgeBaseSolutions?$select=ItemCode,Status,Owner&$filter=SolutionCode ge 123 &$orderby=SolutionCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "KnowledgeBaseSolutions",
+      "description": "Create an instance of 'KnowledgeBaseSolutions' with the given payload of type 'KnowledgeBaseSolution' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/KnowledgeBaseSolutions\n{\n    \"Description\": \"Application Crashed on Linux system\",\n    \"ItemCode\": \"item01\",\n    \"Solution\": \"Crash issue\",\n    \"Symptom\": \"Application Crashed\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "KnowledgeBaseSolutions(id)",
+      "description": "Update an instance of 'KnowledgeBaseSolutions' with the given payload of type 'KnowledgeBaseSolution' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/KnowledgeBaseSolutions(123)\n{\n    \"Solution\": \"Application issue\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "KnowledgeBaseSolutions(id)",
+      "description": "Delete an instance of 'KnowledgeBaseSolutions' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/KnowledgeBaseSolutions(123)"
+    }
+  ]
+}

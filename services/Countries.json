@@ -1,0 +1,36 @@
+{
+  "service": "Countries",
+  "description": "This entity enables you to manipulate 'Countries'. It manages the settings of each country, such as country code, country name and address format.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Countries(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Countries' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Countries('NC')\n\nGET https://localhost:50000/b1s/v2/Countries('NC')?$select=Code,Name,CodeForReports"
+    },
+    {
+      "method": "GET",
+      "path": "Countries",
+      "description": "Retrieve a collection of 'Countries' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Countries\n\nGET https://localhost:50000/b1s/v2/Countries?$select=Code,Name,CodeForReports&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Countries",
+      "description": "Create an instance of 'Countries' with the given payload of type 'Country' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Countries\n{\n    \"Code\": \"NC\",\n    \"Name\": \"New Country\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Countries(id)",
+      "description": "Update an instance of 'Countries' with the given payload of type 'Country' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Countries('NC')\n{\n    \"Details\": \"created new country\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Countries(id)",
+      "description": "Delete an instance of 'Countries' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Countries('NC')"
+    }
+  ]
+}

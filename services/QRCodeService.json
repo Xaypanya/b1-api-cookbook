@@ -1,0 +1,12 @@
+{
+  "service": "QRCodeService",
+  "description": "This API enables you to invoke the interfaces defined on 'QRCodeService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "QRCodeService_AddOrUpdateQRCode",
+      "description": "Invoke the method 'AddOrUpdateQRCode' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/QRCodeService_AddOrUpdateQRCode\n{\n    \"QRCodeData\": {\n        \"FieldName\": \"QRCodeSrc\",\n        \"ObjectAbsEntry\": \"1\",\n        \"ObjectType\": \"22\",\n        \"QRCodeText\": \"This is QR code text.\"\n    }\n}"
+    }
+  ]
+}

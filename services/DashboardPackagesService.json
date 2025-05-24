@@ -1,0 +1,12 @@
+{
+  "service": "DashboardPackagesService",
+  "description": "This API enables you to invoke the interfaces defined on 'DashboardPackagesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DashboardPackagesService_ImportDashboardPackage",
+      "description": "Invoke the method 'ImportDashboardPackage' on this service by specifying the payload 'DashboardPackageImportParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DashboardPackagesService_ImportDashboardPackage\n{\n    \"DashboardPackageImportParams\": {}\n}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "CustomerEquipmentCards",
+  "description": "This entity enables you to manipulate 'CustomerEquipmentCards'. It represents the customer equipment cards. For each item sold and managed by a serial number, you can create a customer equipment card to track the after-sales services provided for this item.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CustomerEquipmentCards(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CustomerEquipmentCards' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CustomerEquipmentCards(123)\n\nGET https://localhost:50000/b1s/v2/CustomerEquipmentCards(123)?$select=EquipmentCardNum,CustomerCode,CustomerName"
+    },
+    {
+      "method": "GET",
+      "path": "CustomerEquipmentCards",
+      "description": "Retrieve a collection of 'CustomerEquipmentCards' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CustomerEquipmentCards\n\nGET https://localhost:50000/b1s/v2/CustomerEquipmentCards?$select=EquipmentCardNum,CustomerCode,CustomerName&$filter=EquipmentCardNum ge 123 &$orderby=EquipmentCardNum&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CustomerEquipmentCards",
+      "description": "Create an instance of 'CustomerEquipmentCards' with the given payload of type 'CustomerEquipmentCard' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CustomerEquipmentCards\n{\n    \"CustomerCode\": \"C30000\",\n    \"InstallLocation\": \"US location\",\n    \"InternalSerialNum\": \"A6-000005\",\n    \"ItemCode\": \"A00006\",\n    \"ManufacturerSerialNum\": \"S1-000001\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CustomerEquipmentCards(id)",
+      "description": "Update an instance of 'CustomerEquipmentCards' with the given payload of type 'CustomerEquipmentCard' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CustomerEquipmentCards(123)\n{\n    \"InstallLocation\": \"new US Location\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CustomerEquipmentCards(id)",
+      "description": "Delete an instance of 'CustomerEquipmentCards' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CustomerEquipmentCards(123)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "service": "Logout",
+  "description": "By default, a login session will expire and the user will be logged out automatically if there is no new request within 30 minutes. \n\t\tYou can change the default expire time by modifying the value of the \"SessionTimeout\" property in file \"{USER_INSTALL_DIR}/ServiceLayer/conf/b1s.conf\". \n\t\tHere, \"{USER_INSTALL_DIR}\" stands for the installation folder.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "Logout",
+      "description": "Logout.",
+      "example": "POST https://localhost:50000/b1s/v2/Logout"
+    }
+  ]
+}

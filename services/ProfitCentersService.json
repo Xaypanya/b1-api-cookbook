@@ -1,0 +1,12 @@
+{
+  "service": "ProfitCentersService",
+  "description": "This API enables you to invoke the interfaces defined on 'ProfitCentersService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ProfitCentersService_GetProfitCenterList",
+      "description": "Invoke the method 'GetProfitCenterList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ProfitCentersService_GetProfitCenterList"
+    }
+  ]
+}

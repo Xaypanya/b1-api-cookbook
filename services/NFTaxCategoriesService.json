@@ -1,0 +1,12 @@
+{
+  "service": "NFTaxCategoriesService",
+  "description": "This API enables you to invoke the interfaces defined on 'NFTaxCategoriesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "NFTaxCategoriesService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/NFTaxCategoriesService_GetList"
+    }
+  ]
+}

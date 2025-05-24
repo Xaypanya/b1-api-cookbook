@@ -1,0 +1,36 @@
+{
+  "service": "MultiLanguageTranslations",
+  "description": "This entity enables you to manipulate 'MultiLanguageTranslations'. It allows translating alphanumeric data of specified fields in master data objects (such as BusinessPartners and Items) to foreign languages and then printing documents in the translated languages.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "MultiLanguageTranslations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'MultiLanguageTranslations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/MultiLanguageTranslations(123)\n\nGET https://localhost:50000/b1s/v2/MultiLanguageTranslations(123)?$select=Numerator,TableName,FieldAlias"
+    },
+    {
+      "method": "GET",
+      "path": "MultiLanguageTranslations",
+      "description": "Retrieve a collection of 'MultiLanguageTranslations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/MultiLanguageTranslations\n\nGET https://localhost:50000/b1s/v2/MultiLanguageTranslations?$select=Numerator,TableName,FieldAlias&$filter=Numerator ge 123 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "MultiLanguageTranslations",
+      "description": "Create an instance of 'MultiLanguageTranslations' with the given payload of type 'MultiLanguageTranslation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MultiLanguageTranslations\n{\n    \"FieldAlias\": \"Free_Text\",\n    \"PrimaryKeyofobject\": \"v001\",\n    \"TableName\": \"OCRD\",\n    \"TranslationsInUserLanguages\": [\n        {\n            \"LanguageCodeOfUserLanguage\": \"8\",\n            \"Translationscontent\": \"Remarks\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "MultiLanguageTranslations(id)",
+      "description": "Update an instance of 'MultiLanguageTranslations' with the given payload of type 'MultiLanguageTranslation' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/MultiLanguageTranslations(123)\n{\n    \"TranslationsInUserLanguages\": [\n        {\n            \"Translationscontent\": \"Description\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "MultiLanguageTranslations(id)",
+      "description": "Delete an instance of 'MultiLanguageTranslations' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/MultiLanguageTranslations(123)"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "service": "FixedAssetItemsService",
+  "description": "This API enables you to invoke the interfaces defined on 'FixedAssetItemsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "FixedAssetItemsService_GetAssetValuesList",
+      "description": "Invoke the method 'GetAssetValuesList' on this service by specifying the payload 'FixedAssetValuesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FixedAssetItemsService_GetAssetValuesList\n{\n    \"FixedAssetValuesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "FixedAssetItemsService_GetAssetEndBalance",
+      "description": "Invoke the method 'GetAssetEndBalance' on this service by specifying the payload 'FixedAssetValuesParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FixedAssetItemsService_GetAssetEndBalance\n{\n    \"FixedAssetValuesParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "FixedAssetItemsService_UpdateAssetEndBalance",
+      "description": "Invoke the method 'UpdateAssetEndBalance' on this service by specifying the payload 'FixedAssetValuesParams,FixedAssetEndBalance' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FixedAssetItemsService_UpdateAssetEndBalance\n{\n    \"FixedAssetEndBalance\": {},\n    \"FixedAssetValuesParams\": {}\n}"
+    }
+  ]
+}

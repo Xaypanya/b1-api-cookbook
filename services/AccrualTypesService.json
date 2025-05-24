@@ -1,0 +1,18 @@
+{
+  "service": "AccrualTypesService",
+  "description": "This API enables you to invoke the interfaces defined on 'AccrualTypesService'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AccrualTypesService_GetAccrualTypeList",
+      "description": "Invoke the method 'GetAccrualTypeList' on this service.",
+      "example": "GET https://localhost:50000/b1s/v2/AccrualTypesService_GetAccrualTypeList"
+    },
+    {
+      "method": "POST",
+      "path": "AccrualTypesService_GetAccrualTypeList",
+      "description": "Invoke the method 'GetAccrualTypeList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/AccrualTypesService_GetAccrualTypeList"
+    }
+  ]
+}

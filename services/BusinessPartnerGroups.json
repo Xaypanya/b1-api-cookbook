@@ -1,0 +1,36 @@
+{
+  "service": "BusinessPartnerGroups",
+  "description": "This entity enables you to manipulate 'BusinessPartnerGroups'. It represents the setup of customer and vendor groups. Used for classifying business partners according to different criteria, such as sector or size.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BusinessPartnerGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BusinessPartnerGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPartnerGroups(123)\n\nGET https://localhost:50000/b1s/v2/BusinessPartnerGroups(123)?$select=Code,Name,Type"
+    },
+    {
+      "method": "GET",
+      "path": "BusinessPartnerGroups",
+      "description": "Retrieve a collection of 'BusinessPartnerGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPartnerGroups\n\nGET https://localhost:50000/b1s/v2/BusinessPartnerGroups?$select=Code,Name,Type&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BusinessPartnerGroups",
+      "description": "Create an instance of 'BusinessPartnerGroups' with the given payload of type 'BusinessPartnerGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BusinessPartnerGroups\n{\n    \"Name\": \"newGroup\",\n    \"Type\": \"bbpgt_CustomerGroup\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BusinessPartnerGroups(id)",
+      "description": "Update an instance of 'BusinessPartnerGroups' with the given payload of type 'BusinessPartnerGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BusinessPartnerGroups(123)\n{\n    \"Name\": \"bigCustomer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BusinessPartnerGroups(id)",
+      "description": "Delete an instance of 'BusinessPartnerGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BusinessPartnerGroups(123)"
+    }
+  ]
+}

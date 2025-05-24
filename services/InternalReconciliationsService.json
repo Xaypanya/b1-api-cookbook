@@ -1,0 +1,24 @@
+{
+  "service": "InternalReconciliationsService",
+  "description": "This API enables you to invoke the interfaces defined on 'InternalReconciliationsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "InternalReconciliationsService_GetOpenTransactions",
+      "description": "Invoke the method 'GetOpenTransactions' on this service by specifying the payload 'InternalReconciliationOpenTransParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InternalReconciliationsService_GetOpenTransactions\n{\n    \"InternalReconciliationOpenTransParams\": {\n        \"CardOrAccount\": \"coaCard\",\n        \"InternalReconciliationBPs\": [\n            {\n                \"BPCode\": \"v01\"\n            }\n        ],\n        \"ReconDate\": \"2017-11-15\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "InternalReconciliationsService_Cancel",
+      "description": "Invoke the method 'Cancel' on this service by specifying the payload 'InternalReconciliationParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InternalReconciliationsService_Cancel\n{\n    \"InternalReconciliationParams\": {\n        \"ReconNum\": \"4\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "InternalReconciliationsService_RequestApproveCancellation",
+      "description": "Invoke the method 'RequestApproveCancellation' on this service by specifying the payload 'InternalReconciliationParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InternalReconciliationsService_RequestApproveCancellation\n{\n    \"InternalReconciliationParams\": {\n        \"ReconNum\": \"4\"\n    }\n}"
+    }
+  ]
+}

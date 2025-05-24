@@ -1,0 +1,36 @@
+{
+  "service": "DepreciationAreas",
+  "description": "This entity enables you to manipulate 'DepreciationAreas'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DepreciationAreas(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DepreciationAreas' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DepreciationAreas('test')\n\nGET https://localhost:50000/b1s/v2/DepreciationAreas('test')?$select=Code,Description,PostingOfDepreciation"
+    },
+    {
+      "method": "GET",
+      "path": "DepreciationAreas",
+      "description": "Retrieve a collection of 'DepreciationAreas' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DepreciationAreas\n\nGET https://localhost:50000/b1s/v2/DepreciationAreas?$select=Code,Description,PostingOfDepreciation&$filter=startswith(Code, 'test') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DepreciationAreas",
+      "description": "Create an instance of 'DepreciationAreas' with the given payload of type 'DepreciationArea' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DepreciationAreas\n{\n    \"AreaType\": \"atPostingtoGL\",\n    \"Code\": \"test\",\n    \"Description\": \"test Description\",\n    \"PostingOfDepreciation\": \"podIndirectPosting\",\n    \"RetirementMethod\": \"rmGross\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DepreciationAreas(id)",
+      "description": "Update an instance of 'DepreciationAreas' with the given payload of type 'DepreciationArea' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DepreciationAreas('test')\n{\n    \"Description\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DepreciationAreas(id)",
+      "description": "Delete an instance of 'DepreciationAreas' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DepreciationAreas('test')"
+    }
+  ]
+}

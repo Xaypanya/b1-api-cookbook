@@ -1,0 +1,36 @@
+{
+  "service": "ShortLinkMappings",
+  "description": "This entity enables you to manipulate 'ShortLinkMappings'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ShortLinkMappings(guid)",
+      "description": "Retrieve all or some selected properties from an instance of 'ShortLinkMappings' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ShortLinkMappings('guid123')\n\nGET https://localhost:50000/b1s/v2/ShortLinkMappings('guid123')?$select=Guid,Origin"
+    },
+    {
+      "method": "GET",
+      "path": "ShortLinkMappings",
+      "description": "Retrieve a collection of 'ShortLinkMappings' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ShortLinkMappings\n\nGET https://localhost:50000/b1s/v2/ShortLinkMappings?$select=Guid,Origin&$filter=Guid ne 'guid123' &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ShortLinkMappings",
+      "description": "Create an instance of 'ShortLinkMappings' with the given payload of type 'ShortLinkMappings' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ShortLinkMappings\n{\n    \"CreateDate\": \"2010-01-01\",\n    \"CreateTime\": \"132233\",\n    \"Guid\": \"guid123\",\n    \"Origin\": \"origin123\",\n    \"OwnerCode\": \"manager\",\n    \"SrcLink\": \"srcLink123\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ShortLinkMappings(guid)",
+      "description": "Update an instance of 'ShortLinkMappings' with the given payload of type 'ShortLinkMappings' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ShortLinkMappings('guid123')\n{\n    \"SrcLink\": \"srcLink123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ShortLinkMappings(guid)",
+      "description": "Delete an instance of 'ShortLinkMappings' with the specified guid.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ShortLinkMappings('guid123')"
+    }
+  ]
+}

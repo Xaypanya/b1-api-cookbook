@@ -1,0 +1,48 @@
+{
+  "service": "AlertManagements",
+  "description": "This entity enables you to manipulate 'AlertManagements'. \n\t\t\tFor each alert, you need to define its priority, the users and documents to which the alert applies, and the conditions that trigger the alert. In addition to activating system alerts, you can also add alerts based on user-defined queries.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AlertManagements(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AlertManagements' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AlertManagements(123)\n\nGET https://localhost:50000/b1s/v2/AlertManagements(123)?$select=Code,Name,Type"
+    },
+    {
+      "method": "GET",
+      "path": "AlertManagements",
+      "description": "Retrieve a collection of 'AlertManagements' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AlertManagements\n\nGET https://localhost:50000/b1s/v2/AlertManagements?$select=Code,Name,Type&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AlertManagements",
+      "description": "Create an instance of 'AlertManagements' with the given payload of type 'AlertManagement' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AlertManagements\n{\n    \"Active\": \"tYES\",\n    \"AlertManagementRecipients\": [\n        {\n            \"SendInternal\": \"tYES\",\n            \"UserCode\": \"1\"\n        }\n    ],\n    \"FrequencyInterval\": \"1\",\n    \"FrequencyType\": \"atfi_Hours\",\n    \"Name\": \"task alert\",\n    \"Priority\": \"atp_Normal\",\n    \"QueryID\": \"282\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AlertManagements(id)",
+      "description": "Update an instance of 'AlertManagements' with the given payload of type 'AlertManagement' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AlertManagements(123)\n{\n    \"FrequencyType\": \"atfi_Weeks\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "AlertManagements(id)",
+      "description": "Delete an instance of 'AlertManagements' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/AlertManagements(123)"
+    },
+    {
+      "method": "POST",
+      "path": "AlertManagements(id)/GetAlertManagement",
+      "description": "Invoke the method 'GetAlertManagement' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/AlertManagements(123)/GetAlertManagement"
+    },
+    {
+      "method": "POST",
+      "path": "AlertManagements(id)/GetAlertManagementList",
+      "description": "Invoke the method 'GetAlertManagementList' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/AlertManagements(123)/GetAlertManagementList"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service": "ReportLayoutsService",
+  "description": "This API enables you to invoke the interfaces defined on 'ReportLayoutsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_SetDefaultReport",
+      "description": "Invoke the method 'SetDefaultReport' on this service by specifying the payload 'DefaultReportParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_SetDefaultReport\n{\n    \"DefaultReportParams\": {\n        \"LayoutCode\": \"POR10007\",\n        \"ReportCode\": \"POR1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_GetDefaultReport",
+      "description": "Invoke the method 'GetDefaultReport' on this service by specifying the payload 'ReportParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_GetDefaultReport\n{\n    \"ReportParams\": {\n        \"ReportCode\": \"POR1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_AddReportLayout",
+      "description": "Invoke the method 'AddReportLayout' on this service by specifying the payload 'ReportLayout' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_AddReportLayout\n{\n    \"ReportLayout\": {\n        \"LayoutCode\": \"POR10007\",\n        \"Name\": \"layout 123\",\n        \"TypeCode\": \"POR1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_UpdatePrinterSettings",
+      "description": "Invoke the method 'UpdatePrinterSettings' on this service by specifying the payload 'ReportLayout' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_UpdatePrinterSettings\n{\n    \"ReportLayout\": {\n        \"LayoutCode\": \"POR10007\",\n        \"Name\": \"aaaaaa\",\n        \"Printer\": \"Fax\",\n        \"TypeCode\": \"POR1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_DeleteReportLayout",
+      "description": "Invoke the method 'DeleteReportLayout' on this service by specifying the payload 'ReportLayoutParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_DeleteReportLayout\n{\n    \"ReportLayoutParams\": {\n        \"LayoutCode\": \"POR10007\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_GetReportLayout",
+      "description": "Invoke the method 'GetReportLayout' on this service by specifying the payload 'ReportLayoutParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_GetReportLayout\n{\n    \"ReportLayoutParams\": {\n        \"LayoutCode\": \"POR10007\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_GetDefaultReportLayout",
+      "description": "Invoke the method 'GetDefaultReportLayout' on this service by specifying the payload 'ReportParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_GetDefaultReportLayout\n{\n    \"ReportParams\": {\n        \"ReportCode\": \"POR1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_GetReportLayoutList",
+      "description": "Invoke the method 'GetReportLayoutList' on this service by specifying the payload 'ReportParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_GetReportLayoutList\n{\n    \"ReportParams\": {\n        \"ReportCode\": \"POR1\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_UpdateLanguageReport",
+      "description": "Invoke the method 'UpdateLanguageReport' on this service by specifying the payload 'ReportLayout' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_UpdateLanguageReport\n{\n    \"ReportLayout\": {\n        \"LayoutCode\": \"POR10007\",\n        \"language\": 35\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_AddReportLayoutToMenu",
+      "description": "Invoke the method 'AddReportLayoutToMenu' on this service by specifying the payload 'ReportLayout,ReportInputParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_AddReportLayoutToMenu\n{\n    \"ReportInputParams\": {\n        \"ReportLayoutMenuID\": 1\n    },\n    \"ReportLayout\": {\n        \"AllignFooterToBottom\": \"tNO\",\n        \"Author\": null,\n        \"B1Version\": null,\n        \"BottomMargin\": 10,\n        \"CRVersion\": null,\n        \"Category\": \"rlcPLD\",\n        \"ChangeFontSizeForEMail\": -1,\n        \"ChangeFontSizeInPreview\": -1,\n        \"ConvertFontForEMail\": \"tNO\",\n        \"ConvertFontInPrintPreview\": \"tNO\",\n        \"EMailFont\": \"Arial\",\n        \"Editable\": \"tYES\",\n        \"ExtensionErrorAction\": \"eeaStop\",\n        \"ExtensionName\": null,\n        \"FollowUpReport\": null,\n        \"ForeignLanguageReport\": \"tNO\",\n        \"GridSize\": 10,\n        \"GridType\": \"gtCombination\",\n        \"Height\": 842,\n        \"ImpExpObjCode\": 0,\n        \"LayoutCode\": \"POR10005\",\n        \"LeaderReport\": null,\n        \"LeftMargin\": 10,\n        \"Localization\": null,\n        \"Name\": \"layout 125\",\n        \"NumberOfCopies\": 1,\n        \"Orientation\": \"ortVertical\",\n        \"PaperSize\": \"A4\",\n        \"Picture\": null,\n        \"PreviewPrintingFont\": \"Arial\",\n        \"Printer\": null,\n        \"PrinterFirstPage\": null,\n        \"Query\": null,\n        \"QueryType\": \"qtRegular\",\n        \"Remarks\": null,\n        \"RepetitiveAreasNumber\": 0,\n        \"ReportLayoutItems\": [],\n        \"ReportLayout_TranslationLines\": [],\n        \"RightMargin\": 30,\n        \"ShowGrid\": \"tYES\",\n        \"SnapToGrid\": \"tYES\",\n        \"Sortable\": \"tYES\",\n        \"TopMargin\": 10,\n        \"TypeCode\": \"POR1\",\n        \"TypeDetail\": null,\n        \"UseFirstPrinter\": \"tNO\",\n        \"Width\": 595,\n        \"language\": 31\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ReportLayoutsService_DeleteReportLayoutAndMenu",
+      "description": "Invoke the method 'DeleteReportLayoutAndMenu' on this service by specifying the payload 'ReportLayoutParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportLayoutsService_DeleteReportLayoutAndMenu\n{\n    \"ReportLayoutParams\": {\n        \"LayoutCode\": \"POR10007\"\n    }\n}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "WarehouseLocations",
+  "description": "This entity enables you to manipulate 'WarehouseLocations'. It defines the geographical locations of the warehouses.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WarehouseLocations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WarehouseLocations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WarehouseLocations(123)\n\nGET https://localhost:50000/b1s/v2/WarehouseLocations(123)?$select=Code,Name,LSTVATNumber"
+    },
+    {
+      "method": "GET",
+      "path": "WarehouseLocations",
+      "description": "Retrieve a collection of 'WarehouseLocations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WarehouseLocations\n\nGET https://localhost:50000/b1s/v2/WarehouseLocations?$select=Code,Name,LSTVATNumber&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WarehouseLocations",
+      "description": "Create an instance of 'WarehouseLocations' with the given payload of type 'WarehouseLocation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WarehouseLocations\n{\n    \"City\": \"SH\",\n    \"Country\": \"China\",\n    \"ExemptionNumber\": \"123456789\",\n    \"Name\": \"ShangHai\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WarehouseLocations(id)",
+      "description": "Update an instance of 'WarehouseLocations' with the given payload of type 'WarehouseLocation' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WarehouseLocations(123)\n{\n    \"Name\": \"SH Pudong\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WarehouseLocations(id)",
+      "description": "Delete an instance of 'WarehouseLocations' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WarehouseLocations(123)"
+    }
+  ]
+}

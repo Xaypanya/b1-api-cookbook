@@ -1,0 +1,12 @@
+{
+  "service": "BOEPortfoliosService",
+  "description": "This API enables you to invoke the interfaces defined on 'BOEPortfoliosService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BOEPortfoliosService_GetBOEPortfolioList",
+      "description": "Invoke the method 'GetBOEPortfolioList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/BOEPortfoliosService_GetBOEPortfolioList"
+    }
+  ]
+}

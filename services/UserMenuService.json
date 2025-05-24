@@ -1,0 +1,30 @@
+{
+  "service": "UserMenuService",
+  "description": "This API enables you to invoke the interfaces defined on 'UserMenuService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "UserMenuService_GetCurrentUserMenu",
+      "description": "Invoke the method 'GetCurrentUserMenu' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/UserMenuService_GetCurrentUserMenu"
+    },
+    {
+      "method": "POST",
+      "path": "UserMenuService_UpdateCurrentUserMenu",
+      "description": "Invoke the method 'UpdateCurrentUserMenu' on this service by specifying the payload 'Collection(UserMenuItem)' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserMenuService_UpdateCurrentUserMenu\n{\n    \"UserMenuItems\": [\n        {\n            \"LinkedFormMenuID\": \"11\",\n            \"LinkedFormNum\": null,\n            \"LinkedObjKey\": null,\n            \"LinkedObjType\": null,\n            \"Name\": \"Forms\",\n            \"Position\": 1,\n            \"ReportPath\": \"11\",\n            \"Type\": \"umitFolder\"\n        },\n        {\n            \"LinkedFormMenuID\": null,\n            \"LinkedFormNum\": null,\n            \"LinkedObjKey\": null,\n            \"LinkedObjType\": null,\n            \"Name\": \"Reports\",\n            \"Position\": 2,\n            \"ReportPath\": \"\",\n            \"Type\": \"umitFolder\"\n        },\n        {\n            \"LinkedFormMenuID\": null,\n            \"LinkedFormNum\": null,\n            \"LinkedObjKey\": null,\n            \"LinkedObjType\": null,\n            \"Name\": \"Queries\",\n            \"Position\": 3,\n            \"ReportPath\": \"\",\n            \"Type\": \"umitFolder\"\n        },\n        {\n            \"LinkedFormMenuID\": null,\n            \"LinkedFormNum\": null,\n            \"LinkedObjKey\": null,\n            \"LinkedObjType\": null,\n            \"Name\": \"Links\",\n            \"Position\": 4,\n            \"ReportPath\": \"\",\n            \"Type\": \"umitFolder\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "POST",
+      "path": "UserMenuService_GetUserMenu",
+      "description": "Invoke the method 'GetUserMenu' on this service by specifying the payload 'UserMenuParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserMenuService_GetUserMenu\n{\n    \"UserMenuParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "UserMenuService_UpdateUserMenu",
+      "description": "Invoke the method 'UpdateUserMenu' on this service by specifying the payload 'UserMenuParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserMenuService_UpdateUserMenu\n{\n    \"UserMenuParams\": {}\n}"
+    }
+  ]
+}

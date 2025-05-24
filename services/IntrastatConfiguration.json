@@ -1,0 +1,36 @@
+{
+  "service": "IntrastatConfiguration",
+  "description": "This entity enables you to manipulate 'IntrastatConfiguration'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "IntrastatConfiguration(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'IntrastatConfiguration' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/IntrastatConfiguration(123)\n\nGET https://localhost:50000/b1s/v2/IntrastatConfiguration(123)?$select=AbsEntry,ConfType,Code"
+    },
+    {
+      "method": "GET",
+      "path": "IntrastatConfiguration",
+      "description": "Retrieve a collection of 'IntrastatConfiguration' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/IntrastatConfiguration\n\nGET https://localhost:50000/b1s/v2/IntrastatConfiguration?$select=AbsEntry,ConfType,Code&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "IntrastatConfiguration",
+      "description": "Create an instance of 'IntrastatConfiguration' with the given payload of type 'IntrastatConfiguration' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/IntrastatConfiguration\n{\n    \"AbsEntry\": 1,\n    \"Code\": \"c/k11\",\n    \"ConfID\": \"M:c/k:::\",\n    \"ConfType\": \"enAdditionalMeasureUnit\",\n    \"Country\": null,\n    \"DateFrom\": null,\n    \"DateTo\": null,\n    \"Descr\": \"test Quantidade de quilates (1 quilate metr. = 2 ?10-4 kg)\",\n    \"Export\": \"tYES\",\n    \"Import\": \"tYES\",\n    \"PrcstVal\": 0,\n    \"StatCode\": \"\",\n    \"SuppUnit\": null,\n    \"TriangDeal\": null\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "IntrastatConfiguration(id)",
+      "description": "Update an instance of 'IntrastatConfiguration' with the given payload of type 'IntrastatConfiguration' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/IntrastatConfiguration(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "IntrastatConfiguration(id)",
+      "description": "Delete an instance of 'IntrastatConfiguration' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/IntrastatConfiguration(123)"
+    }
+  ]
+}

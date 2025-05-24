@@ -1,0 +1,18 @@
+{
+  "service": "PickListsService",
+  "description": "This API enables you to invoke the interfaces defined on 'PickListsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "PickListsService_Close",
+      "description": "Invoke the method 'Close' on this service by specifying the payload 'PickList' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PickListsService_Close\n{\n    \"PickList\": {\n        \"Absoluteentry\": 3\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "PickListsService_UpdateReleasedAllocation",
+      "description": "Invoke the method 'UpdateReleasedAllocation' on this service by specifying the payload 'PickList' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PickListsService_UpdateReleasedAllocation\n{\n    \"PickList\": {\n        \"Absoluteentry\": 3,\n        \"Name\": \"manager\",\n        \"ObjectType\": \"156\",\n        \"OwnerCode\": 1,\n        \"PickDate\": \"2016-08-25\",\n        \"PickListsLines\": [\n            {\n                \"AbsoluteEntry\": 3,\n                \"BaseObjectType\": 17,\n                \"DocumentLinesBinAllocations\": [\n                    {\n                        \"BinAbsEntry\": 2,\n                        \"Quantity\": 1,\n                        \"SerialAndBatchNumbersBaseLine\": 0\n                    }\n                ],\n                \"LineNumber\": 0,\n                \"OrderEntry\": 9,\n                \"OrderRowID\": 0,\n                \"PickStatus\": \"ps_Released\",\n                \"PickedQuantity\": 0,\n                \"PreviouslyReleasedQuantity\": 1,\n                \"ReleasedQuantity\": 1,\n                \"SerialNumbers\": [\n                    {\n                        \"InternalSerialNumber\": 4,\n                        \"ManufacturerSerialNumber\": 4,\n                        \"Quantity\": 1\n                    }\n                ]\n            }\n        ],\n        \"Status\": \"ps_Released\",\n        \"UseBaseUnits\": \"tNO\"\n    }\n}"
+    }
+  ]
+}

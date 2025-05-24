@@ -1,0 +1,36 @@
+{
+  "service": "Manufacturers",
+  "description": "This entity enables you to manipulate 'Manufacturers'. It defines manufacturers used in the Item master data.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Manufacturers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Manufacturers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Manufacturers(123)\n\nGET https://localhost:50000/b1s/v2/Manufacturers(123)?$select=Code,ManufacturerName"
+    },
+    {
+      "method": "GET",
+      "path": "Manufacturers",
+      "description": "Retrieve a collection of 'Manufacturers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Manufacturers\n\nGET https://localhost:50000/b1s/v2/Manufacturers?$select=Code,ManufacturerName&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Manufacturers",
+      "description": "Create an instance of 'Manufacturers' with the given payload of type 'Manufacturer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Manufacturers\n{\n    \"ManufacturerName\": \"Prosoft\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Manufacturers(id)",
+      "description": "Update an instance of 'Manufacturers' with the given payload of type 'Manufacturer' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Manufacturers(123)\n{\n    \"ManufacturerName\": \"Rainbow\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Manufacturers(id)",
+      "description": "Delete an instance of 'Manufacturers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Manufacturers(123)"
+    }
+  ]
+}

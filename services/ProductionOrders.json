@@ -1,0 +1,36 @@
+{
+  "service": "ProductionOrders",
+  "description": "This entity enables you to manipulate 'ProductionOrders'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ProductionOrders(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ProductionOrders' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ProductionOrders(123)\n\nGET https://localhost:50000/b1s/v2/ProductionOrders(123)?$select=AbsoluteEntry,DocumentNumber,Series"
+    },
+    {
+      "method": "GET",
+      "path": "ProductionOrders",
+      "description": "Retrieve a collection of 'ProductionOrders' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ProductionOrders\n\nGET https://localhost:50000/b1s/v2/ProductionOrders?$select=AbsoluteEntry,DocumentNumber,Series&$filter=AbsoluteEntry ge 123 &$orderby=AbsoluteEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ProductionOrders",
+      "description": "Create an instance of 'ProductionOrders' with the given payload of type 'ProductionOrder' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ProductionOrders\n{\n    \"DueDate\": \"2014-04-05\",\n    \"ItemNo\": \"bom1\",\n    \"PlannedQuantity\": 100\n}\nPOST https://localhost:50000/b1s/v2/ProductionOrders\n{\n    \"DueDate\": \"20170604\",\n    \"ItemNo\": \"10000978\",\n    \"PlannedQuantity\": 3,\n    \"PostingDate\": \"20170604\",\n    \"Warehouse\": \"MD01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ProductionOrders(id)",
+      "description": "Update an instance of 'ProductionOrders' with the given payload of type 'ProductionOrder' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ProductionOrders(123)\n{\n    \"ProductionOrderStatus\": \"R\",\n    \"Remarks\": \"Updated Remarks\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ProductionOrders(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ProductionOrders(123)/Cancel"
+    }
+  ]
+}

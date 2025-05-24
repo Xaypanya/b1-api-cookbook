@@ -1,0 +1,36 @@
+{
+  "service": "SpecialPrices",
+  "description": "This entity enables you to manipulate 'SpecialPrices'. It represents a discount for a specific item in a specific price list. The discount can apply to a specific business partner or for all business partners. For a specific business partner, the item and business partner must be unique; for all business partners, the item and price list must be unique.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "SpecialPrices(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'SpecialPrices' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/SpecialPrices(CardCode='c001',ItemCode='i001')\n\nGET https://localhost:50000/b1s/v2/SpecialPrices(CardCode='c001',ItemCode='i001')?$select=ItemCode,CardCode,Price"
+    },
+    {
+      "method": "GET",
+      "path": "SpecialPrices",
+      "description": "Retrieve a collection of 'SpecialPrices' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/SpecialPrices\n\nGET https://localhost:50000/b1s/v2/SpecialPrices?$select=ItemCode,CardCode,Price&$filter=startswith(CardCode, 'a') and startswith(ItemCode, 'a') &$orderby=CardCode,ItemCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "SpecialPrices",
+      "description": "Create an instance of 'SpecialPrices' with the given payload of type 'SpecialPrice' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/SpecialPrices\n{\n    \"CardCode\": \"c001\",\n    \"DiscountPercent\": 10,\n    \"ItemCode\": \"i001\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "SpecialPrices(id)",
+      "description": "Update an instance of 'SpecialPrices' with the given payload of type 'SpecialPrice' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/SpecialPrices(CardCode='c001',ItemCode='i001')\n{\n    \"DiscountPercent\": 20\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "SpecialPrices(id)",
+      "description": "Delete an instance of 'SpecialPrices' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/SpecialPrices(CardCode='c001',ItemCode='i001')"
+    }
+  ]
+}

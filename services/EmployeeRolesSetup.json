@@ -1,0 +1,36 @@
+{
+  "service": "EmployeeRolesSetup",
+  "description": "This entity enables you to manipulate 'EmployeeRolesSetup'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "EmployeeRolesSetup(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'EmployeeRolesSetup' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeeRolesSetup(1)\n\nGET https://localhost:50000/b1s/v2/EmployeeRolesSetup(1)?$select=TypeID,Name,Description"
+    },
+    {
+      "method": "GET",
+      "path": "EmployeeRolesSetup",
+      "description": "Retrieve a collection of 'EmployeeRolesSetup' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/EmployeeRolesSetup\n\nGET https://localhost:50000/b1s/v2/EmployeeRolesSetup?$select=TypeID,Name,Description&$filter=TypeID ge 1 &$orderby=TypeID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "EmployeeRolesSetup",
+      "description": "Create an instance of 'EmployeeRolesSetup' with the given payload of type 'EmployeeRoleSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/EmployeeRolesSetup\n{\n    \"Description\": \"test\",\n    \"Name\": \"test\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "EmployeeRolesSetup(id)",
+      "description": "Update an instance of 'EmployeeRolesSetup' with the given payload of type 'EmployeeRoleSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/EmployeeRolesSetup(1)\n{\n    \"Name\": \"test123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "EmployeeRolesSetup(id)",
+      "description": "Delete an instance of 'EmployeeRolesSetup' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/EmployeeRolesSetup(1)"
+    }
+  ]
+}

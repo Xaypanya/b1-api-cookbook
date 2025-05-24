@@ -1,0 +1,48 @@
+{
+  "service": "LandedCosts",
+  "description": "This entity enables you to manipulate 'LandedCosts'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "LandedCosts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'LandedCosts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/LandedCosts(123)\n\nGET https://localhost:50000/b1s/v2/LandedCosts(123)?$select=DocEntry,LandedCostNumber,PostingDate"
+    },
+    {
+      "method": "GET",
+      "path": "LandedCosts",
+      "description": "Retrieve a collection of 'LandedCosts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/LandedCosts\n\nGET https://localhost:50000/b1s/v2/LandedCosts?$select=DocEntry,LandedCostNumber,PostingDate&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "LandedCosts",
+      "description": "Create an instance of 'LandedCosts' with the given payload of type 'LandedCost' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/LandedCosts\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "LandedCosts(id)",
+      "description": "Update an instance of 'LandedCosts' with the given payload of type 'LandedCost' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/LandedCosts(123)\n{\n    \"JournalRemarks\": \"update from sl\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "LandedCosts(id)",
+      "description": "Delete an instance of 'LandedCosts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/LandedCosts(123)"
+    },
+    {
+      "method": "POST",
+      "path": "LandedCosts(id)/CloseLandedCost",
+      "description": "Invoke the method 'CloseLandedCost' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/LandedCosts(123)/CloseLandedCost"
+    },
+    {
+      "method": "POST",
+      "path": "LandedCosts(id)/CancelLandedCost",
+      "description": "Invoke the method 'CancelLandedCost' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/LandedCosts(123)/CancelLandedCost"
+    }
+  ]
+}

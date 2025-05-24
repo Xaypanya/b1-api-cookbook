@@ -1,0 +1,36 @@
+{
+  "service": "BOEDocumentTypes",
+  "description": "This entity enables you to manipulate 'BOEDocumentTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BOEDocumentTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BOEDocumentTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BOEDocumentTypes(1)\n\nGET https://localhost:50000/b1s/v2/BOEDocumentTypes(1)?$select=DocEntry,DocType,DocDescription"
+    },
+    {
+      "method": "GET",
+      "path": "BOEDocumentTypes",
+      "description": "Retrieve a collection of 'BOEDocumentTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BOEDocumentTypes\n\nGET https://localhost:50000/b1s/v2/BOEDocumentTypes?$select=DocEntry,DocType,DocDescription&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BOEDocumentTypes",
+      "description": "Create an instance of 'BOEDocumentTypes' with the given payload of type 'BOEDocumentType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BOEDocumentTypes\n{\n    \"DocDescription\": \"testing\",\n    \"DocType\": \"11\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BOEDocumentTypes(id)",
+      "description": "Update an instance of 'BOEDocumentTypes' with the given payload of type 'BOEDocumentType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BOEDocumentTypes(1)\n{\n    \"DocDescription\": \"testing\",\n    \"DocType\": \"11\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BOEDocumentTypes(id)",
+      "description": "Delete an instance of 'BOEDocumentTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BOEDocumentTypes(1)"
+    }
+  ]
+}

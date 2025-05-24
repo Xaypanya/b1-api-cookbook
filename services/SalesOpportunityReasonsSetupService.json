@@ -1,0 +1,12 @@
+{
+  "service": "SalesOpportunityReasonsSetupService",
+  "description": "This API enables you to invoke the interfaces defined on 'SalesOpportunityReasonsSetupService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "SalesOpportunityReasonsSetupService_GetSalesOpportunityReasonSetupList",
+      "description": "Invoke the method 'GetSalesOpportunityReasonSetupList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/SalesOpportunityReasonsSetupService_GetSalesOpportunityReasonSetupList"
+    }
+  ]
+}

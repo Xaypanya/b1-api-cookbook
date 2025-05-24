@@ -1,0 +1,36 @@
+{
+  "service": "WebClientNotifications",
+  "description": "This entity enables you to manipulate 'WebClientNotifications'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientNotifications(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientNotifications' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientNotifications('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientNotifications('abc')?$select=Guid,ObjectKey,ActivityDate"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientNotifications",
+      "description": "Retrieve a collection of 'WebClientNotifications' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientNotifications\n\nGET https://localhost:50000/b1s/v2/WebClientNotifications?$select=Guid,ObjectKey,ActivityDate&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientNotifications",
+      "description": "Create an instance of 'WebClientNotifications' with the given payload of type 'WebClientNotification' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientNotifications\n{\n    \"Guid\": \"N_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientNotifications(id)",
+      "description": "Update an instance of 'WebClientNotifications' with the given payload of type 'WebClientNotification' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientNotifications('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientNotifications(id)",
+      "description": "Delete an instance of 'WebClientNotifications' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientNotifications('abc')"
+    }
+  ]
+}

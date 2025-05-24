@@ -1,0 +1,36 @@
+{
+  "service": "WithholdingTaxCodes",
+  "description": "This entity enables you to manipulate 'WithholdingTaxCodes'. It defines withholding tax codes that can be applied to business partners, payments, and documents.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WithholdingTaxCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WithholdingTaxCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WithholdingTaxCodes('W01')\n\nGET https://localhost:50000/b1s/v2/WithholdingTaxCodes('W01')?$select=WTCode,WTName,Category"
+    },
+    {
+      "method": "GET",
+      "path": "WithholdingTaxCodes",
+      "description": "Retrieve a collection of 'WithholdingTaxCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WithholdingTaxCodes\n\nGET https://localhost:50000/b1s/v2/WithholdingTaxCodes?$select=WTCode,WTName,Category&$filter=startswith(WTCode, 'a') &$orderby=WTCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WithholdingTaxCodes",
+      "description": "Create an instance of 'WithholdingTaxCodes' with the given payload of type 'WithholdingTaxCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WithholdingTaxCodes\n{\n    \"Account\": \"100000000000000\",\n    \"WTCode\": \"W01\",\n    \"WTName\": \"WT tax\",\n    \"WithholdingTaxCodes_Lines\": [\n        {\n            \"Effectivefrom\": \"2014-11-10\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WithholdingTaxCodes(id)",
+      "description": "Update an instance of 'WithholdingTaxCodes' with the given payload of type 'WithholdingTaxCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WithholdingTaxCodes('W01')\n{\n    \"WTName\": \"withholding Tax code\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WithholdingTaxCodes(id)",
+      "description": "Delete an instance of 'WithholdingTaxCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WithholdingTaxCodes('W01')"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "service": "InventoryPostingsService",
+  "description": "This API enables you to invoke the interfaces defined on 'InventoryPostingsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "InventoryPostingsService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryPostingsService_GetList"
+    },
+    {
+      "method": "POST",
+      "path": "InventoryPostingsService_SetCopyOption",
+      "description": "Invoke the method 'SetCopyOption' on this service by specifying the payload 'InventoryPostingCopyOption' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/InventoryPostingsService_SetCopyOption\n{\n    \"InventoryPostingCopyOption\": {}\n}"
+    }
+  ]
+}

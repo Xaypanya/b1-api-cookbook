@@ -1,0 +1,36 @@
+{
+  "service": "GovPayCodes",
+  "description": "This entity enables you to manipulate 'GovPayCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "GovPayCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'GovPayCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/GovPayCodes(123)\n\nGET https://localhost:50000/b1s/v2/GovPayCodes(123)?$select=AbsId,Code,Descr"
+    },
+    {
+      "method": "GET",
+      "path": "GovPayCodes",
+      "description": "Retrieve a collection of 'GovPayCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/GovPayCodes\n\nGET https://localhost:50000/b1s/v2/GovPayCodes?$select=AbsId,Code,Descr&$filter=AbsId ge 123 &$orderby=AbsId&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "GovPayCodes",
+      "description": "Create an instance of 'GovPayCodes' with the given payload of type 'GovPayCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/GovPayCodes\n{\n    \"AbsId\": 1,\n    \"Code\": \"c1\",\n    \"Descr\": \"c1\",\n    \"GovPayCodeAuthorities\": [],\n    \"Prdcity\": \"gpcpMonth\",\n    \"StateTax\": \"tNO\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "GovPayCodes(id)",
+      "description": "Update an instance of 'GovPayCodes' with the given payload of type 'GovPayCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/GovPayCodes(123)\n{\n    \"Descr\": \"c1211\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "GovPayCodes(id)",
+      "description": "Delete an instance of 'GovPayCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/GovPayCodes(123)"
+    }
+  ]
+}

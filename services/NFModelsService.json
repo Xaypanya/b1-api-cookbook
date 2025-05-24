@@ -1,0 +1,12 @@
+{
+  "service": "NFModelsService",
+  "description": "This API enables you to invoke the interfaces defined on 'NFModelsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "NFModelsService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/NFModelsService_GetList"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "service": "UsersService",
+  "description": "This API enables you to invoke the interfaces defined on 'UsersService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "UsersService_GetCurrentUser",
+      "description": "Invoke the method 'GetCurrentUser' on this service to get the current user information.",
+      "example": "POST https://localhost:50000/b1s/v2/UsersService_GetCurrentUser"
+    }
+  ]
+}

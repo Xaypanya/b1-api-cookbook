@@ -1,0 +1,24 @@
+{
+  "service": "AssetManualDepreciationService",
+  "description": "This API enables you to invoke the interfaces defined on 'AssetManualDepreciationService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "AssetManualDepreciationService_Cancel",
+      "description": "Invoke the method 'Cancel' on this service by specifying the payload 'AssetDocumentParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetManualDepreciationService_Cancel\n{\n    \"AssetDocumentParams\": {\n        \"CancellationOption\": \"coByCurrentSystemDate\",\n        \"Code\": \"2\"\n    }\n}"
+    },
+    {
+      "method": "GET",
+      "path": "AssetManualDepreciationService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetManualDepreciationService_GetList"
+    },
+    {
+      "method": "POST",
+      "path": "AssetManualDepreciationService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetManualDepreciationService_GetList"
+    }
+  ]
+}

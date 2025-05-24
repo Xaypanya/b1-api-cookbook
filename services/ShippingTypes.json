@@ -1,0 +1,36 @@
+{
+  "service": "ShippingTypes",
+  "description": "This entity enables you to manipulate 'ShippingTypes'. It defines transportation methods (for example, air cargo and courier) of goods.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ShippingTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ShippingTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ShippingTypes(123)\n\nGET https://localhost:50000/b1s/v2/ShippingTypes(123)?$select=Code,Name,Website"
+    },
+    {
+      "method": "GET",
+      "path": "ShippingTypes",
+      "description": "Retrieve a collection of 'ShippingTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ShippingTypes\n\nGET https://localhost:50000/b1s/v2/ShippingTypes?$select=Code,Name,Website&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ShippingTypes",
+      "description": "Create an instance of 'ShippingTypes' with the given payload of type 'ShippingType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ShippingTypes\n{\n    \"Name\": \"UPS Ground\",\n    \"Website\": \"http://www.ups.com/\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ShippingTypes(id)",
+      "description": "Update an instance of 'ShippingTypes' with the given payload of type 'ShippingType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ShippingTypes(123)\n{\n    \"Website\": \"http://www.ups.com/cn\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ShippingTypes(id)",
+      "description": "Delete an instance of 'ShippingTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ShippingTypes(123)"
+    }
+  ]
+}

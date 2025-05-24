@@ -1,0 +1,36 @@
+{
+  "service": "DeductibleTaxes",
+  "description": "This entity enables you to manipulate 'DeductibleTaxes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DeductibleTaxes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DeductibleTaxes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductibleTaxes('abc')\n\nGET https://localhost:50000/b1s/v2/DeductibleTaxes('abc')?$select=Code,Name,Inactive"
+    },
+    {
+      "method": "GET",
+      "path": "DeductibleTaxes",
+      "description": "Retrieve a collection of 'DeductibleTaxes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductibleTaxes\n\nGET https://localhost:50000/b1s/v2/DeductibleTaxes?$select=Code,Name,Inactive&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DeductibleTaxes",
+      "description": "Create an instance of 'DeductibleTaxes' with the given payload of type 'DeductibleTax' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DeductibleTaxes\n{\n    \"Category\": \"bovcInputTax\",\n    \"Code\": \"Z6\",\n    \"DeductibleTaxRate\": 10.0,\n    \"Inactive\": \"tNO\",\n    \"Name\": \"Z6 name\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DeductibleTaxes(id)",
+      "description": "Update an instance of 'DeductibleTaxes' with the given payload of type 'DeductibleTax' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DeductibleTaxes('abc')\n{\n    \"Category\": \"bovcInputTax\",\n    \"DeductibleTaxRate\": 7.0,\n    \"Inactive\": \"tYES\",\n    \"Name\": \"Z6 updated name\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DeductibleTaxes(id)",
+      "description": "Delete an instance of 'DeductibleTaxes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DeductibleTaxes('abc')"
+    }
+  ]
+}

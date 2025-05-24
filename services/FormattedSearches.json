@@ -1,0 +1,36 @@
+{
+  "service": "FormattedSearches",
+  "description": "This entity enables you to manipulate 'FormattedSearches'. It allows to assign a formatted search function to a specified field, so that SAP Business One users can enter values, originated by a pre-defined search process, to the field.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "FormattedSearches(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'FormattedSearches' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/FormattedSearches(24488)\n\nGET https://localhost:50000/b1s/v2/FormattedSearches(24488)?$select=FormID,ItemID,ColumnID"
+    },
+    {
+      "method": "GET",
+      "path": "FormattedSearches",
+      "description": "Retrieve a collection of 'FormattedSearches' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/FormattedSearches\n\nGET https://localhost:50000/b1s/v2/FormattedSearches?$select=FormID,ItemID,ColumnID&$filter=Index ge 24488 &$orderby=Index&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "FormattedSearches",
+      "description": "Create an instance of 'FormattedSearches' with the given payload of type 'FormattedSearche' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/FormattedSearches\n{\n    \"Action\": \"bofsaValidValues\",\n    \"ByField\": \"tYES\",\n    \"ColumnID\": \"-1\",\n    \"FormID\": \"139\",\n    \"Index\": \"24488\",\n    \"ItemID\": \"16\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "FormattedSearches(id)",
+      "description": "Update an instance of 'FormattedSearches' with the given payload of type 'FormattedSearche' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/FormattedSearches(24488)\n{\n    \"ItemID\": \"29\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "FormattedSearches(id)",
+      "description": "Delete an instance of 'FormattedSearches' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/FormattedSearches(24488)"
+    }
+  ]
+}

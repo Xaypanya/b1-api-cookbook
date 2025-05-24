@@ -1,0 +1,24 @@
+{
+  "service": "BinLocationFields",
+  "description": "This entity enables you to manipulate 'BinLocationFields'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BinLocationFields(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BinLocationFields' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BinLocationFields(123)\n\nGET https://localhost:50000/b1s/v2/BinLocationFields(123)?$select=AbsEntry,FieldType,FieldNumber"
+    },
+    {
+      "method": "GET",
+      "path": "BinLocationFields",
+      "description": "Retrieve a collection of 'BinLocationFields' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BinLocationFields\n\nGET https://localhost:50000/b1s/v2/BinLocationFields?$select=AbsEntry,FieldType,FieldNumber&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "BinLocationFields(id)",
+      "description": "Update an instance of 'BinLocationFields' with the given payload of type 'BinLocationField' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BinLocationFields(123)\n{\n    \"DefaultFieldName\": \"default_field\"\n}"
+    }
+  ]
+}

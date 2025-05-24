@@ -1,0 +1,36 @@
+{
+  "service": "CreditPaymentMethods",
+  "description": "This entity enables you to manipulate 'CreditPaymentMethods'. It defines credit card payment methods.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CreditPaymentMethods(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CreditPaymentMethods' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditPaymentMethods(123)\n\nGET https://localhost:50000/b1s/v2/CreditPaymentMethods(123)?$select=PaymentMethodCode,Name,AssignedtoCreditCard"
+    },
+    {
+      "method": "GET",
+      "path": "CreditPaymentMethods",
+      "description": "Retrieve a collection of 'CreditPaymentMethods' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CreditPaymentMethods\n\nGET https://localhost:50000/b1s/v2/CreditPaymentMethods?$select=PaymentMethodCode,Name,AssignedtoCreditCard&$filter=PaymentMethodCode ge 123 &$orderby=PaymentMethodCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CreditPaymentMethods",
+      "description": "Create an instance of 'CreditPaymentMethods' with the given payload of type 'CreditPaymentMethod' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CreditPaymentMethods\n{\n    \"Name\": \"Default 20D\",\n    \"PaymentCode\": \"20D\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CreditPaymentMethods(id)",
+      "description": "Update an instance of 'CreditPaymentMethods' with the given payload of type 'CreditPaymentMethod' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CreditPaymentMethods(123)\n{\n    \"MinimumPaymentAmount\": \"100.11\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CreditPaymentMethods(id)",
+      "description": "Delete an instance of 'CreditPaymentMethods' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CreditPaymentMethods(123)"
+    }
+  ]
+}

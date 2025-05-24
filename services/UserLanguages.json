@@ -1,0 +1,36 @@
+{
+  "service": "UserLanguages",
+  "description": "This entity enables you to manipulate 'UserLanguages'. It defines user languages for multi-language support.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserLanguages(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserLanguages' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserLanguages(123)\n\nGET https://localhost:50000/b1s/v2/UserLanguages(123)?$select=Code,LanguageShortName,LanguageFullName"
+    },
+    {
+      "method": "GET",
+      "path": "UserLanguages",
+      "description": "Retrieve a collection of 'UserLanguages' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserLanguages\n\nGET https://localhost:50000/b1s/v2/UserLanguages?$select=Code,LanguageShortName,LanguageFullName&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserLanguages",
+      "description": "Create an instance of 'UserLanguages' with the given payload of type 'UserLanguage' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserLanguages\n{\n    \"LanguageFullName\": \"Chinese\",\n    \"LanguageShortName\": \"TWC\",\n    \"RelatedSystemLanguage\": \"35\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UserLanguages(id)",
+      "description": "Update an instance of 'UserLanguages' with the given payload of type 'UserLanguage' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UserLanguages(123)\n{\n    \"LanguageFullName\": \"Traditional Chinese\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserLanguages(id)",
+      "description": "Delete an instance of 'UserLanguages' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserLanguages(123)"
+    }
+  ]
+}

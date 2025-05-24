@@ -1,0 +1,36 @@
+{
+  "service": "Budgets",
+  "description": "This entity enables you to manipulate 'Budgets' based on G/L accounts.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Budgets(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Budgets' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Budgets(123)\n\nGET https://localhost:50000/b1s/v2/Budgets(123)?$select=FutureAnnualExpensesCreditSys,FutureAnnualExpensesCreditLoc,FutureAnnualExpensesDebitSys"
+    },
+    {
+      "method": "GET",
+      "path": "Budgets",
+      "description": "Retrieve a collection of 'Budgets' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Budgets\n\nGET https://localhost:50000/b1s/v2/Budgets?$select=FutureAnnualExpensesCreditSys,FutureAnnualExpensesCreditLoc,FutureAnnualExpensesDebitSys&$filter=Numerator ge 123 &$orderby=Numerator&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Budgets",
+      "description": "Create an instance of 'Budgets' with the given payload of type 'Budget' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Budgets\n{\n    \"AccountCode\": \"_SYS00000000220\",\n    \"StartofFiscalYear\": \"2014-01-01\",\n    \"TotalAnnualBudgetDebitLoc\": \"0.894\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Budgets(id)",
+      "description": "Update an instance of 'Budgets' with the given payload of type 'Budget' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Budgets(123)\n{\n    \"TotalAnnualBudgetDebitLoc\": \"12.345\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Budgets(id)",
+      "description": "Delete an instance of 'Budgets' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Budgets(123)"
+    }
+  ]
+}

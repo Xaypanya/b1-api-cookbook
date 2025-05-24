@@ -1,0 +1,36 @@
+{
+  "service": "PartnersSetups",
+  "description": "This entity enables you to manipulate 'PartnersSetups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PartnersSetups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PartnersSetups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PartnersSetups(1)\n\nGET https://localhost:50000/b1s/v2/PartnersSetups(1)?$select=PartnerID,Name,DefaultRelationship"
+    },
+    {
+      "method": "GET",
+      "path": "PartnersSetups",
+      "description": "Retrieve a collection of 'PartnersSetups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PartnersSetups\n\nGET https://localhost:50000/b1s/v2/PartnersSetups?$select=PartnerID,Name,DefaultRelationship&$filter=PartnerID ge 1 &$orderby=PartnerID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PartnersSetups",
+      "description": "Create an instance of 'PartnersSetups' with the given payload of type 'PartnersSetup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PartnersSetups\n{\n    \"DefaultRelationship\": \"01\",\n    \"Name\": \"Partner 01\",\n    \"RelatedBP\": \"C01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PartnersSetups(id)",
+      "description": "Update an instance of 'PartnersSetups' with the given payload of type 'PartnersSetup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PartnersSetups(1)\n{\n    \"Details\": \"Updated related BP\",\n    \"RelatedBP\": \"V01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PartnersSetups(id)",
+      "description": "Delete an instance of 'PartnersSetups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PartnersSetups(1)"
+    }
+  ]
+}

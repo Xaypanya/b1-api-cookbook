@@ -1,0 +1,36 @@
+{
+  "service": "Contacts",
+  "description": "This entity enables you to manipulate 'Contacts'. It represents the activities carried out with customers and vendors.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Contacts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Contacts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Contacts(123)\n\nGET https://localhost:50000/b1s/v2/Contacts(123)?$select=CardCode,Notes,ContactDate"
+    },
+    {
+      "method": "GET",
+      "path": "Contacts",
+      "description": "Retrieve a collection of 'Contacts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Contacts\n\nGET https://localhost:50000/b1s/v2/Contacts?$select=CardCode,Notes,ContactDate&$filter=ContactCode ge 123 &$orderby=ContactCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Contacts",
+      "description": "Create an instance of 'Contacts' with the given payload of type 'Contact' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Contacts\n{\n    \"Activity\": \"cn_Meeting\",\n    \"CardCode\": \"v001\",\n    \"Details\": \"create meeting type activity\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Contacts(id)",
+      "description": "Update an instance of 'Contacts' with the given payload of type 'Contact' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Contacts(123)\n{\n    \"Details\": \"follow up meeting\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Contacts(id)",
+      "description": "Delete an instance of 'Contacts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Contacts(123)"
+    }
+  ]
+}

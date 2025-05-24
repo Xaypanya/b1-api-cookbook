@@ -1,0 +1,48 @@
+{
+  "service": "ApprovalStages",
+  "description": "This entity enables you to manipulate 'ApprovalStages'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ApprovalStages(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ApprovalStages' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ApprovalStages(123)\n\nGET https://localhost:50000/b1s/v2/ApprovalStages(123)?$select=Code,Name,NoOfApproversRequired"
+    },
+    {
+      "method": "GET",
+      "path": "ApprovalStages",
+      "description": "Retrieve a collection of 'ApprovalStages' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ApprovalStages\n\nGET https://localhost:50000/b1s/v2/ApprovalStages?$select=Code,Name,NoOfApproversRequired&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalStages",
+      "description": "Create an instance of 'ApprovalStages' with the given payload of type 'ApprovalStage' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalStages\n{\n    \"ApprovalStageApprovers\": [\n        {\n            \"UserID\": \"1\"\n        }\n    ],\n    \"Name\": \"stage01\",\n    \"NoOfApproversRequired\": \"1\",\n    \"Remarks\": \"Approved by Manager\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ApprovalStages(id)",
+      "description": "Update an instance of 'ApprovalStages' with the given payload of type 'ApprovalStage' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ApprovalStages(123)\n{\n    \"Remarks\": \"Approved by Director\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ApprovalStages(id)",
+      "description": "Delete an instance of 'ApprovalStages' with the specified id. However, you are not allowed to remove the stage that is linked to an approval template.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ApprovalStages(123)"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalStages(id)/GetApprovalStage",
+      "description": "Invoke the method 'GetApprovalStage' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalStages(123)/GetApprovalStage"
+    },
+    {
+      "method": "POST",
+      "path": "ApprovalStages(id)/RemoveApprovalStage",
+      "description": "Invoke the method 'RemoveApprovalStage' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ApprovalStages(123)/RemoveApprovalStage"
+    }
+  ]
+}

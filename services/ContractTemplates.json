@@ -1,0 +1,36 @@
+{
+  "service": "ContractTemplates",
+  "description": "This entity enables you to manipulate 'ContractTemplates'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ContractTemplates(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ContractTemplates' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ContractTemplates('newTemplate')\n\nGET https://localhost:50000/b1s/v2/ContractTemplates('newTemplate')?$select=TemplateName,TemplateIsDeleted,TemplateIsRenewal"
+    },
+    {
+      "method": "GET",
+      "path": "ContractTemplates",
+      "description": "Retrieve a collection of 'ContractTemplates' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ContractTemplates\n\nGET https://localhost:50000/b1s/v2/ContractTemplates?$select=TemplateName,TemplateIsDeleted,TemplateIsRenewal&$filter=startswith(TemplateName, 'a') &$orderby=TemplateName&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ContractTemplates",
+      "description": "Create an instance of 'ContractTemplates' with the given payload of type 'ContractTemplate' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ContractTemplates\n{\n    \"ContractType\": \"ct_SerialNumber\",\n    \"Description\": \"for service\",\n    \"MondayEnabled\": \"tNO\",\n    \"Remarks\": \"Create new Contract Template\",\n    \"TemplateName\": \"newTemplate\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ContractTemplates(id)",
+      "description": "Update an instance of 'ContractTemplates' with the given payload of type 'ContractTemplate' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ContractTemplates('newTemplate')\n{\n    \"Details\": \"new service contract template\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ContractTemplates(id)",
+      "description": "Delete an instance of 'ContractTemplates' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ContractTemplates('newTemplate')"
+    }
+  ]
+}

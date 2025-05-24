@@ -1,0 +1,36 @@
+{
+  "service": "WebClientVariantGroups",
+  "description": "This entity enables you to manipulate 'WebClientVariantGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientVariantGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientVariantGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientVariantGroups('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientVariantGroups('abc')?$select=Guid,UserId,ViewType"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientVariantGroups",
+      "description": "Retrieve a collection of 'WebClientVariantGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientVariantGroups\n\nGET https://localhost:50000/b1s/v2/WebClientVariantGroups?$select=Guid,UserId,ViewType&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientVariantGroups",
+      "description": "Create an instance of 'WebClientVariantGroups' with the given payload of type 'WebClientVariantGroup' in JSON format. \"Guid\", \"UserId\", \"ViewType\", and \"ObjectName\" are four mandertory properties.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientVariantGroups\n{\n    \"Guid\": \"VG1\",\n    \"ObjectName\": \"objName1\",\n    \"UserId\": 1,\n    \"ViewType\": \"2\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientVariantGroups(id)",
+      "description": "Update an instance of 'WebClientVariantGroups' with the given payload of type 'WebClientVariantGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientVariantGroups('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientVariantGroups(id)",
+      "description": "Delete an instance of 'WebClientVariantGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientVariantGroups('abc')"
+    }
+  ]
+}

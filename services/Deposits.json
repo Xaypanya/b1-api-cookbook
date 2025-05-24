@@ -1,0 +1,42 @@
+{
+  "service": "Deposits",
+  "description": "This entity enables you to manipulate 'Deposits'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Deposits(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Deposits' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Deposits(123)\n\nGET https://localhost:50000/b1s/v2/Deposits(123)?$select=DepositNumber,AbsEntry,DepositType"
+    },
+    {
+      "method": "GET",
+      "path": "Deposits",
+      "description": "Retrieve a collection of 'Deposits' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Deposits\n\nGET https://localhost:50000/b1s/v2/Deposits?$select=DepositNumber,AbsEntry,DepositType&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Deposits",
+      "description": "Create an instance of 'Deposits' with the given payload of type 'Deposit' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Deposits\n{\n    \"CreditLines\": [\n        {\n            \"AbsId\": 1\n        }\n    ],\n    \"DepositAccount\": \"10000\",\n    \"DepositType\": \"dtCredit\",\n    \"VoucherAccount\": \"10100\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Deposits(id)",
+      "description": "Update an instance of 'Deposits' with the given payload of type 'Deposit' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Deposits(123)\n{\n    \"JournalRemarks\": \"Updating existing deposit\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "Deposits(id)/CancelDeposit",
+      "description": "Invoke the method 'CancelDeposit' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Deposits(123)/CancelDeposit"
+    },
+    {
+      "method": "POST",
+      "path": "Deposits(id)/CancelDepositbyCurrentSystemDate",
+      "description": "Invoke the method 'CancelDepositbyCurrentSystemDate' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Deposits(123)/CancelDepositbyCurrentSystemDate"
+    }
+  ]
+}

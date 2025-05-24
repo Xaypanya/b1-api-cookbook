@@ -1,0 +1,54 @@
+{
+  "service": "ElectronicCommunicationActionsService",
+  "description": "This API enables you to invoke the interfaces defined on 'ElectronicCommunicationActionsService'. This API depends on EFM runtime.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_GetEcmAction",
+      "description": "Invoke the method 'GetEcmAction' on this service by specifying the payload 'EcmActionParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_GetEcmAction\n{\n    \"EcmActionParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_AddEcmAction",
+      "description": "Invoke the method 'AddEcmAction' on this service by specifying the payload 'EcmAction' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_AddEcmAction\n{\n    \"EcmAction\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_UpdateEcmAction",
+      "description": "Invoke the method 'UpdateEcmAction' on this service by specifying the payload 'EcmAction' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_UpdateEcmAction\n{\n    \"EcmAction\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_DeleteEcmAction",
+      "description": "Invoke the method 'DeleteEcmAction' on this service by specifying the payload 'EcmAction' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_DeleteEcmAction\n{\n    \"EcmAction\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_GetEcmActionByDoc",
+      "description": "Invoke the method 'GetEcmActionByDoc' on this service by specifying the payload 'EcmActionDocParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_GetEcmActionByDoc\n{\n    \"EcmActionDocParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_GetEcmActionLogList",
+      "description": "Invoke the method 'GetEcmActionLogList' on this service by specifying the payload 'EcmAction' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_GetEcmActionLogList\n{\n    \"EcmAction\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_GetEcmActionLog",
+      "description": "Invoke the method 'GetEcmActionLog' on this service by specifying the payload 'EcmActionLogParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_GetEcmActionLog\n{\n    \"EcmActionLogParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionsService_AddEcmActionLog",
+      "description": "Invoke the method 'AddEcmActionLog' on this service by specifying the payload 'EcmActionLog' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionsService_AddEcmActionLog\n{\n    \"EcmActionLog\": {}\n}"
+    }
+  ]
+}

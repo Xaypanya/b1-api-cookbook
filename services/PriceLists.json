@@ -1,0 +1,36 @@
+{
+  "service": "PriceLists",
+  "description": "This entity enables you to manipulate 'PriceLists'. It represents the management of price lists in the Inventory module. An item can have several prices, with each based on a different price list, for example, purchase price list, sales price list, distributor price list, and so on.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PriceLists(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PriceLists' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PriceLists(123)\n\nGET https://localhost:50000/b1s/v2/PriceLists(123)?$select=RoundingMethod,GroupNum,BasePriceList"
+    },
+    {
+      "method": "GET",
+      "path": "PriceLists",
+      "description": "Retrieve a collection of 'PriceLists' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PriceLists\n\nGET https://localhost:50000/b1s/v2/PriceLists?$select=RoundingMethod,GroupNum,BasePriceList&$filter=PriceListNo ge 123 &$orderby=PriceListNo&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PriceLists",
+      "description": "Create an instance of 'PriceLists' with the given payload of type 'PriceList' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PriceLists\n{\n    \"PriceListName\": \"Price List 30\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PriceLists(id)",
+      "description": "Update an instance of 'PriceLists' with the given payload of type 'PriceList' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PriceLists(123)\n{\n    \"PriceListName\": \"Price List 40\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PriceLists(id)",
+      "description": "Delete an instance of 'PriceLists' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PriceLists(123)"
+    }
+  ]
+}

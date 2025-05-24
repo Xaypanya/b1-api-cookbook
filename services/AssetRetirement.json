@@ -1,0 +1,30 @@
+{
+  "service": "AssetRetirement",
+  "description": "This entity enables you to manipulate 'AssetRetirement'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AssetRetirement(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AssetRetirement' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetRetirement(9)\n\nGET https://localhost:50000/b1s/v2/AssetRetirement(9)?$select=DocEntry,DocNum,Series"
+    },
+    {
+      "method": "GET",
+      "path": "AssetRetirement",
+      "description": "Retrieve a collection of 'AssetRetirement' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetRetirement\n\nGET https://localhost:50000/b1s/v2/AssetRetirement?$select=DocEntry,DocNum,Series&$filter=DocEntry ge 9 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AssetRetirement",
+      "description": "Create an instance of 'AssetRetirement' with the given payload of type 'AssetDocument' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetRetirement\n{\n    \"AssetDocumentLineCollection\": [\n        {\n            \"AssetNumber\": \"FA1\",\n            \"Quantity\": 1,\n            \"TotalLC\": 1000\n        }\n    ],\n    \"AssetValueDate\": \"2016-08-29\",\n    \"DocumentDate\": \"2016-08-29\",\n    \"PostingDate\": \"2016-08-29\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AssetRetirement(id)",
+      "description": "Update an instance of 'AssetRetirement' with the given payload of type 'AssetDocument' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AssetRetirement(9)\n{\n    \"AssetDocumentLineCollection\": [\n        {\n            \"LineNumber\": 1,\n            \"Remarks\": \"Remark is 0\"\n        }\n    ]\n}"
+    }
+  ]
+}

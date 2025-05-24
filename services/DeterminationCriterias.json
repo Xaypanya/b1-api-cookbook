@@ -1,0 +1,24 @@
+{
+  "service": "DeterminationCriterias",
+  "description": "This entity enables you to manipulate 'DeterminationCriterias'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DeterminationCriterias(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DeterminationCriterias' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DeterminationCriterias(2)\n\nGET https://localhost:50000/b1s/v2/DeterminationCriterias(2)?$select=DmcId,DeterminationCriteria,IsActive"
+    },
+    {
+      "method": "GET",
+      "path": "DeterminationCriterias",
+      "description": "Retrieve a collection of 'DeterminationCriterias' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DeterminationCriterias\n\nGET https://localhost:50000/b1s/v2/DeterminationCriterias?$select=DmcId,DeterminationCriteria,IsActive&$filter=DmcId ge 2 &$orderby=DmcId&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "DeterminationCriterias(id)",
+      "description": "Update an instance of 'DeterminationCriterias' with the given payload of type 'DeterminationCriteria' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DeterminationCriterias(2)\n{\n    \"IsActive\": \"tYES\"\n}"
+    }
+  ]
+}

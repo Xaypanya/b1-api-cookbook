@@ -1,0 +1,36 @@
+{
+  "service": "CustomsGroups",
+  "description": "This entity enables you to manipulate 'CustomsGroups'. It defines custom groups, which specify the customs duty for items purchased abroad that are liable for customs.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CustomsGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CustomsGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CustomsGroups(123)\n\nGET https://localhost:50000/b1s/v2/CustomsGroups(123)?$select=Code,Name,Number"
+    },
+    {
+      "method": "GET",
+      "path": "CustomsGroups",
+      "description": "Retrieve a collection of 'CustomsGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CustomsGroups\n\nGET https://localhost:50000/b1s/v2/CustomsGroups?$select=Code,Name,Number&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CustomsGroups",
+      "description": "Create an instance of 'CustomsGroups' with the given payload of type 'CustomsGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CustomsGroups\n{\n    \"Customs\": \"10\",\n    \"CustomsAllocationAccount\": \"_SYS00000000051\",\n    \"CustomsExpenseAccount\": \"_SYS00000000085\",\n    \"Name\": \"Exempt\",\n    \"Other\": \"30\",\n    \"Purchase\": \"20\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CustomsGroups(id)",
+      "description": "Update an instance of 'CustomsGroups' with the given payload of type 'CustomsGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CustomsGroups(123)\n{\n    \"Name\": \"Custom exempt\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CustomsGroups(id)",
+      "description": "Delete an instance of 'CustomsGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CustomsGroups(123)"
+    }
+  ]
+}

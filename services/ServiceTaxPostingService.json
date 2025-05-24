@@ -1,0 +1,18 @@
+{
+  "service": "ServiceTaxPostingService",
+  "description": "This API enables you to invoke the interfaces defined on 'ServiceTaxPostingService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ServiceTaxPostingService_PostServiceTax",
+      "description": "Invoke the method 'PostServiceTax' on this service by specifying the payload 'ServiceTaxPostingParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceTaxPostingService_PostServiceTax\n{\n    \"ServiceTaxPostingParams\": {\n        \"DocEntry\": 5\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceTaxPostingService_GetTaxableDeliveries",
+      "description": "Invoke the method 'GetTaxableDeliveries' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceTaxPostingService_GetTaxableDeliveries"
+    }
+  ]
+}

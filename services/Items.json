@@ -1,0 +1,42 @@
+{
+  "service": "Items",
+  "description": "This entity enables you to manipulate 'Items'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Items(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Items' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Items('i001')\n\nGET https://localhost:50000/b1s/v2/Items('i001')?$select=ItemCode,ItemName,ForeignName"
+    },
+    {
+      "method": "GET",
+      "path": "Items",
+      "description": "Retrieve a collection of 'Items' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Items\n\nGET https://localhost:50000/b1s/v2/Items?$select=ItemCode,ItemName,ForeignName&$filter=startswith(ItemCode, 'a') &$orderby=ItemCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Items",
+      "description": "Create an instance of 'Items' with the given payload of type 'Item' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Items\n{\n    \"ItemCode\": \"i001\",\n    \"ItemName\": \"Item1\",\n    \"ItemType\": \"itItems\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Items(id)",
+      "description": "Update an instance of 'Items' with the given payload of type 'Item' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Items('i001')\n{\n    \"ItemName\": \"Updated Item Name\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Items(id)",
+      "description": "Delete an instance of 'Items' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Items('i001')"
+    },
+    {
+      "method": "POST",
+      "path": "Items(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Items('i001')/Cancel"
+    }
+  ]
+}

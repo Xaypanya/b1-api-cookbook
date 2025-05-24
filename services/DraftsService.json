@@ -1,0 +1,24 @@
+{
+  "service": "DraftsService",
+  "description": "This API enables you to invoke the interfaces defined on 'DraftsService'. It represents the preliminary version of a document or report.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "DraftsService_GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this service by specifying the payload 'Document' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DraftsService_GetApprovalTemplates\n{\n    \"Document\": {\n        \"CardCode\": \"c001\",\n        \"DocObjectCode\": \"23\",\n        \"DocumentLines\": [\n            {\n                \"ItemCode\": \"i001\",\n                \"Quantity\": \"100\",\n                \"TaxCode\": \"T1\",\n                \"UnitPrice\": \"30\"\n            }\n        ]\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "DraftsService_HandleApprovalRequest",
+      "description": "Invoke the method 'HandleApprovalRequest' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/DraftsService_HandleApprovalRequest"
+    },
+    {
+      "method": "POST",
+      "path": "DraftsService_SaveDraftToDocument",
+      "description": "Invoke the method 'SaveDraftToDocument' on this service by specifying the payload 'Document' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DraftsService_SaveDraftToDocument\n{\n    \"Document\": {\n        \"DocDueDate\": \"2017-01-28\",\n        \"DocEntry\": \"3\"\n    }\n}"
+    }
+  ]
+}

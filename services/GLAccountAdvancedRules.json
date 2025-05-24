@@ -1,0 +1,36 @@
+{
+  "service": "GLAccountAdvancedRules",
+  "description": "This entity enables you to manipulate 'GLAccountAdvancedRules'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "GLAccountAdvancedRules(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'GLAccountAdvancedRules' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/GLAccountAdvancedRules(8)\n\nGET https://localhost:50000/b1s/v2/GLAccountAdvancedRules(8)?$select=AbsoluteEntry,Period,BeginningofFinancialYear"
+    },
+    {
+      "method": "GET",
+      "path": "GLAccountAdvancedRules",
+      "description": "Retrieve a collection of 'GLAccountAdvancedRules' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/GLAccountAdvancedRules\n\nGET https://localhost:50000/b1s/v2/GLAccountAdvancedRules?$select=AbsoluteEntry,Period,BeginningofFinancialYear&$filter=AbsoluteEntry ge 123 &$orderby=AbsoluteEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "GLAccountAdvancedRules",
+      "description": "Create an instance of 'GLAccountAdvancedRules' with the given payload of type 'GLAccountAdvancedRule' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/GLAccountAdvancedRules\n{\n    \"AbsoluteEntry\": 1,\n    \"BeginningofFinancialYear\": \"2016-01-01\",\n    \"Code\": \"Test1\",\n    \"Description\": \"Test Determination Rules1\",\n    \"EUExpensesAccount\": \"2730\",\n    \"EURevenuesAccount\": \"2725\",\n    \"ExpenseClearingAct\": \"2739\",\n    \"ExpensesAccount\": \"2720\",\n    \"FinancialYear\": 2016,\n    \"ForeignExpensAcc\": \"2735\",\n    \"ForeignRevenueAcc\": \"2732\",\n    \"FromDate\": \"2016-01-01\",\n    \"IsActive\": \"tNO\",\n    \"Period\": \"2016\",\n    \"RevenuesAccount\": \"2715\",\n    \"ToDate\": \"2016-12-31\",\n    \"Warehouse\": \"01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "GLAccountAdvancedRules(id)",
+      "description": "Update an instance of 'GLAccountAdvancedRules' with the given payload of type 'GLAccountAdvancedRule' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/GLAccountAdvancedRules(8)\n{\n    \"AbsoluteEntry\": 1,\n    \"Description\": \"Test Determination Rules123\",\n    \"IsActive\": \"tYES\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "GLAccountAdvancedRules(id)",
+      "description": "Delete an instance of 'GLAccountAdvancedRules' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/GLAccountAdvancedRules(8)"
+    }
+  ]
+}

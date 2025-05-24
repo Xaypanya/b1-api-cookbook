@@ -1,0 +1,36 @@
+{
+  "service": "DeductionTaxHierarchies",
+  "description": "This entity enables you to manipulate 'DeductionTaxHierarchies'. It defines taxation levels to withhold from payments to vendors.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DeductionTaxHierarchies(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DeductionTaxHierarchies' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductionTaxHierarchies(123)\n\nGET https://localhost:50000/b1s/v2/DeductionTaxHierarchies(123)?$select=AbsEntry,BPCode,HierarchyCode"
+    },
+    {
+      "method": "GET",
+      "path": "DeductionTaxHierarchies",
+      "description": "Retrieve a collection of 'DeductionTaxHierarchies' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DeductionTaxHierarchies\n\nGET https://localhost:50000/b1s/v2/DeductionTaxHierarchies?$select=AbsEntry,BPCode,HierarchyCode&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DeductionTaxHierarchies",
+      "description": "Create an instance of 'DeductionTaxHierarchies' with the given payload of type 'DeductionTaxHierarchy' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DeductionTaxHierarchies\n{\n    \"BPCode\": \"v001\",\n    \"DeductionTaxHierarchies_Lines\": [\n        {\n            \"DeductionPercent\": \"12\",\n            \"MaximumTotal\": \"10000\"\n        }\n    ],\n    \"HierarchyCode\": \"G01\",\n    \"HierarchyName\": \"new hierarchy group\",\n    \"ValidFrom\": \"2014-01-01\",\n    \"ValidUntil\": \"2014-12-31\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DeductionTaxHierarchies(id)",
+      "description": "Update an instance of 'DeductionTaxHierarchies' with the given payload of type 'DeductionTaxHierarchy' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DeductionTaxHierarchies(123)\n{\n    \"HierarchyName\": \"vendor hierarchy group\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DeductionTaxHierarchies(id)",
+      "description": "Delete an instance of 'DeductionTaxHierarchies' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DeductionTaxHierarchies(123)"
+    }
+  ]
+}

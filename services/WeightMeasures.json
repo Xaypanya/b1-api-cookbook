@@ -1,0 +1,36 @@
+{
+  "service": "WeightMeasures",
+  "description": "This entity enables you to manipulate 'WeightMeasures'. It defines the weight measure units that are used for item records.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WeightMeasures(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WeightMeasures' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WeightMeasures(123)\n\nGET https://localhost:50000/b1s/v2/WeightMeasures(123)?$select=UnitCode,UnitDisplay,UnitName"
+    },
+    {
+      "method": "GET",
+      "path": "WeightMeasures",
+      "description": "Retrieve a collection of 'WeightMeasures' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WeightMeasures\n\nGET https://localhost:50000/b1s/v2/WeightMeasures?$select=UnitCode,UnitDisplay,UnitName&$filter=UnitCode ge 123 &$orderby=UnitCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WeightMeasures",
+      "description": "Create an instance of 'WeightMeasures' with the given payload of type 'WeightMeasure' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WeightMeasures\n{\n    \"UnitDisplay\": \"T\",\n    \"UnitName\": \"ton\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WeightMeasures(id)",
+      "description": "Update an instance of 'WeightMeasures' with the given payload of type 'WeightMeasure' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WeightMeasures(123)\n{\n    \"UnitName\": \"tonne\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WeightMeasures(id)",
+      "description": "Delete an instance of 'WeightMeasures' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WeightMeasures(123)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "service": "OccurrenceCodesService",
+  "description": "This API enables you to invoke the interfaces defined on 'OccurrenceCodesService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "OccurrenceCodesService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/OccurrenceCodesService_GetList"
+    }
+  ]
+}

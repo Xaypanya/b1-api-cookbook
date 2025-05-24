@@ -1,0 +1,12 @@
+{
+  "service": "BOEInstructionsService",
+  "description": "This API enables you to invoke the interfaces defined on 'BOEInstructionsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BOEInstructionsService_GetBOEInstructionList",
+      "description": "Invoke the method 'GetBOEInstructionList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/BOEInstructionsService_GetBOEInstructionList"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "service": "ExternalCallsService",
+  "description": "This API enables you to invoke the interfaces defined on 'ExternalCallsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ExternalCallsService_SendCall",
+      "description": "Invoke the method 'SendCall' on this service by specifying the payload 'ExternalCall' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ExternalCallsService_SendCall\n{\n    \"ExternalCall\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ExternalCallsService_UpdateCall",
+      "description": "Invoke the method 'UpdateCall' on this service by specifying the payload 'ExternalCall' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ExternalCallsService_UpdateCall\n{\n    \"ExternalCall\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ExternalCallsService_GetCall",
+      "description": "Invoke the method 'GetCall' on this service by specifying the payload 'ExternalCallParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ExternalCallsService_GetCall\n{\n    \"ExternalCallParams\": {}\n}"
+    }
+  ]
+}

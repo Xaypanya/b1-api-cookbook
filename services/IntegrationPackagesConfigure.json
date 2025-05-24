@@ -1,0 +1,36 @@
+{
+  "service": "IntegrationPackagesConfigure",
+  "description": "This entity enables you to manipulate 'IntegrationPackagesConfigure'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "IntegrationPackagesConfigure(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'IntegrationPackagesConfigure' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/IntegrationPackagesConfigure(123)\n\nGET https://localhost:50000/b1s/v2/IntegrationPackagesConfigure(123)?$select=AbsEntry,Code,Name"
+    },
+    {
+      "method": "GET",
+      "path": "IntegrationPackagesConfigure",
+      "description": "Retrieve a collection of 'IntegrationPackagesConfigure' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/IntegrationPackagesConfigure\n\nGET https://localhost:50000/b1s/v2/IntegrationPackagesConfigure?$select=AbsEntry,Code,Name&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "IntegrationPackagesConfigure",
+      "description": "Create an instance of 'IntegrationPackagesConfigure' with the given payload of type 'IntegrationPackageConfigure' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/IntegrationPackagesConfigure\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "IntegrationPackagesConfigure(id)",
+      "description": "Update an instance of 'IntegrationPackagesConfigure' with the given payload of type 'IntegrationPackageConfigure' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/IntegrationPackagesConfigure(123)\n{\n    \"IsEnable\": \"tYES\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "IntegrationPackagesConfigure(id)",
+      "description": "Delete an instance of 'IntegrationPackagesConfigure' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/IntegrationPackagesConfigure(123)"
+    }
+  ]
+}

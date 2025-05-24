@@ -1,0 +1,36 @@
+{
+  "service": "LocalEra",
+  "description": "This entity enables you to manipulate 'LocalEra'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "LocalEra(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'LocalEra' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/LocalEra('D')\n\nGET https://localhost:50000/b1s/v2/LocalEra('D')?$select=EraName,StartDate,Code"
+    },
+    {
+      "method": "GET",
+      "path": "LocalEra",
+      "description": "Retrieve a collection of 'LocalEra' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/LocalEra\n\nGET https://localhost:50000/b1s/v2/LocalEra?$select=EraName,StartDate,Code&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "LocalEra",
+      "description": "Create an instance of 'LocalEra' with the given payload of type 'LocalEra' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/LocalEra\n{\n    \"Code\": \"D\",\n    \"EraName\": \"Showa\",\n    \"StartDate\": \"1923-12-25\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "LocalEra(id)",
+      "description": "Update an instance of 'LocalEra' with the given payload of type 'LocalEra' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/LocalEra('D')\n{\n    \"EraName\": \"Maruzen\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "LocalEra(id)",
+      "description": "Delete an instance of 'LocalEra' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/LocalEra('D')"
+    }
+  ]
+}

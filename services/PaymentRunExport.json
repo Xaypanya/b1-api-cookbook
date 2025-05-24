@@ -1,0 +1,18 @@
+{
+  "service": "PaymentRunExport",
+  "description": "This entity enables you to manipulate 'PaymentRunExport'. It allows you to export data of automatic payments for both incoming payments and outgoing payments to vendors.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PaymentRunExport(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PaymentRunExport' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentRunExport(123)\n\nGET https://localhost:50000/b1s/v2/PaymentRunExport(123)?$select=AbsoluteEntry,RunDate,VendorNum"
+    },
+    {
+      "method": "GET",
+      "path": "PaymentRunExport",
+      "description": "Retrieve a collection of 'PaymentRunExport' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PaymentRunExport\n\nGET https://localhost:50000/b1s/v2/PaymentRunExport?$select=AbsoluteEntry,RunDate,VendorNum&$filter=AbsoluteEntry ge 123 &$orderby=AbsoluteEntry&$top=10&$skip=1"
+    }
+  ]
+}

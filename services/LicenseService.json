@@ -1,0 +1,12 @@
+{
+  "service": "LicenseService",
+  "description": "This API enables you to invoke the interfaces defined on 'LicenseService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "LicenseService_GetInstallationNumber",
+      "description": "Invoke the method 'GetInstallationNumber' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/LicenseService_GetInstallationNumber"
+    }
+  ]
+}

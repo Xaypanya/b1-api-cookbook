@@ -1,0 +1,12 @@
+{
+  "service": "PaymentReasonCodeService",
+  "description": "This API enables you to invoke the interfaces defined on 'PaymentReasonCodeService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "PaymentReasonCodeService_GetPaymentReasonCodeList",
+      "description": "Invoke the method 'GetPaymentReasonCodeList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/PaymentReasonCodeService_GetPaymentReasonCodeList"
+    }
+  ]
+}

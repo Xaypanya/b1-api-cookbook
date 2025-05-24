@@ -1,0 +1,12 @@
+{
+  "service": "GTIsService",
+  "description": "This API enables you to invoke the interfaces defined on 'GTIsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "GTIsService_Import",
+      "description": "Invoke the method 'Import' on this service by specifying the payload 'GTIParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/GTIsService_Import\n{\n    \"GTIParams\": {}\n}"
+    }
+  ]
+}

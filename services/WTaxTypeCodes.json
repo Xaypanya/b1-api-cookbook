@@ -1,0 +1,36 @@
+{
+  "service": "WTaxTypeCodes",
+  "description": "This entity enables you to manipulate 'WTaxTypeCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WTaxTypeCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WTaxTypeCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WTaxTypeCodes(123)\n\nGET https://localhost:50000/b1s/v2/WTaxTypeCodes(123)?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "WTaxTypeCodes",
+      "description": "Retrieve a collection of 'WTaxTypeCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WTaxTypeCodes\n\nGET https://localhost:50000/b1s/v2/WTaxTypeCodes?$select=Code,Description&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WTaxTypeCodes",
+      "description": "Create an instance of 'WTaxTypeCodes' with the given payload of type 'WTaxTypeCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WTaxTypeCodes\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WTaxTypeCodes(id)",
+      "description": "Update an instance of 'WTaxTypeCodes' with the given payload of type 'WTaxTypeCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WTaxTypeCodes(123)\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WTaxTypeCodes(id)",
+      "description": "Delete an instance of 'WTaxTypeCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WTaxTypeCodes(123)"
+    }
+  ]
+}

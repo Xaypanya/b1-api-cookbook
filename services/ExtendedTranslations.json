@@ -1,0 +1,36 @@
+{
+  "service": "ExtendedTranslations",
+  "description": "This entity enables you to manipulate 'ExtendedTranslations'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ExtendedTranslations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ExtendedTranslations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ExtendedTranslations(1)\n\nGET https://localhost:50000/b1s/v2/ExtendedTranslations(1)?$select=DocEntry,Category,ID"
+    },
+    {
+      "method": "GET",
+      "path": "ExtendedTranslations",
+      "description": "Retrieve a collection of 'ExtendedTranslations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ExtendedTranslations\n\nGET https://localhost:50000/b1s/v2/ExtendedTranslations?$select=DocEntry,Category,ID&$filter=DocEntry ge 1 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ExtendedTranslations",
+      "description": "Create an instance of 'ExtendedTranslations' with the given payload of type 'ExtendedTranslation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ExtendedTranslations\n{\n    \"Category\": \"asEFMItem\",\n    \"ID\": \"test\",\n    \"SecondaryID\": \"SecondaryID\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ExtendedTranslations(id)",
+      "description": "Update an instance of 'ExtendedTranslations' with the given payload of type 'ExtendedTranslation' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ExtendedTranslations(1)\n{\n    \"ID\": \"123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ExtendedTranslations(id)",
+      "description": "Delete an instance of 'ExtendedTranslations' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ExtendedTranslations(1)"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "service": "PurchaseDownPayments",
+  "description": "This entity enables you to manipulate 'PurchaseDownPayments'. It represents a document to ensure that a customer is committed and will follow through with a placed order.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "PurchaseDownPayments(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'PurchaseDownPayments' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseDownPayments(123)\n\nGET https://localhost:50000/b1s/v2/PurchaseDownPayments(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "PurchaseDownPayments",
+      "description": "Retrieve a collection of 'PurchaseDownPayments' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/PurchaseDownPayments\n\nGET https://localhost:50000/b1s/v2/PurchaseDownPayments?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDownPayments",
+      "description": "Create an instance of 'PurchaseDownPayments' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDownPayments\n{\n    \"CardCode\": \"c001\",\n    \"DocumentLines\": [\n        {\n            \"ItemCode\": \"i001\",\n            \"Quantity\": \"100\",\n            \"TaxCode\": \"T1\",\n            \"UnitPrice\": \"50\"\n        }\n    ],\n    \"DownPaymentType\": \"dptInvoice\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "PurchaseDownPayments(id)",
+      "description": "Update an instance of 'PurchaseDownPayments' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/PurchaseDownPayments(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "PurchaseDownPayments(id)",
+      "description": "Delete an instance of 'PurchaseDownPayments' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/PurchaseDownPayments(123)"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDownPayments(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDownPayments(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDownPayments(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDownPayments(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDownPayments(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDownPayments(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "PurchaseDownPayments(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/PurchaseDownPayments(123)/CreateCancellationDocument"
+    }
+  ]
+}

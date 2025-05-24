@@ -1,0 +1,54 @@
+{
+  "service": "CorrectionPurchaseInvoiceReversal",
+  "description": "This entity enables you to manipulate 'CorrectionPurchaseInvoiceReversal'. It is used to reverse the correction purchase invoice.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CorrectionPurchaseInvoiceReversal(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CorrectionPurchaseInvoiceReversal' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal(123)\n\nGET https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal(123)?$select=DocEntry,DocNum,DocType"
+    },
+    {
+      "method": "GET",
+      "path": "CorrectionPurchaseInvoiceReversal",
+      "description": "Retrieve a collection of 'CorrectionPurchaseInvoiceReversal' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal\n\nGET https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal?$select=DocEntry,DocNum,DocType&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionPurchaseInvoiceReversal",
+      "description": "Create an instance of 'CorrectionPurchaseInvoiceReversal' with the given payload of type 'Document' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal\n{\n    \"CardCode\": \"v001\",\n    \"Comments\": \"add correction invoice reversal based on correction invoice\",\n    \"DocDate\": \"2014-12-06\",\n    \"DocDueDate\": \"2014-12-06\",\n    \"InternalCorrectedDocNum\": \"8\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CorrectionPurchaseInvoiceReversal(id)",
+      "description": "Update an instance of 'CorrectionPurchaseInvoiceReversal' with the given payload of type 'Document' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal(123)\n{\n    \"Comments\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionPurchaseInvoiceReversal(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal(123)/Close"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionPurchaseInvoiceReversal(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionPurchaseInvoiceReversal(id)/Reopen",
+      "description": "Invoke the method 'Reopen' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal(123)/Reopen"
+    },
+    {
+      "method": "POST",
+      "path": "CorrectionPurchaseInvoiceReversal(id)/CreateCancellationDocument",
+      "description": "Invoke the method 'CreateCancellationDocument' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/CorrectionPurchaseInvoiceReversal(123)/CreateCancellationDocument"
+    }
+  ]
+}

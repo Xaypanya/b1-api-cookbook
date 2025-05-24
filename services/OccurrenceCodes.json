@@ -1,0 +1,36 @@
+{
+  "service": "OccurrenceCodes",
+  "description": "This entity enables you to manipulate 'OccurrenceCodes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "OccurrenceCodes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'OccurrenceCodes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/OccurrenceCodes(123)\n\nGET https://localhost:50000/b1s/v2/OccurrenceCodes(123)?$select=AbsEntry,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "OccurrenceCodes",
+      "description": "Retrieve a collection of 'OccurrenceCodes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/OccurrenceCodes\n\nGET https://localhost:50000/b1s/v2/OccurrenceCodes?$select=AbsEntry,Code,Description&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "OccurrenceCodes",
+      "description": "Create an instance of 'OccurrenceCodes' with the given payload of type 'OccurenceCode' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/OccurrenceCodes\n{\n    \"Code\": \"01\",\n    \"Description\": \"001\",\n    \"RequestedBoeStatus\": \"boes_Created\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "OccurrenceCodes(id)",
+      "description": "Update an instance of 'OccurrenceCodes' with the given payload of type 'OccurenceCode' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/OccurrenceCodes(123)\n{\n    \"Description\": \"updating\",\n    \"RequestedBoeStatus\": \"boes_Deposited\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "OccurrenceCodes(id)",
+      "description": "Delete an instance of 'OccurrenceCodes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/OccurrenceCodes(123)"
+    }
+  ]
+}

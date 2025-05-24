@@ -1,0 +1,36 @@
+{
+  "service": "CertificateSeries",
+  "description": "This entity enables you to manipulate 'CertificateSeries'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CertificateSeries(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CertificateSeries' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CertificateSeries(123)\n\nGET https://localhost:50000/b1s/v2/CertificateSeries(123)?$select=AbsEntry,Code,Section"
+    },
+    {
+      "method": "GET",
+      "path": "CertificateSeries",
+      "description": "Retrieve a collection of 'CertificateSeries' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CertificateSeries\n\nGET https://localhost:50000/b1s/v2/CertificateSeries?$select=AbsEntry,Code,Section&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CertificateSeries",
+      "description": "Create an instance of 'CertificateSeries' with the given payload of type 'CertificateSeries' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CertificateSeries\n{\n    \"AbsEntry\": 1,\n    \"Code\": \"D1\",\n    \"DefaultSeries\": 0,\n    \"Location\": -1,\n    \"Section\": 1,\n    \"SeriesLines\": [\n        {\n            \"FirstNum\": 1,\n            \"LastNum\": null,\n            \"NextNum\": 1,\n            \"Prefix\": \"D\",\n            \"Series\": 0\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CertificateSeries(id)",
+      "description": "Update an instance of 'CertificateSeries' with the given payload of type 'CertificateSeries' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CertificateSeries(123)\n{\n    \"Code\": \"C123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CertificateSeries(id)",
+      "description": "Delete an instance of 'CertificateSeries' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CertificateSeries(123)"
+    }
+  ]
+}

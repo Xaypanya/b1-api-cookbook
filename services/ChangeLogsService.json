@@ -1,0 +1,18 @@
+{
+  "service": "ChangeLogsService",
+  "description": "This API enables you to invoke the interfaces defined on 'ChangeLogsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ChangeLogsService_GetChangeLog",
+      "description": "Invoke the method 'GetChangeLog' on this service by specifying the payload 'GetChangeLogParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ChangeLogsService_GetChangeLog\n{\n    \"GetChangeLogParams\": {\n        \"Object\": \"clPurchaseOrders\",\n        \"PrimaryKey\": \"7\",\n        \"UDOObjectCode\": \"3\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ChangeLogsService_GetChangeLogDifferences",
+      "description": "Invoke the method 'GetChangeLogDifferences' on this service by specifying the payload 'ShowDifferenceParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ChangeLogsService_GetChangeLogDifferences\n{\n    \"ShowDifferenceParams\": {\n        \"LogInstance\": 1,\n        \"LogInstance2\": 2,\n        \"Object\": \"clPurchaseOrders\",\n        \"PrimaryKey\": \"7\",\n        \"UDOObjectCode\": \"3\"\n    }\n}"
+    }
+  ]
+}

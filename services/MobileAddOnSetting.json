@@ -1,0 +1,36 @@
+{
+  "service": "MobileAddOnSetting",
+  "description": "This entity enables you to manipulate 'MobileAddOnSetting'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "MobileAddOnSetting(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'MobileAddOnSetting' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/MobileAddOnSetting('abc')\n\nGET https://localhost:50000/b1s/v2/MobileAddOnSetting('abc')?$select=Code,Description,Url"
+    },
+    {
+      "method": "GET",
+      "path": "MobileAddOnSetting",
+      "description": "Retrieve a collection of 'MobileAddOnSetting' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/MobileAddOnSetting\n\nGET https://localhost:50000/b1s/v2/MobileAddOnSetting?$select=Code,Description,Url&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "MobileAddOnSetting",
+      "description": "Create an instance of 'MobileAddOnSetting' with the given payload of type 'MobileAddOnSetting' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MobileAddOnSetting\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "MobileAddOnSetting(id)",
+      "description": "Update an instance of 'MobileAddOnSetting' with the given payload of type 'MobileAddOnSetting' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/MobileAddOnSetting('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "MobileAddOnSetting(id)",
+      "description": "Delete an instance of 'MobileAddOnSetting' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/MobileAddOnSetting('abc')"
+    }
+  ]
+}

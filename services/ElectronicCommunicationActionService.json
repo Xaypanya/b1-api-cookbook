@@ -1,0 +1,36 @@
+{
+  "service": "ElectronicCommunicationActionService",
+  "description": "This API enables you to invoke the interfaces defined on 'ElectronicCommunicationActionService'. This API is deprecated while 'ElectronicCommunicationActionsService' is recommended. As such, this object would be removed and not exposed in the future patches.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionService_GetAction",
+      "description": "Invoke the method 'GetAction' on this service by specifying the payload 'ECMCodeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionService_GetAction\n{\n    \"ECMCodeParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionService_UpdateAction",
+      "description": "Invoke the method 'UpdateAction' on this service by specifying the payload 'ECMActionStatusData' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionService_UpdateAction\n{\n    \"ECMActionStatusData\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionService_ConfirmSuccessOfCommunication",
+      "description": "Invoke the method 'ConfirmSuccessOfCommunication' on this service by specifying the payload 'ECMCodeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionService_ConfirmSuccessOfCommunication\n{\n    \"ECMCodeParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionService_ReportErrorAndContinue",
+      "description": "Invoke the method 'ReportErrorAndContinue' on this service by specifying the payload 'ECMCodeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionService_ReportErrorAndContinue\n{\n    \"ECMCodeParams\": {}\n}"
+    },
+    {
+      "method": "POST",
+      "path": "ElectronicCommunicationActionService_ReportErrorAndStop",
+      "description": "Invoke the method 'ReportErrorAndStop' on this service by specifying the payload 'ECMCodeParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ElectronicCommunicationActionService_ReportErrorAndStop\n{\n    \"ECMCodeParams\": {}\n}"
+    }
+  ]
+}

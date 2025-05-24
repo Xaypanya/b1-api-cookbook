@@ -1,0 +1,54 @@
+{
+  "service": "IncomingPayments",
+  "description": "This entity enables you to manipulate 'IncomingPayments'. It represents incoming payments from customers or, for returned goods, from vendors. Available payment methods are cash, credit cards, checks, bank transfers, and in some localizations, bills of exchange.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "IncomingPayments(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'IncomingPayments' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/IncomingPayments(123)\n\nGET https://localhost:50000/b1s/v2/IncomingPayments(123)?$select=DocNum,DocType,HandWritten"
+    },
+    {
+      "method": "GET",
+      "path": "IncomingPayments",
+      "description": "Retrieve a collection of 'IncomingPayments' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/IncomingPayments\n\nGET https://localhost:50000/b1s/v2/IncomingPayments?$select=DocNum,DocType,HandWritten&$filter=DocEntry ge 123 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "IncomingPayments",
+      "description": "Create an instance of 'IncomingPayments' with the given payload of type 'Payment' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/IncomingPayments\n{\n    \"CardCode\": \"c001\",\n    \"CashAccount\": \"_SYS00000000002\",\n    \"CashFlowAssignments\": [\n        {\n            \"AmountLC\": \"110\",\n            \"PaymentMeans\": \"pmtCash\"\n        }\n    ],\n    \"CashSum\": \"110\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "IncomingPayments(id)",
+      "description": "Update an instance of 'IncomingPayments' with the given payload of type 'Payment' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/IncomingPayments(123)\n{\n    \"Remarks\": \"new comments - modified by Service Layer\"\n}"
+    },
+    {
+      "method": "POST",
+      "path": "IncomingPayments(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/IncomingPayments(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "IncomingPayments(id)/GetApprovalTemplates",
+      "description": "Invoke the method 'GetApprovalTemplates' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/IncomingPayments(123)/GetApprovalTemplates"
+    },
+    {
+      "method": "POST",
+      "path": "IncomingPayments(id)/CancelbyCurrentSystemDate",
+      "description": "Invoke the method 'CancelbyCurrentSystemDate' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/IncomingPayments(123)/CancelbyCurrentSystemDate"
+    },
+    {
+      "method": "POST",
+      "path": "IncomingPayments(id)/RequestApproveCancellation",
+      "description": "Invoke the method 'RequestApproveCancellation' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/IncomingPayments(123)/RequestApproveCancellation"
+    }
+  ]
+}

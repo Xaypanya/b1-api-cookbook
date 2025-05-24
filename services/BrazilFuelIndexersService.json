@@ -1,0 +1,12 @@
+{
+  "service": "BrazilFuelIndexersService",
+  "description": "This API enables you to invoke the interfaces defined on 'BrazilFuelIndexersService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "BrazilFuelIndexersService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilFuelIndexersService_GetList"
+    }
+  ]
+}

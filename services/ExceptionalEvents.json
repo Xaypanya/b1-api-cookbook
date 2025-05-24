@@ -1,0 +1,36 @@
+{
+  "service": "ExceptionalEvents",
+  "description": "This entity enables you to manipulate 'ExceptionalEvents'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ExceptionalEvents(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ExceptionalEvents' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ExceptionalEvents('abc')\n\nGET https://localhost:50000/b1s/v2/ExceptionalEvents('abc')?$select=Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "ExceptionalEvents",
+      "description": "Retrieve a collection of 'ExceptionalEvents' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ExceptionalEvents\n\nGET https://localhost:50000/b1s/v2/ExceptionalEvents?$select=Code,Description&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ExceptionalEvents",
+      "description": "Create an instance of 'ExceptionalEvents' with the given payload of type 'ExceptionalEvent' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ExceptionalEvents\n{}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ExceptionalEvents(id)",
+      "description": "Update an instance of 'ExceptionalEvents' with the given payload of type 'ExceptionalEvent' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ExceptionalEvents('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ExceptionalEvents(id)",
+      "description": "Delete an instance of 'ExceptionalEvents' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ExceptionalEvents('abc')"
+    }
+  ]
+}

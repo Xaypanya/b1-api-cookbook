@@ -1,0 +1,36 @@
+{
+  "service": "UserDefaultGroups",
+  "description": "This entity enables you to manipulate 'UserDefaultGroups'. It defines default values (such as, default documents, default address in printed documents, windows color, and so on).",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserDefaultGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserDefaultGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserDefaultGroups('UD01')\n\nGET https://localhost:50000/b1s/v2/UserDefaultGroups('UD01')?$select=Code,Name,Warehouse"
+    },
+    {
+      "method": "GET",
+      "path": "UserDefaultGroups",
+      "description": "Retrieve a collection of 'UserDefaultGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserDefaultGroups\n\nGET https://localhost:50000/b1s/v2/UserDefaultGroups?$select=Code,Name,Warehouse&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserDefaultGroups",
+      "description": "Create an instance of 'UserDefaultGroups' with the given payload of type 'UserDefaultGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserDefaultGroups\n{\n    \"Address\": \"No. 1001 Chenhui road Shanghai\",\n    \"Code\": \"UD01\",\n    \"Name\": \"User Default\",\n    \"PrintReceipt\": \"boprcAlways\",\n    \"UseTax\": \"tYES\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UserDefaultGroups(id)",
+      "description": "Update an instance of 'UserDefaultGroups' with the given payload of type 'UserDefaultGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UserDefaultGroups('UD01')\n{\n    \"Name\": \"Default User\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserDefaultGroups(id)",
+      "description": "Delete an instance of 'UserDefaultGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserDefaultGroups('UD01')"
+    }
+  ]
+}

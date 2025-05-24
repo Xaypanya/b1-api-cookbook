@@ -1,0 +1,30 @@
+{
+  "service": "CustomsDeclaration",
+  "description": "This entity enables you to manipulate 'CustomsDeclaration'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CustomsDeclaration(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CustomsDeclaration' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CustomsDeclaration('2')\n\nGET https://localhost:50000/b1s/v2/CustomsDeclaration('2')?$select=CCDNum,Date,CustomsBroker"
+    },
+    {
+      "method": "GET",
+      "path": "CustomsDeclaration",
+      "description": "Retrieve a collection of 'CustomsDeclaration' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CustomsDeclaration\n\nGET https://localhost:50000/b1s/v2/CustomsDeclaration?$select=CCDNum,Date,CustomsBroker&$filter=startswith(CCDNum, '2') &$orderby=CCDNum&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CustomsDeclaration",
+      "description": "Create an instance of 'CustomsDeclaration' with the given payload of type 'CustomsDeclaration' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CustomsDeclaration\n{\n    \"CCDNum\": \"2\",\n    \"CustomsBroker\": \"C01\",\n    \"CustomsTerminal\": \"C01\",\n    \"Date\": \"2016-08-31\",\n    \"DocDate\": \"2016-08-31\",\n    \"DocNum\": \"Exp./Imp. Doc. No.\",\n    \"PaymentKey\": \"PID\",\n    \"SupplyDate\": \"2016-08-31\",\n    \"SupplyNum\": \"Supply Agreement Num\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CustomsDeclaration(id)",
+      "description": "Update an instance of 'CustomsDeclaration' with the given payload of type 'CustomsDeclaration' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CustomsDeclaration('2')\n{\n    \"DocNum\": \"123\"\n}"
+    }
+  ]
+}

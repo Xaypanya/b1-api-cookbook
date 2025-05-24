@@ -1,0 +1,12 @@
+{
+  "service": "AccountsService",
+  "description": "This API enables you to invoke the interfaces defined on 'AccountsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "AccountsService_CreateOpenBalance",
+      "description": "Invoke the method 'CreateOpenBalance' on this service by specifying the payload 'OpenningBalanceAccount,GLAccounts' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AccountsService_CreateOpenBalance\n{\n    \"GLAccounts\": {\n        \"Code\": \"test\"\n    },\n    \"OpenningBalanceAccount\": {\n        \"Date\": \"2016-08-29\"\n    }\n}"
+    }
+  ]
+}

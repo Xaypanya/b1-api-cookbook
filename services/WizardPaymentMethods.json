@@ -1,0 +1,36 @@
+{
+  "service": "WizardPaymentMethods",
+  "description": "This entity enables you to manipulate 'WizardPaymentMethods'. It defines various payment methods for various payment means (such as check, bank transfer, and in some localizations, bills of exchange) which can be used in payment wizard runs.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WizardPaymentMethods(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WizardPaymentMethods' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WizardPaymentMethods('outpay')\n\nGET https://localhost:50000/b1s/v2/WizardPaymentMethods('outpay')?$select=PaymentMethodCode,Description,Type"
+    },
+    {
+      "method": "GET",
+      "path": "WizardPaymentMethods",
+      "description": "Retrieve a collection of 'WizardPaymentMethods' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WizardPaymentMethods\n\nGET https://localhost:50000/b1s/v2/WizardPaymentMethods?$select=PaymentMethodCode,Description,Type&$filter=startswith(PaymentMethodCode, 'a') &$orderby=PaymentMethodCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WizardPaymentMethods",
+      "description": "Create an instance of 'WizardPaymentMethods' with the given payload of type 'WizardPaymentMethod' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WizardPaymentMethods\n{\n    \"BankCountry\": \"US\",\n    \"DefaultAccount\": \"11123456\",\n    \"DefaultBank\": \"USBank\",\n    \"Description\": \"outpayment bank method\",\n    \"PaymentMeans\": \"bopmCheck\",\n    \"PaymentMethodCode\": \"outpay\",\n    \"Type\": \"boptOutgoing\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WizardPaymentMethods(id)",
+      "description": "Update an instance of 'WizardPaymentMethods' with the given payload of type 'WizardPaymentMethod' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WizardPaymentMethods('outpay')\n{\n    \"Description\": \"outgoing payment method\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WizardPaymentMethods(id)",
+      "description": "Delete an instance of 'WizardPaymentMethods' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WizardPaymentMethods('outpay')"
+    }
+  ]
+}

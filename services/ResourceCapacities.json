@@ -1,0 +1,36 @@
+{
+  "service": "ResourceCapacities",
+  "description": "This entity enables you to manipulate 'ResourceCapacities'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ResourceCapacities(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ResourceCapacities' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ResourceCapacities(123)\n\nGET https://localhost:50000/b1s/v2/ResourceCapacities(123)?$select=Id,Code,Warehouse"
+    },
+    {
+      "method": "GET",
+      "path": "ResourceCapacities",
+      "description": "Retrieve a collection of 'ResourceCapacities' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ResourceCapacities\n\nGET https://localhost:50000/b1s/v2/ResourceCapacities?$select=Id,Code,Warehouse&$filter=Id ge 123 &$orderby=Id&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ResourceCapacities",
+      "description": "Create an instance of 'ResourceCapacities' with the given payload of type 'ResourceCapacity' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ResourceCapacities\n{\n    \"Action\": \"rcaUnknown\",\n    \"BaseEntry\": null,\n    \"BaseLineNum\": null,\n    \"BaseType\": \"rcbtNone\",\n    \"Capacity\": 50,\n    \"Code\": \"R01\",\n    \"Date\": \"2016-10-02\",\n    \"Id\": 3,\n    \"Memo\": null,\n    \"MemoSource\": \"rcmsUnknown\",\n    \"OwningEntry\": null,\n    \"OwningLineNum\": null,\n    \"OwningType\": \"rcotNone\",\n    \"RevertedEntry\": null,\n    \"RevertedLineNum\": null,\n    \"RevertedType\": \"rcrtNone\",\n    \"SourceEntry\": null,\n    \"SourceLineNum\": null,\n    \"SourceType\": \"rcstNone\",\n    \"Type\": \"rctInternal\",\n    \"Warehouse\": \"01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ResourceCapacities(id)",
+      "description": "Update an instance of 'ResourceCapacities' with the given payload of type 'ResourceCapacity' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ResourceCapacities(123)\n{\n    \"Capacity\": 15\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ResourceCapacities(id)",
+      "description": "Delete an instance of 'ResourceCapacities' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ResourceCapacities(123)"
+    }
+  ]
+}

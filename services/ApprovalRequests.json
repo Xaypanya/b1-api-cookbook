@@ -1,0 +1,24 @@
+{
+  "service": "ApprovalRequests",
+  "description": "This entity enables you to manipulate 'ApprovalRequests' and retrieve approval requests for various approval processes.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ApprovalRequests(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ApprovalRequests' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ApprovalRequests(123)\n\nGET https://localhost:50000/b1s/v2/ApprovalRequests(123)?$select=Code,ObjectType,IsDraft"
+    },
+    {
+      "method": "GET",
+      "path": "ApprovalRequests",
+      "description": "Retrieve a collection of 'ApprovalRequests' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ApprovalRequests\n\nGET https://localhost:50000/b1s/v2/ApprovalRequests?$select=Code,ObjectType,IsDraft&$filter=Code ge 123 &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "PATCH",
+      "path": "ApprovalRequests(id)",
+      "description": "Update an instance of 'ApprovalRequests' with the given payload of type 'ApprovalRequest' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ApprovalRequests(123)\n{\n    \"ApprovalRequestLines\": [\n        {\n            \"StageCode\": 3,\n            \"Status\": \"ardPending\",\n            \"UserID\": 1\n        }\n    ],\n    \"CurrentStage\": 3,\n    \"IsDraft\": \"Y\",\n    \"ObjectEntry\": 14,\n    \"ObjectType\": \"112\",\n    \"OriginatorID\": 38,\n    \"Remarks\": \"Please Approve, dear Master\",\n    \"Status\": \"arsPending\"\n}"
+    }
+  ]
+}

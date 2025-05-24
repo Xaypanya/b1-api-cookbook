@@ -1,0 +1,36 @@
+{
+  "service": "ReportTypes",
+  "description": "This entity enables you to manipulate 'ReportTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ReportTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ReportTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ReportTypes('A001')\n\nGET https://localhost:50000/b1s/v2/ReportTypes('A001')?$select=TypeCode,TypeName,DefaultReportLayout"
+    },
+    {
+      "method": "GET",
+      "path": "ReportTypes",
+      "description": "Retrieve a collection of 'ReportTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ReportTypes\n\nGET https://localhost:50000/b1s/v2/ReportTypes?$select=TypeCode,TypeName,DefaultReportLayout&$filter=startswith(TypeCode, 'a') &$orderby=TypeCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ReportTypes",
+      "description": "Create an instance of 'ReportTypes' with the given payload of type 'ReportType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportTypes\n{\n    \"TypeName\": \"report type 01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ReportTypes(id)",
+      "description": "Update an instance of 'ReportTypes' with the given payload of type 'ReportType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ReportTypes('A001')\n{\n    \"TypeName\": \"update report type 01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ReportTypes(id)",
+      "description": "Delete an instance of 'ReportTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ReportTypes('A001')"
+    }
+  ]
+}

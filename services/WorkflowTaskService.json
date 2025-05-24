@@ -1,0 +1,18 @@
+{
+  "service": "WorkflowTaskService",
+  "description": "This API enables you to invoke the interfaces defined on 'WorkflowTaskService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "WorkflowTaskService_Complete",
+      "description": "Invoke the method 'Complete' on this service by specifying the payload 'WorkflowTaskCompleteParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WorkflowTaskService_Complete\n{\n    \"WorkflowTaskCompleteParams\": {\n        \"Note\": \"Default Comment\",\n        \"TaskID\": \"4\",\n        \"TriggerParams\": \"<Params><Param><Key>Result</Key><Value Type=\"string\">1</Value></Param></Params>\"\n    }\n}"
+    },
+    {
+      "method": "POST",
+      "path": "WorkflowTaskService_GetApprovalTaskList",
+      "description": "Invoke the method 'GetApprovalTaskList' on this service by specifying the payload 'WorkflowApprovalTaskListParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WorkflowTaskService_GetApprovalTaskList\n{\n    \"WorkflowApprovalTaskListParams\": {\n        \"Status\": \"G|W\"\n    }\n}"
+    }
+  ]
+}

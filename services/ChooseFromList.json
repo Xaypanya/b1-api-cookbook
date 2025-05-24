@@ -1,0 +1,36 @@
+{
+  "service": "ChooseFromList",
+  "description": "This entity enables you to manipulate 'ChooseFromList'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ChooseFromList(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ChooseFromList' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ChooseFromList('ITM1')\n\nGET https://localhost:50000/b1s/v2/ChooseFromList('ITM1')?$select=ObjectName,ChooseFromList_Lines"
+    },
+    {
+      "method": "GET",
+      "path": "ChooseFromList",
+      "description": "Retrieve a collection of 'ChooseFromList' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ChooseFromList\n\nGET https://localhost:50000/b1s/v2/ChooseFromList?$select=ObjectName,ChooseFromList_Lines&$filter=startswith(ObjectName, 'a') &$orderby=ObjectName&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ChooseFromList",
+      "description": "Create an instance of 'ChooseFromList' with the given payload of type 'ChooseFromList' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ChooseFromList\n{\n    \"ChooseFromList_Lines\": [\n        {\n            \"DisplayedName\": \"Weight\",\n            \"FieldNo\": \"1\",\n            \"ShowType\": \"tYES\",\n            \"SortOrder\": \"soAscending\",\n            \"Visible\": \"tNO\"\n        }\n    ],\n    \"ObjectName\": \"ITM1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ChooseFromList(id)",
+      "description": "Update an instance of 'ChooseFromList' with the given payload of type 'ChooseFromList' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ChooseFromList('ITM1')\n{\n    \"ChooseFromList_Lines\": [\n        {\n            \"FieldNo\": \"1\",\n            \"Visible\": \"tYES\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ChooseFromList(id)",
+      "description": "Delete an instance of 'ChooseFromList' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ChooseFromList('ITM1')"
+    }
+  ]
+}

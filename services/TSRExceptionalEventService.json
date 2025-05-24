@@ -1,0 +1,12 @@
+{
+  "service": "TSRExceptionalEventService",
+  "description": "This API enables you to invoke the interfaces defined on 'TSRExceptionalEventService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "TSRExceptionalEventService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/TSRExceptionalEventService_GetList"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "BOEInstructions",
+  "description": "This entity enables you to manipulate 'BOEInstructions'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BOEInstructions(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BOEInstructions' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BOEInstructions(1)\n\nGET https://localhost:50000/b1s/v2/BOEInstructions(1)?$select=InstructionEntry,InstructionCode,InstructionDesc"
+    },
+    {
+      "method": "GET",
+      "path": "BOEInstructions",
+      "description": "Retrieve a collection of 'BOEInstructions' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BOEInstructions\n\nGET https://localhost:50000/b1s/v2/BOEInstructions?$select=InstructionEntry,InstructionCode,InstructionDesc&$filter=InstructionEntry ge 123 &$orderby=InstructionEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BOEInstructions",
+      "description": "Create an instance of 'BOEInstructions' with the given payload of type 'BOEInstruction' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BOEInstructions\n{\n    \"InstructionCode\": \"01\",\n    \"InstructionDesc\": \"01\",\n    \"IsCancelInstruction\": \"tYES\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BOEInstructions(id)",
+      "description": "Update an instance of 'BOEInstructions' with the given payload of type 'BOEInstruction' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BOEInstructions(1)\n{\n    \"InstructionCode\": \"02\",\n    \"InstructionDesc\": \"02\",\n    \"IsCancelInstruction\": \"tNO\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BOEInstructions(id)",
+      "description": "Delete an instance of 'BOEInstructions' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BOEInstructions(1)"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "service": "ValueMappingCommunication",
+  "description": "This entity enables you to manipulate 'ValueMappingCommunication'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ValueMappingCommunication(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ValueMappingCommunication' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ValueMappingCommunication(123)\n\nGET https://localhost:50000/b1s/v2/ValueMappingCommunication(123)?$select=AbsEntry,ThirdPartySystemId,ObjectId"
+    },
+    {
+      "method": "GET",
+      "path": "ValueMappingCommunication",
+      "description": "Retrieve a collection of 'ValueMappingCommunication' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ValueMappingCommunication\n\nGET https://localhost:50000/b1s/v2/ValueMappingCommunication?$select=AbsEntry,ThirdPartySystemId,ObjectId&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ValueMappingCommunication",
+      "description": "Create an instance of 'ValueMappingCommunication' with the given payload of type 'ValueMappingCommunicationData' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ValueMappingCommunication\n{\n    \"CommunicationType\": \"MD\",\n    \"ObjectId\": 37,\n    \"ThirdPartySystemId\": 1\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ValueMappingCommunication(id)",
+      "description": "Update an instance of 'ValueMappingCommunication' with the given payload of type 'ValueMappingCommunicationData' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ValueMappingCommunication(123)\n{\n    \"CommunicationType\": \"vmct_MasterData\",\n    \"EndTime\": 165050,\n    \"ObjectId\": 37,\n    \"StartDate\": \"2017-12-19\",\n    \"StartTime\": 160244,\n    \"ThirdPartySystemId\": 1\n}"
+    }
+  ]
+}

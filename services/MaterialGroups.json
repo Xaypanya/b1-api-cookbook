@@ -1,0 +1,36 @@
+{
+  "service": "MaterialGroups",
+  "description": "This entity enables you to manipulate 'MaterialGroups'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "MaterialGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'MaterialGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/MaterialGroups(123)\n\nGET https://localhost:50000/b1s/v2/MaterialGroups(123)?$select=AbsEntry,MaterialGroupCode,Description"
+    },
+    {
+      "method": "GET",
+      "path": "MaterialGroups",
+      "description": "Retrieve a collection of 'MaterialGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/MaterialGroups\n\nGET https://localhost:50000/b1s/v2/MaterialGroups?$select=AbsEntry,MaterialGroupCode,Description&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "MaterialGroups",
+      "description": "Create an instance of 'MaterialGroups' with the given payload of type 'MaterialGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/MaterialGroups\n{\n    \"AbsEntry\": 1,\n    \"Description\": \"\",\n    \"MaterialGroupCode\": \"1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "MaterialGroups(id)",
+      "description": "Update an instance of 'MaterialGroups' with the given payload of type 'MaterialGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/MaterialGroups(123)\n{\n    \"Description\": \"test\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "MaterialGroups(id)",
+      "description": "Delete an instance of 'MaterialGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/MaterialGroups(123)"
+    }
+  ]
+}

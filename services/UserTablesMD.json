@@ -1,0 +1,36 @@
+{
+  "service": "UserTablesMD",
+  "description": "This entity enables you to manipulate 'UserTablesMD'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "UserTablesMD(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'UserTablesMD' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/UserTablesMD('UDT01')\n\nGET https://localhost:50000/b1s/v2/UserTablesMD('UDT01')?$select=TableName,TableDescription,TableType"
+    },
+    {
+      "method": "GET",
+      "path": "UserTablesMD",
+      "description": "Retrieve a collection of 'UserTablesMD' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/UserTablesMD\n\nGET https://localhost:50000/b1s/v2/UserTablesMD?$select=TableName,TableDescription,TableType&$filter=startswith(TableName, 'a') &$orderby=TableName&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "UserTablesMD",
+      "description": "Create an instance of 'UserTablesMD' with the given payload of type 'UserTablesMD' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/UserTablesMD\n{\n    \"TableDescription\": \"NewUDT\",\n    \"TableName\": \"UDT01\",\n    \"TableType\": \"bott_NoObject\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "UserTablesMD(id)",
+      "description": "Update an instance of 'UserTablesMD' with the given payload of type 'UserTablesMD' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/UserTablesMD('UDT01')\n{\n    \"TableDescription\": \"UpdateUDT01\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "UserTablesMD(id)",
+      "description": "Delete an instance of 'UserTablesMD' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/UserTablesMD('UDT01')"
+    }
+  ]
+}

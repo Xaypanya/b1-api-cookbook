@@ -1,0 +1,36 @@
+{
+  "service": "NotaFiscalCST",
+  "description": "This entity enables you to manipulate 'NotaFiscalCST'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "NotaFiscalCST(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'NotaFiscalCST' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/NotaFiscalCST(123)\n\nGET https://localhost:50000/b1s/v2/NotaFiscalCST(123)?$select=ID,Code,Situation"
+    },
+    {
+      "method": "GET",
+      "path": "NotaFiscalCST",
+      "description": "Retrieve a collection of 'NotaFiscalCST' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/NotaFiscalCST\n\nGET https://localhost:50000/b1s/v2/NotaFiscalCST?$select=ID,Code,Situation&$filter=ID ge 123 &$orderby=ID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "NotaFiscalCST",
+      "description": "Create an instance of 'NotaFiscalCST' with the given payload of type 'NotaFiscalCST' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/NotaFiscalCST\n{\n    \"CSTCodeOutgoing\": \"111\",\n    \"Code\": \"0409\",\n    \"DescriptionOutgoing\": \"desoutgoing\",\n    \"Situation\": \"situ\",\n    \"TaxCategory\": 1\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "NotaFiscalCST(id)",
+      "description": "Update an instance of 'NotaFiscalCST' with the given payload of type 'NotaFiscalCST' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/NotaFiscalCST(123)\n{\n    \"DescriptionOutgoing\": \"desout\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "NotaFiscalCST(id)",
+      "description": "Delete an instance of 'NotaFiscalCST' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/NotaFiscalCST(123)"
+    }
+  ]
+}

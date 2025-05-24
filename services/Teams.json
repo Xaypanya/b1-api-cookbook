@@ -1,0 +1,30 @@
+{
+  "service": "Teams",
+  "description": "This entity enables you to manipulate 'Teams'. It represents the list of teams from which team memberships of an employee can be selected. An employee can be a Member or a Leader of more than one team.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Teams(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Teams' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Teams(123)\n\nGET https://localhost:50000/b1s/v2/Teams(123)?$select=TeamID,TeamName,Description"
+    },
+    {
+      "method": "GET",
+      "path": "Teams",
+      "description": "Retrieve a collection of 'Teams' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Teams\n\nGET https://localhost:50000/b1s/v2/Teams?$select=TeamID,TeamName,Description&$filter=TeamID ge 123 &$orderby=TeamID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Teams",
+      "description": "Create an instance of 'Teams' with the given payload of type 'Team' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Teams\n{\n    \"Description\": \"Testing Team\",\n    \"TeamMembers\": [\n        {\n            \"EmployeeID\": \"20\",\n            \"RoleInTeam\": \"borit_Leader\"\n        }\n    ],\n    \"TeamName\": \"ACE\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Teams(id)",
+      "description": "Update an instance of 'Teams' with the given payload of type 'Team' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Teams(123)\n{\n    \"Description\": \"Code Refactor\",\n    \"TeamMembers\": [\n        {\n            \"RoleInTeam\": \"borit_Leader\"\n        }\n    ],\n    \"TeamName\": \"Refactor\"\n}"
+    }
+  ]
+}

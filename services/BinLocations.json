@@ -1,0 +1,36 @@
+{
+  "service": "BinLocations",
+  "description": "This entity enables you to manipulate 'BinLocations'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BinLocations(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BinLocations' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BinLocations(123)\n\nGET https://localhost:50000/b1s/v2/BinLocations(123)?$select=AbsEntry,Warehouse,Sublevel1"
+    },
+    {
+      "method": "GET",
+      "path": "BinLocations",
+      "description": "Retrieve a collection of 'BinLocations' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BinLocations\n\nGET https://localhost:50000/b1s/v2/BinLocations?$select=AbsEntry,Warehouse,Sublevel1&$filter=AbsEntry ge 123 &$orderby=AbsEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BinLocations",
+      "description": "Create an instance of 'BinLocations' with the given payload of type 'BinLocation' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BinLocations\n{\n    \"BinCode\": \"02-PVG\",\n    \"Description\": null,\n    \"Inactive\": \"tNO\",\n    \"ReceivingBinLocation\": \"tNO\",\n    \"RestrictedItemType\": \"briNone\",\n    \"RestrictedUoMType\": \"bruNone\",\n    \"Sublevel1\": \"PVG\",\n    \"Warehouse\": \"02\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BinLocations(id)",
+      "description": "Update an instance of 'BinLocations' with the given payload of type 'BinLocation' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BinLocations(123)\n{\n    \"Description\": \"updated from sl\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BinLocations(id)",
+      "description": "Delete an instance of 'BinLocations' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BinLocations(123)"
+    }
+  ]
+}

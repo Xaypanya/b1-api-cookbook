@@ -1,0 +1,36 @@
+{
+  "service": "ChartOfAccounts",
+  "description": "This entity enables you to manipulate 'ChartOfAccounts'. It represents the General Ledger (G/L) accounts in the Finance module. The Chart of Accounts is an index of all G/L accounts that are used by one or more companies. For every G/L account there is an account number, an account description, and information that determines the function of the account.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ChartOfAccounts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ChartOfAccounts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ChartOfAccounts('abc')\n\nGET https://localhost:50000/b1s/v2/ChartOfAccounts('abc')?$select=Code,Name,Balance"
+    },
+    {
+      "method": "GET",
+      "path": "ChartOfAccounts",
+      "description": "Retrieve a collection of 'ChartOfAccounts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ChartOfAccounts\n\nGET https://localhost:50000/b1s/v2/ChartOfAccounts?$select=Code,Name,Balance&$filter=startswith(Code, 'a') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ChartOfAccounts",
+      "description": "Create an instance of 'ChartOfAccounts' with the given payload of type 'ChartOfAccount' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ChartOfAccounts\n{\n    \"FatherAccountKey\": \"100000000000000k\",\n    \"FormatCode\": \"100000000100101\",\n    \"Name\": \"Test Account\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ChartOfAccounts(id)",
+      "description": "Update an instance of 'ChartOfAccounts' with the given payload of type 'ChartOfAccount' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ChartOfAccounts('abc')\n{\n    \"Name\": \"Updated Account\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ChartOfAccounts(id)",
+      "description": "Delete an instance of 'ChartOfAccounts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ChartOfAccounts('abc')"
+    }
+  ]
+}

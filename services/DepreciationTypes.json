@@ -1,0 +1,36 @@
+{
+  "service": "DepreciationTypes",
+  "description": "This entity enables you to manipulate 'DepreciationTypes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DepreciationTypes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DepreciationTypes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DepreciationTypes('test')\n\nGET https://localhost:50000/b1s/v2/DepreciationTypes('test')?$select=Code,Description,DepreciationMethod"
+    },
+    {
+      "method": "GET",
+      "path": "DepreciationTypes",
+      "description": "Retrieve a collection of 'DepreciationTypes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DepreciationTypes\n\nGET https://localhost:50000/b1s/v2/DepreciationTypes?$select=Code,Description,DepreciationMethod&$filter=startswith(Code, 'test') &$orderby=Code&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DepreciationTypes",
+      "description": "Create an instance of 'DepreciationTypes' with the given payload of type 'DepreciationType' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DepreciationTypes\n{\n    \"AcquisitionPeriodControl\": \"apcProRataTemporis\",\n    \"AcquisitionProRataType\": \"aprtExactlyDailyBase\",\n    \"CalculationBase\": \"cbYearly\",\n    \"Code\": \"test\",\n    \"DepreciationMethod\": \"dmNoDepreciation\",\n    \"Description\": \"Test DepreciationTypes\",\n    \"IncludeSalvageInDepreciation\": \"tNO\",\n    \"MinimumDepreciatedValue\": 0,\n    \"PercentageOfDepreciationReversedInRetirementYear\": 0,\n    \"RetirementPeriodControl\": \"rpcProRataTemporis\",\n    \"RetirementProRataType\": \"rprtExactlyDailyBase\",\n    \"RoundYearEndBookValue\": \"tYES\",\n    \"SalvagePercentage\": 0,\n    \"StraightLineCalculationMethod\": \"slcmAuquisitionValueDividedByTotalUsefulLife\",\n    \"StraightLinePercentage\": 0,\n    \"StraightLinePeriodControlDepreciationPeriods\": \"slpcdpStandard\",\n    \"StraightLinePeriodControlFactor\": 1,\n    \"SubsequentAcquisitionPeriodControl\": \"sapcProRataTemporis\",\n    \"SubsequentAcquisitionProRataType\": \"saprtExactlyDailyBase\",\n    \"ValidFrom\": \"1900-01-01\",\n    \"ValidTo\": \"2099-12-31\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DepreciationTypes(id)",
+      "description": "Update an instance of 'DepreciationTypes' with the given payload of type 'DepreciationType' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DepreciationTypes('test')\n{\n    \"Description\": \"DepreciationTypes 123\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DepreciationTypes(id)",
+      "description": "Delete an instance of 'DepreciationTypes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DepreciationTypes('test')"
+    }
+  ]
+}

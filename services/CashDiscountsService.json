@@ -1,0 +1,12 @@
+{
+  "service": "CashDiscountsService",
+  "description": "This API enables you to invoke the interfaces defined on 'CashDiscountsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "CashDiscountsService_GetCashDiscountList",
+      "description": "Invoke the method 'GetCashDiscountList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/CashDiscountsService_GetCashDiscountList"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "BrazilStringIndexers",
+  "description": "This entity enables you to manipulate 'BrazilStringIndexers'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BrazilStringIndexers(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BrazilStringIndexers' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilStringIndexers(849)\n\nGET https://localhost:50000/b1s/v2/BrazilStringIndexers(849)?$select=IndexerType,Code,Description"
+    },
+    {
+      "method": "GET",
+      "path": "BrazilStringIndexers",
+      "description": "Retrieve a collection of 'BrazilStringIndexers' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BrazilStringIndexers\n\nGET https://localhost:50000/b1s/v2/BrazilStringIndexers?$select=IndexerType,Code,Description&$filter=ID ge 849 &$orderby=ID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilStringIndexers",
+      "description": "Create an instance of 'BrazilStringIndexers' with the given payload of type 'BrazilStringIndexer' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilStringIndexers\n{\n    \"Code\": \"3\",\n    \"Description\": \"aaaaaaaa\",\n    \"IndexerType\": \"bsitIPIPeriod\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BrazilStringIndexers(id)",
+      "description": "Delete an instance of 'BrazilStringIndexers' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BrazilStringIndexers(849)"
+    },
+    {
+      "method": "POST",
+      "path": "BrazilStringIndexers(id)/GetIndexerTypeList",
+      "description": "Invoke the method 'GetIndexerTypeList' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/BrazilStringIndexers(849)/GetIndexerTypeList"
+    }
+  ]
+}

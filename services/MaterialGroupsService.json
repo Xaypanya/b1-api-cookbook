@@ -1,0 +1,12 @@
+{
+  "service": "MaterialGroupsService",
+  "description": "This API enables you to invoke the interfaces defined on 'MaterialGroupsService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "MaterialGroupsService_GetMaterialGroupList",
+      "description": "Invoke the method 'GetMaterialGroupList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/MaterialGroupsService_GetMaterialGroupList"
+    }
+  ]
+}

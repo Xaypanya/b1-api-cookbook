@@ -1,0 +1,36 @@
+{
+  "service": "TrackingNotes",
+  "description": "This entity enables you to manipulate 'TrackingNotes'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "TrackingNotes(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'TrackingNotes' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/TrackingNotes(2)\n\nGET https://localhost:50000/b1s/v2/TrackingNotes(2)?$select=TrackingNoteNumber,CCDNumber,Date"
+    },
+    {
+      "method": "GET",
+      "path": "TrackingNotes",
+      "description": "Retrieve a collection of 'TrackingNotes' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/TrackingNotes\n\nGET https://localhost:50000/b1s/v2/TrackingNotes?$select=TrackingNoteNumber,CCDNumber,Date&$filter=TrackingNoteNumber ge 2 &$orderby=TrackingNoteNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "TrackingNotes",
+      "description": "Create an instance of 'TrackingNotes' with the given payload of type 'TrackingNote' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/TrackingNotes\n{\n    \"CCDNumber\": \"18/2018/18\",\n    \"CountryOfOrigin\": \"XX\",\n    \"Date\": \"2016-08-31\",\n    \"TrackingNoteItemCollection\": [\n        {\n            \"ItemCCDNumber\": 1,\n            \"ItemCode\": \"I01\",\n            \"Quantity\": \"100\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "TrackingNotes(id)",
+      "description": "Update an instance of 'TrackingNotes' with the given payload of type 'TrackingNote' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/TrackingNotes(2)\n{\n    \"CountryOfOrigin\": \"AU\",\n    \"TrackingNoteBrokerCollection\": [\n        {\n            \"AgreementNumber\": \"2\",\n            \"BPCode\": \"C01\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "TrackingNotes(id)",
+      "description": "Delete an instance of 'TrackingNotes' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/TrackingNotes(2)"
+    }
+  ]
+}

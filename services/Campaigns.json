@@ -1,0 +1,42 @@
+{
+  "service": "Campaigns",
+  "description": "This entity enables you to manipulate 'Campaigns'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "Campaigns(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'Campaigns' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/Campaigns(1)\n\nGET https://localhost:50000/b1s/v2/Campaigns(1)?$select=CampaignNumber,CampaignName,CampaignType"
+    },
+    {
+      "method": "GET",
+      "path": "Campaigns",
+      "description": "Retrieve a collection of 'Campaigns' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/Campaigns\n\nGET https://localhost:50000/b1s/v2/Campaigns?$select=CampaignNumber,CampaignName,CampaignType&$filter=CampaignNumber ge 1 &$orderby=CampaignNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "Campaigns",
+      "description": "Create an instance of 'Campaigns' with the given payload of type 'Campaign' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/Campaigns\n{\n    \"CampaignBusinessPartners\": [\n        {\n            \"BPCode\": \"C01\"\n        },\n        {\n            \"BPCode\": \"V01\"\n        }\n    ],\n    \"CampaignName\": \"Party\",\n    \"CampaignType\": \"ctEmail\",\n    \"StartDate\": \"2016-12-30\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "Campaigns(id)",
+      "description": "Update an instance of 'Campaigns' with the given payload of type 'Campaign' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/Campaigns(1)\n{\n    \"StartDate\": \"2016-10-30\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "Campaigns(id)",
+      "description": "Delete an instance of 'Campaigns' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/Campaigns(1)"
+    },
+    {
+      "method": "POST",
+      "path": "Campaigns(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/Campaigns(1)/Cancel"
+    }
+  ]
+}

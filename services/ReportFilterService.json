@@ -1,0 +1,12 @@
+{
+  "service": "ReportFilterService",
+  "description": "This API enables you to invoke the interfaces defined on 'ReportFilterService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "ReportFilterService_GetTaxReportFilterList",
+      "description": "Invoke the method 'GetTaxReportFilterList' on this service by specifying the payload 'TaxReportFilterParams' in the JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ReportFilterService_GetTaxReportFilterList\n{\n    \"TaxReportFilterParams\": {\n        \"Code\": 1\n    }\n}"
+    }
+  ]
+}

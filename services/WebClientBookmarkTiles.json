@@ -1,0 +1,36 @@
+{
+  "service": "WebClientBookmarkTiles",
+  "description": "This entity enables you to manipulate 'WebClientBookmarkTiles'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "WebClientBookmarkTiles(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'WebClientBookmarkTiles' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientBookmarkTiles('abc')\n\nGET https://localhost:50000/b1s/v2/WebClientBookmarkTiles('abc')?$select=Guid,Title,SubTitle"
+    },
+    {
+      "method": "GET",
+      "path": "WebClientBookmarkTiles",
+      "description": "Retrieve a collection of 'WebClientBookmarkTiles' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/WebClientBookmarkTiles\n\nGET https://localhost:50000/b1s/v2/WebClientBookmarkTiles?$select=Guid,Title,SubTitle&$filter=startswith(Guid, 'a') &$orderby=Guid&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "WebClientBookmarkTiles",
+      "description": "Create an instance of 'WebClientBookmarkTiles' with the given payload of type 'WebClientBookmarkTile' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/WebClientBookmarkTiles\n{\n    \"Guid\": \"Tile_1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "WebClientBookmarkTiles(id)",
+      "description": "Update an instance of 'WebClientBookmarkTiles' with the given payload of type 'WebClientBookmarkTile' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/WebClientBookmarkTiles('abc')\n{}"
+    },
+    {
+      "method": "DELETE",
+      "path": "WebClientBookmarkTiles(id)",
+      "description": "Delete an instance of 'WebClientBookmarkTiles' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/WebClientBookmarkTiles('abc')"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "service": "CommissionGroups",
+  "description": "This entity enables you to manipulate 'CommissionGroups'. It defines commission groups for a sales employee, an item, or a customer.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "CommissionGroups(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'CommissionGroups' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/CommissionGroups(123)\n\nGET https://localhost:50000/b1s/v2/CommissionGroups(123)?$select=CommissionGroupCode,CommissionGroupName,CommissionPercentage"
+    },
+    {
+      "method": "GET",
+      "path": "CommissionGroups",
+      "description": "Retrieve a collection of 'CommissionGroups' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/CommissionGroups\n\nGET https://localhost:50000/b1s/v2/CommissionGroups?$select=CommissionGroupCode,CommissionGroupName,CommissionPercentage&$filter=CommissionGroupCode ge 123 &$orderby=CommissionGroupCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "CommissionGroups",
+      "description": "Create an instance of 'CommissionGroups' with the given payload of type 'CommissionGroup' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/CommissionGroups\n{\n    \"CommissionGroupName\": \"Medium Commission\",\n    \"CommissionPercentage\": \"10\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "CommissionGroups(id)",
+      "description": "Update an instance of 'CommissionGroups' with the given payload of type 'CommissionGroup' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/CommissionGroups(123)\n{\n    \"CommissionPercentage\": \"28\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "CommissionGroups(id)",
+      "description": "Delete an instance of 'CommissionGroups' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/CommissionGroups(123)"
+    }
+  ]
+}

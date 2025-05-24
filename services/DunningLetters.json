@@ -1,0 +1,36 @@
+{
+  "service": "DunningLetters",
+  "description": "This entity enables you to manipulate 'DunningLetters'. It represents a list of dunning levels that is used as a template when creating a new dunning term.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "DunningLetters(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'DunningLetters' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/DunningLetters(123)\n\nGET https://localhost:50000/b1s/v2/DunningLetters(123)?$select=FeeCurrency,RowNumber,LetterFormat"
+    },
+    {
+      "method": "GET",
+      "path": "DunningLetters",
+      "description": "Retrieve a collection of 'DunningLetters' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/DunningLetters\n\nGET https://localhost:50000/b1s/v2/DunningLetters?$select=FeeCurrency,RowNumber,LetterFormat&$filter=RowNumber ge 123 &$orderby=RowNumber&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "DunningLetters",
+      "description": "Create an instance of 'DunningLetters' with the given payload of type 'DunningLetter' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/DunningLetters\n{\n    \"Effectiveafter\": \"10\",\n    \"FeeCurrency\": \"RMB\",\n    \"Feeperletter\": \"20\",\n    \"LetterFormat\": \"DUN0\",\n    \"MinimumBalance\": \"2000\",\n    \"MinimumBalanceCurrency\": \"RMB\",\n    \"RowNumber\": \"1\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "DunningLetters(id)",
+      "description": "Update an instance of 'DunningLetters' with the given payload of type 'DunningLetter' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/DunningLetters(123)\n{\n    \"MinimumBalance\": \"220\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "DunningLetters(id)",
+      "description": "Delete an instance of 'DunningLetters' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/DunningLetters(123)"
+    }
+  ]
+}

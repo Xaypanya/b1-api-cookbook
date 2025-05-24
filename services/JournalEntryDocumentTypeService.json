@@ -1,0 +1,12 @@
+{
+  "service": "JournalEntryDocumentTypeService",
+  "description": "This API enables you to invoke the interfaces defined on 'JournalEntryDocumentTypeService'.",
+  "operations": [
+    {
+      "method": "POST",
+      "path": "JournalEntryDocumentTypeService_GetList",
+      "description": "Invoke the method 'GetList' on this service.",
+      "example": "POST https://localhost:50000/b1s/v2/JournalEntryDocumentTypeService_GetList"
+    }
+  ]
+}

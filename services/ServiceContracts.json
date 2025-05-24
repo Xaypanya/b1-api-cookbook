@@ -1,0 +1,48 @@
+{
+  "service": "ServiceContracts",
+  "description": "This entity enables you to manipulate 'ServiceContracts'. It represents the service contracts table in the Service module of the SAP Business One application. This object enables you to do the following: Add a service contract; retrieve a service contract by its key; update a service contract; remove a service contract.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "ServiceContracts(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'ServiceContracts' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceContracts(123)\n\nGET https://localhost:50000/b1s/v2/ServiceContracts(123)?$select=ContractID,CustomerCode,CustomerName"
+    },
+    {
+      "method": "GET",
+      "path": "ServiceContracts",
+      "description": "Retrieve a collection of 'ServiceContracts' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/ServiceContracts\n\nGET https://localhost:50000/b1s/v2/ServiceContracts?$select=ContractID,CustomerCode,CustomerName&$filter=ContractID ge 123 &$orderby=ContractID&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceContracts",
+      "description": "Create an instance of 'ServiceContracts' with the given payload of type 'ServiceContract' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceContracts\n{\n    \"CustomerCode\": \"C60000\",\n    \"EndDate\": \"2014-12-09\",\n    \"Remarks\": \"Add service Contract\",\n    \"ServiceContract_Lines\": [\n        {\n            \"InternalSerialNum\": \"A6-000005\",\n            \"ItemCode\": \"S10000\",\n            \"ManufacturerSerialNum\": \"S1-000166\"\n        }\n    ]\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "ServiceContracts(id)",
+      "description": "Update an instance of 'ServiceContracts' with the given payload of type 'ServiceContract' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/ServiceContracts(123)\n{\n    \"Remarks\": \"Silver Warranty Contract\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "ServiceContracts(id)",
+      "description": "Delete an instance of 'ServiceContracts' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/ServiceContracts(123)"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceContracts(id)/Cancel",
+      "description": "Invoke the method 'Cancel' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceContracts(123)/Cancel"
+    },
+    {
+      "method": "POST",
+      "path": "ServiceContracts(id)/Close",
+      "description": "Invoke the method 'Close' on this EntitySet with the specified id.",
+      "example": "POST https://localhost:50000/b1s/v2/ServiceContracts(123)/Close"
+    }
+  ]
+}

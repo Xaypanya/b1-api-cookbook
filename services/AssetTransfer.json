@@ -1,0 +1,30 @@
+{
+  "service": "AssetTransfer",
+  "description": "This entity enables you to manipulate 'AssetTransfer'.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "AssetTransfer(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'AssetTransfer' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetTransfer(2)\n\nGET https://localhost:50000/b1s/v2/AssetTransfer(2)?$select=DocEntry,DocNum,Series"
+    },
+    {
+      "method": "GET",
+      "path": "AssetTransfer",
+      "description": "Retrieve a collection of 'AssetTransfer' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/AssetTransfer\n\nGET https://localhost:50000/b1s/v2/AssetTransfer?$select=DocEntry,DocNum,Series&$filter=DocEntry ge 2 &$orderby=DocEntry&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "AssetTransfer",
+      "description": "Create an instance of 'AssetTransfer' with the given payload of type 'AssetDocument' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/AssetTransfer\n{\n    \"AssetDocumentLineCollection\": [\n        {\n            \"AssetNumber\": \"FA4\",\n            \"NewAssetNumber\": \"FA3\"\n        }\n    ],\n    \"AssetValueDate\": \"2017-01-01\",\n    \"DepreciationArea\": \"*\",\n    \"DocumentDate\": \"2017-01-01\",\n    \"DocumentType\": \"adtAssetTransfer\",\n    \"PostingDate\": \"2017-01-01\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "AssetTransfer(id)",
+      "description": "Update an instance of 'AssetTransfer' with the given payload of type 'AssetDocument' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/AssetTransfer(2)\n{\n    \"AssetDocumentLineCollection\": [\n        {\n            \"LineNumber\": 1,\n            \"Remarks\": \"Remark is 0\"\n        }\n    ]\n}"
+    }
+  ]
+}

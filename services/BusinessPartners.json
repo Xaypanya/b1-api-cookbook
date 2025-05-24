@@ -1,0 +1,36 @@
+{
+  "service": "BusinessPartners",
+  "description": "This entity enables you to manipulate 'BusinessPartners'. It represents the business partners master data in the Business Partners module. You can use this data to record and retrieve business partner (customers, vendors, and leads) information and schedule business partner activities.",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "BusinessPartners(id)",
+      "description": "Retrieve all or some selected properties from an instance of 'BusinessPartners' with the given id.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPartners('c001')\n\nGET https://localhost:50000/b1s/v2/BusinessPartners('c001')?$select=CardCode,CardName,CardType"
+    },
+    {
+      "method": "GET",
+      "path": "BusinessPartners",
+      "description": "Retrieve a collection of 'BusinessPartners' with all or some selected properties in the given order by specifying the given filter condition.",
+      "example": "GET https://localhost:50000/b1s/v2/BusinessPartners\n\nGET https://localhost:50000/b1s/v2/BusinessPartners?$select=CardCode,CardName,CardType&$filter=startswith(CardCode, 'a') &$orderby=CardCode&$top=10&$skip=1"
+    },
+    {
+      "method": "POST",
+      "path": "BusinessPartners",
+      "description": "Create an instance of 'BusinessPartners' with the given payload of type 'BusinessPartner' in JSON format.",
+      "example": "POST https://localhost:50000/b1s/v2/BusinessPartners\n{\n    \"CardCode\": \"c001\",\n    \"CardName\": \"c001\",\n    \"CardType\": \"C\"\n}"
+    },
+    {
+      "method": "PATCH",
+      "path": "BusinessPartners(id)",
+      "description": "Update an instance of 'BusinessPartners' with the given payload of type 'BusinessPartner' in JSON format and with the specified id.",
+      "example": "PATCH https://localhost:50000/b1s/v2/BusinessPartners('c001')\n{\n    \"CardName\": \"Updated customer name\"\n}"
+    },
+    {
+      "method": "DELETE",
+      "path": "BusinessPartners(id)",
+      "description": "Delete an instance of 'BusinessPartners' with the specified id.",
+      "example": "DELETE https://localhost:50000/b1s/v2/BusinessPartners('c001')"
+    }
+  ]
+}
